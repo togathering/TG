@@ -85,12 +85,12 @@ public class AdminDAO {
 
 	
 	//특정 회원 검색
-	public List<MemberBean> selectId(int num,  String id){
+	public List<MemberBean> selectId(int num,  String pid){
 		List<MemberBean> list = null;
-		String searchId = "%"+id+"%";
+		String id = "%"+pid+"%";
 			startNum= (num*10)+1;
-			System.out.println(searchId);
-			list = session.selectList("admin.selectAll",searchId ,new RowBounds(startNum, countNum));
+			System.out.println(id);
+			list = session.selectList("admin.selectAll",id ,new RowBounds(startNum, countNum));
 	
 		return list;
 	}
