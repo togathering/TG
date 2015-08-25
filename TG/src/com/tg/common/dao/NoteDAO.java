@@ -14,10 +14,6 @@ public class NoteDAO {
 	
 	@Autowired
 	SqlSession session;
-	
-	public NoteDAO() {
-
-	}
 
 	public List<NoteBean> selectNote(String receiverId){
 		List<NoteBean> list = session.selectList("note.select", receiverId);
@@ -26,24 +22,14 @@ public class NoteDAO {
 
 	
 	public boolean insertNote(NoteBean bean){
-		try {
-			smc.insert("note.insert", bean);
-			return true;
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}		
-		return false;
+		int t = session.insert("note.insert", bean);
+		if(t==1) return true;
+		else return false;
 	}
 
 	
 	public NoteBean detailNote(int noteNo){
-		NoteBean bean = null; 
-		try {
-			bean = (NoteBean) smc.queryForObject("note.spec", noteNo);
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}		
+		NoteBean bean = (NoteBean) session.selectOne("note.spec", noteNo); 
 		return bean;
 	}
-
 }
