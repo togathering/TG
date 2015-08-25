@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><!--Converted at: Tue Aug 25 16:16:29 KST 2015-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="friend">
+	<insert id="add" parameterType="com.tg.common.beans.FriendBean">
+		insert into friend values (#{id},#{fid})
+	</insert>
+	<select id="friendRequest" parameterType="java.lang.String" resultType="com.tg.common.beans.FriendBean">
+		select id, fid from friend where fid = #{id} 
+	</select>
+	<select id="friendList" parameterType="java.util.HashMap" resultType="com.tg.common.beans.FriendBean">
+		select id, fid from friend where id = #{id} and fid = #{fid}
+	</select>
+	
+	<delete id="delRequest" parameterType="java.lang.String">
+		delete from friend where id = #{id}
+	</delete>
+	
+	<delete id="delFriend" parameterType="java.util.HashMap">
+		delete from friend where id = #{id} and fid = #{fid}
+	</delete>
+</mapper>
