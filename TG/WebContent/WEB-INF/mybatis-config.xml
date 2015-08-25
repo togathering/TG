@@ -25,6 +25,10 @@
      	<list>
      		<value>classpath:com/tg/common/sql/sqlGroup.xml</value>
      		<value>classpath:com/tg/common/sql/sqlNote.xml</value>
+     		<value>classpath:com/tg/common/sql/sqlFriend.xml</value>
+     		<value>classpath:com/tg/common/sql/sqlInviteGroup.xml</value>
+     		<value>classpath:com/tg/common/sql/sqlParticipant.xml</value>
+     		<value>classpath:com/tg/common/sql/sqlReply.xml</value>
      	</list>
      </property>
      
