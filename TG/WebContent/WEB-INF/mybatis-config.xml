@@ -29,6 +29,7 @@
      		<value>classpath:com/tg/common/sql/sqlInviteGroup.xml</value>
      		<value>classpath:com/tg/common/sql/sqlParticipant.xml</value>
      		<value>classpath:com/tg/common/sql/sqlReply.xml</value>
+     		<value>classpath:com/tg/common/sql/sqlAdmin.xml</value>
      	</list>
      </property>
      
