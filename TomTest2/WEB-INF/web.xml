@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>TomTest</display-name>
+  
+  
+  <servlet>
+  	<servlet-name>my</servlet-name>
+  	<servlet-class>t0604.MyServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>hello</servlet-name>
+  	<servlet-class>t0605.HelloServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ns</servlet-name>
+  	<servlet-class>t0605.NameServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>test</servlet-name>
+  	<servlet-class>t0608.TestServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>cnt</servlet-name>
+  	<servlet-class>t0608.CountServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+  	<servlet-name>calc</servlet-name>
+  	<servlet-class>t0609.CalcServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>guest</servlet-name>
+  	<servlet-class>guest.control.GuestController</servlet-class>
+  </servlet>
+  
+  <!-- 서블릿클래스에 적용할 가상의 경로를 정의 -->
+  <servlet-mapping>
+  	<servlet-name>my</servlet-name>
+  	<url-pattern>/jin/hello</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>hello</servlet-name>
+  	<url-pattern>/hello</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ns</servlet-name>
+  	<url-pattern>/0605/submitTest</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>test</servlet-name>
+  	<url-pattern>/lifeCycleTest</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>cnt</servlet-name>
+  	<url-pattern>/count</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+  	<servlet-name>calc</servlet-name>
+  	<url-pattern>/calc</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>guest</servlet-name>
+  	<url-pattern>/guest</url-pattern>
+  </servlet-mapping>
+  
+  
+  <error-page>
+  	<error-code>404</error-code>
+  	<location>/error/error404.jsp</location>
+  </error-page>
+  <error-page>
+  	<error-code>405</error-code>
+  	<location>/error/error405.jsp</location>
+  </error-page>
+  <error-page>
+  	<error-code>500</error-code>
+  	<location>/error/error500.jsp</location>
+  </error-page>
+  <error-page>
+  	<exception-type>java.lang.NullPointerException</exception-type>
+  	<location>/error/errorNULL.jsp</location>
+  </error-page>
+  
+  
+  
+  <welcome-file-list>
+  	<welcome-file>index.html</welcome-file>
+  	<welcome-file>index.jsp</welcome-file>
+  	<welcome-file>hello.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

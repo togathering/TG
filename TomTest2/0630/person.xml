@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="person.xsl"?>
+<!-- comm-ent -->
+<persons>
+  <person>
+    <name>홍길동</name>
+    <age>13</age>
+    <job>학생</job>
+  </person>
+  <person>
+  	<name>길라임</name>
+  	<age>15</age>
+  	<job>배우</job>
+  </person>
+  <person>
+  	<name>이순신</name>
+  	<age>18</age>
+  	<job>장군</job>
+  </person>
+</persons>
