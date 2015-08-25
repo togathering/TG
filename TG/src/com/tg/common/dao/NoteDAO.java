@@ -12,19 +12,15 @@ import com.tg.iba.MySqlMapConfig;
 
 public class NoteDAO {
 	
-	SqlMapClient smc;
+	@Autowired
+	SqlSession session;
 	
 	public NoteDAO() {
-		smc = MySqlMapConfig.getSqlMapInstance();
+
 	}
 
 	public List<NoteBean> selectNote(String receiverId){
-		List<NoteBean> list = null;
-		try {
-			list = smc.queryForList("note.select", receiverId);
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}		
+		List<NoteBean> list = session.selectList("note.select", receiverId);
 		return list;
 	}
 
