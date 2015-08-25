@@ -1,86 +1,70 @@
 package com.tg.common.dao;
 
-import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.List;
 
-import com.ibatis.sqlmap.client.SqlMapClient;
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
+
 import com.tg.common.beans.ReplyBean;
-import com.tg.iba.MySqlMapConfig;
 
 public class ReplyDAO {
-	SqlMapClient smc;
-	
+	@Autowired
+	SqlSession session;
 	public ReplyDAO() {
-		smc = MySqlMapConfig.getSqlMapInstance();
+		
 	}
 	
 	public boolean addReply(ReplyBean bean){
-		try {
-			smc.insert("reply.addReply", bean);
+		
+		int t = session.insert("reply.addReply", bean);
+		if(t==1)
+		{
 			return true;
-		} catch (SQLException e) {
-			e.printStackTrace();
 		}
 		return false;
 	}
 	
 	public boolean delGroup(int gno){
-		try {
-			int t = smc.delete("reply.delGroup",gno);
-			if(t!=0){
-				return true;
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
+		int t = session.delete("reply.delGroup",gno);		
+		if(t!=0){
+			return true;
 		}
 		return false;
 	}
 	
 	public boolean delReply(int no){
-		try {
-			int t = smc.delete("reply.delReply", no);
-			if(t==1){
-				return true;
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
+		
+		int t = session.delete("reply.delReply", no);
+		if(t==1){
+			return true;
 		}
+		
 		return false;
 	}
 	
 	public boolean upReply(ReplyBean bean){		
-		try {
-			int t = smc.update("reply.upReply",bean);
-			if(t==1){
-				return true;
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
+		
+		int t = session.update("reply.upReply",bean);
+		if(t==1){
+			return true;
 		}
+		
 		return false;
 	}
 	
 	public int countReply(int gno){
-		int size = 0;
-		try {
-			size = Integer.parseInt(smc.queryForObject("reply.replyCount",gno).toString());
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+		int size = session.selectOne("reply.replyCount",gno);
+		
 		return size;
 	}
 	
 	public List<ReplyBean> pageReply(int end, int gno){
-		List<ReplyBean> list = null;
 		HashMap<String, Integer> map = new HashMap<String, Integer>();
 		map.put("end", end);
 		map.put("gno", gno);
-		try {
-			list = smc.queryForList("reply.pageReply", map);
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+		List<ReplyBean> list = session.selectList("reply.pageReply", map);
+		
 		return list;
 	}
 }

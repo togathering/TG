@@ -1,37 +1,34 @@
 package com.tg.common.dao;
 
-import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.List;
 
-import com.ibatis.sqlmap.client.SqlMapClient;
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
+
 import com.tg.common.beans.InviteGroupBean;
-import com.tg.iba.MySqlMapConfig;
 
 public class InviteGroupDAO {
-	SqlMapClient smc;
+
+	@Autowired
+	SqlSession session;
 	
 	public InviteGroupDAO() {
-		smc = MySqlMapConfig.getSqlMapInstance();
+		
 	}
 	
 	public boolean invite(InviteGroupBean bean){
-		try {
-			smc.insert("invite.invite", bean);
+		
+		int t = session.insert("invite.invite", bean);
+		if(t==1){
 			return true;
-		} catch (SQLException e) {
-			e.printStackTrace();
 		}
+		
 		return false;
 	}
 	
 	public List<InviteGroupBean> loadInvite(String id){
-		List<InviteGroupBean> list = null;
-		try {
-			list = smc.queryForList("invite.load", id);
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+		List<InviteGroupBean> list = session.selectList("invite.load", id);
 		
 		return list;
 	}
@@ -42,14 +39,11 @@ public class InviteGroupDAO {
 		map.put("gno", gno);
 		map.put("fid", fid);
 		
-		try {
-			int t = smc.delete("invite.del", map);
-			if(t==1){
-				return true;
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
+		int t = session.delete("invite.del", map);
+		if(t==1){
+			return true;
 		}
+		
 		return false;
 	}
 }
