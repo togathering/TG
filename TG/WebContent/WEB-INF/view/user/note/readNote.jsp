@@ -5,7 +5,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>Insert title here</title>
-<script type="text/javascript" src="tg/js/jquery.js"></script>	
+
+<script type="text/javascript" src="js/jquery.js"></script>	
+
 <script type="text/javascript">
 	
 	function showBt() {
@@ -17,6 +19,15 @@
 	$(document).ready(function () {
 		showBt();
 	});
+	
+	// 쪽지 쓸수 있는 팝업창 생성 
+	function msg(friendId, friendNick) {
+		var id = friendId;
+		var nick = friendNick; 
+		
+		window.open('writeNote?id='+id+'&nick='+nick,'',
+					'width=400, height=450, screenX=400, screenY=130, resizable=no');
+	}
 	
 </script>
 
@@ -80,21 +91,25 @@ font-family:notokr-demilight !important;
    }
 </style>
 
+
+
 </head>
 <body>
 	<div>
-		쪽지번호 : ${bean.noteNo}<br>
-		보낸사람 : ${bean.senderId}<br>
-		받은시간 : ${bean.noteDate}<br>
-		쪽지내용 :<br> <pre>${bean.noteContent}</pre>
-	
+		쪽지번호 : ${noteBean.noteNo}<br>
+		보낸사람 : ${noteBean.senderId}<br>
+		받은시간 : ${noteBean.noteDate}<br>
+		쪽지내용 :<br> <pre>${noteBean.noteContent}</pre>
 	</div>
 	
-	<form action="" method="post">
-		<input type="hidden" id="noteNo" name="noteNo" value="${bean.noteNo}"></a>
-		<input type="submit" id="delete" class="sm_button" value="삭제하기"></a>
-	</form>
-	<input type="button" id="reply" class="sm_button" style="display: " value="답장하기">
+	<form action="deleteNote" method="post">
+		<input type="hidden" id="noteNo" name="noteNo" value="${noteBean.noteNo}">
+		<input type="submit" id="delete" class="sm_button" value="삭제하기">
+	</form>	
+	
+
+	<input type="button" id="reply" class="sm_button" style="display: " value="답장하기" 
+			onclick="msg('${noteBean.senderId }', '${noteBean.nick }')">
 	
 </body>
 </html>

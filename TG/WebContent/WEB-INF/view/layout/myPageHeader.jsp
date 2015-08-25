@@ -15,7 +15,7 @@
     <li class="t"><a href="myhost">호스트내역</a></li>
     <li class="t"><a href="myFriend">친구목록</a></li>
     <li class="t"><a href="invite">초대그룹</a></li>
-    <li class="t"><a href="noteListAction.do">쪽지</a></li>
+    <li class="t"><a href="noteList">쪽지</a></li>
    </ul></div>
 </body>
 </html>

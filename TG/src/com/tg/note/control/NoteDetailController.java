@@ -22,7 +22,7 @@ public class NoteDetailController {
 	@Autowired
 	NoteBean noteBean;
 	
-	@RequestMapping("/noteDetail")
+	@RequestMapping("/noteDtail")
 	public String detail(@RequestParam(value="no", required=false) Integer noteNo, HttpServletRequest req) {
 		
 		noteBean = noteDao.detailNote(noteNo);
@@ -38,7 +38,7 @@ public class NoteDetailController {
 		
 		req.setAttribute("noteBean", noteBean);
 		
-		return "";
+		return "user/note/readNote";
 	}
 
 }

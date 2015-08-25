@@ -93,7 +93,9 @@
 	}
 	
 	$(document).ready(function() {
-		
+		if('${size}' == '0'){
+			alert('결과값이 없습니다');
+		}
 	});
 
 	

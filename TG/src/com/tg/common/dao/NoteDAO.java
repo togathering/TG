@@ -29,7 +29,15 @@ public class NoteDAO {
 
 	
 	public NoteBean detailNote(int noteNo){
-		NoteBean bean = (NoteBean) session.selectOne("note.spec", noteNo); 
+		NoteBean bean = (NoteBean) session.selectOne("note.detail", noteNo);
+		System.out.println("닉네임 테스트" + bean.getNick());
 		return bean;
+	}
+	
+	public boolean deleteNote(int noteNo){
+		int t = session.delete("note.delete", noteNo);
+		System.out.println("삭제된 행의 갯수는 " +t);
+		if(t==1) return true;
+		else return false;
 	}
 }

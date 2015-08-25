@@ -20,9 +20,9 @@
 	
 	
 	<!-- 쪽지 읽기 -->
-	<select id="spec" parameterType="int" resultType="com.tg.common.beans.NoteBean">
-		select senderId, receiverId, noteTitle, noteDate, noteNo, noteContent 
-		from note where noteNo = #{noteNo}
+	<select id="detail" parameterType="int" resultType="com.tg.common.beans.NoteBean">
+		select senderId, receiverId, noteTitle, noteDate, noteNo, noteContent, nick 
+		from note, member where note.senderId = member.id and noteNo = #{noteNo}
 	</select> 
 	
 	
