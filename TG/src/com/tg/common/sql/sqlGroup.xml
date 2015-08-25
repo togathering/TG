@@ -3,9 +3,9 @@
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="group">
 	<insert id="insert" parameterType="com.tg.common.beans.GroupBean">
-      insert into gxgroup (gno, ghost, gtitle, gloc, gintro, gday, gmax, gmin, gdate, gtag, gimg) 
+      insert into gxgroup (gno, ghost, gtitle, gloc, gintro, gday, gmax, gmin, gdate, gtag, gimg, goption) 
             values (gxgroup_seq.nextval, #{ghost}, #{gtitle}, #{gloc}, #{gintro}, 
-                  to_date(#{gdate},'yyyy-mm-dd-hh24-mi'), #{gmax}, #{gmin}, sysdate, #{gtag}, #{gimg})
+                  to_date(#{gdate},'yyyy-mm-dd-hh24-mi'), #{gmax}, #{gmin}, sysdate, #{gtag}, #{gimg}, #{goption})
 	</insert>
 	
 	<update id="join" parameterType="java.util.HashMap">

@@ -6,6 +6,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
+
 import com.ibatis.sqlmap.client.SqlMapClient;
 import com.tg.common.beans.GroupBean;
 import com.tg.iba.MySqlMapConfig;
@@ -13,6 +16,8 @@ import com.tg.iba.MySqlMapConfig;
 public class GroupDAO {
 	SqlMapClient smc;
 	
+	@Autowired
+	SqlSession session;
 	public GroupDAO() {
 		smc = MySqlMapConfig.getSqlMapInstance();
 		
@@ -20,12 +25,11 @@ public class GroupDAO {
 	}
 	
 	public boolean create(GroupBean bean){
-		try {
-			smc.insert("group.insert", bean);
+		
+		int t = session.insert("group.insert", bean);
+		if(t==1){
 			return true;
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+		}	
 		
 		return false;
 	}

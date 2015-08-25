@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beansProjectDescription>
+	<version>1</version>
+	<pluginVersion><![CDATA[3.7.0.201506251244-RELEASE]]></pluginVersion>
+	<configSuffixes>
+		<configSuffix><![CDATA[xml]]></configSuffix>
+	</configSuffixes>
+	<enableImports><![CDATA[false]]></enableImports>
+	<configs>
+		<config>WebContent/WEB-INF/mybatis-config.xml</config>
+	</configs>
+	<autoconfigs>
+		<config>WebContent/WEB-INF/tiles-servlet.xml</config>
+		<config>WebContent/WEB-INF/beans-servlet.xml</config>
+		<config>WebContent/WEB-INF/main-servlet.xml</config>
+	</autoconfigs>
+	<configSets>
+	</configSets>
+</beansProjectDescription>

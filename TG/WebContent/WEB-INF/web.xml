@@ -13,6 +13,7 @@
   			/WEB-INF/tiles-servlet.xml
   			/WEB-INF/main-servlet.xml
   			/WEB-INF/beans-servlet.xml
+  			/WEB-INF/mybatis-config.xml
   		</param-value>
   	</init-param>
   </servlet>
