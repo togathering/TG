@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMapConfig PUBLIC "-//iBATIS.com//DTD SQL Map Config 2.0//EN" "http://www.ibatis.com/dtd/sql-map-config-2.dtd" >
+<sqlMapConfig>
+  <properties resource="./com/tg/iba/conn.properties"/>
+  <settings
+  	cacheModelsEnabled="true"
+  	enhancementEnabled="true"
+  	lazyLoadingEnabled="true"
+  	maxRequests="30"
+  	maxSessions="10"
+  	maxTransactions="5"
+  	useStatementNamespaces="true"
+  />
+  
+  <transactionManager type="JDBC">
+  	<dataSource type="SIMPLE">
+  		<property name="JDBC.Driver" value="${driver}"/>
+  		<property name="JDBC.ConnectionURL" value="${url}"/>
+  		<property name="JDBC.Username" value="${user}"/>
+  		<property name="JDBC.Password" value="${password}"/>
+  	</dataSource>
+  </transactionManager>
+	<sqlMap resource="./com/tg/iba/sql/sqlLogin.xml"/>
+	<sqlMap resource="./com/tg/iba/sql/sqlJoin.xml"/>
+	<sqlMap resource="./com/tg/iba/sql/sqlGroup.xml"/>
+	<sqlMap resource="./com/tg/iba/sql/sqlParticipant.xml"/>
+	<sqlMap resource="./com/tg/iba/sql/sqlMember.xml"/>
+	<sqlMap resource="./com/tg/iba/sql/sqlReply.xml"/>
+	<sqlMap resource="./com/tg/iba/sql/sqlAdmin.xml"/> 
+	<sqlMap resource="./com/tg/iba/sql/sqlReport.xml"/> 
+	<sqlMap resource="./com/tg/iba/sql/sqlBoard.xml"/>
+	<sqlMap resource="./com/tg/iba/sql/sqlNote.xml"/>
+	<sqlMap resource="./com/tg/iba/sql/sqlFriend.xml"/>
+	<sqlMap resource="./com/tg/iba/sql/sqlWish.xml"/>
+	<sqlMap resource="./com/tg/iba/sql/sqlInviteGroup.xml"/>
+
+</sqlMapConfig>

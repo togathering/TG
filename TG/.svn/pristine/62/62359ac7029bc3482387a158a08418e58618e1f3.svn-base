@@ -1,0 +1,32 @@
+package com.tg.common.beans;
+
+public class ParticipantBean {
+	String gno;
+	String pid;
+	
+	public ParticipantBean() {
+	}
+
+	public ParticipantBean(String gno, String pid) {
+		this.gno = gno;
+		this.pid = pid;
+	}
+
+	public String getGno() {
+		return gno;
+	}
+
+	public void setGno(String gno) {
+		this.gno = gno;
+	}
+
+	public String getPid() {
+		return pid;
+	}
+
+	public void setPid(String pid) {
+		this.pid = pid;
+	}
+	
+	
+}

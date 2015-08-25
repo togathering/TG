@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="group">
+	<insert id="insert" parameterType="com.tg.common.beans.GroupBean">
+      insert into gxgroup (gno, ghost, gtitle, gloc, gintro, gday, gmax, gmin, gdate, gtag, gimg) 
+            values (gxgroup_seq.nextval, #{ghost}, #{gtitle}, #{gloc}, #{gintro}, 
+                  to_date(#{gdate},'yyyy-mm-dd-hh24-mi'), #{gmax}, #{gmin}, sysdate, #{gtag}, #{gimg})
+	</insert>
+	
+	<update id="join" parameterType="java.util.HashMap">
+		update gxgroup set gsum = #{gsum} where gno = #{gno}
+	</update>
+	
+	<delete id="delete" parameterType="int">
+		delete from gxgroup where gno=#{gno}
+	</delete>
+   
+	<select id="getGsum" parameterType="int" resultType="com.tg.common.beans.GroupBean">
+		select gsum, gmin, gmax from gxgroup where gno = #{gno}
+	</select>
+   
+	<select id="list" resultType="com.tg.common.beans.GroupBean">
+     	select gno, nick, gloc, gtitle, gstatus, gimg from member,gxgroup where ghost = id and gstatus != '모임종료'
+	</select>
+   
+	<select id="search" parameterType="java.util.HashMap" resultType="com.tg.common.beans.GroupBean">
+    	select gno, nick, gloc, gtitle, gstatus, gimg from member,gxgroup where ghost = id and gstatus != '모임종료' and replace(gtitle, ' ', '') like #{keyword} order by #{order}
+	</select>
+   
+   	<!-- 모임 상세페이지 출력 -->
+	<select id="info" parameterType="int" 
+						resultType="com.tg.common.beans.GroupBean">
+		select ghost, gtitle, gday, gloc, gstatus, gmin, gmax, gimg, gintro, gsum, nick from member, gxgroup 
+		where ghost = id and gno = #{gno}
+	</select>
+	
+	<!-- 날짜로 모임검색 -->
+	<select id="selectDay" parameterType="java.lang.String" resultType="com.tg.common.beans.GroupBean">
+		select gno, nick, gloc, gtitle, gstatus, gimg from member,gxgroup where ghost = id and gstatus != '모임종료' and gday like #{gday} order by gdate
+	</select>
+
+	<!-- 회원이 참여중인 모임 출력 -->
+	<select id="joinGx" parameterType="java.lang.String" resultType="com.tg.common.beans.GroupBean">
+		select gno, ghost, gtitle, gloc, gintro, gday, gmax, gmin, gimg, gdate, gtag, gstatus, gsum
+		from gxgroup natural join participant 
+		where pid=#{id} order by gday
+	</select>
+	<select id="joinNum" parameterType="java.lang.String" resultType="int">
+		select count(gno) from gxgroup natural join participant where pid=#{id}
+	</select>
+	
+	<!-- 회원이 호스트인 모임출력 -->
+	<select id="hostGx" parameterType="java.lang.String" resultType="com.tg.common.beans.GroupBean">
+		select gno, ghost, gtitle, gloc, gintro, gday, gmax, gmin, gimg, gdate, gtag, gstatus, gsum
+		from gxgroup 
+		where ghost=#{id} order by gday
+	</select>
+	<select id="hostNum" parameterType="java.lang.String" resultType="int">
+		select count(gno) from gxgroup where ghost=#{id}
+	</select>
+	
+	<!-- 모임참여 -->
+	<update id="joinG" parameterType="java.util.HashMap">
+		update gxgroup set gsum = #{gsum}, gstatus=#{gstatus} where gno = #{gno}
+	</update>
+	
+	<!-- 모임종료 -->
+	<update id="endGx" parameterType="java.lang.String">
+		update gxgroup set gstatus=#{value} where gday&lt;sysdate 
+	</update>
+	<!-- 관리자페이지 모임명으로 모임 검색 -->
+	<select id="MsearchTitle" parameterType="java.lang.String" resultType="com.tg.common.beans.GroupBean">
+		select gno, gtitle, gdate, gday, gsum from gxgroup where gtitle like #{gtitle}
+	</select>
+</mapper>
+
+
+	

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- dao클래스들 -->
+	<bean class="com.tg.common.dao.JoinDAO" id="joinDao"/>
+	<bean class="com.tg.common.dao.LoginDAO" id="loginDao"/>
+	<bean class="com.tg.common.dao.GroupDAO" id="groupDao"/>
+	<bean class="com.tg.common.dao.MemberDAO" id="memberDao"/>
+	<bean class="com.tg.common.dao.ParticipantDAO" id="participantDao"/>
+	<bean class="com.tg.common.dao.WishDAO" id="wishDao"/>
+	<bean class="com.tg.common.dao.ReplyDAO" id="replyDao"/>
+	<bean class="com.tg.common.dao.FriendDAO" id="friendDao"/>
+	<bean class="com.tg.common.dao.NoteDAO" id="noteDao"/>
+	<bean class="com.tg.common.dao.InviteGroupDAO" id="inviteGroupDao"/>
+	<bean class="com.tg.common.dao.ReportDAO" id="reportDao"/>
+
+	
+	<!-- 빈즈 클래스들 -->
+	<bean class="com.tg.common.beans.GroupBean" id="groupBean"/>
+	<bean class="com.tg.common.beans.WishBean" id="wishBean"/>
+	<bean class="com.tg.common.beans.ReplyBean" id="replyBean"/>
+	<bean class="com.tg.common.beans.FriendBean" id="friendBean"/>
+
+	<bean class="com.tg.common.beans.ReportBean" id="reportBean"/>
+	<bean class="com.tg.common.beans.NoteBean" id="noteBean"/>
+
+</beans>

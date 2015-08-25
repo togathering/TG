@@ -1,0 +1,44 @@
+package com.tg.note.control;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.apache.ibatis.annotations.Param;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.tg.common.beans.NoteBean;
+import com.tg.common.dao.NoteDAO;
+
+@Controller
+public class NoteSendController{
+	
+	@Autowired
+	NoteBean noteBean;
+	
+	@Autowired
+	NoteDAO noteDao;
+
+	@RequestMapping("/noteSendAction")
+	public String noteSend(HttpServletRequest req){
+
+		// 데이터 가공
+		String senderId = (String) req.getSession().getAttribute("id"); 
+		String receiverId = req.getParameter("receiverId");
+		String noteTitle = req.getParameter("noteTitle");
+		String noteContent = req.getParameter("noteContent");
+		
+		// noteBean 객체에 id, content, title, receiverId 값 저장
+
+		noteBean.setSenderId(senderId);
+		noteBean.setNoteContent(noteContent);
+		noteBean.setNoteTitle(noteTitle);
+		noteBean.setReceiverId(receiverId);
+		
+		// insertNote() 메소드 호출
+		noteDao.insertNote(noteBean);
+		
+		// 페이지 이동
+		return "user/main/main";
+	}
+}

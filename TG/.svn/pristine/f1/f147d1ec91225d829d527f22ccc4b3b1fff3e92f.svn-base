@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd" >
+<sqlMap namespace="note">
+	<insert id="insert" parameterClass="com.tg.common.beans.NoteBean">
+		insert into note (noteNo, senderId, receiverId, noteTitle, noteContent, noteDate) 
+				values (gxgroup_seq.nextval, #senderId#, #receiverId#, #noteTitle#, 
+						#noteContent#, sysdate)
+	</insert>
+	
+	<!-- 총 쪽지 갯수 -->
+<!-- 	<select id="userCnt" parameterClass=""  resultClass="java.lang.Integer">
+		select count(*) from note where senderId = #senderId#
+	</select> -->
+	
+	<select id="select" parameterClass="java.lang.String" resultClass="com.tg.common.beans.NoteBean">
+		select senderId, noteTitle, noteDate, noteNo from note 
+		where receiverId = #receiverId# 
+		order by noteDate desc
+	</select>
+
+	<delete id="delete" parameterClass="java.lang.Integer">
+		delete from note 
+		where noteNo=#noteNo#
+	</delete>
+	
+	<select id="spec" parameterClass="java.lang.Integer" resultClass="com.tg.common.beans.NoteBean">
+		select senderId, receiverId, noteTitle, noteDate, noteNo, noteContent from note 
+		where noteNo = #noteNo# 
+	</select>
+</sqlMap>

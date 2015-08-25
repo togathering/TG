@@ -1,0 +1,82 @@
+<%@page import="kr.co.ddam.model.dao.GroupDAO"%>
+<%@page import="kr.co.ddam.model.beans.GroupBean"%>
+<%@page import="java.util.ArrayList"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<%@taglib uri="http://struts.apache.org/tags-tiles" prefix="tiles" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<link rel="stylesheet" type="text/css" href="tg/css/list.css">
+<link rel="stylesheet" type="text/css" media="all" href="tg/css/styleMy.css">
+<title>Today, ToGathering, Together</title>
+<script type="text/javascript">
+	function cancelGx(gno) {
+		location.href=  'cancelGx.do?gno='+<%= request.getParameter("gno")%>;
+		alert(<%= request.getParameter("gno") %>);	
+	}
+</script>
+
+<% 
+	String id = (String)session.getAttribute("id");
+	GroupDAO dao = new GroupDAO();
+	ArrayList<GroupBean> gx = dao.joinGx(id);
+	int count = gx.size();
+	int num = dao.joinNum(id);
+%>
+
+</head>
+<body>
+	<div style="z-index: 2;">
+		<tiles:insert attribute="header" />
+	</div>
+	<br><br>
+	<div>
+		<tiles:insert attribute="myPageHeader"/>
+	</div>
+	<section class="listings">
+		<form id="form" style="padding-top: 20px; text-align: center;">
+		<div class="wrapper"><h1>참가 내역</h1><br><br>
+		<font color="#add">현재 <%= num %>개의 모임에 참여중입니다</font><br><br>
+			<table id="joinGx" style="width: 80%; margin: 20px auto;">
+				<tr style="height: 40px; background-color: #40C4AD; border: 1px solid lightgray; font-weight: bold;">
+					<td hidden="true">모임번호</td>
+					<td>모임이름</td>
+					<td>개최자</td>
+					<td>장소</td>
+					<td>시간</td>
+					<td>최소인원</td>
+					<td>최대인원</td>
+					<td>참여인원</td>
+					<td>모집상태</td>
+					<td style="width: 100px; padding-top: 8px;"><font style="text-align: center;">참여취소</font></td>
+				</tr>
+				<% 
+				String time[]=null;
+				for(int i=0; i<count; i++){
+				 %>
+				<tr style="height: 80px; text-align: center; border: 1px; border: 1px solid lightgray;" >
+					<td hidden="true" value="gno"><%= gx.get(i).getGno() %></a></td>
+					<td><a style="color: gray;" href="groupinfo.do?gno=<%= gx.get(i).getGno() %>"><%= gx.get(i).getGtitle() %></font></td>
+					<td><%= gx.get(i).getGhost() %></font></td>
+					<td><%= gx.get(i).getGloc() %></td>
+					<% time = gx.get(i).getGday().split(" "); %>
+					<td><%= time[0] %><br><%= time[1] %></td>
+					<td><%= gx.get(i).getGmin() %></td>
+					<td><%= gx.get(i).getGmax() %></td>
+					<td><%= gx.get(i).getGsum() %></td>
+					<td><%= gx.get(i).getGstatus() %></td>
+					<td style="padding-top: 15px;"><a href="cancelGx.do?gno=<%= gx.get(i).getGno() %>">
+					<input type="button" id="cancel" class="button" value="취소" ></a></td>
+				</tr>
+				<% } %>
+			</table>
+		</div>
+		</form>
+		</section> <!--  end listing section  -->
+	<div style="position: relative; top: 30px">
+		<tiles:insert attribute="footer" />
+	</div>
+</body>
+</html>

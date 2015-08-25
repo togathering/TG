@@ -1,0 +1,152 @@
+/* 
+Flex Template 
+http://www.templatemo.com/preview/templatemo_406_flex 
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, 
+pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, 
+small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, 
+form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, 
+details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, 
+summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;	
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body {
+  line-height: 1;
+}
+
+h2{
+	font-size: 18px;
+	margin-top: 20px;
+}
+
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle;
+}
+
+button,
+input {
+  line-height: normal;
+  *overflow: visible;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+body {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: .83em;
+  line-height: 1.75;
+  color: #666666;
+  background-color: white;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+button,
+input,
+select,
+textarea {
+  border: 1px solid #d5d5d5;
+  outline: 0;
+  padding: 10px 12px;
+  color: #666666;
+}
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #666666;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.contact-info {
+  margin-top: 40px;
+  
+}
+
+
+.contact-form input .input {
+  width: 60%;
+  margin-bottom: 15px;
+}
+.contact-form textarea .txtarea{
+  font-size:100%;	
+  width: 60%;
+  max-width: 60%;
+  height: 120px;
+  margin-bottom: 15px;
+}
+
+.contact-form .mainBtn {
+  margin-top: 15px;
+  color: white;
+  background-color: #ec523f;
+  text-transform: uppercase;
+  border: 0;
+}
+
+#go-top {
+  background-color: #ec523f;
+  color: white;
+  padding: 15px 40px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+#footer {
+  margin-top: 130px;
+}

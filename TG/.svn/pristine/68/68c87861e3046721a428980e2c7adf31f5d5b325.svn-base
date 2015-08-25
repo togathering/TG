@@ -1,0 +1,15 @@
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+	 <table style="width: 600px;" id="qList">
+				<tr>
+					<th style="width: 400px">문의제목</th>
+					<th style="width: 130px">날짜</th>
+				</tr>
+		<c:forEach  items='${list }' var='qList' >
+				<tr>
+					<td align="center"><a href="qnaReplyConfirm?qno=${qList.qno }" style="color: gray;">${qList.qtitle }</a></td>
+					<td align="center">${qList.qdate }</td>
+				</tr>
+		</c:forEach>		
+			</table>

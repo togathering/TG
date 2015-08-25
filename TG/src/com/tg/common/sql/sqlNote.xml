@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="note">
+	
+	<!-- 쪽지보내기 -->
+	<insert id="insert" parameterType="com.tg.common.beans.NoteBean">
+		insert into note (noteNo, senderId, receiverId, noteTitle, noteContent, noteDate) 
+				values (gxgroup_seq.nextval, #{senderId}, #{receiverId}, #{noteTitle}, 
+						#{noteContent}, sysdate)
+	</insert>
+	
+	
+	<!-- 전체쪽지 조회 -->
+	<select id="select" parameterType="String" resultType="com.tg.common.beans.NoteBean">
+		select senderId, noteTitle, noteDate, noteNo from note 
+		where receiverId = #{receiverId} 
+		order by noteDate desc
+	</select>
+	
+	
+	<!-- 쪽지 읽기 -->
+	<select id="spec" parameterType="int" resultType="com.tg.common.beans.NoteBean">
+		select senderId, receiverId, noteTitle, noteDate, noteNo, noteContent 
+		from note where noteNo = #{noteNo}
+	</select> 
+	
+	
+	<!-- 쪽지 삭제 -->	
+	<delete id="delete" parameterType="int">
+		delete from note where noteNo = #{noteNo}
+	</delete>
+
+</mapper>
+
+
+	

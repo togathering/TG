@@ -1,0 +1,63 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<%@taglib uri="http://struts.apache.org/tags-tiles" prefix="tiles"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<script type="text/javascript" src="tg/js/jquery.js"></script>
+<script type="text/javascript" src="tg/js/ajax.js"></script>
+<script type="text/javascript">
+	function loadInvite() {
+		$.ajax({url:"invitePage.do", type:"POST", dataType:"text",
+			success:function(data){
+				var table = document.getElementById('inviteTable');
+				table.innerHTML = data;
+			}
+		});
+	}
+	
+	function delInvite(sendId, gno, reId) {
+		alert(sendId +','+ gno);
+		$.ajax({url:"delInvite.do", type:"POST", data: "id="+sendId+"&gno="+gno+"&fid="+reId, dataType:"text",
+			success:function(data){
+				var table = document.getElementById('inviteTable');
+				table.innerHTML = data;
+			}
+		});
+	}
+	
+	$(document).ready(function() {
+		loadInvite();
+	})
+</script>
+<title>Insert title here</title>
+</head>
+<body>
+	<div style="z-index: 2;">
+		<tiles:insert attribute="header" />
+	</div>
+	<br><br>
+	<div>
+		<tiles:insert attribute="myPageHeader"/>
+	</div>
+	<div>
+		<h2>그룹에 초대되었어요~</h2>
+		<hr>
+		
+		<table style="width: 70%; margin: 20px auto;">
+			<tr style="height: 30px; background-color: #40C4AD; border: 1px solid lightgray; font-weight: bold;">
+				<th width="220px">나를 초대한 사람</th>
+				<th width="150px">그룹 제목</th>
+				<th width="100px">살펴보기/거절</th>
+			</tr>
+		</table>
+		<table style="width: 70%; margin: 20px auto;" id="inviteTable">
+			
+		</table>
+	</div>	
+	<div style="position: relative; top: 30px">
+		<tiles:insert attribute="footer" />
+	</div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+div#side{ 
+	 height:30px; background:#40C4AD; text-align: left; font-size: 1.2em;
+	position:ebsolute; top:0; left:0; margin-left:0px; weigtht: 100px; padding-left:200px;}
+	.t { border: 1px; }
+	ul{
+	 margin: 100px;
+	 padding: 0px;
+	 list-style: none;
+	}
+	li {
+	 margin:0px;
+	 padding:0px;
+	 width:150px;
+	 float:left;
+	}
+		.button{
+	font-family: 'Source Sans Pro', sans-serif;
+  	background-color: #53e3a6;
+	 margin:0 auto 3px auto; 
+	  border: 0;
+	  color: white;
+	  border-radius: 1px;
+	  width: 10%;
+	  min-width:80px;
+	  max-width:150px;
+	  height: 40px;
+	  cursor: pointer;
+	  font-size: 16px;
+	}
+
+.button:hover {
+  background-color: rgba(83,227,166,0.8);
+}
+
+.button:focus {
+  background-color: #21c982;
+}

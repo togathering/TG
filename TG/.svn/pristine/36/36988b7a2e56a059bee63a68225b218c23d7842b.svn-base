@@ -1,0 +1,274 @@
+/** basic default styles **/
+html { margin: 0; padding: 0; }
+
+body { 
+height: 101%; 
+font-size: 62.5%; 
+color: #333; 
+background: #fff url('images/body-bg.jpg') 0px 0px repeat; 
+padding-top: 10px; 
+}
+
+a { color: #4681da; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+h1 {
+letter-spacing: -0.04em;
+font-weight: bold;
+font-size: 2.44em;
+margin-bottom: 10px;
+}
+
+h2 { 
+border-bottom: 1px solid #ddd; 
+border-top: 1px solid #ddd; 
+color: #363636;
+font-size: 2.6em; 
+line-height: 1.8em; 
+font-weight: 500; 
+margin-top: 25px; 
+margin-bottom: 25px; 
+padding: 12px 0; 
+text-align: center; 
+}
+
+h3 {
+letter-spacing: -0.04em;
+font-weight: bold;
+font-size: 1.44em;
+margin-bottom: 10px;
+}
+
+span.chyron { font-size: 1.2em; padding-top: 10px; }
+
+/** main blocks **/
+#container { 
+display: block;
+max-width: 800px;
+margin: 0 auto; 
+margin-top: 5px; 
+margin-bottom: 66px;
+padding: 20px 35px 20px 15px; 
+background: #fff; 
+border-radius: 6px; 
+-webkit-border-radius: 6px; 
+-moz-border-radius: 6px;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box; 
+box-sizing: border-box;  
+}
+
+
+/** the form elements **/
+#hongkiat-form { box-sizing: border-box; }
+
+#hongkiat-form .txtinput { 
+display: block;
+/* font-family: "Helvetica Neue", Arial, sans-serif; */
+border-style: solid;
+border-width: 1px;
+border-color: #dedede;
+margin-bottom: 20px;
+font-size: 1.1em;
+padding: 10px 10px;
+width: 95%;
+color: #777;
+box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset;
+-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset;
+-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset; 
+transition: border 0.15s linear 0s, box-shadow 0.15s linear 0s, color 0.15s linear 0s;
+-webkit-transition: border 0.15s linear 0s, box-shadow 0.15s linear 0s, color 0.15s linear 0s;
+-moz-transition: border 0.15s linear 0s, box-shadow 0.15s linear 0s, color 0.15s linear 0s;
+-o-transition: border 0.15s linear 0s, box-shadow 0.15s linear 0s, color 0.15s linear 0s;
+}
+
+#hongkiat-form .txtinput:focus { 
+color: #333;
+border-color: rgba(41, 92, 161, 0.4);
+box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset, 0 0 8px rgba(41, 92, 161, 0.6);
+-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset, 0 0 8px rgba(41, 92, 161, 0.6);
+-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset, 0 0 8px rgba(41, 92, 161, 0.6);
+outline: 0 none; 
+}
+
+
+
+#hongkiat-form textarea {
+display: block;
+font-family: "Helvetica Neue", Arial, sans-serif;
+border-style: solid;
+border-width: 1px;
+border-color: #dedede;
+margin-bottom: 15px;
+font-size: 1.5em;
+padding: 11px 11px;
+width: 94.7%;
+height: 420px;
+color: #777;
+box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset;
+-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset;
+-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset; 
+transition: border 0.15s linear 0s, box-shadow 0.15s linear 0s, color 0.15s linear 0s;
+-webkit-transition: border 0.15s linear 0s, box-shadow 0.15s linear 0s, color 0.15s linear 0s;
+-moz-transition: border 0.15s linear 0s, box-shadow 0.15s linear 0s, color 0.15s linear 0s;
+-o-transition: border 0.15s linear 0s, box-shadow 0.15s linear 0s, color 0.15s linear 0s;
+}
+#hongkiat-form textarea:focus {
+color: #333;
+border-color: rgba(41, 92, 161, 0.4);
+box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset, 0 0 8px rgba(40, 90, 160, 0.6);
+-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset, 0 0 8px rgba(40, 90, 160, 0.6);
+-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset, 0 0 8px rgba(40, 90, 160, 0.6);
+outline: 0 none; 
+}
+#hongkiat-form textarea.txtblock {
+}
+
+#hongkiat-form #slider { width: 80%; }
+
+#hongkiat-form #aligned { 
+box-sizing: border-box; 
+float: left; 
+width: 90%; 
+margin-left: 10%;
+margin-right: 10% 
+}
+#hongkiat-form #aside {
+	float: left;
+	width: 250px;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+#wrapping { width: 100%; box-sizing: border-box; }
+
+
+select.selmenu {
+font-size: 17px;
+color: #676767;
+padding: 9px !important;
+border: 1px solid #aaa;
+width: 200px;
+}
+
+/** custom buttons **/
+
+#buttons { display: block; padding-top: 10px; }
+#buttons #save {
+display: block;
+float: left;
+color: #515151;
+text-shadow: -1px 1px 0px #fff;
+margin-right: 20px;
+height: 3em;
+padding: 0 1em;
+outline: 0;
+font-weight: bold;
+font-size: 1.3em;
+white-space: nowrap;
+word-wrap: normal;
+vertical-align: middle;
+cursor: pointer;
+-moz-border-radius: 2px;
+-webkit-border-radius: 2px;
+border-radius: 2px;
+background-color: #fff;
+background-image: -moz-linear-gradient(top,  rgb(255,255,255) 2%, rgb(240,240,240) 2%, rgb(222,222,222) 100%);
+background-image: -webkit-gradient(linear, left top, left bottom, color-stop(2%,rgb(255,255,255)), color-stop(2%,rgb(240,240,240)), color-stop(100%,rgb(222,222,222)));
+background-image: -webkit-linear-gradient(top,  rgb(255,255,255) 2%,rgb(240,240,240) 2%,rgb(222,222,222) 100%);
+background-image: -o-linear-gradient(top,  rgb(255,255,255) 2%,rgb(240,240,240) 2%,rgb(222,222,222) 100%);    background-image: -ms-linear-gradient(top,  rgb(255,255,255) 2%,rgb(240,240,240) 2%,rgb(222,222,222) 100%);
+background-image: linear-gradient(top,  rgb(255,255,255) 2%,rgb(240,240,240) 2%,rgb(222,222,222) 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dedede',GradientType=0 );
+border: 1px solid #969696;
+box-shadow: 0 1px 2px rgba(144, 144, 144, 0.4);
+-moz-box-shadow: 0 1px 2px rgba(144, 144, 144, 0.4);
+-webkit-box-shadow: 0 1px 2px rgba(144, 144, 144, 0.4);
+text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+}
+
+#buttons #resetbtn:hover {
+text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);	
+color: #818181;
+background-color: #fff;
+background-image: -moz-linear-gradient(top,  rgb(255,255,255) 2%, rgb(244,244,244) 2%, rgb(229,229,229) 100%);
+background-image: -webkit-gradient(linear, left top, left bottom, color-stop(2%,rgb(255,255,255)), color-stop(2%,rgb(244,244,244)), color-stop(100%,rgb(229,229,229)));
+background-image: -webkit-linear-gradient(top,  rgb(255,255,255) 2%,rgb(244,244,244) 2%,rgb(229,229,229) 100%);background-image: -o-linear-gradient(top,  rgb(255,255,255) 2%,rgb(244,244,244) 2%,rgb(229,229,229) 100%); background-image: -ms-linear-gradient(top,  rgb(255,255,255) 2%,rgb(244,244,244) 2%,rgb(229,229,229) 100%); background-image: linear-gradient(top,  rgb(255,255,255) 2%,rgb(244,244,244) 2%,rgb(229,229,229) 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 );
+border-color: #aeaeae;
+box-shadow: inset 0 1px 0 rgba(256,256,256,0.4),0 1px 3px rgba(0,0,0,0.5);
+}
+
+#one .txtinput { 
+display: block;
+/* font-family: "Helvetica Neue", Arial, sans-serif; */
+border-style: solid;
+border-width: 1px;
+border-color: #dedede;
+margin-bottom: 20px;
+font-size: 1em;
+padding: 9px 9px;
+width: 40%;
+color: #777;
+
+}
+
+#one .txtinput:focus { 
+color: #333;
+border-color: rgba(41, 92, 161, 0.4);
+box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset, 0 0 8px rgba(41, 92, 161, 0.6);
+-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset, 0 0 8px rgba(41, 92, 161, 0.6);
+-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset, 0 0 8px rgba(41, 92, 161, 0.6);
+outline: 0 none; 
+}
+
+#layer a.skip{overflow:hidden; position:absolute; top:0; right:0; width:0; height:0;}
+#layer .input_ty1{height:11px; margin:0; padding:4px 2px 3px 4px; border:1px solid #c7c7c7; color:#666666; font-size:11px;}
+#layer a,
+#layer a:visited,
+#layer a:active{text-decoration:none;}
+#layer a:hover{text-decoration:underline;}
+#layer .se2_icon_tool .se2_db_tab a,
+#layer .se2_icon_tool .se2_db_tab a:visited,
+#layer .se2_icon_tool .se2_db_tab a:active{color:#888888;}
+#layer .se2_icon_tool .se2_db_tab a:hover{color:#888888;text-decoration:underline;}
+#layer {position:absolute; width:195px; z-index:99999;}
+#layer {width:195px;padding-bottom:9px;border:1px solid #777;background:#ffffff;}
+#layer div{margin-bottom:10px;padding:7px 0 9px 0px;text-align:center;background:#f6f6f6; vertical-align:top;}
+#layer div button {border: 0 none; cursor: pointer; margin 0; padding:0;}
+#layer div button span {display:none;}
+#layer div .calendar-btn-prev-year{position:absolute;top:7px;left:5px;width:20px;height:18px;font:11px dotum; white-space:nowrap; letter-spacing:-1px;}
+#layer div .calendar-btn-prev-mon{position:absolute;top:7px;left:38px;width:20px;height:18px;font:11px dotum; white-space:nowrap; letter-spacing:-1px;}
+#layer div .calendar-title{float:none !important;font-family:verdana;font-size:12px;color:#383838;}
+#layer div .calendar-btn-next-mon{position:absolute;top:7px;left:130px;width:20px;height:18px;font:11px dotum; white-space:nowrap; letter-spacing:-1px;}
+#layer div .calendar-btn-next-year{position:absolute;top:7px;left:163px;width:20px;height:18px;font:11px dotum; white-space:nowrap; letter-spacing:-1px;}
+#layer table{width:175px;margin:0 auto;text-align:center;}
+#layer table *{font-family:tahoma !important;font-size:10px;}
+#layer table td{width:25px;height:16px;text-align:center;color:#000000;}
+#layer table td a{display:block;height:15px;padding-top:1px;color:#000000;}
+#layer table td a:hover{background:#edf4fe;color:#6d6d6d;text-decoration:none !important;font-family:tahoma !important;}
+#layer table td a:visited,
+#layer table td a:active{color:#000000;text-decoration:none !important;}
+#layer table .calendar-selected{background:#edf4fe;color:#6d6d6d;}
+#layer table .calendar-selected a{color:#6d6d6d;text-decoration:none;}
+#layer table .calendar-sun{color:#e82828;}
+#layer table .calendar-sun a,
+#layer table .calendar-sun a:visited,
+#layer table .calendar-sun a:hover,
+#layer table .calendar-sun a:active{color:#e82828 !important;}
+#layer table .calendar-today{background:#6595db;color:#ffffff;}
+#layer table .calendar-today a{font-weight:bold;text-decoration:none;color:#fff}
+#layer table .calendar-today a:hover,
+#layer table .calendar-today a:visited,
+#layer table .calendar-today a:active{background:#6595db;color:#fff}
+#layer table .calendar-prev-mon .calendar-date,
+#layer table .calendar-next-mon .calendar-date {display:none}
+#layer table .calendar-noselect span{background:none !important;color:#d1d1d1 !important;}
+#layer table .calendar-sun span{background:none !important;color:#eca9a9 !important;}
+
+
+/** @group clearfix **/
+.clearfix:after { content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }
+.clearfix { display: inline-block; }
+ 
+html[xmlns] .clearfix { display: block; }
+* html .clearfix { height: 1%; }

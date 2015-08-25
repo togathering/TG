@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd" >
+<sqlMap namespace="admin">
+<select id="login" parameterClass="java.lang.String" resultClass="java.lang.String">
+	select pass from admintable where id=#id#
+</select>
+<select id="showAllGroup"   resultClass="com.tg.common.beans.GroupBean">
+	select * from gxgroup
+</select>
+
+</sqlMap>

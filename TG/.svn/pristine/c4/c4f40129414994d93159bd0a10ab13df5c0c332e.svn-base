@@ -1,0 +1,40 @@
+package com.tg.common.dao;
+
+import java.sql.SQLException;
+
+import javax.servlet.http.HttpServletRequest;
+
+import com.ibatis.sqlmap.client.SqlMapClient;
+import com.tg.iba.MySqlMapConfig;
+
+public class AdminDAO {
+	SqlMapClient smc;
+	HttpServletRequest request;
+	public AdminDAO() {
+		smc = MySqlMapConfig.getSqlMapInstance();
+	}
+	
+	public boolean loginCheck(String id, String pass){
+		
+		try{
+		// 이전 세션 끊기 
+		request.getSession().removeAttribute("id");
+		request.getSession().removeAttribute("pass");
+		request.getSession().removeAttribute("nick"); 
+		}catch(NullPointerException e){
+			e.getStackTrace();
+		}
+			try {
+				System.out.println("id&pass="+id+"&"+pass);
+				
+				if(pass.equals(((String)smc.queryForObject("admin.login",id)))){
+					return true;
+				}
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+			return false;
+		}
+		
+
+}

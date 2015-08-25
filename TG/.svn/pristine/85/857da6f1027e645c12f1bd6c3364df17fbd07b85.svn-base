@@ -1,0 +1,40 @@
+package com.tg.friend.control;
+
+import javax.servlet.http.HttpSession;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.tg.common.beans.FriendBean;
+import com.tg.common.dao.FriendDAO;
+
+@Controller
+public class FriendControl {
+	
+	@Autowired
+	FriendBean fbean;
+	@Autowired
+	FriendDAO fdao;
+	
+	@RequestMapping("/addFriend")
+	public String addFriend(Model model, 
+			@RequestParam(value="search", required=false)String search, 
+			@RequestParam(value="friend", required=false)String fid,
+			HttpSession session){
+
+		String id = session.getAttribute("id").toString();
+		
+		fbean.setId(id);
+		fbean.setFid(fid);
+		
+		if(fdao.addFriend(fbean)){
+			System.out.println("친추성공");
+		}else{
+			System.out.println("친추실패");
+		}
+		return "redirect:searchuser?search="+search;
+	}
+}

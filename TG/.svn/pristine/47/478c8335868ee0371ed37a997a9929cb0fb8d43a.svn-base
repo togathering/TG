@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+	
+<tiles-definitions>
+	
+	<!-- 메인  -->
+	<definition name=".main" template="/WEB-INF/view/user/main/main.jsp">
+		<put-attribute name="header" value="/WEB-INF/view/layout/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/view/layout/footer.jsp" />
+	</definition>
+	
+	<!-- 로그인 -->
+	<definition name=".login" template="/WEB-INF/view/user/main/login.jsp">
+		<put-attribute name="header" value="/WEB-INF/view/layout/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/view/layout/footer.jsp" />
+	</definition>
+	
+	<!-- 회원가입 -->
+	<definition name=".join" template="/WEB-INF/view/user/main/join.jsp">
+		<put-attribute name="header" value="/WEB-INF/view/layout/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/view/layout/footer.jsp" />
+	</definition>
+	
+	<!-- 그룹만들기 -->
+	<definition name=".create" template="/WEB-INF/view/user/main/gxcreate.jsp">
+		<put-attribute name="header" value="/WEB-INF/view/layout/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/view/layout/footer.jsp" />
+	</definition>
+	
+	<!-- 그룹찾기 -->
+	<definition name=".tglist" template="/WEB-INF/view/user/grouplist/TGlist.jsp">
+		<put-attribute name="header" value="/WEB-INF/view/layout/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/view/layout/footer.jsp" />
+	</definition>
+	
+	<!-- 그룹정보 -->
+	<definition name=".tginfo" template="/WEB-INF/view/user/groupinfo/groupInfo.jsp">
+		<put-attribute name="header" value="/WEB-INF/view/layout/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/view/layout/footer.jsp" />
+	</definition>
+	
+	<!-- 프로필 -->
+	<definition name=".mypage" template="/WEB-INF/view/user/mypage/mypage.jsp">
+		<put-attribute name="header" value="/WEB-INF/view/layout/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/view/layout/footer.jsp" />
+		<put-attribute name="myPageHeader" value="/WEB-INF/view/layout/myPageHeader.jsp" />
+	</definition>
+	
+	<!-- 참가내역 -->
+	<definition name=".mygx" template="/WEB-INF/view/user/mypage/mygx.jsp">
+		<put-attribute name="header" value="/WEB-INF/view/layout/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/view/layout/footer.jsp" />
+		<put-attribute name="myPageHeader" value="/WEB-INF/view/layout/myPageHeader.jsp" />
+	</definition>
+	
+	<!-- 호스트내역 -->
+	<definition name=".myhost" template="/WEB-INF/view/user/mypage/myhost.jsp">
+		<put-attribute name="header" value="/WEB-INF/view/layout/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/view/layout/footer.jsp" />
+		<put-attribute name="myPageHeader" value="/WEB-INF/view/layout/myPageHeader.jsp" />
+	</definition>
+	
+	<!-- user가 보는 유저리스트 -->
+	<definition name=".userlist" template="/WEB-INF/view/user/memberlist/memberList.jsp">
+		<put-attribute name="header" value="/WEB-INF/view/layout/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/view/layout/footer.jsp" />
+	</definition>
+</tiles-definitions>

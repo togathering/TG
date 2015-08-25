@@ -1,0 +1,13 @@
+package com.tg.admin.group.control;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class GroupControl_admin {
+
+	@RequestMapping("/adminGroupList")
+	public String groupList(){
+		return ".adminGroup_List";
+	}
+}

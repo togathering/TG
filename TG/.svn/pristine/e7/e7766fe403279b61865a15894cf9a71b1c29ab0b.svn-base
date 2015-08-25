@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd" >
+<sqlMap namespace="qna">
+	<insert id="QnaInsert" parameterClass="com.tg.common.beans.QnaBean">
+		insert into qna (qno, id, qtitle, qcont, tel, qdate) 
+				values (qna_seq.nextval, #id#, #qtitle#, #qcont#, #tel#, sysdate)
+	</insert>
+	<select id="QnaList" parameterClass="java.lang.String" resultClass="com.tg.common.beans.QnaBean">
+		select * from qna where qstatus=#qstatus# order by qdate
+	</select>
+	<select id="QnaSelect" parameterClass="int" resultClass="com.tg.common.beans.QnaBean">
+		select * from qna 
+		where qno=#qno#
+	</select>
+	<update id="QnaReply" parameterClass="com.tg.common.beans.QnaBean">
+		update qna set rcont=#rcont#, rdate=sysdate, qstatus=#qstatus# where qno=#qno#
+	</update>
+	<select id="QnaReplyConfirm" parameterClass="java.util.HashMap" resultClass="com.tg.common.beans.QnaBean">
+		select * from qna where qstatus=#qstatus# and id=#id# order by qdate
+	</select>
+</sqlMap>

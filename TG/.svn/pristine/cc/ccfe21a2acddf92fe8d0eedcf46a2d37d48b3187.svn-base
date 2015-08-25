@@ -1,0 +1,25 @@
+package com.tg.common.dao;
+
+import java.sql.SQLException;
+
+import com.ibatis.sqlmap.client.SqlMapClient;
+import com.tg.common.beans.BoardBean;
+import com.tg.iba.MySqlMapConfig;
+
+public class BoardDAO {
+	SqlMapClient smc;
+	
+	public BoardDAO() {
+		smc = MySqlMapConfig.getSqlMapInstance();
+	}
+	
+	public boolean QnaInsert(BoardBean bean){
+		try {
+			smc.insert("board.QnaInsert", bean);
+			return true;
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return false;
+	}
+}

@@ -1,0 +1,5 @@
+package com.tg.admin.member.control;
+// 리스트 뿌려주기 
+public class List {
+
+}

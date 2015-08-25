@@ -1,0 +1,35 @@
+package com.tg.join.control;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.tg.common.beans.MemberBean;
+import com.tg.common.dao.JoinDAO;
+
+@Controller
+public class JoinControl{
+	
+	@RequestMapping("/joinpass")
+	public String memberJoin(@Param(value="nick")String nick, @Param(value="id")String id, @Param(value="pass")String pass, HttpServletRequest request){
+		
+		MemberBean bean = new MemberBean();
+		bean.setNick(nick);
+		bean.setId(id);
+		bean.setPass(pass);
+		
+		JoinDAO dao = new JoinDAO();
+		if(dao.checkJoin(id)){
+			request.setAttribute("join", "fail");
+			
+		}else{
+			dao.join(bean);
+			request.setAttribute("join", "success");
+		}
+		
+		return ".join";
+	}
+	
+}

@@ -1,0 +1,39 @@
+td, div, input, textarea, select, iframe {
+	font-size: 12;
+	font-family: ³ª´®°íµñ;
+	color: #474747;
+}
+
+.sfont {
+	font-family: tahoma;
+	font-size: 10;
+}
+
+.sgfont {
+	font-family: tahoma;
+	font-size: 10;
+	color: #bbbbbb;
+}
+
+.srfont {
+	font-family: tahoma;
+	font-size: 10;
+	color: #ff0000;
+}
+
+.srgfont {
+	font-family: tahoma;
+	font-size: 10;
+	color: #ff8989;
+}
+
+.searchingHere label.mainLabel  {
+	padding-left: 40%
+}
+
+
+.searchingHere table {
+	width:65%;
+	margin: 0 auto;	
+		
+}

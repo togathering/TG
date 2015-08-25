@@ -1,0 +1,46 @@
+package com.tg.login.control;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
+import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.tg.common.dao.LoginDAO;
+
+@Controller
+public class LoginControl {
+	
+	@RequestMapping("/loginpass")
+	public String loginForm(@Param(value="id")String id, @Param(value="pass")String pass, HttpSession session, HttpServletRequest request){
+		
+		String page = "";
+		LoginDAO dao = new LoginDAO();
+					
+		if(dao.checkLogin(id,pass)){
+			String nick = dao.loginNick(id);
+			session.setAttribute("nick", nick);
+			//세션로그인
+		    session.setAttribute("id", id);
+			session.setAttribute("pass", pass);	
+			request.setAttribute("login", "succcess");
+			page = "redirect:main";
+		}else{
+			request.setAttribute("login", "fail");
+			page = ".login";
+		}
+		
+		return page;
+	}
+	
+	@RequestMapping("/logoutpass")
+	public String logOut(HttpSession session){
+		
+		session.removeAttribute("id");
+		session.removeAttribute("pass");
+		session.removeAttribute("nick");
+		
+		return "redirect:main";
+	}
+}

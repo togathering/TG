@@ -1,0 +1,5 @@
+package com.tg.admin.member.control;
+// 아이디로 검색 
+public class Search {
+
+}

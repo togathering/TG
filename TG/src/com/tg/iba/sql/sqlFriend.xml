@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd" >
+<sqlMap namespace="friend">
+	<insert id="add" parameterClass="com.tg.common.beans.FriendBean">
+		insert into friend values (#id#,#fid#)
+	</insert>
+	<select id="friendRequest" parameterClass="java.lang.String" resultClass="com.tg.common.beans.FriendBean">
+		select id, fid from friend where fid = #id# 
+	</select>
+	<select id="friendList" parameterClass="java.util.HashMap" resultClass="com.tg.common.beans.FriendBean">
+		select id, fid from friend where id = #id# and fid = #fid#
+	</select>
+	
+	<delete id="delRequest" parameterClass="java.lang.String">
+		delete from friend where id = #id#
+	</delete>
+	
+	<delete id="delFriend" parameterClass="java.util.HashMap">
+		delete from friend where id = #id# and fid = #fid#
+	</delete>
+</sqlMap>

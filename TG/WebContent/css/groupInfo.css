@@ -1,0 +1,101 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300);
+
+/* 본고딕 폰트적용 */
+@import url(http://fonts.googleapis.com/css?family=Noto+Sans); 
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+* {
+  font-family: 'Noto Sans', sans-serif;
+  color: #616161;
+  font-weight: 300;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.4;
+} 
+
+
+/* <정식 구글웹폰트는 아니지만 early access로 구글에서 제공하는 무료 웹폰트들>
+1. 하나체
+Link : @import url(http://fonts.googleapis.com/earlyaccess/hanna.css);
+Example : font-family: 'Hanna', serif;
+
+2. 제주고딕
+Link : @import url(http://fonts.googleapis.com/earlyaccess/jejugothic.css);
+Example : font-family: 'Jeju Gothic', serif;
+
+3. 제주한라산
+Link : @import url(http://fonts.googleapis.com/earlyaccess/jejuhallasan.css);
+Example : font-family: 'Jeju Hallasan', serif;
+
+4. 제주명조
+Link : @import url(http://fonts.googleapis.com/earlyaccess/jejumyeongjo.css);
+Example : font-family: 'Jeju Myeongjo', serif;
+
+5. KoPub 바탕체
+Link : @import url(http://fonts.googleapis.com/earlyaccess/kopubbatang.css);
+Example : font-family: 'KoPub Batang', serif;
+
+6. 나눔 Brush
+Link : @import url(http://fonts.googleapis.com/earlyaccess/nanumbrushscript.css);
+Example : font-family: 'Nanum Brush Script', serif;
+
+7. 나눔 고딕체
+Link : @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+Example : font-family: 'Nanum Gothic', serif;
+
+8. 나눔 고딕 코딩
+Link : @import url(http://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css);
+Example : font-family: 'Nanum Gothic Coding', serif;
+
+9. 나눔 명조체
+Link : @import url(http://fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
+Example : font-family: 'Nanum Myeongjo', serif;
+
+10. 나눔 Pen Script
+Link : @import url(http://fonts.googleapis.com/earlyaccess/nanumpenscript.css);
+Example : font-family: 'Nanum Pen Script', serif; */
+
+
+/* @font-face란 ? 사용자가 해당 폰트를 가지고 있지 않다면 서버 다운로드 후 적용 가능 */
+
+/* @font-face {
+    font-family: '폰트명';
+    src: url('파일경로');
+    src: url('파일경로') format('파일형식'),
+         url('파일경로') format('파일형식');
+    font-style: normal;
+    font-weight: normal;
+} */
+
+@font-face {
+    font-family: 'lato-bold';
+    src: url('../fonts/lato-bold.eot');
+    src: url('../fonts/lato-bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lato-bold.woff') format('woff'),
+         url('../fonts/lato-bold.ttf') format('truetype'),
+         url('../fonts/lato-bold.svg#LatoBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'lato-regular';
+    src: url('../fonts/lato-regular.eot');
+    src: url('../fonts/lato-regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lato-regular.woff') format('woff'),
+         url('../fonts/lato-regular.ttf') format('truetype'),
+         url('../fonts/lato-regular.svg#LatRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'p22_corinthia';
+    src: url('../fonts/p22_corinthia.eot');
+    src: url('../fonts/p22_corinthia.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/p22_corinthia.woff') format('woff'),
+         url('../fonts/p22_corinthia.ttf') format('truetype'),
+         url('../fonts/p22_corinthia.svg#P22Corinthia') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

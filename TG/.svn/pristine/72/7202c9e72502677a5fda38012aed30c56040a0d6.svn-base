@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd" >
+<sqlMap namespace="log">
+	<select id="login" parameterClass="java.lang.String" resultClass="java.lang.String">
+		select pass from member where id=#value#
+	</select>
+	<select id="logInfo" parameterClass="java.lang.String" resultClass="java.lang.String">
+		select nick from member where id=#value#
+	</select>
+	<select id="logmy" parameterClass="java.lang.String" resultClass="com.tg.common.beans.MemberBeanIn" >
+		select id, pass, nick, tel, favo, loc, birth, intro, gender, insta, fbook from member where id=#value#
+	</select>
+	<update id="logPro" parameterClass="com.tg.common.beans.MemberBeanIn">
+		update member 
+		set nick=#nick#, pass=#pass#, tel=#tel#, favo=#favo#, loc=#loc#,birth=#birth#, 
+			intro=#intro#, gender=#gender#, insta=#insta#, fbook=#fbook# 
+		where id=#id#
+	</update>
+</sqlMap>

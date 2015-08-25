@@ -1,0 +1,31 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<link rel="stylesheet" type="text/css" href="css/list.css">
+<title>신고내용</title>
+<script type="text/javascript">
+	function reportOk(rno) {
+		location.href = "adminReportOk?no="+rno;
+		window.close();
+	}
+</script>
+</head>
+<body>
+	<h2 align="center">신고 내용</h2>
+	<form action="adminReportOk?" style="padding-left: 30px;" >
+		신고자 : <input type="text" class="t" readonly="readonly" value="${bean.reporter }"><br>
+		피신고자 : <input type="text" class="t" readonly="readonly" value="${bean.accused }"><br>
+		신고날짜 : ${bean.rdate }<br>
+		카테고리 : ${bean.category }<br>
+		내용 <br><textarea rows="10" cols="50" class="t" readonly="readonly" >${bean.content}</textarea><br>
+		<input hidden="true" type="text" name="upno" value="${rno}" ><br>
+		<div align="center">
+			<input type="submit" class="button" value="확인" onclick="reportOk('${rno}')">
+			<input type="button" class="button" value="보류" onclick="window.close()">
+		</div>
+	</form>
+</body>
+</html>

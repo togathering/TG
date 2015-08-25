@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<mvc:annotation-driven/>
+	<mvc:default-servlet-handler/>
+	
+	<!-- 컨트롤러 리턴값 조합 -->
+	<mvc:view-resolvers>
+		<mvc:jsp prefix="/WEB-INF/view/"/>
+	</mvc:view-resolvers>
+	
+	
+	<!-- 단순포워딩 -->
+	<mvc:view-controller path="/login" view-name=".login"/>
+	<mvc:view-controller path="/main" view-name=".main"/>
+	<mvc:view-controller path="/join" view-name=".join"/>
+	<mvc:view-controller path="/create" view-name=".create"/>
+	<mvc:view-controller path="/myFriend" view-name=".myfriend"/>
+	<mvc:view-controller path="/invite" view-name=".invite"/>
+	<mvc:view-controller path="/userlist" view-name=".userlist"/>
+	<mvc:view-controller path="/adminLogin" view-name=".adminLogin"/>
+	
+	<!-- 컨트롤러 스캔 -->
+	<context:component-scan base-package="com.tg"/>
+</beans>

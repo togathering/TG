@@ -1,0 +1,74 @@
+package com.tg.common.beans;
+
+import java.sql.Date;
+
+public class QnaBean {
+	private int qno;
+	private String id;
+	private String qtitle;
+	private String qcont;
+	private String tel;
+	private Date qdate;
+
+	public QnaBean() {
+	
+	}
+
+	public QnaBean(int qno, String id, String qtitle, String qcont,
+			String tel, Date qdate) {
+		this.qno = qno;
+		this.id = id;
+		this.qtitle = qtitle;
+		this.qcont = qcont;
+		this.tel = tel;
+		this.qdate = qdate;
+	}
+
+	public int getQno() {
+		return qno;
+	}
+
+	public void setQno(int qno) {
+		this.qno = qno;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getQtitle() {
+		return qtitle;
+	}
+
+	public void setQtitle(String qtitle) {
+		this.qtitle = qtitle;
+	}
+
+	public String getQcont() {
+		return qcont;
+	}
+
+	public void setQcont(String qcont) {
+		this.qcont = qcont;
+	}
+
+	public String getTel() {
+		return tel;
+	}
+
+	public void setTel(String tel) {
+		this.tel = tel;
+	}
+
+	public Date getQdate() {
+		return qdate;
+	}
+
+	public void setQdate(Date qdate) {
+		this.qdate = qdate;
+	}	
+}

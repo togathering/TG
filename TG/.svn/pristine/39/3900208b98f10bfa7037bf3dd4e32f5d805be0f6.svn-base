@@ -1,0 +1,104 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+	pageEncoding="EUC-KR"%>
+<%@taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles" %>
+<!DOCTYPE html>
+<html>
+<script type="text/javascript">
+	function checkValue() {
+		var nick = document.hongkiat.nick.value;
+		var tel = document.hongkiat.tel.value;
+		var pass = document.hongkiat.pass.value;
+		var intro = document.hongkiat.intro.value;
+	
+			if(nick.length==0){
+				alert('닉네임을 입력해주세요');
+				document.hongkiat.tel.focus();
+				return;
+			}
+			if(pass.length==0){
+				alert('비밀번호를 입력해주세요');
+				document.hongkiat.pass.focus();
+				return;
+			}
+			if(tel.length==0){
+				alert('전화번호을 입력해주세요');
+				document.hongkiat.nick.focus();
+				return;
+			}
+			if(intro.length>200){
+				alert("소개글이 너무 깁니다");
+				document.hongkiat.intro.focus();
+				return;
+			}
+	}
+</script>
+<head>
+
+<style type="text/css">
+
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<meta name="viewport"	content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>MY PAGE</title>
+<link rel="stylesheet" type="text/css" media="all" href="css/styleMy.css">
+<link rel="stylesheet" type="text/css" media="all" href="css/responsiveMy.css">
+
+
+</head>
+<body>
+	<div style="z-index: 2;"><tiles:insertAttribute name="header"/></div>
+	<br><br>
+	<div><tiles:insertAttribute name="myPageHeader"/></div>
+	
+	<div id="menu" class="t"><br>
+			<h2>프로필</h2>
+	<div id="main"
+		style="position: relative; top: 10px; margin-top: 10px; z-index: 1;">
+		<section id="container">
+			<span class="chyron"><em></em></span>
+			<form name="hongkiat" id="hongkiat-form" method="post" action="myupdate.do" >
+
+			<div class="_1">
+				<h3>닉네임</h3><br><h3>이메일</h3><br><h3>비밀번호</h3><br>
+				<h3>휴대전화</h3><br><h3>성별</h3><br><h3>생년월일</h3><br>
+				<h3>선호운동</h3><br><h3>활동지역</h3><br>
+				<h3>Instagram</h3><br><h3>Facebook</h3><br><h3>자기소개</h3>
+			</div>
+			
+				<div id="wrapping" class="clearfix">
+					<section id="aligned">
+	
+				<input type="text" id="nick" name="nick" class="txtinput" value="${my.nick }"><br>
+               	<input type="text" id="email" name="email" class="txtinput" readonly="readonly"   value="<%=session.getAttribute("id") %>"><br>
+               	<input type="password" id="pass" name="pass" class="txtinput" value="${my.pass }"><br>
+               	<input type="text" id="tel" name="tel" class="txtinput" value="${my.tel }"><br>
+               	<select id="gender" name="gender" tabindex="" class="sel" >
+               			<option selected value="male">남자</option>
+               			<option selected value="female">여자</option>
+               	</select><br><br>
+               
+               
+            	   <select id="year" name="year" tabindex="" class="selmenu">
+	            	   	<option></option>
+	            	   </select><br><br>
+         	 	<input type="text" name="favo" id="favo" tabindex="" class="txtinput" value="${my.favo }"><br>
+        		<input type="text" name="loc" id="loc" tabindex="" class="txtinput" value="${my.loc }"><br>
+        		<input type="text" name="insta" id="insta" tabindex="" class="txtinput" value="${my.insta }"><br>
+        		<input type="text" name="fb" id="fb" tabindex="" class="txtinput" value="${my.fbook }"><br>
+        		<textarea name="intro" id="intro" autocomplete="on"  tabindex="" class="txtblock" row="10" col="">
+         		${my.intro }
+         		</textarea>
+						<br style="clear: both;">
+						<section id="buttons">
+							<input type="submit" name="save" id="save" class="resetbtn"
+								value="수정하기" onclick="checkValue()" onresize="false"> <br style="clear: both;">
+						</section>
+					</section>
+				</div>
+				</form>
+			</section>		
+		</div>
+	</div>
+	<div style="position: relative; top: 30px"><tiles:insertAttribute name="footer"/></div>
+</body>
+</html>

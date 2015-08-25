@@ -1,0 +1,5 @@
+package com.tg.admin.member.control;
+// 검색어 추천
+public class Suggest {
+	
+}

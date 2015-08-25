@@ -1,0 +1,38 @@
+package com.tg.main.control;
+
+import java.util.ArrayList;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.apache.ibatis.annotations.Param;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.tg.common.beans.GroupBean;
+import com.tg.common.dao.GroupDAO;
+
+@Controller
+public class MainControl {
+	@Autowired
+	GroupDAO dao;
+	
+	@RequestMapping("/mainlist")
+	public String mainView(@Param(value="search")String keyword, Model model){
+		
+		ArrayList<GroupBean> list = new ArrayList<GroupBean>();
+
+		if(keyword == null || keyword.equals("")){
+			list = (ArrayList<GroupBean>) dao.listAll("gday");
+			model.addAttribute("list", list);
+			model.addAttribute("keyword", "");
+		}else{
+			list = (ArrayList<GroupBean>) dao.search(keyword, "gday");
+			model.addAttribute("list", list);
+			model.addAttribute("keyword", keyword);
+		}
+		return "user/main/mainlist";
+	}
+
+}

@@ -1,0 +1,73 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<%@taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles" %>
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/responsive.css">
+<link rel="stylesheet" type="text/css" href="css/search.css">
+
+ 
+<title>ToGathering : 우리집처럼 편안하게</title>
+<script type="text/javascript" src="js/ajax.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+	function loadlist() {
+		$.ajax({url:"mainlist", type:"POST", dataType:"text",
+			success:function(data){
+				var list = document.getElementById('list');
+				list.innerHTML = data;
+			}
+		});
+	}
+	
+	function movePage(){
+		var search = document.frm.search.value;
+		location.href = 'searchlist?search='+search;
+	}
+	
+	function gogroupinfo(gno){
+		location.href = 'groupinfo?gno='+gno;
+	}
+	
+	$(document).ready(function() {
+		loadlist();
+	});
+</script>
+</head>
+
+<body>
+<div><tiles:insertAttribute name="header"/></div>
+	<section class="hero" >
+		<section class="caption">
+			<h2 class="caption" >환영합니다!</h2>
+			<h3 class="properties">190개 활력인들의 독특한 모임에 참여해 보세요.</h3>			
+		</section>
+		<section>
+			<form class="frm" name="frm">
+				<input type="text" class="search" placeholder="검색 고고" name="search">
+				<button type="button" class="button" name="join_bt" onclick="movePage()">모임 검색</button>
+			</form>
+		</section>	
+	</section>
+	<video id="video-background" src="img/video.mp4" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
+	</video>
+	
+	
+	<!--hero 끝   //  list 시작  -->
+	
+	<section class="listings">
+	<div class="wrapper">
+		<ul class="properties_list" id="list">
+			
+		</ul>
+	</div>
+	</section>	<!--  end listing section  -->
+<div><tiles:insertAttribute name="footer"/></div>
+</body>
+</html>

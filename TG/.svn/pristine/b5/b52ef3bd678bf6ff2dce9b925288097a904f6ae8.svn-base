@@ -1,0 +1,35 @@
+package com.tg.main.control;
+
+import java.util.ArrayList;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.tg.common.beans.GroupBean;
+import com.tg.common.dao.GroupDAO;
+
+@Controller
+public class MainControl {
+	
+	@RequestMapping("/mainlist")
+	public String mainView(@Param(value="search")String keyword, HttpServletRequest request){
+		
+		GroupDAO dao = new GroupDAO();
+		ArrayList<GroupBean> list = new ArrayList<GroupBean>();
+
+		if(keyword == null || keyword.equals("")){
+			list = (ArrayList<GroupBean>) dao.listAll("gday");
+			request.setAttribute("list", list);
+			request.setAttribute("keyword", "");
+		}else{
+			list = (ArrayList<GroupBean>) dao.search(keyword, "gday");
+			request.setAttribute("list", list);
+			request.setAttribute("keyword", keyword);
+		}
+		return "user/main/mainlist";
+	}
+
+}

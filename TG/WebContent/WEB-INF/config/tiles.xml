@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+	
+<tiles-definitions>
+	
+	<!-- 메인  -->
+	<definition name=".main" template="/WEB-INF/view/user/main/main.jsp">
+		<put-attribute name="header" value="/WEB-INF/view/layout/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/view/layout/footer.jsp" />
+	</definition>
+	
+	<!-- 로그인 -->
+	<definition name=".login" template="/WEB-INF/view/user/main/login.jsp">
+		<put-attribute name="header" value="/WEB-INF/view/layout/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/view/layout/footer.jsp" />
+	</definition>
+	
+	<!-- 회원가입 -->
+	<definition name=".join" template="/WEB-INF/view/user/main/join.jsp">
+		<put-attribute name="header" value="/WEB-INF/view/layout/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/view/layout/footer.jsp" />
+	</definition>
+	
+	<!-- 그룹만들기 -->
+	<definition name=".create" template="/WEB-INF/view/user/main/gxcreate.jsp">
+		<put-attribute name="header" value="/WEB-INF/view/layout/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/view/layout/footer.jsp" />
+	</definition>
+	
+	<!-- 그룹찾기 -->
+	<definition name=".tglist" template="/WEB-INF/view/user/grouplist/TGlist.jsp">
+		<put-attribute name="header" value="/WEB-INF/view/layout/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/view/layout/footer.jsp" />
+	</definition>
+	
+	<!-- 그룹정보 -->
+	<definition name=".tginfo" template="/WEB-INF/view/user/groupinfo/groupInfo.jsp">
+		<put-attribute name="header" value="/WEB-INF/view/layout/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/view/layout/footer.jsp" />
+	</definition>
+	
+	<!-- 프로필 -->
+	<definition name=".mypage" template="/WEB-INF/view/user/mypage/mypage.jsp">
+		<put-attribute name="header" value="/WEB-INF/view/layout/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/view/layout/footer.jsp" />
+		<put-attribute name="myPageHeader" value="/WEB-INF/view/layout/myPageHeader.jsp" />
+	</definition>
+	
+	<!-- 친구목록 -->
+	<definition name=".myfriend" template="/WEB-INF/view/user/mypage/myfriend.jsp">
+		<put-attribute name="header" value="/WEB-INF/view/layout/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/view/layout/footer.jsp" />
+		<put-attribute name="myPageHeader" value="/WEB-INF/view/layout/myPageHeader.jsp" />
+	</definition>
+
+	<!-- 참가내역 -->
+	<definition name=".mygx" template="/WEB-INF/view/user/mypage/mygx.jsp">
+		<put-attribute name="header" value="/WEB-INF/view/layout/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/view/layout/footer.jsp" />
+		<put-attribute name="myPageHeader" value="/WEB-INF/view/layout/myPageHeader.jsp" />
+	</definition>
+	
+	<!-- 호스트내역 -->
+	<definition name=".myhost" template="/WEB-INF/view/user/mypage/myhost.jsp">
+		<put-attribute name="header" value="/WEB-INF/view/layout/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/view/layout/footer.jsp" />
+		<put-attribute name="myPageHeader" value="/WEB-INF/view/layout/myPageHeader.jsp" />
+	</definition>
+	
+	<!-- 초대받은그룹내역 -->
+	<definition name=".invite" template="/WEB-INF/view/user/mypage/invitePage.jsp">
+		<put-attribute name="header" value="/WEB-INF/view/layout/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/view/layout/footer.jsp" />
+		<put-attribute name="myPageHeader" value="/WEB-INF/view/layout/myPageHeader.jsp" />
+	</definition>
+	
+	<!-- user가 보는 유저리스트 -->
+	<definition name=".userlist" template="/WEB-INF/view/user/memberlist/memberList.jsp">
+		<put-attribute name="header" value="/WEB-INF/view/layout/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/view/layout/footer.jsp" />
+	</definition>
+	
+	<!-- 문의하기 -->
+	<definition name=".qna" template="/WEB-INF/view/user/qna/qna.jsp">
+		<put-attribute name="header" value="/WEB-INF/view/layout/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/view/layout/footer.jsp" />
+		<put-attribute name="myPageHeader" value="/WEB-INF/view/layout/myPageHeader.jsp" />
+		<put-attribute name="qnaSide" value="/WEB-INF/view/layout/qnaSide.jsp" />
+	</definition>
+	
+	<!-- 문의내역 -->
+	<definition name=".qnaList" template="/WEB-INF/view/user/qna/qnaList.jsp">
+		<put-attribute name="header" value="/WEB-INF/view/layout/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/view/layout/footer.jsp" />
+		<put-attribute name="myPageHeader" value="/WEB-INF/view/layout/myPageHeader.jsp" />
+		<put-attribute name="qnaSide" value="/WEB-INF/view/layout/qnaSide.jsp" />
+	</definition>
+	
+	<!-- 문의답변보기 -->
+	<definition name=".qnaReConfirm" template="/WEB-INF/view/user/qna/qnaReConfirm.jsp">
+		<put-attribute name="header" value="/WEB-INF/view/layout/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/view/layout/footer.jsp" />
+		<put-attribute name="myPageHeader" value="/WEB-INF/view/layout/myPageHeader.jsp" />
+		<put-attribute name="qnaSide" value="/WEB-INF/view/layout/qnaSide.jsp" />
+	</definition>
+	
+		<!-- admin login -->
+	<definition name=".adminLogin" template="/WEB-INF/view/admin/AdminLogin.jsp">
+		<put-attribute name="header" value="/WEB-INF/view/layout/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/view/layout/footer.jsp" />
+	</definition>
+
+	<!-- admin list -->
+	<definition name =".adminMember_List" template="/WEB-INF/view/admin/member/AdminMember_list.jsp">
+		<put-attribute name="adminHeader" value="/WEB-INF/view/layout/adminHeader.jsp"/>
+	</definition>
+	
+	<!-- admin board -->
+	<definition name =".adminBoard" template="/WEB-INF/view/admin/board/AdminBoard.jsp">
+		<put-attribute name="adminHeader" value="/WEB-INF/view/layout/adminHeader.jsp"/>
+		<put-attribute name="adminBoard" value="/WEB-INF/view/layout/adminBoard.jsp"/>
+	</definition>
+	
+	<!-- admin report -->
+	<definition name =".adminReport" template="/WEB-INF/view/admin/report/AdminReportList.jsp">
+		<put-attribute name="adminHeader" value="/WEB-INF/view/layout/adminHeader.jsp"/>
+		<put-attribute name="adminBoard" value="/WEB-INF/view/layout/adminBoard.jsp"/>
+	</definition>
+	
+	<!-- admin qna -->
+	<definition name =".adminQna" template="/WEB-INF/view/admin/qna/AdminQnaList.jsp">
+		<put-attribute name="adminHeader" value="/WEB-INF/view/layout/adminHeader.jsp"/>
+		<put-attribute name="adminBoard" value="/WEB-INF/view/layout/adminBoard.jsp"/>
+	</definition>
+	
+	<!-- admin qnaReply -->
+	<definition name =".adminQnaReply" template="/WEB-INF/view/admin/qna/AdminQnaReply.jsp">
+		<put-attribute name="adminHeader" value="/WEB-INF/view/layout/adminHeader.jsp"/>
+		<put-attribute name="adminBoard" value="/WEB-INF/view/layout/adminBoard.jsp"/>
+	</definition>
+	
+
+</tiles-definitions>

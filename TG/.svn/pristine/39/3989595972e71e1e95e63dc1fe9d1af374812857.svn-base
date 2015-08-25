@@ -1,0 +1,56 @@
+package com.tg.my.control;
+
+import java.util.List;
+
+import javax.servlet.http.HttpSession;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.tg.common.beans.GroupBean;
+import com.tg.common.beans.MemberBeanIn;
+import com.tg.common.dao.GroupDAO;
+import com.tg.common.dao.MemberDAO;
+
+@Controller
+public class MyPageControl {
+	@Autowired
+	MemberDAO dao;
+	@Autowired
+	GroupDAO gdao;
+	
+	@RequestMapping("/mypage")
+	public String myPage(Model model, HttpSession session){
+		System.out.println("¿©±â");
+		String id = (String) session.getAttribute("id");
+		MemberBeanIn bean = dao.profile(id);
+		model.addAttribute("my", bean);
+		return ".mypage";
+	}
+
+	@RequestMapping("/myhost")
+	public String myHost(Model model, HttpSession session){
+		
+		String id = (String) session.getAttribute("id");
+		List<GroupBean> list = gdao.hostGx(id);
+		int num = gdao.hostNum(id);
+		model.addAttribute("list", list);
+		model.addAttribute("hNum", num);
+		
+		return ".myhost";
+	}
+	
+	@RequestMapping("/mygx")
+	public String myGx(Model model, HttpSession session){
+		
+		String id = (String) session.getAttribute("id");
+		List<GroupBean> list = gdao.joinGx(id);
+		int num = gdao.joinNum(id);
+		model.addAttribute("list", list);
+		model.addAttribute("gNum", num);
+		
+		return ".mygx";
+	}
+}

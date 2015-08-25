@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd" >
+<sqlMap namespace="invite">
+	<insert id="invite" parameterClass="com.tg.common.beans.InviteGroupBean">
+		insert into invitegroup values (#id#, #fid#, #gno#)
+	</insert>
+	
+	<select id="load" parameterClass="java.lang.String" resultClass="com.tg.common.beans.InviteGroupBean">
+		select id, fid, i.gno, gtitle from invitegroup i, gxgroup g where g.gno = i.gno and fid = #id#
+	</select>
+	
+	<delete id="del" parameterClass="java.util.HashMap">
+		delete from invitegroup where id=#id# and gno=#gno# and fid=#fid#
+	</delete>
+</sqlMap>
