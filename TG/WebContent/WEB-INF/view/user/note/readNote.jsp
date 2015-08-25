@@ -102,11 +102,11 @@ font-family:notokr-demilight !important;
 		쪽지내용 :<br> <pre>${noteBean.noteContent}</pre>
 	</div>
 	
-	<form action="" method="post">
-		<input type="hidden" id="noteNo" name="noteNo" value="${bean.noteNo}"></a>
+	<form action="deleteNote" method="post">
+		<input type="hidden" id="noteNo" name="noteNo" value="${noteBean.noteNo}">
+		<input type="submit" id="delete" class="sm_button" value="삭제하기">
 	</form>	
 	
-	<input type="submit" id="delete" class="sm_button" value="삭제하기"></a>
 
 	<input type="button" id="reply" class="sm_button" style="display: " value="답장하기" 
 			onclick="msg('${noteBean.senderId }', '${noteBean.nick }')">
