@@ -26,6 +26,7 @@ public class NoteDeleteController {
 		System.out.println("받아온 번호는 "+noteNo);
 		
 		noteDao.deleteNote(noteNo); // 쪽지 삭제 끝.
+
 		
 		// 쪽지를 뿌려주기 위한 설정
 		String id = (String) session.getAttribute("id");
@@ -33,12 +34,10 @@ public class NoteDeleteController {
 		List<NoteBean> list = noteDao.selectNote(id);
 		
 		for (int i = 0; i < list.size(); i++) {
-			/*NoteBean b = list.get(i);*/
 			if (list.get(i).getSenderId().equals("admin")) {
 				list.get(i).setSenderId("관리자");
 			}
-		}
-		
+		}	
 		model.addAttribute("noteList", list);
 		
 		return ".noteList";

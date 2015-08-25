@@ -35,16 +35,12 @@ public class NoteListController{
 		List<NoteBean> list = noteDao.selectNote(id);
 		
 		for (int i = 0; i < list.size(); i++) {
-			/*NoteBean b = list.get(i);*/
 			if (list.get(i).getSenderId().equals("admin")) {
 				list.get(i).setSenderId("°ü¸®ÀÚ");
 			}
-		}
-		
+		}	
 		model.addAttribute("noteList", list);
 		
 		return ".noteList";
-		
-		
 	}
 }
