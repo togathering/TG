@@ -19,7 +19,7 @@ import com.tg.common.dao.NoteDAO;
 @Controller
 public class NoteListController{
 	
-	List<NoteBean> list ;
+	List<NoteBean> list;
 	
 	@Autowired
 	NoteDAO noteDao;	
@@ -43,7 +43,7 @@ public class NoteListController{
 		
 		model.addAttribute("noteList", list);
 		
-		return "";
+		return ".noteList";
 		
 		
 	}

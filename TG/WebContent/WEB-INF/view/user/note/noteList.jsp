@@ -22,7 +22,7 @@
 		<c:forEach  items="${noteList}" var='noteInfo' >
 		<tr>
 			<td><a href="">${noteInfo.senderId}</a></td>
-			<td><a href="readNoteAction.do?no=${noteInfo.noteNo}">${noteInfo.noteTitle}</a></td>
+			<td><a href="noteDtail?no=${noteInfo.noteNo}">${noteInfo.noteTitle}</a></td>
 			<td>${noteInfo.noteDate}</td>
 		</tr>
 		</c:forEach>

@@ -9,13 +9,14 @@ public class NoteBean {
 	private String noteContent;
 	private Date noteDate;
 	private int noteNo;
+	private String nick;
 	
 	// 扁夯积己磊 积己
 	public NoteBean() {}
 	
 
 	public NoteBean(String senderId, String receiverId, String noteTitle,
-			String noteContent, Date noteDate, int noteNo) {
+			String noteContent, Date noteDate, int noteNo, String nick) {
 
 		this.senderId = senderId;
 		this.receiverId = receiverId;
@@ -23,6 +24,7 @@ public class NoteBean {
 		this.noteContent = noteContent;
 		this.noteDate = noteDate;
 		this.noteNo = noteNo;
+		this.nick = nick;
 	}
 
 	public int getNoteNo() {
@@ -73,5 +75,12 @@ public class NoteBean {
 	public void setNoteDate(Date noteDate) {
 		this.noteDate = noteDate;
 	}
-	
+
+	public String getNick() {
+		return nick;
+	}
+
+	public void setNick(String nick) {
+		this.nick = nick;
+	}
 }
