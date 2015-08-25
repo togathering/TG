@@ -63,8 +63,8 @@
 	function setKey() {
 		order ='';
 		day='';
-		keyword = document.frm.search.value;
-		location.href = 'groupsearch?search='+keyword;
+		
+		document.frm.submit();
 	}
 	
 	function loadlist() {
