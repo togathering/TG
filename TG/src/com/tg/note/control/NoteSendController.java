@@ -26,6 +26,6 @@ public class NoteSendController{
 		noteDao.insertNote(noteBean);
 		
 		// 페이지 이동
-		return "user/main/main";
+		return "common/windowClose";
 	}
 }
