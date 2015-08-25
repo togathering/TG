@@ -4,6 +4,7 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="admin">
 
+
 <!-- 로그인 -->
 <select id="login" parameterType="java.lang.String" resultType="java.lang.String">
 	select pass from admintable where id=#{id}
