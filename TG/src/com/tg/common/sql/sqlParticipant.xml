@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><!--Converted at: Tue Aug 25 16:16:31 KST 2015-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="parti">
+	<insert id="join" parameterType="java.util.HashMap">
+		insert into participant values (#{gno}, #{id})
+	</insert>
+	
+	<delete id="cancel" parameterType="com.tg.common.beans.ParticipantBean">
+		delete from participant where gno=#{gno} and pid=#{pid}
+	</delete>
+	
+	<delete id="delete" parameterType="int">
+		delete from participant where gno=#{gno}
+	</delete>
+	
+	<select id="duplicationCheck" parameterType="java.util.HashMap" resultType="com.tg.common.beans.ParticipantBean">
+		select gno, pid from participant where gno = #{gno} and pid = #{id}
+	</select>
+	
+	<select id="joinlist" parameterType="int" resultType="com.tg.common.beans.ParticipantBean">
+		select pid, rownum from participant where gno = #{gno}
+	</select>
+</mapper>

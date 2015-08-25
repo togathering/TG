@@ -1,18 +1,22 @@
+
 package com.tg.common.dao;
 
-import java.sql.SQLException;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
-import com.tg.common.beans.GroupBean;
+import org.apache.ibatis.session.RowBounds;
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
 
-import com.ibatis.sqlmap.client.SqlMapClient;
+import com.tg.common.beans.GroupBean;
 import com.tg.common.beans.MemberBean;
 import com.tg.iba.MySqlMapConfig;
 
 public class AdminDAO {
-	SqlMapClient smc;
+
+	@Autowired
+	private SqlSession session;
 	HttpServletRequest request;
 	
 	int startNum =0; //시작숫자
@@ -20,7 +24,7 @@ public class AdminDAO {
 	
 	
 	public AdminDAO() {
-		smc = MySqlMapConfig.getSqlMapInstance();
+		
 	}
 	
 	public boolean loginCheck(String id, String pass){
@@ -33,27 +37,19 @@ public class AdminDAO {
 		}catch(NullPointerException e){
 			e.getStackTrace();
 		}
-			try {
 				System.out.println("id&pass="+id+"&"+pass);
 				
-				if(pass.equals(((String)smc.queryForObject("admin.login",id)))){
+				if(pass.equals((session.selectOne("admin.login",id)))){
 					return true;
-				}
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
-			return false;
+				}else{
+					return false; }
 		}
 
 		
 	//아이디 추천
 	public List<String> suggestId(String keyword){
 		List<String> list = null;
-		try {
-			list = smc.queryForList("admin.suggestMember", "%"+keyword+"%");
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+			list = session.selectList("admin.suggestMember", "%"+keyword+"%");
 		return list;
 	}
 
@@ -62,11 +58,7 @@ public class AdminDAO {
 		gtitle="%"+gtitle+"%";
 		System.out.println("dao"+gtitle);
 
-		try {
-			list=smc.queryForList("group.MsearchTitle",gtitle);
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+			list=session.selectList("group.MsearchTitle",gtitle);
 		return list;
 	}
 
@@ -77,23 +69,17 @@ public class AdminDAO {
 		
 		System.out.println(num);
 		
-		try {
 			startNum= (num*10)+1;
-			list = smc.queryForList("admin.selectAll",null ,startNum, countNum);
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+//			list = session.selectList("admin.selectAll",null ,startNum, countNum);
+			list = session.selectList("admin.selectAll",null ,new RowBounds(startNum, countNum));
 		return list;
 	}
 	
 	//회원수 count
 	public int countAll(){
 		int memberNum=0;
-		try {
-			memberNum=(int)smc.queryForObject("admin.countAll");
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+			memberNum=(int)session.selectOne("admin.countAll");
+
 		return memberNum;
 	}
 
@@ -102,28 +88,23 @@ public class AdminDAO {
 	public List<MemberBean> selectId(int num,  String id){
 		List<MemberBean> list = null;
 		String searchId = "%"+id+"%";
-		
-		try {
-			
 			startNum= (num*10)+1;
 			System.out.println(searchId);
-			list = smc.queryForList("admin.selectAll",searchId ,startNum, countNum);
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+			list = session.selectList("admin.selectAll",searchId ,new RowBounds(startNum, countNum));
+	
 		return list;
 	}
 		
 	//특정 검색어 관련 회원 검색
 	public int countId(String id){
 		int countId = 0;
-		try {
-			countId = (int) smc.queryForObject("admin.countSpecificId", "id");
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+
+			countId = (int) session.selectOne("admin.countSpecificId", id);
 		
 		return countId;
 	}
 
 }
+
+
+

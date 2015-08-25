@@ -26,11 +26,6 @@
 		});
 	}
 	
-	function movePage(){
-		var search = document.frm.search.value;
-		location.href = 'groupsearch?search='+search;
-	}
-	
 	function gogroupinfo(gno){
 		location.href = 'groupinfo?gno='+gno;
 	}
@@ -49,9 +44,9 @@
 			<h3 class="properties">190개 활력인들의 독특한 모임에 참여해 보세요.</h3>			
 		</section>
 		<section>
-			<form class="frm" name="frm">
+			<form class="frm" name="frm" action="groupsearch">
 				<input type="text" class="search" placeholder="검색 고고" name="search">
-				<button type="button" class="button" name="join_bt" onclick="movePage()">모임 검색</button>
+				<button type="submit" class="button" name="join_bt">모임 검색</button>
 			</form>
 		</section>	
 	</section>

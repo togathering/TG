@@ -63,8 +63,8 @@
 	function setKey() {
 		order ='';
 		day='';
-		keyword = document.frm.search.value;
-		location.href = 'groupsearch?search='+keyword;
+		
+		document.frm.submit();
 	}
 	
 	function loadlist() {
@@ -93,7 +93,9 @@
 	}
 	
 	$(document).ready(function() {
-		
+		if('${size}' == '0'){
+			alert('결과값이 없습니다');
+		}
 	});
 
 	
