@@ -32,27 +32,27 @@
 				document.hongkiat.intro.focus();
 				return;
 			}
-			location.href = 'myupdate';
+			document.hongkiat.submit();
 	}
 	$(document).ready(function(){
 			var gender = document.getElementById("gender");
 			var selectGender = null;
 		if('${my.gender}' == 'M'){
 			selectGender = '<select id="gender" name="gender" tabindex="" class="sel" onselect="show()">';
-			selectGender += '<option selected value="male">남자</option>';
-			selectGender += '<option value="female">여자</option>';
+			selectGender += '<option selected value="M">남자</option>';
+			selectGender += '<option value="F">여자</option>';
 			selectGender += '</select>';
 		}else if('${my.gender}' == 'F'){
 			
 			selectGender= '<select id="gender" name="gender" tabindex="" class="sel" onselect="show()">';
-			selectGender += '<option selected value="female">여자</option>';
-			selectGender += '<option value="male">남자</option>';
+			selectGender += '<option selected value="F">여자</option>';
+			selectGender += '<option value="M">남자</option>';
 			selectGender += '</select>';
 		}else{
 			selectGender= '<select id="gender" name="gender" tabindex="" class="sel" onselect="show()">';
 			selectGender += '<option value=""> </option>';
-			selectGender += '<option value="female">여자</option>';
-			selectGender += '<option value="male">남자</option>';
+			selectGender += '<option value="F">여자</option>';
+			selectGender += '<option value="M">남자</option>';
 			selectGender += '</select>';
 		}
 		gender.innerHTML = selectGender;
@@ -67,22 +67,43 @@
 			var selectYear = selectBirth[0];
 			var selectMonth = selectBirth[1];
 			var selectDay = selectBirth[2].split(" ", 1);
-			yy = '<option selected value="">'+selectYear+'</option>';
-			yy += '<% for(int i=2015; i>=1930; i--){ %>';
-            yy +=  '<option value="<%= i %>"><%= i %></option><% } %>';
-			mm = '<option selected value="">'+selectMonth+'</option>';
-			mm += '<% for(int i=1; i<=12; i++){ %>';
-            mm +=  '<option value="<%= i %>"><%= i %></option><% } %>';
-			dd = '<option selected value="">'+selectDay+'</option>';
-			dd += '<% for(int i=1; i<=31; i++){ %>';
-            dd +=  '<option value="<%= i %>"><%= i %></option><% } %>';
+			yy = '<option selected value="'+selectYear+'">'+selectYear+'</option>';
+			<% for(int i=2015; i>=1930; i--){ %>
+            yy +=  '<option value="<%= i %>"><%= i %></option>';
+            <% } %>
+			mm = '<option selected value="'+selectMonth+'">'+selectMonth+'</option>';
+			<% for(int i=1; i<=12; i++){ %>
+			<%if(i<10){%>
+            mm +=  '<option value="0<%= i %>">0<%= i %></option>';
+            <%}else{%>
+            mm +=  '<option value="<%= i %>"><%= i %></option>';
+            <%}
+			}%>
+			dd = '<option selected value="'+selectDay+'">'+selectDay+'</option>';
+			<% for(int i=1; i<=31; i++){ %>
+			<%if(i<10){%>
+            dd +=  '<option value="0<%= i %>">0<%= i %></option>';
+            <%}else{%>
+            dd +=  '<option value="<%= i %>"><%= i %></option>';
+            <%}}%>
 		}else{
-			yy = '<% for(int i=2015; i>=1930; i--){ %>';
-            yy +=  '<option value="<%= i %>"><%= i %></option><% } %>';
-            mm = '<% for(int i=1; i<=12; i++){ %>';
-            mm +=  '<option value="<%= i %>"><%= i %></option><% } %>';
-            dd = '<% for(int i=1; i<=31; i++){ %>';
-            dd +=  '<option value="<%= i %>"><%= i %></option><% } %>';
+			<% for(int i=2015; i>=1930; i--){ %>
+            yy +=  '<option value="<%= i %>"><%= i %></option>';
+            <% } %>
+            <% for(int i=1; i<=12; i++){ %>
+            <%if(i<10){%>
+            mm +=  '<option value="0<%= i %>">0<%= i %></option>';
+            <%}else{%>
+            mm +=  '<option value="<%= i %>"><%= i %></option>';
+            <%}
+			}%>
+            <% for(int i=1; i<=31; i++){ %>
+            <%if(i<10){%>
+            dd +=  '<option value="0<%= i %>">0<%= i %></option>';
+            <%}else{%>
+            dd +=  '<option value="<%= i %>"><%= i %></option>';
+            <%}
+            }%>
 		}
 		year.innerHTML = yy;
 		month.innerHTML = mm;
@@ -114,7 +135,7 @@
 		style="position: relative; top: 10px; margin-top: 10px; z-index: 1;">
 		<section id="container">
 			<span class="chyron"><em></em></span>
-			<form name="hongkiat" id="hongkiat-form" method="post" >
+			<form name="hongkiat" id="hongkiat-form" method="post" action="myupdate">
 
 			<div class="_1">
 				<h3>닉네임</h3><br><h3>이메일</h3><br><h3>비밀번호</h3><br>
@@ -148,7 +169,7 @@
          	 	<input type="text" name="favo" id="favo" tabindex="" class="txtinput" value="${my.favo }"><br>
         		<input type="text" name="loc" id="loc" tabindex="" class="txtinput" value="${my.loc }"><br>
         		<input type="text" name="insta" id="insta" tabindex="" class="txtinput" value="${my.insta }"><br>
-        		<input type="text" name="fb" id="fb" tabindex="" class="txtinput" value="${my.fbook }"><br>
+        		<input type="text" name="fbook" id="fbook" tabindex="" class="txtinput" value="${my.fbook }"><br>
         		<textarea name="intro" id="intro" autocomplete="on"  tabindex="" class="txtblock" row="10" col="">
          		${my.intro }
          		</textarea>

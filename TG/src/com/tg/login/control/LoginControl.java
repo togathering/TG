@@ -29,7 +29,6 @@ public class LoginControl {
 			//세션로그인
 		    session.setAttribute("id", id);
 			session.setAttribute("pass", pass);	
-			model.addAttribute("login", "succcess");
 			page = "redirect:main";
 		}else{
 			model.addAttribute("login", "fail");
