@@ -387,29 +387,14 @@
 							class="txtinput" style="font-size: medium; margin-bottom: 2px;">
 						
 						<textarea name="message" id="message" autocomplete="on"
-							tabindex="" class="txtblock" row="50" col=""
-							style="font-size: medium; text-align: center;">
+							tabindex="" class="txtblock" row="25" col=""
+							style="font-size: medium; text-align: left: ;">
 							
-저는 _____ 를 좋아하는 사람입니다.
-		
-어떤 이유로 모임을 만들게 됐나요?
-간단한 자기소개로 시작합시다. 
-단, 전화번호, 이메일, 카카오톡(메신저) 등의
-개인연락처 작성은 금지합니다.
-		
-		
-_____ 하는 모임을 소개합니다.
-그저 손이 가는 대로 끄적여봅니다.
-		
-이런 분은 주목하세요!
-
-우리 동네 사는 사람, 나와 취향이 비슷한 사람, 
-아니면 그냥 즐거운 시간을 보내고픈 사람? 
-누구를 만나 볼까요?
-이런 대화로 모임을 시작해요!
-누구나 어색할 수 있는 처음 5분! 
-자, 우리 어떤 이야기로 친해질까요?
-			</textarea>
+							어떤 이유로 모임을 만들게 됐나요?
+							간단한 자기소개로 시작합시다. 
+							단, 전화번호, 이메일, 카카오톡(메신저) 등의
+							개인연락처 작성은 금지합니다.
+						</textarea>
 
 
 						<!-- <h1>한 줄 소개</h1>
