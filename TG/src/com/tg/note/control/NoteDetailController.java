@@ -25,6 +25,7 @@ public class NoteDetailController {
 	@RequestMapping("/noteDtail")
 	public String detail(@RequestParam(value="no", required=false) Integer noteNo, HttpServletRequest req) {
 		
+		System.out.println("쪽지번호 :"+ noteNo);
 		noteBean = noteDao.detailNote(noteNo);
 		
 		// 쪽지함, 

@@ -29,6 +29,7 @@ public class NoteDAO {
 
 	
 	public NoteBean detailNote(int noteNo){
+		System.out.println("디테일노트() 메소드 실행");
 		NoteBean bean = (NoteBean) session.selectOne("note.detail", noteNo);
 		System.out.println("닉네임 테스트" + bean.getNick());
 		return bean;

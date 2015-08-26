@@ -31,16 +31,25 @@
 	}
 	
 	function friend(fid) {//친구신청
-		var msearch = trim(document.memFrm.msearch.value);
 		
-		$.ajax({url:'addFriend', type:'POST', data: 'search='+msearch+'&fid='+fid, dataType:'text', 
-			success:function(data){
-				var table = document.getElementById('listTable');
-				
-				document.getElementById('listhead').style.display = '';
-				table.innerHTML = data;					
-			}
-		});
+		var con = confirm(fid+'님을 친구추가하겠습니까??');
+			
+		if(con){	
+			var msearch = trim(document.memFrm.msearch.value);
+			
+			$.ajax({url:'addFriend', type:'POST', data: 'search='+msearch+'&fid='+fid, dataType:'text', 
+				success:function(data){
+					alert('친구신청을 완료 하였습니다');
+					
+					var table = document.getElementById('listTable');
+					
+					document.getElementById('listhead').style.display = '';
+					table.innerHTML = data;					
+				}
+			});
+		}else{
+			alert('취소하였습니다');
+		}
 	}
 	
 	function report(reportId) {
