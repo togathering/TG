@@ -18,6 +18,10 @@
 		order by noteDate desc
 	</select>
 	
+	<select id="selectNoteCount" parameterType="String" resultType="int">
+		select count(*) from note
+		where receiverId = #{receiverId} 
+	</select>
 	
 	<!-- 쪽지 읽기 -->
 	<select id="detail" parameterType="int" resultType="com.tg.common.beans.NoteBean">
