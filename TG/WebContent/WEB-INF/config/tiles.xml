@@ -117,6 +117,11 @@
 		<put-attribute name="adminHeader" value="/WEB-INF/view/layout/adminHeader.jsp"/>
 	</definition>
 	
+	<!-- admin group list -->
+	<definition name =".adminGroup_List" template="/WEB-INF/view/admin/group/AdminGroup_list.jsp">
+		<put-attribute name="adminHeader" value="/WEB-INF/view/layout/adminHeader.jsp"/>
+	</definition>
+	
 	<!-- admin board -->
 	<definition name =".adminBoard" template="/WEB-INF/view/admin/board/AdminBoard.jsp">
 		<put-attribute name="adminHeader" value="/WEB-INF/view/layout/adminHeader.jsp"/>
