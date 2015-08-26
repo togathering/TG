@@ -40,5 +40,5 @@
 				<c:forEach begin="1" end="${pageMaxNum }" step="1" var="i">
 					<a href="#" onclick="goPage(${i })">${i }</a>
 				</c:forEach>
-				<a href="#" onclick="goPage(${i })">场其捞瘤</a>
+				<a href="#" onclick="goPage(${pageMaxNum })">场其捞瘤</a>
 				</center>
