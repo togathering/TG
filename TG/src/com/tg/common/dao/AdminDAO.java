@@ -152,6 +152,10 @@ public class AdminDAO {
 		return countId;
 	}
 
+	public void removeId(String pid){
+		
+		 session.update("admin.deleteId",pid);
+	}
 }
 
 

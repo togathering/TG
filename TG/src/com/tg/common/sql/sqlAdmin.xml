@@ -65,5 +65,9 @@
 	<select id="countSpecificId" resultType="java.lang.Integer" parameterType="java.lang.String">
 		select count(*) from member where id  like #{id}
 	</select>
+	
+	<update id="deleteId" statementType="CALLABLE" parameterType="String">
+		{call del_user(#{id})
+	</update>
 </mapper>
 

@@ -38,7 +38,24 @@
 						});
 					}
 				});
-			});// 
+			});//
+			
+		//삭제	
+		function deleteId(eraseId){
+
+    		var del =confirm("정말 삭제하시겠습니까?");
+    		
+    		if(del){
+    	$.ajax({
+    		url: 'removeId',
+    		type:'POST' ,
+    		data: {delId:eraseId},
+    		dataType:"text",
+    		success:function(){
+    			goPage(1);
+    		}});
+   		 }//if절
+		};
 
 		// 검색어 창 
 		$('#search').click(function (){
