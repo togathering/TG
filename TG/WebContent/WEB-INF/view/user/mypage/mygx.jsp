@@ -16,6 +16,7 @@
 	}
 	$(document).ready(function(){
 		if('${gstatus }'=='모집완료'){
+			alert('되나');
 			var cancels = document.getElementsByName("cancel");
 			var tcancel = document.getElementById("tcancel");
 			tcancel.style.display = 'none';
