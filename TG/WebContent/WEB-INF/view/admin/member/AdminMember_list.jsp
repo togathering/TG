@@ -40,22 +40,6 @@
 				});
 			});//
 			
-		//삭제	
-		function deleteId(eraseId){
-
-    		var del =confirm("정말 삭제하시겠습니까?");
-    		
-    		if(del){
-    	$.ajax({
-    		url: 'removeId',
-    		type:'POST' ,
-    		data: {delId:eraseId},
-    		dataType:"text",
-    		success:function(){
-    			goPage(1);
-    		}});
-   		 }//if절
-		};
 
 		// 검색어 창 
 		$('#search').click(function (){
@@ -97,6 +81,23 @@
 		}
 		
 		// 검색 버튼 클릭시 
+		
+				//삭제	
+		function deleteId(eraseId){
+				//alert(eraseId);
+    		var del =confirm("정말 삭제하시겠습니까?");
+    		
+    		if(del){
+    	$.ajax({
+    		url: 'removeId',
+    		type:'POST' ,
+    		data: {delId:eraseId},
+    		dataType:"text",
+    		success:function(){
+    			goPage(1);
+    		}});
+   		 }//if절
+		};
 	</script>
 
 	<form action="" name="frm">
