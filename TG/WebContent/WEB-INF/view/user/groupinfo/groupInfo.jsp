@@ -334,7 +334,7 @@ a:hover{
 			<br>
 			<form style="align:center;">
 				<span id="attend"><button type="button" class="button"  name="attend" onclick="join()">참석</button></span>
-				<span id="wish"><button type="button"  class="button" name="wish" onclick="wish()">원해요</button></span>
+				<span id="wish"><button type="button"  class="button" name="wish" onclick="wishGroup()">원해요</button></span>
 				<span id="encore"><button type="button" name="encore" hidden="">앵콜</button></span><br>
 				<span><button type="button" style="display: none" class="button" id="invite" name="invite" value="친구초대" onclick="loadFriend(${group.gno})">친구초대</button></span>
 			</form>
