@@ -37,13 +37,24 @@ public class MyPageControl {
 	}
 	
 	@RequestMapping("/myupdate")
-	public String gxDelete(MemberBean m, HttpServletRequest request) {
-		String id= (String) request.getAttribute("id");
-		System.out.println(id);
-		System.out.println("@pass:"+m.getNick());
-		return ".main";
+	public String gxDelete(MemberBeanIn m, HttpSession session,
+			@RequestParam(value="year")String year,
+			@RequestParam(value="month")String month,
+			@RequestParam(value="day")String day) {
+		String id= (String) session.getAttribute("id");
+		if(Integer.parseInt(month) < 10){
+			month = "0"+month;
+		}
+		if(Integer.parseInt(day) < 10){
+			day = "0"+day;
+		}
 		
+		m.setBirth(year+month+day);
+		m.setId(id);
 		
+		dao.upProfile(m);					
+		
+		return ".main";		
 	}
 
 	@RequestMapping("/myhost")
