@@ -11,13 +11,14 @@
 						#{noteContent}, sysdate)
 	</insert>
 	
-	<!-- 전체쪽지 조회 -->
+	<!-- 쪽지 리스트 조회 -->
 	<select id="select" parameterType="String" resultType="com.tg.common.beans.NoteBean">
 		select senderId, noteTitle, noteDate, noteNo from note 
 		where receiverId = #{receiverId} 
 		order by noteDate desc
 	</select>
 	
+	<!-- 쪽지 갯수 조회 -->
 	<select id="selectNoteCount" parameterType="String" resultType="int">
 		select count(*) from note
 		where receiverId = #{receiverId} 
