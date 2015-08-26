@@ -29,6 +29,10 @@
 					'width=400, height=450, screenX=400, screenY=130, resizable=no');
 	}
 	
+	function deleteMsg(){
+		alert("쪽지가 삭제되었습니다.");
+	}
+	
 </script>
 
 <style type="text/css">
@@ -96,7 +100,6 @@ font-family:notokr-demilight !important;
 </head>
 <body>
 	<div>
-		쪽지번호 : ${noteBean.noteNo}<br>
 		보낸사람 : ${noteBean.senderId}<br>
 		받은시간 : ${noteBean.noteDate}<br>
 		쪽지내용 :<br> <pre>${noteBean.noteContent}</pre>
@@ -104,7 +107,7 @@ font-family:notokr-demilight !important;
 	
 	<form action="deleteNote" method="post">
 		<input type="hidden" id="noteNo" name="noteNo" value="${noteBean.noteNo}">
-		<input type="submit" id="delete" class="sm_button" value="삭제하기">
+		<input type="submit" id="delete" class="sm_button" value="삭제하기" onclick="deleteMsg()">
 	</form>	
 	
 
