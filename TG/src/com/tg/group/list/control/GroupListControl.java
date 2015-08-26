@@ -35,22 +35,32 @@ public class GroupListControl {
 		
 		if(keyword != null){
 			if(order != null && !order.equals("")){
+				System.out.println("실행1");
 				list = (ArrayList<GroupBean>) dao.search(keyword, order, cnt);
 			}else{
+				System.out.println("실행2");
+				System.out.println("날짜:"+day);
 				list = (ArrayList<GroupBean>) dao.search(keyword, "gday", cnt);
+			}
+			if(day != null && !day.equals("") ){
+				System.out.println("실행12");
+				list = (ArrayList<GroupBean>) dao.searchDay(day, cnt);
 			}
 			model.addAttribute("keyword", keyword);
 					
 		}else{
 			if(order != null && !order.equals("")){
+				System.out.println("실행3");
 				list = (ArrayList<GroupBean>) dao.listAll(order, cnt);
 			}else {
+				System.out.println("실행4");
 				list = (ArrayList<GroupBean>) dao.listAll("gday", cnt);
 			}
-		}
-		
-		if(day != null && !day.equals("") ){
-			list = (ArrayList<GroupBean>) dao.searchDay(day);
+			if(day != null && !day.equals("") ){
+				System.out.println("실행13");
+				list = (ArrayList<GroupBean>) dao.searchDay(day, cnt);
+				model.addAttribute("day", day);
+			}
 		}
 		
 		model.addAttribute("tglist", list);

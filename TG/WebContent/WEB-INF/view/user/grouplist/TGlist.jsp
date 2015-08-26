@@ -51,8 +51,9 @@
 	}
 	
 	function setOrder(ord) {
-		order = ord;
-		loadlist();
+		/* order = ord;
+		loadlist(); */
+		alert('미구현기능');
 	}
 	
 	function setDay(gday) {
@@ -60,15 +61,9 @@
 		location.href = 'groupsearch?day='+day;
 	}
 	
-	function setKey() {
-		order ='';
-		day='';
-		
-		document.frm.submit();
-	}
-	
 	function loadlist() {
-		$.ajax({url:"groupsearch", type:"POST", data:"search="+keyword+"&order="+order+"&day="+day+"&cnt="+cnt, dataType:"text",
+		var keyword = document.frm.search.value;
+		$.ajax({url:"groupsearch", type:"POST", data:"cnt="+cnt+"&search="+keyword+"&day=${day}", dataType:"text",
 			success:function(data){
 				var list = document.getElementById('list');
 				list.innerHTML = data;
@@ -81,11 +76,11 @@
 		keyword = '';
 		cnt = 6;
 		document.frm.search.value = '';
-		loadlist();
+		location.href = 'groupsearch';
 	}
 	
 	function popularity() {//인기순
-		
+		alert('미구현기능');
 	}
 	
 	function gogroupinfo(gno){
@@ -96,6 +91,7 @@
 		if('${size}' == '0'){
 			alert('결과값이 없습니다');
 		}
+		
 	});
 
 	
@@ -109,14 +105,14 @@
 		<label class="mainLabel">
 			${size }개의 ToGathering이 진행중입니다. <br><br>
 		</label>
-		<form name="frm">	
+		<form name="frm" action="groupsearch">	
 			<div class="orderBySubject" align="center">
 				<input type="button" class="sbutton" value="인기순" name="buttons" hidden=""> &nbsp;
 				<input type="button" class="sbutton" value="날짜순" name="buttons" onclick="setOrder('gday')"> &nbsp; 
 				<input type="button" class="sbutton" value="개설순" name="buttons" onclick="setOrder('gdate')"> &nbsp;
 				<input type="button" class="sbutton" value="검색초기화 " onclick="loadfirst()">  &nbsp;
 				<input type="text" style="height:30px;" placeholder="검색어를 입력하세요 :-)" size="30" name="search" value="${keyword }">
-				<input type="button" class="sbutton" value="검색" onclick="setKey()">
+				<input type="submit" class="sbutton" value="검색">
 			</div>
 		</form>
 		<br><br>

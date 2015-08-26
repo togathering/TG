@@ -141,11 +141,11 @@ public class GroupDAO {
 		return false;
 	}
 	
-	public List<GroupBean> searchDay(String day){
+	public List<GroupBean> searchDay(String day, int pageCnt){
 		List<GroupBean> list = null;
 		day = day+"%";
 		try {
-			list = smc.queryForList("group.selectDay", day);
+			list = smc.queryForList("group.selectDay", day, 0, pageCnt);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
