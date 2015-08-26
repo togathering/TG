@@ -67,11 +67,11 @@
 	</select>
 	
 	<update id="deleteId" statementType="CALLABLE" parameterType="String">
-		{call del_user(#{id})
+		{call del_user(#{id})}
 	</update>
 	
 	<update id="deleteId2" statementType="CALLABLE" parameterType="String">
-		{call del_user2(#{id})
+		{call del_user2(#{id})}
 	</update>
 </mapper>
 

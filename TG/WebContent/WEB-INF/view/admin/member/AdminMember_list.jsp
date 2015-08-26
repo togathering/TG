@@ -45,6 +45,7 @@
 		$('#search').click(function (){
 			var search = $("#searchtxt").val();
 			searchClick(search, 1);
+			document.frm.searchtxt.value = '';
 		});
 			
 		});
@@ -67,6 +68,7 @@
 		function goPage(page){
 			var search = $("#searchtxt").val();
 			searchClick(search, page);
+			document.frm.searchtxt.value = '';
 		}
 
 		// 쪽지 쓸수 있는 팝업창 생성
