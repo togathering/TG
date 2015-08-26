@@ -40,27 +40,33 @@
 				});
 			});// 
 
-		
+		// 검색어 창 
 		$('#search').click(function (){
+			var search = $("#searchtxt").val();
+			searchClick(search, 1);
+		});
+			
+		});
+		function searchClick(search, page){
 			$.ajax({
 				url:'specificId',
-				type:"POST",
-				data :{
-					keyword: $('#searchtxt').val()
+				type:'POST',
+				data : {
+					keyword:search,
+					pageNum:page
 				},
-				dataType : "html",
-				success: function(data){
-					var table = document.getElementById("mtable");					
-					table.innerHTML = data;
+				dataType : 'html',
+				success:function(data){
+					$("#tableAndpage").html(data);
 				}
+				
 			})
-			
-		});
-			
+		}
 		
-		
-		
-		});
+		function goPage(page){
+			var search = $("#searchtxt").val();
+			searchClick(search, page);
+		}
 
 		// 쪽지 쓸수 있는 팝업창 생성
 
@@ -78,16 +84,19 @@
 
 	<form action="" name="frm">
 		<div style="float: left; width: 95%; margin: 0 1%;">
-			<div>
+			<div >
+			
 				<input type="text" name="searchtxt" class="searchtxt" id="searchtxt"
 					placeholder="검색할ID 입력"
 					style="height: 34px; margin-bottom: 6px; padding: 3px 6px; font-size: 16px;">
 
 				<input type="button" class="button" name="search" id="search"
 					value="검색" style="margin-top: 2px;">
+					
+				<input type="hidden"  name="pageNum"  id="pageNum" value="">	
 			</div>
-
 			<hr>
+		<div id="tableAndpage">
 			<table style="width: 95%;" id="mtable">
 				<tr>
 					<th style="width: 220px">아이디</th>
@@ -127,6 +136,7 @@
 				</c:forEach>
 				<a href="adminMemberList?pageNum=${pageMaxNum }">끝페이지</a>
 			</center>
+			</div>
 		</div>
 
 	</form>
