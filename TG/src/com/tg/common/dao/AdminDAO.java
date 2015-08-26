@@ -1,7 +1,9 @@
 
 package com.tg.common.dao;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -69,7 +71,7 @@ public class AdminDAO {
 		
 		System.out.println(num);
 		
-			startNum= (num*10)+1;
+			startNum= (num*10);
 //			list = session.selectList("admin.selectAll",null ,startNum, countNum);
 			list = session.selectList("admin.selectAll",null ,new RowBounds(startNum, countNum));
 		return list;
@@ -88,9 +90,11 @@ public class AdminDAO {
 	public List<MemberBean> selectId(int num,  String pid){
 		List<MemberBean> list = null;
 		String id = "%"+pid+"%";
-			startNum= (num*10)+1;
+		Map<String, Object> map = new HashMap<String, Object>();
+			startNum= (num*10);
+			map.put("id", id);
 			System.out.println(id);
-			list = session.selectList("admin.selectAll",id ,new RowBounds(startNum, countNum));
+			list = session.selectList("admin.selectAll",map ,new RowBounds(startNum, countNum));
 	
 		return list;
 	}

@@ -43,7 +43,6 @@
 		
 		$('#search').click(function (){
 			$.ajax({
-				
 				url:'specificId',
 				type:"POST",
 				data :{
@@ -51,9 +50,8 @@
 				},
 				dataType : "html",
 				success: function(data){
-					var table = document.getElementById("mtable");
-					table = data;
-				alert(data);
+					var table = document.getElementById("mtable");					
+					table.innerHTML = data;
 				}
 			})
 			

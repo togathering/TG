@@ -18,7 +18,7 @@
 	select * from gxgroup
 </select>
 
-<select id ="selectAll" resultType="com.tg.common.beans.MemberBean" parameterType="String">
+<select id ="selectAll" resultType="com.tg.common.beans.MemberBean" parameterType="map">
 	select mid, mnick, pp, ccnt, rcnt,rn
 from  (select m.id mid, m.nick mnick, nvl(p.cnt,0) pp, nvl(gx.cnt,0) ccnt, nvl(re.cnt,0) rcnt , rownum rn
 		 from  member m, 
