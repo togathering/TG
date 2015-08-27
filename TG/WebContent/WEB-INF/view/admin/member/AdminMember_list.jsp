@@ -38,12 +38,14 @@
 						});
 					}
 				});
-			});// 
+			});//
+			
 
 		// 검색어 창 
 		$('#search').click(function (){
 			var search = $("#searchtxt").val();
 			searchClick(search, 1);
+			document.frm.searchtxt.value = '';
 		});
 			
 		});
@@ -66,6 +68,7 @@
 		function goPage(page){
 			var search = $("#searchtxt").val();
 			searchClick(search, page);
+			document.frm.searchtxt.value = '';
 		}
 
 		// 쪽지 쓸수 있는 팝업창 생성
@@ -80,6 +83,23 @@
 		}
 		
 		// 검색 버튼 클릭시 
+		
+				//삭제	
+		function deleteId(eraseId){
+				//alert(eraseId);
+    		var del =confirm("정말 삭제하시겠습니까?");
+    		
+    		if(del){
+    	$.ajax({
+    		url: 'removeId',
+    		type:'POST' ,
+    		data: {delId:eraseId},
+    		dataType:"text",
+    		success:function(){
+    			goPage(1);
+    		}});
+   		 }//if절
+		};
 	</script>
 
 	<form action="" name="frm">

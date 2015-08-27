@@ -8,29 +8,26 @@
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <link rel="stylesheet" type="text/css" href="css/search.css">
 <script type="text/javascript">
-	function load() {
-		var gtitle = document.frm.searchtxt.value;
-		sendRequest('/AdminSearchGroup.jsp', 'gtitle=' + gtitle, loaded, 'POST');
-		/* alert(document.frm.searchtxt.value); */
-	}
 
-	function loaded() {//요청에 대한 응답데이터 처리
-		if (xhr.readyState == 4) {
-			if (xhr.status == 200) {
-				var table = document.getElementById('mtable');
-				/* alert(xhr.responseText); */
-				var htmlMsg = xhr.responseText;
-				document.getElementById("mtable").innerHTML = htmlMsg;
+	$('#search').click(function (){
+		$.ajax({
+			
+			url:'specificTitle',
+			type:"POST",
+			data :{
+				keyword: $('#searchtxt').val()
+			},
+			dataType : "html",
+			success: function(data){
+				var table = document.getElementById("mtable");
+				table = data;
+			alert(data);
 			}
-		}
-	}//loaded
-	function setPage(i) {
-		alert(i);
-		//request.setAttribute("nowpage", i);
-	}
-	window.onload = function() {
+		})
+		
+	})
+	
 
-	}
 	function deleteG() {
 		alert("정말 삭제하시겠습니까?")
 		
@@ -47,7 +44,6 @@
 </head>
 <body>
  <div><tiles:insertAttribute name="adminHeader"/></div> 
-	나는그룹리스트 !
 		<form action="" name="frm" onsubmit="return false;">
 	
 		<div>
@@ -71,7 +67,7 @@
 					<tr style="border-bottom: 1px solid #167266;">
 						<td align="center">${grpbean.gno }</td>
 						<td align="center"><a href="#"
-							onClick="window.open('http://localhost/ToGathering/groupinfo.do?gno=${grpbean.gno }','name',
+							onClick="window.open('http://localhost/TG/groupinfo?gno=${grpbean.gno }','name',
 							'width=1300,height=630');return false">${grpbean.gtitle }</a></td>
 						<td align="center">${grpbean.gday }</td>
 						<td align="center">${grpbean.gdate }</td>
@@ -82,6 +78,11 @@
 					</tr>
 				</c:forEach>
 			</table>
+			<a href="adminGroupList?pageNum=1">시작페이지</a>
+				<c:forEach begin="1" end="${pageMaxNum }" step="1" var="i">
+					<a href="adminGroupList?pageNum=${i }">${i }</a>
+				</c:forEach>
+				<a href="adminGroupList?pageNum=${pageMaxNum }">끝페이지</a>
 		</div>
 	</form>
 </body>

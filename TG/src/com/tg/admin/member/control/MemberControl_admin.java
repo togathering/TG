@@ -62,6 +62,12 @@ public class MemberControl_admin {
 		 
 	 }
 	
+	 @RequestMapping("removeId")
+	 public void removeId(@RequestParam(value="delId")String eraseId){
+		 System.out.println("삭제아이디:"+eraseId);
+		 dao.removeId(eraseId);
+		 
+	 }
 
 
 }

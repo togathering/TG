@@ -46,8 +46,59 @@ public class AdminDAO {
 				}else{
 					return false; }
 		}
+	//그룹관리
+		public List<GroupBean> SpecificTitle(String gtitle){
+			List<GroupBean> list = null;
+			gtitle="%"+gtitle+"%";
+			System.out.println("dao"+gtitle);
 
+				list=session.selectList("group.SpecificGroup",gtitle);
+			return list;
+	}
+	//그룹리스트 뿌려주기 
+		public List<GroupBean> selectAllGroup(int num){
+			List<GroupBean> list = null;
+			
+			System.out.println(num);
+			
+				startNum= (num*10);
+
+				list = session.selectList("admin.selectAllGroup",null ,new RowBounds(startNum, countNum));
+			return list;
+		}
+		//그룹수 count
+		public int countAllGroup(){
+			int memberNum=0;
+				memberNum=(int)session.selectOne("admin.countAllGroup");
+
+			return memberNum;
+		}
 		
+		//특정 모임명 검색
+		public List<GroupBean> selectTitle(int num,  String gtitle){
+			List<GroupBean> list = null;
+			gtitle="%"+gtitle+"%";
+
+			Map<String, Object> map = new HashMap<String, Object>();
+				startNum= (num*10);
+				map.put("gtitle", gtitle);
+				System.out.println(gtitle);
+				list = session.selectList("admin.selectAllGroup",map ,new RowBounds(startNum, countNum));
+				
+			return list;
+		}
+		//검색한 모임명 갯수
+		public int countTitle(String gtitle){
+			int countTitle = 0;
+				String title = "%"+gtitle+"%";
+				countTitle = (int) session.selectOne("admin.countSpecificTitle", title);
+			
+			return countTitle;
+		}
+		
+		
+		
+	//멤버관리
 	//아이디 추천
 	public List<String> suggestId(String keyword){
 		List<String> list = null;
@@ -55,14 +106,7 @@ public class AdminDAO {
 		return list;
 	}
 
-	public List<GroupBean> AdminSearchTitle(String gtitle){
-		List<GroupBean> list = null;
-		gtitle="%"+gtitle+"%";
-		System.out.println("dao"+gtitle);
 
-			list=session.selectList("group.MsearchTitle",gtitle);
-		return list;
-	}
 
 	
 	//리스트 뿌려주기 
@@ -99,7 +143,7 @@ public class AdminDAO {
 		return list;
 	}
 		
-	//특정 검색어 관련 회원 검색
+	//특정 검색어 관련 회원수 검색
 	public int countId(String pid){
 		int countId = 0;
 			String id = "%"+pid+"%";
@@ -108,6 +152,16 @@ public class AdminDAO {
 		return countId;
 	}
 
+	public void removeId(String pid){
+		//1차 아이디 삭제  삭제/ 임시 보존/ 영구보존
+		System.out.println("pid:"+pid);
+		 session.update("admin.deleteId",pid);
+	}
+
+	public void removeId2(String pid){
+		//2차 아이디 삭제 임시보존 내용 까지 삭제
+		session.update("admin.deleteId2",pid);
+	}
 }
 
 

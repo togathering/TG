@@ -60,6 +60,7 @@
 		<put-attribute name="header" value="/WEB-INF/view/layout/header.jsp" />
 		<put-attribute name="footer" value="/WEB-INF/view/layout/footer.jsp" />
 		<put-attribute name="myPageHeader" value="/WEB-INF/view/layout/myPageHeader.jsp" />
+		<put-attribute name="gxSide" value="/WEB-INF/view/layout/gxSide.jsp" />
 	</definition>
 	
 	<!-- 호스트내역 -->
@@ -67,6 +68,7 @@
 		<put-attribute name="header" value="/WEB-INF/view/layout/header.jsp" />
 		<put-attribute name="footer" value="/WEB-INF/view/layout/footer.jsp" />
 		<put-attribute name="myPageHeader" value="/WEB-INF/view/layout/myPageHeader.jsp" />
+		<put-attribute name="hostSide" value="/WEB-INF/view/layout/hostSide.jsp" />
 	</definition>
 	
 	<!-- 초대받은그룹내역 -->
@@ -114,6 +116,11 @@
 
 	<!-- admin list -->
 	<definition name =".adminMember_List" template="/WEB-INF/view/admin/member/AdminMember_list.jsp">
+		<put-attribute name="adminHeader" value="/WEB-INF/view/layout/adminHeader.jsp"/>
+	</definition>
+	
+	<!-- admin group list -->
+	<definition name =".adminGroup_List" template="/WEB-INF/view/admin/group/AdminGroup_list.jsp">
 		<put-attribute name="adminHeader" value="/WEB-INF/view/layout/adminHeader.jsp"/>
 	</definition>
 	

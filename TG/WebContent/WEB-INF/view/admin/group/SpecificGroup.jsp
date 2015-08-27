@@ -1,22 +1,7 @@
-<%@page import="java.util.HashMap"%>
-<%@page import="java.util.Map"%>
-<%@page import="com.tg.common.beans.GroupBean"%>
-<%@page import="java.util.List"%>
-<%@page import="com.tg.common.dao.AdminDAO"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 
-<%
-	request.setCharacterEncoding("UTF-8");
-	String gtitle = request.getParameter("gtitle");
-	System.out.println("MsearchTitle:"+gtitle);
-	AdminDAO dao = new AdminDAO();
-	List<GroupBean> list = dao.AdminSearchTitle(gtitle);
-	System.out.println("Á¦¸ñµµÂø");
-	request.setAttribute("list", list);
-
-	%>
 	
 	<table style="width: 98%; border-collapse: collapse;" id="mtable">
 				<tr height="30px" style="border-bottom: 1px solid #167266;">

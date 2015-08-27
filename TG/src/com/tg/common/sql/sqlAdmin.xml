@@ -9,18 +9,34 @@
 	select pass from admintable where id=#{id}
 </select>
 
-<!-- 검색어 추천  -->
-	<select id="suggestMember" parameterType="java.lang.String" resultType="java.lang.String">
-		select id from member where id like #{keyword}
-	</select>
-
 <select id="showAllGroup"   resultType="com.tg.common.beans.GroupBean">
 	select * from gxgroup
 </select>
 
+<!-- admin group 관리 -->
+	<!-- 전체그룹선택 -->
+	<select id="selectAllGroup"  resultType="com.tg.common.beans.GroupBean" parameterType="String">
+	select * from gxgroup
+	</select>
+	<!-- 전체 그룹 갯수 카운트 -->
+	<select id="countAllGroup" resultType="java.lang.Integer">
+		select count(*) from gxgroup
+	</select>
+	<!-- 그룹 검색 갯수 카운트 -->
+	<select id="countSpecificTitle" resultType="java.lang.Integer" parameterType="java.lang.String">
+		select count(*) from gxgroup where gtitle  like #{gtitle}
+	</select>
+<!-- admin member 관리 -->
+	<!-- 검색어 추천  -->
+	<select id="suggestMember" parameterType="java.lang.String" resultType="java.lang.String">
+		select id from member where id like #{keyword}
+	</select>
+	
+
 <select id ="selectAll" resultType="com.tg.common.beans.MemberBean" parameterType="map">
+
 	select mid, mnick, pp, ccnt, rcnt,rn
-from  (select m.id mid, m.nick mnick, nvl(p.cnt,0) pp, nvl(gx.cnt,0) ccnt, nvl(re.cnt,0) rcnt , rownum rn
+	from  (select m.id mid, m.nick mnick, nvl(p.cnt,0) pp, nvl(gx.cnt,0) ccnt, nvl(re.cnt,0) rcnt , rownum rn
 		 from  member m, 
 		        (select id, count(*) cnt
 		          from member,participant
@@ -49,5 +65,13 @@ from  (select m.id mid, m.nick mnick, nvl(p.cnt,0) pp, nvl(gx.cnt,0) ccnt, nvl(r
 	<select id="countSpecificId" resultType="java.lang.Integer" parameterType="java.lang.String">
 		select count(*) from member where id  like #{id}
 	</select>
+	
+	<update id="deleteId" statementType="CALLABLE" parameterType="String">
+		{call del_user(#{id})}
+	</update>
+	
+	<update id="deleteId2" statementType="CALLABLE" parameterType="String">
+		{call del_user2(#{id})}
+	</update>
 </mapper>
 
