@@ -96,7 +96,7 @@
     		data: {delId:eraseId},
     		dataType:"text",
     		success:function(){
-    			goPage(1);
+    			searchClick('@',1);
     		}});
    		 }//ifÀý
 		};
