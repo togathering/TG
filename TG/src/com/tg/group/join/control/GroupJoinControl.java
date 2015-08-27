@@ -56,7 +56,7 @@ public class GroupJoinControl {
 		GroupBean gbean = gdao.wantGsum(gno);
 		int gsum = gbean.getGsum();
 		gsum--;
-		if(gdao.joinGroup(gsum, gno) &&	pdao.cancelJoin(pbean)){
+		if(gdao.joinG(gsum, gno, "모집중") &&	pdao.cancelJoin(pbean)){
 			System.out.println("참여취소 성공");				
 		}else{
 			System.out.println("참여취소 실패");				

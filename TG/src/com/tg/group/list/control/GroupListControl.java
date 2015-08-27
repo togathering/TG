@@ -25,6 +25,10 @@ public class GroupListControl {
 			@RequestParam(value="day", required=false)String day,
 			@RequestParam(value="cnt", required=false)Integer cnt){		
 		String movePage = "";
+		
+		dao.endGx("모임종료");
+		
+		
 		if(cnt == null){
 			cnt = 6;
 			movePage = ".tglist";
@@ -65,6 +69,9 @@ public class GroupListControl {
 		
 		model.addAttribute("tglist", list);
 		model.addAttribute("size", list.size());
+		
+		
+		
 		
 		return movePage;
 	}

@@ -42,12 +42,6 @@ public class MyPageControl {
 			@RequestParam(value="month")String month,
 			@RequestParam(value="day")String day) {
 		String id= (String) session.getAttribute("id");
-		if(Integer.parseInt(month) < 10){
-			month = "0"+month;
-		}
-		if(Integer.parseInt(day) < 10){
-			day = "0"+day;
-		}
 		
 		m.setBirth(year+month+day);
 		m.setId(id);
