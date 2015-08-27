@@ -5,11 +5,13 @@
 				<tr>
 					<th style="width: 400px">문의제목</th>
 					<th style="width: 130px">날짜</th>
+					<th style="width: 130px">답변상태</th>
 				</tr>
 		<c:forEach  items='${list }' var='qList' >
 				<tr>
 					<td align="center"><a href="qnaReplyConfirm?qno=${qList.qno }" style="color: gray;">${qList.qtitle }</a></td>
 					<td align="center">${qList.qdate }</td>
+					<td align="center">${qList.qstatus }</td>
 				</tr>
 		</c:forEach>		
 			</table>

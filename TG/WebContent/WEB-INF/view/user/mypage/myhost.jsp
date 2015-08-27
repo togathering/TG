@@ -9,11 +9,15 @@
 <link rel="stylesheet" type="text/css" href="css/list.css">
 <link rel="stylesheet" type="text/css" media="all" href="css/styleMy.css">
 <title>Today, ToGathering, Together</title>
+<script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript">
 	function deleteGx(gno) {
 		alert(gno);
 		location.href = 'gxdelete?gno='+gno;
 	}
+	$(document).ready(function(){		
+		myhost();		
+	 });
 </script>
 </head>
 <body>
@@ -26,7 +30,7 @@
 		<form id="form" style="padding-top: 20px; text-align: center;">
 		<div class="wrapper"><h1>호스트 내역</h1><br><br>
 			<font color="#add">현재 ${hNum}개의 모임의 호스트를 맡고있습니다.</font><br><br>
-			<table id="joinGx" style="width: 70%; margin-left: 5px">
+			<table id="hostGx" style="width: 70%; margin-left: 5px">
 				<tr style="height: 40px; background-color: #40C4AD; font-weight: bold; border: 1px solid lightgray;">
 					<td hidden="true">모임번호</td>
 					<td>모임이름</td>

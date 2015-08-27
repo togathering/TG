@@ -173,10 +173,13 @@ public class GroupDAO {
 		}
 		return num;
 	}
-	public List<GroupBean> hostGx(String id){
+	public List<GroupBean> hostGx(String id, String gstatus){
+		HashMap<Object, Object> map = new HashMap<Object, Object>();
+		map.put("id", id);
+		map.put("gstatus", gstatus);
 		List<GroupBean> gx = null;
 		try {
-			gx = smc.queryForList("group.hostGx", id);
+			gx = smc.queryForList("group.hostGx", map);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

@@ -64,10 +64,10 @@
 	</select>
 	
 	<!-- 회원이 호스트인 모임출력 -->
-	<select id="hostGx" parameterClass="java.lang.String" resultClass="com.tg.common.beans.GroupBean">
+	<select id="hostGx" parameterClass="java.util.HashMap" resultClass="com.tg.common.beans.GroupBean">
 		select gno, ghost, gtitle, gloc, gintro, gday, gmax, gmin, gimg, gdate, gtag, gstatus, gsum
 		from gxgroup 
-		where ghost=#id# order by gday
+		where ghost=#id# and gstatus=#gstatus# order by gday
 	</select>
 	<select id="hostNum" parameterClass="java.lang.String" resultClass="int">
 		select count(gno) from gxgroup where ghost=#id#
