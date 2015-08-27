@@ -24,10 +24,7 @@ public class GroupListControl {
 			@RequestParam(value="order", required=false)String order,
 			@RequestParam(value="day", required=false)String day,
 			@RequestParam(value="cnt", required=false)Integer cnt){		
-		String movePage = "";
-		
-		dao.endGx("모임종료");
-		
+		String movePage = "";		
 		
 		if(cnt == null){
 			cnt = 6;
