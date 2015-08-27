@@ -339,6 +339,10 @@ a:hover{
 				<span id="encore"><button type="button" name="encore" hidden="">앵콜</button></span><br>
 				<span><button type="button" style="display: none" class="button" id="invite" name="invite" value="친구초대" onclick="loadFriend(${group.gno})">친구초대</button></span>
 			</form>
+		</div>
+	</div>
+	<!-- 상단 이미지+요약내용 끝-->
+			<!-- 참가인원 시작 -->
 			<div>
 				<h2>참가인원들</h2>
 				<table>
@@ -353,10 +357,9 @@ a:hover{
 						</tr>						
 					</c:forEach>
 				</table>
-			</div>
-		</div>
-	</div>
-	<!-- 상단 이미지+요약내용 끝-->
+			</div><!-- 참가인원끝 -->
+			
+	<!-- 상세내용 -->
 	<div>
 		<h4 align="center">모임명</h4>
 		<h2 align="center"> ${group.gtitle} </h2>
@@ -386,13 +389,13 @@ a:hover{
 		<div style="margin: 10px auto; width:80%;">
 		<h3>댓글</h3>
 		<div id="replyDiv"></div>
-		<form style="margin:10px auto; width:100%" name="replyFrm">
-			<textarea rows="5" name="reply" id="reply" style="width: 80%;"></textarea>
-			<br>
-			<button type="button" class="button" onclick="addReply()" style="width: 100px;">등록</button>
-		</form>
-		<br>
-		<button type="button" class="button" onclick="loadReplyPage()" style="width: 110px; border-radius:1.5em 1.5em 1.5em 1.5em;">댓글더보기</button>
+			<form style="margin:10px auto; width:100%" name="replyFrm">
+				<textarea rows="5" name="reply" id="reply" style="width: 80%;"></textarea>
+				<br>
+				<button type="button" class="button" onclick="addReply()" style="width: 100px;">등록</button>
+			</form>
+				<br>
+			<button type="button" class="button" onclick="loadReplyPage()" style="width: 110px; border-radius:1.5em 1.5em 1.5em 1.5em;">댓글더보기</button>
 		</div>
 	<!-- 하단footer -->
 	<div style="position: relative; top: 30px">

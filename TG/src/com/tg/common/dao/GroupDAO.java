@@ -15,14 +15,11 @@ import com.tg.common.beans.GroupBean;
 import com.tg.iba.MySqlMapConfig;
 
 public class GroupDAO {
-	SqlMapClient smc;
 	
 	@Autowired
 	SqlSession session;
 	public GroupDAO() {
-		smc = MySqlMapConfig.getSqlMapInstance();
-		
-		
+				
 	}
 	
 	public boolean create(GroupBean bean){
