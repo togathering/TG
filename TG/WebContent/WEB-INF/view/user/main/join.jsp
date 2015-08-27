@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
+x<%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
 <%@taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles" %>
 <!DOCTYPE html>
@@ -40,6 +40,7 @@
 			location.href = 'login';
 		}
 	});
+	
 </script>
 <head>
 	<meta charset="UTF-8">
@@ -62,8 +63,7 @@
 			<form class="form" name="frm" method="post" action="joinpass">
 				<input type="text" placeholder="Nickname" name="nick"> 
 				<input type="text" placeholder="E-mail" name="id"> 
-				<input
-					type="password" placeholder="Password" name="pass">
+				<input type="password" placeholder="Password" name="pass">
 				<button type="button" name="join_bt" onclick="checkValue()">Join</button>
 			</form>
 		</div>
