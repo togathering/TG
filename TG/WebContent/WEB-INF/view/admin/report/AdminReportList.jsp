@@ -19,7 +19,7 @@
 	});
 	
 	function report(reportNo) {
-		window.open('adminReportConfirm?rno='+reportNo,'','width=400, height=390, screenX=400, screenY=130, resizable=no'); 
+		window.open('adminReportConfirm?rno='+reportNo,'','width=440, height=420, screenX=400, screenY=130, resizable=no'); 
 	}
 	$(document).ready(function(){
 		load();

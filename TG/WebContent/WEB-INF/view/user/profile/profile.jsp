@@ -8,8 +8,8 @@
 <style type="text/css">
 	body { width:800px; margin:20px auto; background:#ddd;}
 	.image { width:250px; height:250px; float:left; background:skyblue;}
-	.profile {width:550px; height:200px; float:left; background:skyblue;}
-	.evaluate {width:550px; height:50px; float:left; background:skyblue;}
+	.profile {width:550px; height:200px; float:left; background:white;}
+	.evaluate {width:550px; height:50px; float:left; background:white;}
 	.tprofile {margin: 10px;}
 	.tevaluate {margin: 10px;}
 </style>
