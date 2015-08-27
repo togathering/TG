@@ -17,7 +17,7 @@
 					<td>${gx.ghost }</td>
 					<td>${gx.gloc }</td>
 					<td>${gx.gday }</td>
-					<td><input type="button" value="평가" onclick="review()"></td>
+					<td><input type="button" value="평가" onclick="review(${gx.gno})"></td>
 				</tr>
 				</c:forEach>
 			</table>
