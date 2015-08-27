@@ -32,3 +32,13 @@
 					</tr>
 				</c:forEach>
 			</table>
+				<br />
+			<br />
+			<hr />
+			<center>
+				<a href="#"  onclick="goPage(1);">시작페이지</a>
+				<c:forEach begin="1" end="${pageMaxNum }" step="1" var="i">
+					<a href="#" onclick="goPage(${i })">${i }</a>
+				</c:forEach>
+				<a href="#" onclick="goPage(${pageMaxNum })">끝페이지</a>
+				</center>

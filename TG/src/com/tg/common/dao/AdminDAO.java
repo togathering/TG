@@ -100,9 +100,9 @@ public class AdminDAO {
 	}
 		
 	//특정 검색어 관련 회원 검색
-	public int countId(String id){
+	public int countId(String pid){
 		int countId = 0;
-
+			String id = "%"+pid+"%";
 			countId = (int) session.selectOne("admin.countSpecificId", id);
 		
 		return countId;

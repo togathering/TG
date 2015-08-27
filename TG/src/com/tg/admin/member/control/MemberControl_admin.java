@@ -32,20 +32,30 @@ public class MemberControl_admin {
 	}
 	
 	 @RequestMapping("/specificId")
-	 public String specificId(@RequestParam(value="keyword")String id,Model model, HttpServletRequest request){
+	 public String specificId(@RequestParam(value="keyword")String id,@Param(value="pageNum")String pageNum,Model model, HttpServletRequest request){
 		 
 		 int pageMaxNum =0;
 		 
-			if(dao.countId(id)/10==0){
+		 System.out.println("검색결과 : "+dao.countId(id));
+			if(dao.countId(id)%10==0){
 				pageMaxNum= dao.countId(id)/10;
 				}else{
 				pageMaxNum= dao.countId(id)/10+1;
 				}
-			
+		System.out.println("pageMaxNum in search result: "+pageMaxNum);	
 		 request.setAttribute("pageMaxNum",	pageMaxNum);
 		 
-		 request.setAttribute("list", dao.selectId(0, id));
+			int pNum=0;
+			if(pageNum==null){
+				pNum=0;
+			}else{
+				 pNum = Integer.parseInt(pageNum)-1;
+			}
 		 
+			request.setAttribute("keyword", id);
+			request.setAttribute("list", dao.selectId(pNum, id));
+			request.setAttribute("pageNum", pNum);
+			
 		 int t = dao.selectId(0,id).size();
 		 System.out.println(id+"요기"+t+"개 : "+dao.selectId(0,id));
 		 return "admin/member/SpecificMember";
