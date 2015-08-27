@@ -5,6 +5,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>비밀번호 찾기</title>
+<script type="text/javascript" src="js/jquery.js"></script>
+
 <script type="text/javascript">
 
 // 빈값 체크
@@ -17,9 +19,17 @@ function emptyCheck(){
 		return;
 	}
 	document.frm.submit();
-	
-	alert("이메일로 비밀번호를 전송하였습니다.");
 }
+
+// 이메일 전송 성공 여부를 알려주는 알림창 생성
+$(document).ready(function(){
+	if('${result}' =='fail'){
+		alert("없는 이메일입니다.");
+	} else('${result}' =='success'){
+		alert("비밀번호를 이메일로 전송하였습니다.");
+	}
+})
+
 </script>
 </head>
 <body>

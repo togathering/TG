@@ -49,7 +49,7 @@ public class EmailController {
 		
 		} else {
 			model.addAttribute("result", "fail");
-			return "sendPass";
+			return "common/sendPass";
 		}
 	}
 }

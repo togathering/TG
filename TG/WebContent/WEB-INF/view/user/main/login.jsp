@@ -18,6 +18,7 @@
 		window.open('sendPass','',
 					'width=400, height=450, screenX=400, screenY=130, resizable=no');
 	}
+	
 </script>
 
 
