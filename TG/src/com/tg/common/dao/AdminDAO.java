@@ -152,6 +152,16 @@ public class AdminDAO {
 		return countId;
 	}
 
+	public void removeId(String pid){
+		//1차 아이디 삭제  삭제/ 임시 보존/ 영구보존
+		System.out.println("pid:"+pid);
+		 session.update("admin.deleteId",pid);
+	}
+
+	public void removeId2(String pid){
+		//2차 아이디 삭제 임시보존 내용 까지 삭제
+		session.update("admin.deleteId2",pid);
+	}
 }
 
 
