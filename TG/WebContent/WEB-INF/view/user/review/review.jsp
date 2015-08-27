@@ -12,30 +12,41 @@
 		document.reviewFrm.id.value = id;
 	}
 	
+	function insertReview() {
+		var id = document.reviewFrm.id.value;
+		var evaluate = document.reviewFrm.evaluate.value;
+		
+		$.ajax({url:'review', type:'POST', data: 'gno=${param.gno}&id='+id+'&evaluate='+evaluate, dataType: 'text', 
+			success: function () {
+				alert("성공");
+			}
+		});
+	}
+	
 </script>
 <title>함께한 사람들은 어떤 사람들이었나요</title>
 </head>
 <body>
 	<select id="sel" onchange="selectId()">
-	<option value="함께한 친구들">함께한 친구들</option>
-	<option value="${host }">${host }</option>	
-	<c:forEach items="${list }" var="gx">
-		<option value="${gx.pid }">${gx.pid }</option>
-	</c:forEach>
+		<option value="함께한 친구들">함께한 친구들</option>
+		<option value="${host }">${host }</option>	
+		<c:forEach items="${list }" var="gx">
+			<option value="${gx.pid }">${gx.pid }</option>
+		</c:forEach>
 	</select>
 	<br>
 	<br>
-	<form name="reviewFrm" action="review">
+	<form name="reviewFrm">
 		<span>이름</span>
 		<br>
 		<input type="hidden" name="gno" value="${param.gno }" >
 		<input type="text" name="id" id="id" readonly="readonly">
 		<br>
-		<span>COMMENT</span>
+		<span>EVALUATE</span>
 		<br>
-		<input type="text" name="comment">
+		<input type="text" name="evaluate">
 		<br>
-		<input type="submit" value="완료">
+		<input type="button" value="완료" onclick="insertReview()">
 	</form>
 </body>
 </html>

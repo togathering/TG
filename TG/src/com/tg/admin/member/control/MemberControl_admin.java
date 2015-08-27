@@ -63,10 +63,31 @@ public class MemberControl_admin {
 	 }
 	
 	 @RequestMapping("removeId")
-	 public void removeId(@RequestParam(value="delId")String eraseId){
-		 System.out.println("삭제아이디:"+eraseId);
-		 dao.removeId(eraseId);
+	 public String removeId(@RequestParam(value="delId")String eraseId){
+		 if(dao.removeId(eraseId)){
+			 System.out.println("삭제아이디:"+eraseId+"삭제 성공");
+			
+		 }else{
+			 System.out.println("삭제아이디:"+eraseId+"삭제 실패");
+		 }
+		 return ".adminMember_List";
+	 }
 		 
+		 @RequestMapping("removeId2")
+		 public boolean removeId2(@RequestParam(value="delId")String eraseId){
+			 if(eraseId.substring(0, 5).equals("(탈퇴회원)")){
+				return true;
+			 }else{
+				 
+				 if(dao.removeId2(eraseId)){
+					 System.out.println("삭제아이디:"+eraseId+"삭제 성공");
+					 return true; 
+				 }else{
+					 System.out.println("삭제아이디:"+eraseId+"삭제 실패");
+					 return false;
+				 }
+			 
+			 }
 	 }
 
 
