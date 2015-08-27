@@ -64,4 +64,14 @@ public class ReportDAO {
 		}
 		return false;
 	}
+	
+	public int reportCount(String id){
+		int count = 0;
+		try {
+			count = (int) smc.queryForObject("report.Count", id);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return count;
+	}
 }
