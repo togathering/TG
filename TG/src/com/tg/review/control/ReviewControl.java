@@ -1,7 +1,5 @@
 package com.tg.review.control;
 
-import java.util.ArrayList;
-
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.tg.common.beans.ReviewBean;
 import com.tg.common.dao.GroupDAO;
 import com.tg.common.dao.ParticipantDAO;
+import com.tg.common.dao.ReviewDAO;
 
 @Controller
 public class ReviewControl {
@@ -21,25 +20,29 @@ public class ReviewControl {
 	ParticipantDAO pdao;
 	@Autowired
 	GroupDAO gdao;
+	@Autowired
+	ReviewDAO rdao;
 	
 	@RequestMapping("/openReview")
-	public String openReview(Model model, @RequestParam(value="gno")Integer gno){
+	public String openReview(Model model, HttpSession session, @RequestParam(value="gno")Integer gno){
 		
 		model.addAttribute("host", gdao.selectGroupInfo(gno).getGhost());
-		model.addAttribute("list", pdao.joinList(gno));
+		model.addAttribute("list", pdao.reviewList(gno, (String) session.getAttribute("id")));
 		
 		return "user/review/review";
 	}
 	
 	@RequestMapping("/review")
-	public String review(ReviewBean rbean, HttpSession session){
+	public String review(ReviewBean rbean, HttpSession session, Model model){
 		String id = (String) session.getAttribute("id");
 		
-		System.out.println(id);
-		System.out.println(rbean.getGno());
-		System.out.println(rbean.getId());
-		System.out.println(rbean.getComment());
+		rbean.setEvaluator(id);
+		rbean.setGrade(10);
 		
-		return "redirect:mygx";
+		rdao.insertReview(rbean);
+		
+		model.addAttribute("reviewId", rbean.getId());
+		
+		return "user/review/successPage";
 	}
 }

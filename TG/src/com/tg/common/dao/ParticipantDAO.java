@@ -23,6 +23,14 @@ public class ParticipantDAO {
 		return list;
 	}
 	
+	public List<ParticipantBean> reviewList(int gno, String id){
+		HashMap<String, Object> map = new HashMap<String, Object>();
+		map.put("gno", gno);
+		map.put("id", id);
+		List<ParticipantBean> list = session.selectList("parti.reviewlist", map);
+		return list;
+	}
+	
 	public ParticipantBean dupCheck(int gno, String id){
 
 		HashMap<String, Object> map = new HashMap<String, Object>();

@@ -21,4 +21,8 @@
 	<select id="joinlist" parameterType="int" resultType="com.tg.common.beans.ParticipantBean">
 		select pid, rownum from participant where gno = #{gno}
 	</select>
+	
+	<select id="reviewlist" parameterType="hashmap" resultType="com.tg.common.beans.ParticipantBean">
+		select pid from participant where gno = #{gno} and pid != #{id}
+	</select>
 </mapper>

@@ -86,19 +86,24 @@
 		
 				//삭제	
 		function deleteId(eraseId){
+			if(eraseId.startsWith('(탈퇴회원)')){
+				alert("이미 탈퇴한 회원입니다.");	
+			}else{
+			
 				//alert(eraseId);
-    		var del =confirm("정말 삭제하시겠습니까?");
-    		
-    		if(del){
-    	$.ajax({
-    		url: 'removeId',
-    		type:'POST' ,
-    		data: {delId:eraseId},
-    		dataType:"text",
-    		success:function(){
-    			goPage(1);
-    		}});
-   		 }//if절
+	    		var del =confirm("정말 삭제하시겠습니까?");
+	    		
+	    		if(del){
+	    	$.ajax({
+	    		url: 'removeId',
+	    		type:'POST' ,
+	    		data: {delId:eraseId},
+	    		dataType:"text",
+	    		success:function(){
+	    			searchClick('@',1);
+	    		}});
+	   		 }//if절
+			}
 		};
 	</script>
 
