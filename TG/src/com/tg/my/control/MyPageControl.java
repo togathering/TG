@@ -51,7 +51,7 @@ public class MyPageControl {
 	public String myHost(Model model, HttpSession session){
 		String id = (String) session.getAttribute("id");
 		String gstatus = "모집중";
-		List<GroupBean> list = gdao.hostGx(id);
+		List<GroupBean> list = gdao.hostGx(id, gstatus);
 		int num = gdao.hostNum(id);
 		model.addAttribute("list", list);
 		model.addAttribute("hNum", num);
@@ -63,7 +63,7 @@ public class MyPageControl {
 	public String myHostEnd(Model model, HttpSession session){
 		String id = (String) session.getAttribute("id");
 		String gstatus = "모집완료";
-		List<GroupBean> list = gdao.hostGx(id);
+		List<GroupBean> list = gdao.hostGx(id, gstatus);
 		int num = gdao.hostNum(id);
 		model.addAttribute("list", list);
 		model.addAttribute("hNum", num);
