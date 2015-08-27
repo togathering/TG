@@ -6,7 +6,6 @@
 					<th style="width: 220px">신고자</th>
 					<th>피신고자</th>
 					<th>카테고리</th>
-					<th>내용</th>
 					<th>신고날짜</th>
 					<th>신고확인</th>
 				</tr>
@@ -15,7 +14,6 @@
 					<td align="center">${rList.reporter } </td>
 					<td align="center">${rList.accused }</td>
 					<td align="center">${rList.category }</td>
-					<td align="center">${rList.content }</td>
 					<td align="center">${rList.rdate }</td>
 					<td align="center"><input type="button" value="확인" onclick="report('${rList.no }')"></td>
 				</tr>

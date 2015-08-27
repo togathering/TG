@@ -16,8 +16,8 @@
 	border-style: none;
 }
 .Content{
-text-align: left; 
-width: 70%
+width: 600px;
+margin-left: 400px;
 }
 </style>
 <script type="text/javascript">

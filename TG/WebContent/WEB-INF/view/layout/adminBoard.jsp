@@ -10,7 +10,7 @@
 	<div style="float: left; width: 15%; height: 600px; display: inline; margin: 0 2%;">
 
 		<ul style="color: black">
-			<li><a href="#">FAQ包府</a></li>
+			<li hidden="true"><a href="#">FAQ包府</a></li>
 			<li><a href="adminQna" id="qna">巩狼包府</a></li>
 			<li><a href="adminReport" id="report">脚绊包府</a></li>
 		</ul>
