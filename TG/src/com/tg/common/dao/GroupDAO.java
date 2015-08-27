@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.ibatis.session.RowBounds;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -36,45 +37,36 @@ public class GroupDAO {
 	
 	public List<GroupBean> listAll(String order, int pageCnt){
 		List<GroupBean> list = null;
-		try {
-			list = smc.queryForList("group.list", order, 0, pageCnt);
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+			list = session.selectList("group.list", order, new RowBounds(0, pageCnt));
+
 		return list;
 	}
 	
 	public List<GroupBean> mainList(){
 		List<GroupBean> list = null;
-		try {
-			list = smc.queryForList("group.mainlist", 0, 6);
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+
+			list = session.selectList("group.mainlist","",new RowBounds(0, 6));
+
 		return list;
 	}
 	
 	public List<GroupBean> mSelectAll(){
 		List<GroupBean> list = null;
-		try {
-			 list = smc.queryForList("admin.showAllGroup");
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+
+			 list = session.selectList("admin.showAllGroup");
+
 		return list;
 	}
 	
 	public List<GroupBean> search(String keyword, String order, int pageCnt){
 		List<GroupBean> list = null;
-		try {
+
 			keyword = "%"+keyword+"%";
 			HashMap<String, String> map = new HashMap<String, String>();
 			map.put("keyword", keyword);
 			map.put("order", order);
-			list =  smc.queryForList("group.search", map, 0, pageCnt);
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+			list =  session.selectList("group.search", map, new RowBounds(0, pageCnt));
+
 		return list;
 	}
 	
@@ -82,73 +74,57 @@ public class GroupDAO {
 		List<GroupBean> list = null;
 		gtitle="%"+gtitle+"%";
 
-		try {
-			list=smc.queryForList("group.MsearchTitle",gtitle);
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+			list=session.selectList("group.MsearchTitle",gtitle);
+
 		return list;
 	}
 	
 	// 명준 : 상세페이지 보기
 	public GroupBean selectGroupInfo(int gno){
 		GroupBean bean = null;
-		try {
-			
-			bean = (GroupBean)smc.queryForObject("group.info", gno);
-			
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}		
+
+			bean = (GroupBean)session.selectOne("group.info", gno);
+					
 		return bean;
 	}
 	
 	public GroupBean wantGsum(int gno){
 		GroupBean bean = null;
-		try {
-			bean = (GroupBean) smc.queryForObject("group.getGsum", gno);
-		} catch (SQLException e) {			
-			e.printStackTrace();
-		}
-		return bean;
+			
+			bean = (GroupBean) session.selectOne("group.getGsum", gno);
+		
+			return bean;
 	}
 		
 	public boolean joinGroup(int gsum, int gno){		
 		HashMap<String, Integer> map = new HashMap<String, Integer>();
 				map.put("gsum", gsum);
 				map.put("gno", gno);
-		try {
-			int t = smc.update("group.join", map);
+
+			int t = session.update("group.join", map);
 			if(t==1){
 				return true;
 			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+		
 		return false;
 	}
 	
 	public boolean delGroup(int gno){
 		
-		try {
-			int t = smc.delete("group.delete",gno);
+			int t = session.delete("group.delete",gno);
 			if(t==1){
 				return true;
 			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+		
 		return false;
 	}
 	
 	public List<GroupBean> searchDay(String day, int pageCnt){
 		List<GroupBean> list = null;
 		day = day+"%";
-		try {
-			list = smc.queryForList("group.selectDay", day, 0, pageCnt);
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+
+			list = session.selectList("group.selectDay", day, new RowBounds(0, pageCnt));
+		
 		return list;
 	}
 	
@@ -157,20 +133,16 @@ public class GroupDAO {
 		HashMap<Object, Object> map = new HashMap<Object, Object>();
 		map.put("id", id);
 		map.put("gstatus", gstatus);
-		try {
-			gx = smc.queryForList("group.joinGx", map);
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+
+			gx = session.selectList("group.joinGx", map);
+		
 		return gx;
 	}
 	public int joinNum(String id){
 		int num = 0;
-		try {
-			num = (int) smc.queryForObject("group.joinNum", id);
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+		
+			num = (int) session.selectOne("group.joinNum", id);
+		
 		return num;
 	}
 	public List<GroupBean> hostGx(String id, String gstatus){
@@ -178,20 +150,16 @@ public class GroupDAO {
 		map.put("id", id);
 		map.put("gstatus", gstatus);
 		List<GroupBean> gx = null;
-		try {
-			gx = smc.queryForList("group.hostGx", map);
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+		
+			gx = session.selectList("group.hostGx", map);
+		
 		return gx;
 	}
 	public int hostNum(String id){
 		int num = 0;
-		try {
-			num = (int) smc.queryForObject("group.hostNum", id);
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+		
+			num = (int) session.selectOne("group.hostNum", id);
+		
 		return num;
 	}
 	
@@ -200,24 +168,20 @@ public class GroupDAO {
 				map.put("gstatus", gstatus);
 				map.put("gsum", gsum);
 				map.put("gno", gno);
-		try {
-			int t = smc.update("group.joinG", map);
+		
+			int t = session.update("group.joinG", map);
 			if(t==1){
 				return true;
 			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+		
 		return false;
 	}
 	
 	public boolean endGx(String gstatus){
 		int t=0;
-		try {
-			t = smc.update("group.endGx", gstatus);
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+		
+			t = session.update("group.endGx", gstatus);
+		
 		if(t>1){
 			return true;
 		}
@@ -228,12 +192,10 @@ public class GroupDAO {
 	public List<GroupBean> tagResult(String tag){
 		List<GroupBean> list=null;
 		System.out.println("태그는 "+tag);
-		try {
-			list = smc.queryForList("group.selectTag", "%#"+tag+"%");
+		
+			list = session.selectList("group.selectTag", "%#"+tag+"%");
 			System.out.println(list.size());
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+		
 		return list;
 	}
 }
