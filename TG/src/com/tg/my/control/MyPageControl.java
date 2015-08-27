@@ -71,7 +71,7 @@ public class MyPageControl {
 		return ".myhost";
 	}
 	
-	@RequestMapping("/mygx")
+	@RequestMapping("/mygxgroup")
 	public String myGx(Model model, HttpSession session){
 		String id = (String) session.getAttribute("id");
 		String gstatus = "모집중";
@@ -81,10 +81,10 @@ public class MyPageControl {
 		model.addAttribute("gNum", num);
 		model.addAttribute("gstatus", gstatus);
 		
-		return ".mygx";
+		return "user/mypage/processing";
 	}
 	
-	@RequestMapping("/mygxEnd")
+	@RequestMapping("/mygxgroupEnd")
 	public String myGxEnd(Model model, HttpSession session){
 		String id = (String) session.getAttribute("id");
 		String gstatus = "모집완료";
@@ -94,7 +94,7 @@ public class MyPageControl {
 		model.addAttribute("gNum", num);
 		model.addAttribute("gstatus", gstatus);
 		
-		return ".mygx";
+		return "user/mypage/endGroup";
 	}
 	
 	@RequestMapping("/gxcancel")
