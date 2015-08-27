@@ -10,6 +10,7 @@ import com.ibatis.sqlmap.client.SqlMapClient;
 import com.tg.common.beans.MemberBean;
 import com.tg.common.beans.MemberBeanIn;
 import com.tg.iba.MySqlMapConfig;
+import com.tg.email.model.Email;
 
 public class MemberDAO {
 	SqlMapClient smc;
@@ -130,6 +131,17 @@ public class MemberDAO {
 			e.printStackTrace();
 		}
 		return false;
+	}
+	
+	public String getPass(String id){
+		try {
+			String pass = (String) smc.queryForObject("member.getPass", id);
+			return pass;
+		
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return "fail";
 	}
 
 }
