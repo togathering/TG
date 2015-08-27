@@ -13,9 +13,13 @@
 function emptyCheck(){
 	var id = document.frm.id.value;
 	
+	var email = new RegExp('^[a-zA-Z0-9]{4,15}@[a-zA-Z]+[.][a-zA-Z]', 'g');
 	if(id.length == 0){
 		alert("이메일을 입력해주세요.");	
-		document.frm.noteTitle.focus();
+		document.frm.id.focus();
+		return;
+	} else if(!email.test(id)){
+		alert("이메일형식이 잘못됐습니다");
 		return;
 	}
 	document.frm.submit();
@@ -25,9 +29,7 @@ function emptyCheck(){
 $(document).ready(function(){
 	if('${result}' =='fail'){
 		alert("없는 이메일입니다.");
-	} else('${result}' =='success'){
-		alert("비밀번호를 이메일로 전송하였습니다.");
-	}
+	} 
 })
 
 </script>

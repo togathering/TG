@@ -9,6 +9,11 @@
 
 	<script type="text/javascript">
 		$(document).ready(function(){
+			if('${result}' == 'passSendSuccess'){
+				alert("비밀번호를 이메일로 전송하였습니다.");
+			} else if('${result}' == 'noteSendSuccess'){
+				alert("쪽지 보내기 성공.");
+			}
 			window.close();
 		})
 	</script>

@@ -43,7 +43,7 @@ public class EmailController {
             
             emailSender.SendEmail(email);
             
-            model.addAttribute("result", "success");
+            model.addAttribute("result", "passSendSuccess");
             
             return "common/windowClose";
 		
