@@ -20,6 +20,7 @@
 	<div style="z-index: 2;"><tiles:insertAttribute name="header"/></div>
 	<br><br>
 	<div><tiles:insertAttribute name="myPageHeader"/></div>
+	<div><tiles:insertAttribute name="hostSide"/></div>
 	<section class="listings">
 	<br>
 		<form id="form" style="padding-top: 20px; text-align: center;">

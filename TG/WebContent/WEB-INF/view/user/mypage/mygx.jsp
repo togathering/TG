@@ -23,9 +23,8 @@
 				cancels.item(i).style.display = 'none';
 			}
 			
-		}else{
-			alert('${gstatus}');
 		}
+		
 	 });
 </script>
 
