@@ -15,8 +15,12 @@
 
 <!-- admin group 관리 -->
 	<!-- 전체그룹선택 -->
-	<select id="selectAllGroup"  resultType="com.tg.common.beans.GroupBean" parameterType="String">
+	<select id="selectAllGroup"  resultType="com.tg.common.beans.GroupBean" parameterType="map">
 	select * from gxgroup
+	<if test="gtitle!=null">
+		where gtitle=#{gtitle}
+	</if>
+
 	</select>
 	<!-- 전체 그룹 갯수 카운트 -->
 	<select id="countAllGroup" resultType="java.lang.Integer">

@@ -7,41 +7,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <link rel="stylesheet" type="text/css" href="css/search.css">
-<script type="text/javascript" src="js/ajax.js"></script>
-<script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript">
 
-	 $(function() {
-		$('#search').click(function() {
-			var search = $("#searchtxt").val();
-			searchClick(search, 1);
-		});
-
-	});
-	function searchClick(search, page){
-		$.ajax({
-			url:'specificTitle',
-			type:'POST',
-			data : {
-				keyword:search,
-				pageNum:page
-			},
-			dataType : 'html',
-			success:function(data){
-				$("#tableAndpage").html(data);
-			}
-			
-		})
-	} 
-	function deleteG() {
-		alert("정말 삭제하시겠습니까?")
-
-	}
-
-	function modifyG() {
-		alert("수정하시겠습니까?")
-	}
-</script>
 <style type="text/css">
 a{
 text-decoration:none;
@@ -95,7 +61,48 @@ float:left;
  width:100%;
 }
 </style>
-<title>Insert title here</title>
+
+<script type="text/javascript" src="js/ajax.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+	
+	function searchGroup(){
+		var search = $("#searchtxt").val();
+		//alert(search); 
+		searchClick(search, 1);
+	};
+	
+</script>
+<script type="text/javascript">
+
+
+	
+	function searchClick(search, page){
+		$.ajax({
+			url:'specificGroup',
+			type:'POST',
+			data : {
+				keyword:search,
+				pageNum:page
+			},
+			dataType : 'html',
+			success:function(data){
+				//alert(data);	
+				$("#tableAndpage").html(data);
+			}
+			
+		})
+	} 
+	function deleteG() {
+		alert("정말 삭제하시겠습니까?")
+
+	}
+
+	function modifyG() {
+		alert("수정하시겠습니까?")
+	}
+</script>
+<title>Administrator Group관리</title>
 </head>
 <body>
 <!-- 헤더 타일즈 -->
@@ -109,11 +116,11 @@ float:left;
 			<input type="text" name="searchtxt" id="searchtxt" placeholder="검색할 모임명 입력"
 				class="search_input"
 				onkeydown="javascript:if(event.keyCode==13){searchClick(search, page);}"> 
-			<input type="button" class="button" name="search" id="search" value="검색">
+			<input type="button" class="button" name="search" id="search" value="검색" onclick="searchGroup()">
 		</div>
 		<br>
 		<!-- 게시판내용 -->
-		<div class="board_div">
+		<div class="board_div" id="tableAndpage">
 			<table  id="mtable" class="board_table">
 				<!-- 테이블헤더 -->
 				<tr class="boardth">

@@ -3,8 +3,9 @@
     pageEncoding="EUC-KR"%>
 
 	
-	<table style="width: 98%; border-collapse: collapse;" id="mtable">
-				<tr height="30px" style="border-bottom: 1px solid #167266;">
+		<table  id="mtable" class="board_table">
+				<!-- 테이블헤더 -->
+				<tr class="boardth">
 					<th>모임번호</th>
 					<th style="width: 250px">모임명</th>
 					<th>만든날짜</th>
@@ -13,7 +14,7 @@
 					<th>삭제</th>
 				</tr>
 				<c:forEach items="${list }" var="gsearchTitle">
-					<tr style="border-bottom: 1px solid #167266;">
+					<tr class="board_contnets">
 						<td align="center">${gsearchTitle.gno }</td>
 						<td align="center"><a href="#"
 							onClick="window.open('http://localhost/ToGathering/groupinfo.do?gno=${gsearchTitle.gno }','name','width=1300,height=630');return false">${gsearchTitle.gtitle }</a></td>
@@ -26,3 +27,11 @@
 					</tr>
 				</c:forEach>
 			</table>
+			<!-- 페이징 -->
+			<div class="paging_div" align="center">
+			<a href="adminGroupList?pageNum=1">시작페이지</a>
+			<c:forEach begin="1" end="${pageMaxNum }" step="1" var="i">
+				<a href="adminGroupList?pageNum=${i }">${i }</a>
+			</c:forEach>
+			<a href="adminGroupList?pageNum=${pageMaxNum }">끝페이지</a>
+			</div>

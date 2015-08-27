@@ -65,12 +65,12 @@ public class GroupControl_admin {
 			}
 		 
 			request.setAttribute("keyword", gtitle);
-			request.setAttribute("list", dao.selectId(pNum, gtitle));
+			request.setAttribute("list", dao.selectTitle(pNum, gtitle));
 			request.setAttribute("pageNum", pNum);
 			
 		 int t = dao.selectId(0,gtitle).size();
-		 System.out.println(gtitle+"요기"+t+"개 : "+dao.selectId(0,gtitle));
-		 return "admin/member/SpecificGroup";
+		 System.out.println(gtitle+"요기"+t+"개 : "+dao.selectTitle(pNum,gtitle));
+		 return "admin/admin/SpecificGroup";
 		 
 	 }
 }

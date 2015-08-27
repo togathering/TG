@@ -82,7 +82,7 @@ public class AdminDAO {
 			Map<String, Object> map = new HashMap<String, Object>();
 				startNum= (num*10);
 				map.put("gtitle", gtitle);
-				System.out.println(gtitle);
+				System.out.println("Dao ≥ª title »Æ¿Œ"+gtitle);
 				list = session.selectList("admin.selectAllGroup",map ,new RowBounds(startNum, countNum));
 				
 			return list;
