@@ -44,23 +44,23 @@ public class QnaControl {
 	}
 	
 	@RequestMapping("/qnaRe")
-	public String qnad(@Param(value="answer") String answer, Model model, HttpSession session){
-		String qstatus = null;
+	public String qnad(Model model, HttpSession session){
 		String page = "user/qna/qlist";
+		String qstatus = null;
 		String id=(String) session.getAttribute("id");
-		if(answer.equalsIgnoreCase("n")){
-			qstatus = "N";
-			List<QnaBean> list = dao.QnaReplyConfirm(qstatus, id);
+			List<QnaBean> list = dao.QnaReplyConfirm(id);
+			System.out.println("list: "+list.get(0).getQstatus());
+			for(int i=0; i<list.size(); i++){
+				if(list.get(i).getQstatus()=="Y"){
+					qstatus = "답변완료";
+					list.get(i).setQstatus(qstatus);
+				}
+				System.out.println("after: "+list.get(0).getQstatus());
+			}
 			model.addAttribute("list", list);
-			return page;
-		}else if(answer.equalsIgnoreCase("y")){
-			qstatus = "Y";
-			List<QnaBean> list = dao.QnaReplyConfirm(qstatus, id);
-			model.addAttribute("list", list);
-			return page;
-		}
 		return page;
 	}
+	
 	@RequestMapping("qnaReplyConfirm")
 	public String qnaReConfirm(@Param(value="qno") Integer qno, Model model){
 		QnaBean bean = dao.QnaSelect(qno);

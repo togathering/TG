@@ -15,7 +15,7 @@
 	<update id="QnaReply" parameterClass="com.tg.common.beans.QnaBean">
 		update qna set rcont=#rcont#, rdate=sysdate, qstatus=#qstatus# where qno=#qno#
 	</update>
-	<select id="QnaReplyConfirm" parameterClass="java.util.HashMap" resultClass="com.tg.common.beans.QnaBean">
-		select * from qna where qstatus=#qstatus# and id=#id# order by qdate
+	<select id="QnaReplyConfirm" parameterClass="java.lang.String" resultClass="com.tg.common.beans.QnaBean">
+		select * from qna where id=#id# order by qdate
 	</select>
 </sqlMap>

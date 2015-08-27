@@ -17,4 +17,7 @@
 	<update id="Up" parameterClass="int">
 		update report1 set status='Y' where no=#no#
 	</update>
+	<select id="Count" parameterClass="java.lang.String" resultClass="int">
+		select count(*) from report1 where status='Y' and accused=#accused#
+	</select>
 </sqlMap>

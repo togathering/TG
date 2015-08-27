@@ -55,13 +55,10 @@ public class QnaDAO {
 		return false;
 	}
 	
-	public List<QnaBean> QnaReplyConfirm(String qstatus, String id){
+	public List<QnaBean> QnaReplyConfirm(String id){
 		List<QnaBean> list = null;
-		HashMap<Object, Object> map = new HashMap<Object, Object>();
-		map.put("id", id);
-		map.put("qstatus", qstatus);
 		try {
-			list = smc.queryForList("qna.QnaReplyConfirm", map);
+			list = smc.queryForList("qna.QnaReplyConfirm", id);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
