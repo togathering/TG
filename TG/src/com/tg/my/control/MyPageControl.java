@@ -42,18 +42,27 @@ public class MyPageControl {
 			@RequestParam(value="month")String month,
 			@RequestParam(value="day")String day) {
 		String id= (String) session.getAttribute("id");
+		return ".main";
 		
-		m.setBirth(year+month+day);
-		m.setId(id);
 		
-		dao.upProfile(m);					
-		
-		return ".main";		
 	}
 
 	@RequestMapping("/myhost")
 	public String myHost(Model model, HttpSession session){
 		String id = (String) session.getAttribute("id");
+		String gstatus = "모집중";
+		List<GroupBean> list = gdao.hostGx(id);
+		int num = gdao.hostNum(id);
+		model.addAttribute("list", list);
+		model.addAttribute("hNum", num);
+		
+		return ".myhost";
+	}
+	
+	@RequestMapping("/myhostEnd")
+	public String myHostEnd(Model model, HttpSession session){
+		String id = (String) session.getAttribute("id");
+		String gstatus = "모집완료";
 		List<GroupBean> list = gdao.hostGx(id);
 		int num = gdao.hostNum(id);
 		model.addAttribute("list", list);
@@ -70,6 +79,20 @@ public class MyPageControl {
 		int num = gdao.joinNum(id);
 		model.addAttribute("list", list);
 		model.addAttribute("gNum", num);
+		model.addAttribute("gstatus", gstatus);
+		
+		return ".mygx";
+	}
+	
+	@RequestMapping("/mygxEnd")
+	public String myGxEnd(Model model, HttpSession session){
+		String id = (String) session.getAttribute("id");
+		String gstatus = "모집완료";
+		List<GroupBean> list = gdao.joinGx(id, gstatus);
+		int num = gdao.joinNum(id);
+		model.addAttribute("list", list);
+		model.addAttribute("gNum", num);
+		model.addAttribute("gstatus", gstatus);
 		
 		return ".mygx";
 	}
