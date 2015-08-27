@@ -49,5 +49,5 @@
 	<bean id="email" class="com.tg.email.model.Email"/>
     
 	<bean id="emailSender" class="com.tg.email.model.EmailSender"/>
-	
+
 </beans>
