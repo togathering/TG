@@ -54,9 +54,9 @@
 	<div style="z-index: 2;">
 		<tiles:insertAttribute name="header" />
 	</div>
-<div style="position: relative; top: 120px; margin-top: 100px; z-index: 1;">
-	<div class="wrapper">
-		<div class="container" style="padding-top: 40px">
+	<div style="position: relative; top: 120px; margin-top: 90px; z-index: 1;">
+		<div class="wrapper">
+			<div class="container" style="padding-top: 40px">
 
 			<h1 style="color: white;">시작하세요</h1>
 
