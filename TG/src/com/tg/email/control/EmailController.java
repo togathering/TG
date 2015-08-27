@@ -2,6 +2,7 @@ package com.tg.email.control;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -24,7 +25,7 @@ public class EmailController {
 	MemberDAO memberDao;
 	
 	@RequestMapping("/getPw")
-	public String sendEmailAction (@RequestParam (value="id", required=false) String id) throws Exception 
+	public String sendEmailAction (@RequestParam (value="id", required=false) String id, Model model) throws Exception 
 		{
 		
 		System.out.println("받아온 이메일 값은 " +id);
@@ -42,8 +43,13 @@ public class EmailController {
             
             emailSender.SendEmail(email);
             
+            model.addAttribute("result", "success");
+            
             return "common/windowClose";
 		
-		} else return "redirect:login";
+		} else {
+			model.addAttribute("result", "fail");
+			return "sendPass";
+		}
 	}
 }
