@@ -17,14 +17,25 @@
 </head>
 <body>
 	<select id="sel" onchange="selectId()">
+	<option value="함께한 친구들">함께한 친구들</option>
 	<option value="${host }">${host }</option>	
 	<c:forEach items="${list }" var="gx">
 		<option value="${gx.pid }">${gx.pid }</option>
 	</c:forEach>
 	</select>
-	<form name="reviewFrm">
+	<br>
+	<br>
+	<form name="reviewFrm" action="review">
+		<span>이름</span>
+		<br>
+		<input type="hidden" name="gno" value="${param.gno }" >
 		<input type="text" name="id" id="id" readonly="readonly">
+		<br>
+		<span>COMMENT</span>
+		<br>
 		<input type="text" name="comment">
+		<br>
+		<input type="submit" value="완료">
 	</form>
 </body>
 </html>

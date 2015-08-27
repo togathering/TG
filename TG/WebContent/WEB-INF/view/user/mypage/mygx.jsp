@@ -16,7 +16,7 @@
 	}
 	
 	function review(gno) {
-		window.open('review?gno='+gno, '', 'width=450, height=600, screenX=450, screenY=50');
+		window.open('openReview?gno='+gno, '', 'width=450, height=600, screenX=450, screenY=50');
 	}
 	
 	
