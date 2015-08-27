@@ -2,7 +2,10 @@
 <%@taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles" %>
 <!DOCTYPE html>
 <html >
+<script type="text/javascript" src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script type="text/javascript" src="js/login.js"></script>
 <script type="text/javascript" src="js/jquery.js"></script>
+
 <script type="text/javascript">
 	$(document).ready(function() {
 		if('${login}'=='fail'){
@@ -10,15 +13,23 @@
 			location.href = 'login';
 		}
 	});
+	
+	function votmdnjem() {
+		window.open('sendPass','',
+					'width=400, height=450, screenX=400, screenY=130, resizable=no');
+	}
+	
 </script>
+
+
 <head>
 	<meta charset="UTF-8">
 	<title>ToGathering : 로그인</title>
 
     <link rel="stylesheet" href="css/login.css">
 
-	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-	<script src="js/login.js"></script>
+	
+	
 </head>
 
 <body>
@@ -35,6 +46,7 @@
 					<input type="text" placeholder="E-mail" name="id">
 					<input type="password" placeholder="Password" name="pass">
 					<button type="submit" name="login_bt">Login</button>
+					<input type="button" name="getPass" onclick="votmdnjem()" value="비번찾기">
 				</form>
 			</div>
 			

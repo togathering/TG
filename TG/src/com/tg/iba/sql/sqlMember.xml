@@ -54,4 +54,10 @@ where rn between #s# and #e#
 			intro=#intro#, gender=#gender#, insta=#insta#, fbook=#fbook# 
 		where id=#id#
 	</update>
+	
+	<!-- 패스워드 찾기 -->
+	<select id="getPass" parameterClass="java.lang.String" resultClass="java.lang.String" >
+		select pass from member where id=#id#
+	</select>
+	
 </sqlMap>

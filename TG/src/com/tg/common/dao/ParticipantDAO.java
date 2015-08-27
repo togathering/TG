@@ -54,6 +54,18 @@ public class ParticipantDAO {
 		return false;
 	}
 	
+	public boolean createGroup(int gno, String id){
+		HashMap<String, Object> map = new HashMap<String, Object>();
+		map.put("gno", gno);
+		map.put("id", id);
+		int t = session.insert("parti.create",map);
+		if(t==1){
+			return true;
+		}
+		
+		return false;
+	}
+	
 	public boolean delGroup(int gno){
 		int t = session.delete("parti.delete",gno);
 		if(t != 0){

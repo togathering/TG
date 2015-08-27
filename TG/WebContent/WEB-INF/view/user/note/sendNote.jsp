@@ -122,7 +122,7 @@ font-family:notokr-demilight !important;
 		
 		document.frm.submit();
 		
-		alert("쪽지 보내기 성공");
+		/* alert("쪽지 보내기 성공"); */
 		
 	}
 </script>

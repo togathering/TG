@@ -30,5 +30,24 @@
 	<bean class="com.tg.common.beans.AdminBean" id="adminBean"/>
 	<bean class="com.tg.common.beans.MemberBean" id="memberBean"/>
 	<bean class="com.tg.common.beans.QnaBean" id="qnaBean"/>
+	
+	<!-- 이메일 설정 (gmail) -->
+	
+	<bean id="mailSender" class ="org.springframework.mail.javamail.JavaMailSenderImpl" >
+		<property name="host" value="smtp.gmail.com" />
+		<property name="defaultEncoding" value="utf-8"/>
+		<property name="username" value="ghwhrpejfld@gmail.com" />
+		<property name="password" value="a12341234" />
+		<property name="javaMailProperties">
+			<props>
+				<prop key="mail.smtp.starttls.enable">true</prop>
+				<prop key="mail.smtp.auth">true</prop>
+			</props>
+        </property>
+    </bean>
+    
+	<bean id="email" class="com.tg.email.model.Email"/>
+    
+	<bean id="emailSender" class="com.tg.email.model.EmailSender"/>
 
 </beans>
