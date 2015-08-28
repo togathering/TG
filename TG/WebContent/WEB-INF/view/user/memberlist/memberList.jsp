@@ -71,8 +71,8 @@
 		<div align="center">
 			<h3>사람들을 검색할수있어요~</h3>
 			<br>
-			<input type="text" class="search_input" name="msearch"  placeholder="ID를 입력해주세요~">
-			<input type="button" class="button" name="msearch_bt" value="검색" onclick="searchMember()">
+			<input type="text" class="search_input" style="margin-bottom: 1px;" name="msearch"  placeholder="ID를 입력해주세요~">
+			<input type="button" class="button"  style="margin-top: 1px" name="msearch_bt" value="검색" onclick="searchMember()">
 		</div>
 	
 		<hr>
