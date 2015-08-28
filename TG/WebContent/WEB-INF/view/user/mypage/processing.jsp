@@ -7,7 +7,7 @@
 		<font color="#add">현재 ${gNum } 개의 모임에 참여중입니다</font><br>
 			<div class="board_div" id="tableAndpage">
 			<table id="joinGx" class="board_table" style="width: 75%">
-				<tr class="boardth">
+				<tr class="boardth" style="padding-top: 8px;">
 					<th style="width: 100px;">모임이름</th>
 					<th>개최자</th>
 					<th>장소</th>
