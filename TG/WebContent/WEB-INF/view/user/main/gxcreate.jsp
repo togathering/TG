@@ -10,6 +10,7 @@
 <title>모임만들기</title>
 
 
+<link rel="stylesheet" type="text/css" media="all" href="css/search.css">
 <link rel="stylesheet" type="text/css" media="all" href="css/styleGC.css">
 <link rel="stylesheet" type="text/css" media="all" href="css/responsiveGC.css">
 <script type="text/javascript" src="js/trim.js"></script>
@@ -323,7 +324,7 @@
 						<h1>장소</h1>
 						<section id="buttons">
 						</section>
-						<input type="button" onclick="searchAddress()" value="장소선택"><br><br>
+						<input type="button" class="sbutton" onclick="searchAddress()" value="장소선택"><br><br>
 						<input type="text" id="loc" name="loc" class="txtinput" placeholder="주소" readonly="readonly">
 						<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 						<script>
@@ -424,7 +425,7 @@
 						<br>
 						</section>
 						<section id="buttons">
-							<input type="button" name="save" id="save" class="resetbtn"
+							<input type="button" class="button" name="save" style="width: 150px;"
 								value="모임 만들기" onclick="checkValue()"> <br style="clear: both;">
 						</section>
 					</section>
