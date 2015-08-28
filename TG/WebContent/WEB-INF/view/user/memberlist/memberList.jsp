@@ -6,6 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <link rel="stylesheet" type="text/css" href="css/search.css">
+<link rel="stylesheet" type="text/css" href="css/tgBoard.css">
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/ajax.js"></script>
 <script type="text/javascript" src="js/trim.js"></script>
@@ -70,14 +71,14 @@
 		<div align="center">
 			<h3>사람들을 검색할수있어요~</h3>
 			<br>
-			<input type="text" name="msearch"  placeholder="ID를 입력해주세요~">
-			<input type="button" class="sbutton" name="msearch_bt" value="검색" onclick="searchMember()">
+			<input type="text" class="search_input" name="msearch"  placeholder="ID를 입력해주세요~">
+			<input type="button" class="button" name="msearch_bt" value="검색" onclick="searchMember()">
 		</div>
 	
 		<hr>
 		<div align="center" id="mlist">
-			<table style="width: 70%; margin: 20px auto; min-width:700px; display: none" id="listhead">
-				<tr style="height: 30px; background-color: #40C4AD; font-weight: bold;">
+			<table  class="board_table" style="width: 70%; min-width:700px; display: none" id="listhead">
+				<tr  class="boardth">
 					<th width="120px">프로필보기</th>
 					<th width="210px">I D</th>
 					<th width="150px">닉네임</th>
@@ -85,7 +86,7 @@
 					<th width="70px">신고하기</th>
 				</tr>
 			</table>
-			<table style="width: 70%; margin: 20px auto; min-width:700px;" id="listTable">
+			<table  class="board_table" style="width: 70%; min-width:700px;" id="listTable">
 				
 			</table>
 		</div>
