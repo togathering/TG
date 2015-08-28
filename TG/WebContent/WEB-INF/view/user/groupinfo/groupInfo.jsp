@@ -365,8 +365,9 @@ a:hover{
 				<a href="tagResult?tag=${tag}">#${tag}</a>&nbsp 
 			</c:forEach>	
 		</div>
+		<hr>
 		<!-- 참가인원 시작 -->
-				<h2>참가인원들</h2>
+				<h3>참가인원들</h3>
 				<div>
 				<table style="margin-left: 45%">
 					<tr>
