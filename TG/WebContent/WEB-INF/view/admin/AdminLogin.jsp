@@ -12,7 +12,6 @@
 <title>ToGathering Administrator</title>
 </head>
 <body>
-<div><tiles:insertAttribute name="header"/></div>
 <div  style="position: relative; top: 220px; margin-top: 110px; z-index: 1;">
 	<div class="wrapper">
 		<div class="container">		

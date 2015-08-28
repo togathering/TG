@@ -7,8 +7,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>Insert title here</title>
 <style> 
-.form { width:700px; margin:20px auto; background:#ddd;}
-.qList { width:700px; margin:20px auto; background:#dd1;}
+.form { height:400px; margin:20px auto; }
+.qList { width:700px;  background:#dd1;}
 </style>
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript">
