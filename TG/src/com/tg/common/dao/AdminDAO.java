@@ -73,7 +73,7 @@ public class AdminDAO {
 
 			return memberNum;
 		}
-		
+		  
 		//특정 모임명 검색
 		public List<GroupBean> selectTitle(int num,  String gtitle){
 			List<GroupBean> list = null;

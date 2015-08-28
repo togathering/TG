@@ -93,7 +93,7 @@ float:left;
 					}
 				});
 			});//
-			
+			 
 
 		// 검색어 창 
 		$('#search').click(function (){

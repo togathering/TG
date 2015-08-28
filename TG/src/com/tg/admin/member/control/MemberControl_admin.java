@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.tg.common.dao.AdminDAO;
-
-
+   
+   
 @Controller
 public class MemberControl_admin {
 	
