@@ -91,6 +91,7 @@
 		select gno, nick, gloc, gtitle, gstatus, gimg, goption
 		from member,gxgroup 
 		where gtag like #{gtag} and ghost = id and gstatus != '모임종료' order by gday
+		
 	</select>
 </mapper>
 
