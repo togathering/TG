@@ -27,7 +27,15 @@ public class NoteDAO{
 	}
 	
 	public NoteBean detailNote(int noteNo){
-		return (NoteBean) session.selectOne("note.detail", noteNo);
+		NoteBean bean = (NoteBean) session.selectOne("note.detail", noteNo);
+		
+		return bean;
+	}
+
+	public NoteBean detailNoteAdmin(int noteNo){
+		NoteBean bean = (NoteBean) session.selectOne("note.detailAdmin", noteNo);
+		
+		return bean;
 	}
 	
 	public boolean deleteNote(int noteNo){

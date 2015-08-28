@@ -23,12 +23,19 @@ public class NoteDetailController {
 	NoteBean noteBean;
 	
 	@RequestMapping("/noteDtail")
-	public String detail(@RequestParam(value="no", required=false) Integer noteNo, HttpServletRequest req) {
+	public String detail(@RequestParam(value="no", required=false) Integer noteNo, 
+						@RequestParam(value="senderId",required=false) String sender,
+						HttpServletRequest req) {
 		
-		System.out.println("쪽지번호 :"+ noteNo);
-		noteBean = noteDao.detailNote(noteNo);
+		System.out.println("보낸사람"+sender);
+		System.out.println("쪽지번호 :"+noteNo);
 		
-		// 쪽지함, 
+		if(sender.equals("관리자")){
+			noteBean = noteDao.detailNoteAdmin(noteNo);
+		} else {
+			noteBean = noteDao.detailNote(noteNo); 
+		}
+		
 		if(noteBean.getSenderId().equals("admin")){
 			noteBean.setSenderId("관리자");
 			req.setAttribute("check", "admin");

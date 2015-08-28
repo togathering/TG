@@ -148,7 +148,7 @@
 		<put-attribute name="adminBoard" value="/WEB-INF/view/layout/adminBoard.jsp"/>
 	</definition>
 	
-	<!-- 쪽지함 -->
+	<!-- 쪽지함 (받은쪽지) -->
 	<definition name =".noteList" template="/WEB-INF/view/user/note/noteList.jsp">
 		<put-attribute name="adminHeader" value="/WEB-INF/view/layout/adminHeader.jsp"/>
 		<put-attribute name="adminBoard" value="/WEB-INF/view/layout/adminBoard.jsp"/>

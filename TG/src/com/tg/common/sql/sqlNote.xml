@@ -29,7 +29,12 @@
 		select senderId, receiverId, noteTitle, noteDate, noteNo, noteContent, nick 
 		from note, member where note.senderId = member.id and noteNo = #{noteNo}
 	</select> 
-	
+
+	<!-- 관리자가 보낸 쪽지 읽기 -->
+	<select id="detailAdmin" parameterType="int" resultType="com.tg.common.beans.NoteBean">
+		select senderId, receiverId, noteTitle, noteDate, noteNo, noteContent 
+		from note where noteNo = #{noteNo}
+	</select> 
 	
 	<!-- 쪽지 삭제 -->	
 	<delete id="delete" parameterType="int">
