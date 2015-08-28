@@ -142,9 +142,10 @@
 				<h3>휴대전화</h3><br><h3>성별</h3><br><h3>생년월일</h3><br>
 				<h3>선호운동</h3><br><h3>활동지역</h3><br>
 				<h3>Instagram</h3><br><h3>Facebook</h3><br><h3>자기소개</h3>
+				<br><br><br><br><br><br><br><br><br><br><br><br><br><br><h3>프사</h3>
 			</div>
 			
-				<div id="wrapping" class="clearfix">
+				<div id="wrapping" class="clearfix" style="margin-left: 30px">
 					<section id="aligned">
 	
 				<input type="text" id="nick" name="nick" class="txtinput" value="${my.nick }"><br>
@@ -173,6 +174,8 @@
         		<textarea name="intro" id="intro" autocomplete="on"  tabindex="" class="txtblock" row="10" col="">
          		${my.intro }
          		</textarea>
+         		
+         		<input type="file" name="imgFile" id="imgFile" class="txtinput" value="">
 						<br style="clear: both;">
 						<section id="buttons">
 							<input type="button" name="save" id="save" class="resetbtn"
