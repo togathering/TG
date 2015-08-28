@@ -28,7 +28,6 @@ public class NoteDAO{
 	
 	public NoteBean detailNote(int noteNo){
 		NoteBean bean = (NoteBean) session.selectOne("note.detail", noteNo);
-		
 		return bean;
 	}
 
