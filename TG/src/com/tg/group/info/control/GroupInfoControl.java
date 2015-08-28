@@ -74,8 +74,6 @@ public class GroupInfoControl {
 			bean.setGno(gno);
 			model.addAttribute("group", bean);	
 			model.addAttribute("tags", arrTag);
-		}else {
-			System.out.println("가져온 값이 없음");
 		}
 		ArrayList<ParticipantBean> list = (ArrayList<ParticipantBean>) pdao.joinList(gno);
 		

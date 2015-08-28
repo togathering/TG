@@ -1,37 +1,32 @@
 package com.tg.common.dao;
 
-import java.sql.SQLException;
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
 
-import com.ibatis.sqlmap.client.SqlMapClient;
 import com.tg.common.beans.MemberBean;
-import com.tg.iba.MySqlMapConfig;
 
 public class JoinDAO {
-	SqlMapClient smc;
+	@Autowired
+	SqlSession session;
 	
 	public JoinDAO() {
-		smc = MySqlMapConfig.getSqlMapInstance();
+		
 	}
 	
 	public boolean join(MemberBean bean){
-		try {
-			smc.insert("join.join", bean);
+		
+		int t = session.insert("join.join", bean);
+		if(t==1){
 			return true;
-		} catch (SQLException e) {
-			e.printStackTrace();
 		}
 		return false;
 	}
 	
 	public boolean checkJoin(String id){
 		
-		try {
-			MemberBean bean = (MemberBean) smc.queryForObject("member.selectMem",id);
-			if(bean != null){
-				return true;
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
+		MemberBean bean = session.selectOne("member.selectMem",id);
+		if(bean != null){
+			return true;
 		}
 		
 		return false;

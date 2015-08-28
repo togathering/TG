@@ -1,25 +1,23 @@
 package com.tg.common.dao;
 
-import java.sql.SQLException;
 import java.util.HashMap;
 
-import com.ibatis.sqlmap.client.SqlMapClient;
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
+
 import com.tg.common.beans.WishBean;
-import com.tg.iba.MySqlMapConfig;
 
 public class WishDAO {
-	SqlMapClient smc;
+	@Autowired
+	SqlSession session;
 	
 	public WishDAO() {
-		smc = MySqlMapConfig.getSqlMapInstance();
 	}
 	
 	public boolean wishGroup(WishBean bean){
-		try {
-			smc.insert("wish.wishGroup", bean);
+		int t = session.insert("wish.wishGroup", bean);
+		if(t==1){
 			return true;
-		} catch (SQLException e) {
-			e.printStackTrace();
 		}
 		return false;
 	}
@@ -29,27 +27,18 @@ public class WishDAO {
 		map.put("gno", gno);
 		map.put("id", id);
 		
-		try {
-			int t =  smc.delete("wish.cancel",map);
-			if(t == 1){
-				return true;
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
+		int t =  session.delete("wish.cancel",map);
+		if(t == 1){
+			return true;
 		}
 		return false;
 	}
 	
 	public WishBean checkWish(int gno, String id){
-		WishBean bean = null;
 		HashMap<String, Object> map = new HashMap<String, Object>();
 		map.put("gno", gno);
 		map.put("id", id);
-		try {
-			bean = (WishBean) smc.queryForObject("wish.wishCheck",map);
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+		WishBean bean = session.selectOne("wish.wishCheck",map);
 		return bean;
 	}
 	

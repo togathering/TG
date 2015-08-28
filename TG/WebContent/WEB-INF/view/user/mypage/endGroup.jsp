@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<link rel="stylesheet" type="text/css" href="css/tgBoard.css">
 <form id="form" style="padding-top: 20px; text-align: center;">
 		<div class="wrapper"><h1>모임 종료</h1><br><br>
 			<table id="joinGx" style="width: 70%; margin-left: 5px;">

@@ -1,0 +1,53 @@
+
+.atag{
+text-decoration:none;
+font:bold;
+color:rgb(41, 128, 185);
+}
+th{
+font-size: 15px;
+color:white;;
+}
+td{
+font-size: 14px;
+color: #585858;
+}
+.board_div{
+float:left;
+width: 100%;
+margin: 0 auto;
+}
+.board_table{
+width: 80%; 
+min-width:800px; 
+margin:1% auto; 
+border-collapse: collapse;"
+}
+.boardth{
+height:45px;
+background-color: rgb(245, 88, 88);
+}
+.board_contents{
+border-bottom: 1px solid #2E2E2E;
+height: 47px; 
+font: bold;
+text-align: center;
+}
+.search_input{
+ height: 30px;
+ width:30%;
+ min-width:400px; 
+ padding: 3px 6px; 
+ font-size: 14px;"
+}
+.search_div{
+	float:left;
+ 	width: 90%; 
+ 	margin-left:10%;
+ 	padding: 0 auto;
+}
+.paging_div{
+float:left;
+ margin:15px auto;
+ width:100%;
+}

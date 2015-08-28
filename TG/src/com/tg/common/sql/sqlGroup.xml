@@ -49,12 +49,12 @@
 	<select id="joinGxEnd" parameterType="hashmap" resultType="com.tg.common.beans.GroupBean">
 		select gno, ghost, gtitle, gloc, gintro, gday, gmax, gmin, gimg, gdate, gtag, gstatus, gsum
 		from gxgroup natural join participant 
-		where pid=#{id} and gstatus = '모임종료' order by gday
+		where pid=#{id} and gstatus = '모임종료' and position is null order by gday
 	</select>
 	<select id="joinGx" parameterType="String" resultType="com.tg.common.beans.GroupBean">
 		select gno, ghost, gtitle, gloc, gintro, gday, gmax, gmin, gimg, gdate, gtag, gstatus, gsum
 		from gxgroup natural join participant 
-		where pid=#{id} and gstatus != '모임종료' order by gday
+		where pid=#{id} and gstatus != '모임종료' and position is null order by gday
 	</select>
 	
 	<select id="joinNum" parameterType="java.lang.String" resultType="int">
