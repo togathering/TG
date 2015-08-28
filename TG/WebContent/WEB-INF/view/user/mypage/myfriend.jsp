@@ -8,6 +8,7 @@
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/ajax.js"></script>
 <link rel="stylesheet" type="text/css" href="css/tgBoard.css">
+<link rel="stylesheet" type="text/css" href=css/search.css>
 <script type="text/javascript">
 	function reqLoad() {
 		$.ajax({url:"myFriendReq", type:"POST", dataType:"text",
@@ -84,31 +85,31 @@
 	<div align="center">
 		<h2>마이 프렌드</h2>
 		<hr>
-		
+	
 		<h3>친구수락하기</h3>
 		<br>
-		<table style="width: 70%; margin: 20px auto;">
-			<tr style="height: 30px; background-color: #40C4AD; border: 1px solid lightgray; font-weight: bold;">
-				<th width="220px">I D</th>
-				<th width="150px">닉네임</th>
-				<th width="100px">수락/거절</th>
+		<table class="board_table">
+			<tr class="boardth">
+				<th width="50%">I D</th>
+				<th width="25%">닉네임</th>
+				<th width="25%">수락/거절</th>
 			</tr>
 		</table>
-		<table style="width: 70%; margin: 20px auto;" id="reqTable">
+		<table  class="board_table" id="reqTable">
 			
 		</table>
 		<hr>
 		<h3 align="center">내친구들</h3>
 		<br>
-		<table style="width: 70%; margin: 20px auto;">
-			<tr style="height: 30px; background-color: #40C4AD; border: 1px solid lightgray; font-weight: bold;">
+		<table class="board_table">
+			<tr class="boardth">
 				<th width="220px">I D</th>
 				<th width="150px">닉네임</th>
-				<th width="70px">쪽지</th>
-				<th width="70px">친구삭제</th>
+				<th width="80px">쪽지</th>
+				<th width="80px">친구삭제</th>
 			</tr>
 		</table>
-		<table style="width: 70%; margin: 20px auto;" id="friendTable">
+		<table class="board_table" id="friendTable">
 		
 		</table>
 	

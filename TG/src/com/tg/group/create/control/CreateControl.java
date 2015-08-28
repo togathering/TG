@@ -10,12 +10,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 
 
+
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 import com.tg.common.beans.GroupBean;
 import com.tg.common.dao.GroupDAO;
 import com.tg.common.dao.ParticipantDAO;
 import com.tg.common.dao.ReplyDAO;
+import com.tg.common.dao.WishDAO;
 
 @Controller
 public class CreateControl{
@@ -26,6 +28,9 @@ public class CreateControl{
 	ParticipantDAO pdao;
 	@Autowired
 	GroupDAO dao;
+	@Autowired
+	WishDAO wdao;
+	
 	@Autowired
 	GroupBean bean;
 	
@@ -96,6 +101,10 @@ public class CreateControl{
 		if(pdao.delGroup(gno)){
 			System.out.println("참가멤버들 삭제성공");		
 		}
+		if(wdao.delGroup(gno)){
+			System.out.println("원해요 삭제성공");
+		}
+		
 		if(dao.delGroup(gno)){
 			System.out.println("모임삭제성공");
 		}else{
