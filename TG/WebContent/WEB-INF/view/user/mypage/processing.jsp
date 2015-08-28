@@ -8,14 +8,14 @@
 			<div class="board_div" id="tableAndpage">
 			<table id="joinGx" class="board_table" style="width: 75%">
 				<tr class="boardth" style="padding-top: 8px;">
-					<th style="width: 100px;">모임이름</th>
+					<th style="width: 170px;">모임이름</th>
 					<th>개최자</th>
 					<th>장소</th>
 					<th>일시</th>
-					<th>최소인원</th>
-					<th>최대인원</th>
+			<!-- 		<th>최소인원</th>
+					<th>최대인원</th> -->
 					<th>참여인원</th>
-					<th>모집상태</th>
+					<!-- <th>모집상태</th> -->
 					<th><font style="text-align: center;">참여취소</font></th>
 				</tr>
 				<c:forEach  items='${list }' var='gx' >
@@ -24,10 +24,10 @@
 					<td>${gx.ghost }</td>
 					<td>${gx.gloc }</td>
 					<td>${gx.gday }</td>
-					<td>${gx.gmin }</td>
-					<td>${gx.gmax }</td>
+					<%-- <td>${gx.gmin }</td>
+					<td>${gx.gmax }</td> --%>
 					<td>${gx.gsum }</td>
-					<td>${gx.gstatus }</td>
+					<%-- <td>${gx.gstatus }</td> --%>
 					<td>
 					<input type="button" name="cancel" class="sbutton" value="모임취소" style="display: " onclick="cancelGx('${gx.gno}')">
 					</td>
