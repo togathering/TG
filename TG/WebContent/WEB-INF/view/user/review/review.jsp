@@ -39,12 +39,14 @@
 		<span>이름</span>
 		<br>
 		<input type="hidden" name="gno" value="${param.gno }" >
-		<input type="text" name="id" id="id" readonly="readonly">
-		<br>
-		<span>EVALUATE</span>
-		<br>
-		<input type="text" name="evaluate">
-		<br>
+		<c:forEach items="${list }" var="gx">
+			<input type="text" name="id" id="id" readonly="readonly" value="${gx.id }">
+			<br>
+			<span>EVALUATE</span>
+			<br>
+			<input type="text" name="evaluate">
+			<br>
+		</c:forEach>
 		<input type="button" value="완료" onclick="insertReview()">
 	</form>
 </body>
