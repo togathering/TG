@@ -1,5 +1,7 @@
 package com.tg.review.control;
 
+import java.util.List;
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,8 +28,7 @@ public class ReviewControl {
 	@RequestMapping("/openReview")
 	public String openReview(Model model, HttpSession session, @RequestParam(value="gno")Integer gno){
 		
-		model.addAttribute("host", gdao.selectGroupInfo(gno).getGhost());
-		model.addAttribute("list", pdao.reviewList(gno, (String) session.getAttribute("id")));
+		model.addAttribute("list", rdao.reviewList(gno, (String) session.getAttribute("id")));
 		
 		return "user/review/review";
 	}
@@ -38,8 +39,6 @@ public class ReviewControl {
 		
 		rbean.setEvaluator(id);
 		rbean.setGrade(10);
-		
-		rdao.insertReview(rbean);
 		
 		model.addAttribute("reviewId", rbean.getId());
 		

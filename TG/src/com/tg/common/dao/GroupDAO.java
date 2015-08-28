@@ -128,16 +128,22 @@ public class GroupDAO {
 		return list;
 	}
 	
-	public List<GroupBean> joinGx(String id, String gstatus){
+	public List<GroupBean> joinGxEnd(String id){
 		List<GroupBean> gx = null;
-		HashMap<Object, Object> map = new HashMap<Object, Object>();
-		map.put("id", id);
-		map.put("gstatus", gstatus);
 
-			gx = session.selectList("group.joinGx", map);
+		gx = session.selectList("group.joinGxEnd", id);
 		
 		return gx;
 	}
+	
+	public List<GroupBean> joinGx(String id){
+		List<GroupBean> gx = null;
+
+		gx = session.selectList("group.joinGx", id);
+		
+		return gx;
+	}
+	
 	public int joinNum(String id){
 		int num = 0;
 		

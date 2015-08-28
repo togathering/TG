@@ -75,7 +75,7 @@ public class MyPageControl {
 	public String myGx(Model model, HttpSession session){
 		String id = (String) session.getAttribute("id");
 		String gstatus = "모집중";
-		List<GroupBean> list = gdao.joinGx(id, gstatus);
+		List<GroupBean> list = gdao.joinGx(id);
 		int num = gdao.joinNum(id);
 		model.addAttribute("list", list);
 		model.addAttribute("gNum", num);
@@ -87,8 +87,8 @@ public class MyPageControl {
 	@RequestMapping("/mygxgroupEnd")
 	public String myGxEnd(Model model, HttpSession session){
 		String id = (String) session.getAttribute("id");
-		String gstatus = "모집완료";
-		List<GroupBean> list = gdao.joinGx(id, gstatus);
+		String gstatus = "모임종료";
+		List<GroupBean> list = gdao.joinGxEnd(id);
 		int num = gdao.joinNum(id);
 		model.addAttribute("list", list);
 		model.addAttribute("gNum", num);

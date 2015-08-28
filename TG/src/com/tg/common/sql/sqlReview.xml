@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="review">
-	<insert id="insert" parameterType="com.tg.common.beans.ReviewBean">
-		insert into review values(review_seq.nextval, #{gno}, #{id}, #{evaluator}, #{evaluate}, #{grade})
-	</insert>
+	<select id="list" parameterType="hashmap" resultType="com.tg.common.beans.ReviewBean">
+		select id, evaluate, grade from review where evaluator = #{id} and gno = #{gno}
+	</select>
 </mapper>

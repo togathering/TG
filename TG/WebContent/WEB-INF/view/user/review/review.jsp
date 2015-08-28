@@ -29,9 +29,8 @@
 <body>
 	<select id="sel" onchange="selectId()">
 		<option value="함께한 친구들">함께한 친구들</option>
-		<option value="${host }">${host }</option>	
 		<c:forEach items="${list }" var="gx">
-			<option value="${gx.pid }">${gx.pid }</option>
+			<option value="${gx.id }">${gx.id }</option>
 		</c:forEach>
 	</select>
 	<br>
