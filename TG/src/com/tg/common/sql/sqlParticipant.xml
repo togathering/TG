@@ -3,7 +3,11 @@
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="parti">
 	<insert id="join" parameterType="java.util.HashMap">
-		insert into participant values (#{gno}, #{id})
+		insert into participant (gno, pid) values (#{gno}, #{id})
+	</insert>
+	
+	<insert id="create" parameterType="java.util.HashMap">
+		insert into participant values (#{gno}, #{id}, "host")
 	</insert>
 	
 	<delete id="cancel" parameterType="com.tg.common.beans.ParticipantBean">

@@ -65,8 +65,7 @@ public class CreateControl{
 		String gintro = multi.getParameter("message");
 		String gtag = multi.getParameter("tag");
 		String goption = multi.getParameter("joinOption");
-		
-		System.out.println(goption);
+
 	
 		bean.setGdate(gdate);
 		bean.setGhost(id);
