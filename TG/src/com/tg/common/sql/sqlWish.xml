@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><!--Converted at: Sat Aug 29 10:05:23 KST 2015-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="wish">
+	<insert id="wishGroup" parameterType="com.tg.common.beans.WishBean">
+		insert into wish values(#{gno}, #{id}, sysdate)
+	</insert>
+	
+	<delete id="cancel" parameterType="java.util.HashMap">
+		delete from wish where gno=#{gno} and id=#{id}
+	</delete>
+	
+	<select id="wishCheck" parameterType="java.util.HashMap" resultType="com.tg.common.beans.WishBean">
+		select gno, id from wish where gno=#{gno} and id=#{id}
+	</select>
+</mapper>
