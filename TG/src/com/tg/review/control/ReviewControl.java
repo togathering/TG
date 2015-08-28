@@ -1,7 +1,5 @@
 package com.tg.review.control;
 
-import java.util.ArrayList;
-
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
