@@ -46,7 +46,7 @@ public class NoteDetailController {
 		
 		req.setAttribute("noteBean", noteBean);
 		
-		return "user/note/readNote";
+		return "user/note/readNote"; 
 	}
 
 }
