@@ -8,15 +8,18 @@ th{
 font-size: 15px;
 color:white;;
 }
+
 td{
 font-size: 14px;
 color: #585858;
 }
+/* 
 .board_div{
 float:left;
 width: 100%;
 margin: 0 auto;
-}
+} */
+
 .board_table{
 width: 80%; 
 min-width:800px; 
@@ -33,6 +36,7 @@ height: 47px;
 font: bold;
 text-align: center;
 }
+
 .search_input{
  height: 30px;
  width:30%;
