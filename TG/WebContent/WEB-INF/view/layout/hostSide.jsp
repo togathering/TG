@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<div style="float: left; width: 80px; height: 1000px; display: inline; margin: 0 2%; padding-left: 170px; padding-top: 30px; background-color: gray;" >
+	<div style="float: left; width: 80px; height: 400px; display: inline; margin: 0 2%; padding-left: 170px; padding-top: 30px; background-color: gray;" >
 
 		<ul style="color: black; background-color: pink;  ">
 			<li><a href="myhost" id="hostCon" style="color: black">¸ğÁıÁß</a></li>
