@@ -58,7 +58,7 @@ public class AdminDAO {
 	//그룹리스트 뿌려주기 
 		public List<GroupBean> selectAllGroup(int num){
 			List<GroupBean> list = null;
-			
+			    
 			System.out.println(num);
 			
 				startNum= (num*10);

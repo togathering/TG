@@ -6,7 +6,8 @@
 
 <!-- 로그인 -->
 <select id="login" parameterType="java.lang.String" resultType="java.lang.String">
-	select pass from admintable where id=#{id}
+	select pass from admintable 
+		where id=#{id}
 </select>
 
 <select id="showAllGroup"   resultType="com.tg.common.beans.GroupBean">

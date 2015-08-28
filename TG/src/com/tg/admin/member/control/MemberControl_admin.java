@@ -18,7 +18,7 @@ import com.tg.common.dao.AdminDAO;
 public class MemberControl_admin {
 	
 	@Autowired
-	AdminDAO dao;
+	AdminDAO dao;  
 	
 	
 	@RequestMapping("/suggestId")

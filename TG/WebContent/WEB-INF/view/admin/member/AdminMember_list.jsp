@@ -65,6 +65,7 @@ float:left;
 }
 </style>
 </head>
+
 <body>
 	<tiles:insertAttribute name="adminHeader" />
 	<script type="text/javascript" src="js/ajax.js"></script>
