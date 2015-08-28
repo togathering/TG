@@ -68,9 +68,9 @@ public class GroupControl_admin {
 			request.setAttribute("list", dao.selectTitle(pNum, gtitle));
 			request.setAttribute("pageNum", pNum);
 			
-		 int t = dao.selectId(0,gtitle).size();
+		 int t = dao.selectTitle(0,gtitle).size();
 		 System.out.println(gtitle+"¿ä±â"+t+"°³ : "+dao.selectTitle(pNum,gtitle));
-		 return "admin/admin/SpecificGroup";
+		 return "admin/group/SpecificGroup";
 		 
 	 }
 }
