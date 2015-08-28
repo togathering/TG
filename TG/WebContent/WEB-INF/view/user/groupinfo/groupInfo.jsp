@@ -96,7 +96,7 @@ a:hover{
 			attend.innerHTML = endBt;		
 			
 		}else{			
-			if('${group.ghost}'=='${id}'){				
+			if('${group.ghost}'=='${id}'){
 				var delBt = '<button type="button" class="button" name="attend" onclick="delGroup()">모임삭제</button>';
 				attend.innerHTML = delBt;
 				

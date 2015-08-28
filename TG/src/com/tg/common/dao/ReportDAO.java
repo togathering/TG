@@ -1,77 +1,54 @@
 package com.tg.common.dao;
 
-import java.sql.SQLException;
 import java.util.List;
 
-import javax.swing.text.StyledEditorKit.BoldAction;
 
-import com.ibatis.sqlmap.client.SqlMapClient;
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
+
 import com.tg.common.beans.ReportBean;
-import com.tg.iba.MySqlMapConfig;
 
 public class ReportDAO {
-	SqlMapClient smc;
+	@Autowired
+	SqlSession session;
 	
 	public ReportDAO() {
-		smc = MySqlMapConfig.getSqlMapInstance();
 	}
 	
 	public boolean report(ReportBean bean){
-		try {
-			smc.insert("report.Add", bean);
+		int t = session.insert("report.Add", bean);
+		if(t==1){
 			return true;
-		} catch (SQLException e) {
-			e.printStackTrace();
 		}
 		return false;
 	}
 	
 	public boolean reportEnd(){
-		try {
-			smc.update("report.End");
+		int t = session.update("report.End");
+		if(t==1){
 			return true;
-		} catch (SQLException e) {
-			e.printStackTrace();
 		}
 		return false;
 	}
 	public List<ReportBean> reportList(){
-		List<ReportBean> list = null;
 		String status="N";
-		try {
-			list = smc.queryForList("report.List", status);
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+		List<ReportBean> list = session.selectList("report.List", status);
 		return list;
 	}
 	public ReportBean reportCon(int no){
-		ReportBean bean = null;
-		try {
-			bean = (ReportBean) smc.queryForObject("report.Con", no);
-			return bean;
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		return null;
+		ReportBean bean = session.selectOne("report.Con", no);
+		return bean;
 	}
 	public boolean reportUp(int no){
-		try {
-			int t = smc.update("report.Up", no);
-			if(t>=1) return true;
-		} catch (SQLException e) {
-			e.printStackTrace();
+		int t = session.update("report.Up", no);
+		if(t>=1) {
+			return true;
 		}
 		return false;
 	}
 	
 	public int reportCount(String id){
-		int count = 0;
-		try {
-			count = (int) smc.queryForObject("report.Count", id);
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+		int count = session.selectOne("report.Count", id);
 		return count;
 	}
 }

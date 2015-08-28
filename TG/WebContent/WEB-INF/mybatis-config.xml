@@ -31,6 +31,12 @@
      		<value>classpath:com/tg/common/sql/sqlReply.xml</value>
      		<value>classpath:com/tg/common/sql/sqlAdmin.xml</value>
      		<value>classpath:com/tg/common/sql/sqlReview.xml</value>
+     		<value>classpath:com/tg/common/sql/sqlJoin.xml</value>
+     		<value>classpath:com/tg/common/sql/sqlLogin.xml</value>
+     		<value>classpath:com/tg/common/sql/sqlMember.xml</value>
+     		<value>classpath:com/tg/common/sql/sqlQna.xml</value>
+     		<value>classpath:com/tg/common/sql/sqlReport.xml</value>
+     		<value>classpath:com/tg/common/sql/sqlWish.xml</value>
      	</list>
      </property>
      

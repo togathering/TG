@@ -1,24 +1,18 @@
 package com.tg.common.dao;
 
-import java.sql.SQLException;
 
-import com.ibatis.sqlmap.client.SqlMapClient;
-import com.tg.common.beans.MemberBeanIn;
-import com.tg.iba.MySqlMapConfig;
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
 
 public class LoginDAO {
-	SqlMapClient smc;
+	@Autowired
+	SqlSession session;
 	public LoginDAO() {
-		smc = MySqlMapConfig.getSqlMapInstance();
 	}
 	
 	public boolean checkLogin(String id, String pass){
-		try {
-			if(pass.equals((String) smc.queryForObject("log.login", id))){
-				return true;
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
+		if(pass.equals(session.selectOne("log.login", id))){
+			return true;
 		}
 		return false;		
 	}
@@ -26,13 +20,8 @@ public class LoginDAO {
 
 	
 	public String loginNick(String id){
-		String nick = "";
-		try {
-			nick = (String) smc.queryForObject("log.logInfo", id);
-			
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+		String nick = session.selectOne("log.logInfo", id);
+		
 		return nick;
 	}
 	
