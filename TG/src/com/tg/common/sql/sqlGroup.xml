@@ -23,7 +23,10 @@
 	<select id="getGsum" parameterType="int" resultType="com.tg.common.beans.GroupBean">
 		select gsum, gmin, gmax from gxgroup where gno = #{gno}
 	</select>
-   
+   <select id="mainlist" resultType="com.tg.common.beans.GroupBean">
+		select gno, nick, gloc, gtitle, gstatus, gimg, goption from member,gxgroup where ghost = id and gstatus != '紐⑥엫醫낅즺' order by gday
+	</select>
+	
 	<select id="list" resultType="com.tg.common.beans.GroupBean">
      	select gno, nick, gloc, gtitle, gstatus, gimg from member,gxgroup where ghost = id and gstatus != '모임종료'
 	</select>
@@ -35,7 +38,8 @@
    	<!-- 모임 상세페이지 출력 -->
 	<select id="info" parameterType="int" 
 						resultType="com.tg.common.beans.GroupBean">
-		select ghost, gtitle, gday, gloc, gstatus, gmin, gmax, gimg, gintro, gsum, nick from member, gxgroup 
+		select ghost, gtitle, gday, gloc, gstatus, gmin, gmax, gimg, gintro, gsum, goption, nick, gtag 
+		from member, gxgroup 
 		where ghost = id and gno = #{gno}
 	</select>
 	

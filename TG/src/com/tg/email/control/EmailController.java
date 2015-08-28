@@ -1,5 +1,7 @@
 package com.tg.email.control;
 
+import java.util.Random;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -50,6 +52,46 @@ public class EmailController {
 		} else {
 			model.addAttribute("result", "fail");
 			return "common/sendPass";
+		}
+	}
+	
+	@RequestMapping("/confirmEmail")
+	public String confirmEmail(@RequestParam(value="email", required=false) String confirmEmail, 
+								Model model) throws Exception{
+		
+		System.out.println(confirmEmail);
+
+		Random random = new Random();
+		
+		String confirmKey = Character.toString((char)((Math.random() * 26)+97));
+
+		//난수생성
+		int arr[] = new int[5];		
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = random.nextInt(10);
+		}
+		
+		//생성된 난수 String형으로 합치기
+		for (int i = 0; i < arr.length; i++) {
+			confirmKey += String.valueOf(arr[i]);
+		}
+		
+		if(confirmKey != null){
+			email.setReceiver(confirmEmail);
+			email.setSubject("안녕하세요.\n 투게더링 회원가입을 위한 메일입니다.");
+			email.setContent("투게더링 : 회원가입을 위한 핫키는"+ confirmKey+"입니다.");
+            
+            emailSender.SendEmail(email);
+            
+            model.addAttribute("result", "confirmSuccess");
+            model.addAttribute("email", confirmEmail);
+            model.addAttribute("key", confirmKey);
+            
+            return "redirect:emailConfirm";
+		
+		} else {
+			model.addAttribute("result", "confirmFail");
+			return "redirect:emailConfirm";
 		}
 	}
 }

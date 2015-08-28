@@ -28,6 +28,7 @@
 	<mvc:view-controller path="/writeNote" view-name="user/note/sendNote"/>
 	<mvc:view-controller path="/mygx" view-name=".mygx"/>
 	<mvc:view-controller path="/sendPass" view-name="common/sendPass"/><!-- 비밀번호 찾기 팝업창 -->
+	<mvc:view-controller path="/emailConfirm" view-name=".emailConfirm"/><!-- 비밀번호 찾기 팝업창 -->
 	
 	<!-- 컨트롤러 스캔 -->
 	<context:component-scan base-package="com.tg"/>
