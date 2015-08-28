@@ -86,8 +86,8 @@
 						<td align="center"><a class="atag" href="#"
 							onClick="window.open('http://localhost/TG/groupinfo?gno=${grpbean.gno }','name',
 							'width=1300,height=630');return false">${grpbean.gtitle }</a></td>
-						<td align="center">${grpbean.gday }</td>
 						<td align="center">${grpbean.gdate }</td>
+						<td align="center">${grpbean.gday }</td>
 						<td align="center">${grpbean.gsum }</td>
 						<td align="center">
 							<input type="button" onclick="deleteG()" class="sbutton"
