@@ -28,8 +28,9 @@ public class ReviewControl {
 	
 	@RequestMapping("/openReview")
 	public String openReview(Model model, HttpSession session, @RequestParam(value="gno")Integer gno){
-		
-		model.addAttribute("list", rdao.reviewList(gno, (String) session.getAttribute("id")));
+		List<ReviewBean> list = rdao.reviewList(gno, (String) session.getAttribute("id"));
+		model.addAttribute("list", list);
+		model.addAttribute("size", list.size());
 		
 		return "user/review/review";
 	}

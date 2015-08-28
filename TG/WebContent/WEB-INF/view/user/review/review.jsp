@@ -25,6 +25,13 @@
 		});
 	}
 	
+	$(document).ready(function () {
+		if('${size}' == '0'){
+			alert('이미 모든 평가를 완료하셧습니다');
+			window.close();
+		}
+	});
+	
 </script>
 <title>함께한 사람들은 어떤 사람들이었나요</title>
 </head>
