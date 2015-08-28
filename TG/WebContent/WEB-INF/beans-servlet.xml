@@ -17,6 +17,7 @@
 	<bean class="com.tg.common.dao.InviteGroupDAO" id="inviteGroupDao"/>
 	<bean class="com.tg.common.dao.ReportDAO" id="reportDao"/>
 	<bean class="com.tg.common.dao.QnaDAO" id="qnaDao"/>
+	<bean class="com.tg.common.dao.ReviewDAO" id="reviewDao"/>
 
 	
 	<!-- 빈즈 클래스들 -->
