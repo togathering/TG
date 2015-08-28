@@ -67,9 +67,7 @@ float:left;
 
 <body>
 	<!-- 헤더 -->
-	<div>
-		<tiles:insertAttribute name="header" />
-	</div>
+	<div><tiles:insertAttribute name="header"/></div>
 	
 	<div class="board_div">
 	
@@ -119,22 +117,20 @@ float:left;
 	</table>
 	
 			<!-- 페이징 -->
-		<div class="paging_div" align="center">
-			<c:if test="${ begin_page != 1 }"><a href="?page=${ begin_page - 1 }"><-이전</a></c:if>
-			<c:forEach begin="${ begin_page }" end="${ end_page }" var="page">
-				<c:choose>
-					<c:when test="${ page == pres_page }">${ page }</c:when>
-					<c:otherwise><a href="?page=${ page }">${ page }</a></c:otherwise>
-				</c:choose>
-			</c:forEach>
-			<c:if test="${ end_page != max_page }"><a href="?page=${ end_page + 1 }">다음-></a></c:if>
-		</div>
+	<div class="paging_div" align="center">
+		<c:if test="${ begin_page != 1 }"><a href="?page=${ begin_page - 1 }"><-이전</a></c:if>
+		<c:forEach begin="${ begin_page }" end="${ end_page }" var="page">
+			<c:choose>
+				<c:when test="${ page == pres_page }">${ page }</c:when>
+				<c:otherwise><a href="?page=${ page }">${ page }</a></c:otherwise>
+			</c:choose>
+		</c:forEach>
+		<c:if test="${ end_page != max_page }"><a href="?page=${ end_page + 1 }">다음-></a></c:if>
+	</div>
 	
 	</div>
 	
 	<!-- 푸터 -->
-	<div>
-		<tiles:insertAttribute name="footer" />
-	</div>
+	<div><tiles:insertAttribute name="footer"/></div>
 </body>
 </html>

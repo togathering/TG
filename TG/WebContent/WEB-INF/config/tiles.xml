@@ -150,8 +150,8 @@
 	
 	<!-- 쪽지함 (받은쪽지) -->
 	<definition name =".noteList" template="/WEB-INF/view/user/note/noteList.jsp">
-		<put-attribute name="adminHeader" value="/WEB-INF/view/layout/adminHeader.jsp"/>
-		<put-attribute name="adminBoard" value="/WEB-INF/view/layout/adminBoard.jsp"/>
+		<put-attribute name="header" value="/WEB-INF/view/layout/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/view/layout/footer.jsp" />
 	</definition>
 
 	<!-- 가입 전 이메일 인증 -->
