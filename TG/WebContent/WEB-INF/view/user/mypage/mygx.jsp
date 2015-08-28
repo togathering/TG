@@ -6,8 +6,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<link rel="stylesheet" type="text/css" href="css/list.css">
-<link rel="stylesheet" type="text/css" media="all" href="css/styleMy.css">
+<!-- <link rel="stylesheet" type="text/css" href="css/list.css">
+<link rel="stylesheet" type="text/css" media="all" href="css/styleMy.css"> -->
 <title>Today, ToGathering, Together</title>
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript">
@@ -28,7 +28,6 @@
 </head>
 <body>
 		<div style="z-index: 2;"><tiles:insertAttribute name="header"/></div>
-	<br><br>
 	<div><tiles:insertAttribute name="myPageHeader"/></div>
 	<div><tiles:insertAttribute name="gxSide"/></div>
 	<section class="listings" id="section">
