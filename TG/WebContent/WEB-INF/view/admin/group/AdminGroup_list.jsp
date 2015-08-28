@@ -87,7 +87,7 @@ float:left;
 			},
 			dataType : 'html',
 			success:function(data){
-				//alert(data);	
+				alert(data);	
 				$("#tableAndpage").html(data);
 			}
 			
