@@ -6,8 +6,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<link rel="stylesheet" type="text/css" href="css/list.css">
-<link rel="stylesheet" type="text/css" href="css/reset.css">
+<!-- <link rel="stylesheet" type="text/css" href="css/list.css">
+<link rel="stylesheet" type="text/css" href="css/reset.css"> -->
 <link rel="stylesheet" type="text/css" href="css/responsive.css">
 <link rel="stylesheet" type="text/css" href="css/TGlist.css">
 <link rel="stylesheet" type="text/css" href="css/search.css">
@@ -118,9 +118,6 @@
 		<br><br>
 	
 		<div id="leftdiary"></div>
-			<table width="600px" border="0" cellspacing="0" cellpadding="0" style="margin-top:20">
-				<tr height="30"></tr>
-			</table>
 			<!-- 메뉴영역 캘린터목록 end -->
 		<script type="text/javascript">
 			var now = new Date();
@@ -180,7 +177,7 @@
 				for(j=1; j<7; j++) { 
 					dmsg += "<td class='sgfont' style='cursor:hand;'>"+(i+j+1)+"</td>"; 
 				}//이렇게 달력의 윗부분과 일자부분이 각각 'dtmsg', 'dmsg'로 정의되었다면 "leftdiary"로 정의한 div에 innerHTML로 넣어 줍니다.
-				document.getElementById("leftdiary").innerHTML = "<table width='100%' border='0' cellspacing='0' cellpadding='0'>"+dtmsg+"<tr align='center' height='17' bgcolor='#eeeeee'>"+dmsg+"</tr><tr bgcolor='#cccccc'><td colspan='7' height='1'></td></tr></table>";
+				document.getElementById("leftdiary").innerHTML = "<table width='100%' max-width='500px' border='0' cellspacing='0' cellpadding='0'>"+dtmsg+"<tr align='center' height='17' bgcolor='#eeeeee'>"+dmsg+"</tr><tr bgcolor='#cccccc'><td colspan='7' height='1'></td></tr></table>";
 				//달력에서 상단에 일자가 빈 칸의 수를 알아낸 후, 지난달의 마지막 날을 계산하여 차례로 숫자를 넣어 줍니다.
 				var ltm = lsm-1;
 				var lty = lsy;

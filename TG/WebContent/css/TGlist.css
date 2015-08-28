@@ -34,6 +34,7 @@ td, div, input, textarea, select, iframe {
 
 .searchingHere table {
 	width:65%;
+	max-width:650px;
 	margin: 0 auto;	
 		
 }

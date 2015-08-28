@@ -42,7 +42,7 @@
 					<input type="text" placeholder="E-mail" name="id">
 					<input type="password" placeholder="Password" name="pass">
 					<button type="submit" name="login_bt">Login</button><br><br>
-					<button type="button" name="getPass" onclick="votmdnjem()" >forget password?</button>
+					<button type="button" name="getPass" onclick="votmdnjem()" >Forget Password?</button>
 				</form>
 			</div>
 			

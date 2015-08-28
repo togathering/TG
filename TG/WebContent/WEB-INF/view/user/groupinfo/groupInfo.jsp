@@ -343,8 +343,8 @@ a:hover{
 	</div>
 	<!-- 상단 이미지+요약내용 끝-->
 			<!-- 참가인원 시작 -->
-			<div>
 				<h2>참가인원들</h2>
+				<div align="center">
 				<table>
 					<tr>
 						<td width="100px"><a onclick="window.open('profile?id=${group.ghost }', '', 'width=850, height=350, screenX=200, screenY=100');"  style="color: red" >${group.ghost }</a></td>

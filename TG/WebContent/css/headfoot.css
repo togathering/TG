@@ -65,15 +65,14 @@ body{
 .wrapper4 li ul{
 	background: rgb(66,219,181);
 	display:none; /* 평상시에는 드랍메뉴가 안보이게 하기 */
-	height:136px;
+	height:95px;
 	padding:1px;
 	margin:0.5px 10px 10px 0px;
 	border:0px;
 	position:absolute;
-	width:150px;
+	width:130px;
 	z-index:200;
-	border-radius: 0em 2.5em 0em 2.5em;
-	border: ;
+/* 	border-radius: 0em 2.5em 0em 2.5em; */
 	/*top:1em;
 	/*left:0;*/
 }
@@ -95,15 +94,15 @@ body{
 .wrapper4 li ul a{
 	display:block;
 	height:30px;
-	width:111px;
-	font-size:16px;
+	width:102px;
+	font-size:14px;
 	font-style:normal;
 	margin:0px;
 	padding:5px 5px 0px 15px;
 	text-align:left;
 	color: white;
 	font-weight: bold;
-	border-radius:1em 1em 1em 1em;
+	/* border-radius:1em 1em 1em 1em; */
 }
 
 
