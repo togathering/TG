@@ -1,5 +1,5 @@
 
-a{
+.atag{
 text-decoration:none;
 font:bold;
 color:rgb(41, 128, 185);
@@ -30,7 +30,8 @@ background-color: rgb(245, 88, 88);
 .board_contnets{
 border-bottom: 1px solid #2E2E2E;
 height: 47px; 
-font: bold;"
+font: bold;
+text-align: center;
 }
 .search_input{
  height: 30px;

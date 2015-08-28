@@ -4,14 +4,11 @@ html { margin: 0; padding: 0; }
 body { 
 	.center{margin:0 auto; }
 height: 101%; 
-font-size: 20px; 
-color: #333; 
-background: #fff url('images/body-bg.jpg') 0px 0px repeat; 
-padding-top: 10px; 
+
 
 }
 
-a { color: #4681da; text-decoration: none; }
+/* a { color: #4681da; text-decoration: none; } */
 /* a:hover { text-decoration: underline; } */
 
 h1 {
@@ -62,8 +59,14 @@ span.chyron { font-size: 5.2em; padding-top: 10px; }
 } 
 @media (max-width:1450px){}
 div#side{ 
-	 height:30px; background:#1acaa3; text-align: left; font-size: 1.1em;
-	position:ebsolute; top:0; left:0; margin-left:0px; weigtht: 100px; padding-left:200px; padding-top: 7px;}
+	 height:30px;
+	 background:#1acaa3; 
+	 top:0; 
+	 left:0; 
+	 margin-left:0px; 
+	 padding-left:230px; 
+	 padding-top: 7px;
+	 }
 #container { 
 display: block;
 max-width: 800px;
@@ -81,7 +84,7 @@ box-sizing: border-box;
 
 .t { border: 1px; }
 .mul{
- align:center;
+text-align:center;
  margin: 0px;
  padding: 0px;
  list-style: none;
@@ -96,6 +99,7 @@ box-sizing: border-box;
  padding:3px 3% 0px 3%;
  float:left;
  font-size: 16px;
+ text-decoration:none;
 }
 
 /** the form elements **/
