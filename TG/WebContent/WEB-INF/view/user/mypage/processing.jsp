@@ -19,7 +19,7 @@
 					<th><font style="text-align: center;">참여취소</font></th>
 				</tr>
 				<c:forEach  items='${list }' var='gx' >
-				<tr class="board_contnets" >
+				<tr class="board_contents" >
 					<td style="padding-top: 15px;"><a style="color: gray;" href="groupinfo?gno=${gx.gno }">${gx.gtitle }</a></td>
 					<td>${gx.ghost }</td>
 					<td>${gx.gloc }</td>

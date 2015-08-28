@@ -81,9 +81,9 @@
 				</tr>
 				<!-- 테이블내용 -->
 				<c:forEach items="${list }" var="grpbean">
-					<tr class="board_contnets">
+					<tr class="board_contents">
 						<td align="center">${grpbean.gno }</td>
-						<td align="center"><a href="#"
+						<td align="center"><a class="atag" href="#"
 							onClick="window.open('http://localhost/TG/groupinfo?gno=${grpbean.gno }','name',
 							'width=1300,height=630');return false">${grpbean.gtitle }</a></td>
 						<td align="center">${grpbean.gday }</td>
