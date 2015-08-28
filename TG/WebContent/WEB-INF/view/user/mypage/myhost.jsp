@@ -6,8 +6,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<link rel="stylesheet" type="text/css" href="css/list.css">
-<link rel="stylesheet" type="text/css" media="all" href="css/styleMy.css">
+<link rel="stylesheet" type="text/css" href="css/tgBoard.css">
+<!-- <link rel="stylesheet" type="text/css" href="css/list.css"> -->
+<!-- <link rel="stylesheet" type="text/css" media="all" href="css/styleMy.css"> -->
 <title>Today, ToGathering, Together</title>
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript">
@@ -22,7 +23,6 @@
 </head>
 <body>
 	<div style="z-index: 2;"><tiles:insertAttribute name="header"/></div>
-	<br><br>
 	<div><tiles:insertAttribute name="myPageHeader"/></div>
 	<div><tiles:insertAttribute name="hostSide"/></div>
 	<section class="listings">
@@ -53,7 +53,7 @@
 					<td>${host.gsum }</td>
 					<td>${host.gstatus }</td>
 					<td style="padding-top: 15px; width: 100px;">
-					<input type="button" class="button" value="삭제" onclick="deleteGx('${host.gno}')"></td>
+					<input type="button" class="sbutton" value="삭제" onclick="deleteGx('${host.gno}')"></td>
 				</tr>
 				</c:forEach>
 			</table>

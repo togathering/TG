@@ -86,15 +86,16 @@ box-sizing: border-box;
  padding: 0px;
  list-style: none;
  width:100%;
- height:35px;
- min-width: 1050px;
+ height:30px;
+ min-width: 750px;
  overflow: auto;
 }
 .mli{
  position:responsive;
  margin:0px;
- padding:0px 3%;
+ padding:3px 3% 0px 3%;
  float:left;
+ font-size: 16px;
 }
 
 /** the form elements **/

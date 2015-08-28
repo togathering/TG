@@ -7,60 +7,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <link rel="stylesheet" type="text/css" href="css/search.css">
+<link rel="stylesheet" type="text/css" href="css/tgBoard.css">
 
-<style type="text/css">
-a{
-text-decoration:none;
-font:bold;
-color:rgb(41, 128, 185);
-}
-th{
-font-size: 15px;
-color:white;;
-}
-td{
-font-size: 14px;
-color: #585858;
-}
-.board_div{
-float:left;
-width: 100%;
-margin: 0 auto;
-}
-.board_table{
-width: 80%; 
-min-width:800px; 
-margin:1% auto; 
-border-collapse: collapse;"
-}
-.boardth{
-height:45px;
-background-color: rgb(245, 88, 88);
-}
-.board_contnets{
-border-bottom: 1px solid #2E2E2E;
-height: 47px; 
-font: bold;"
-}
-.search_input{
- height: 30px;
- width:30%;
- min-width:400px; 
- padding: 3px 6px; 
- font-size: 14px;"
-}
-.search_div{
-	float:left;
- 	width: 90%; 
- 	margin-left:10%;
- 	padding: 0 auto;
-}
-.paging_div{
-float:left;
- margin:15px auto;
- width:100%;
-}
-</style>
 
 <script type="text/javascript" src="js/ajax.js"></script>
 <script type="text/javascript" src="js/jquery.js"></script>

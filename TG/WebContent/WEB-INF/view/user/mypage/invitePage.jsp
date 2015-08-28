@@ -36,7 +36,6 @@
 	<div style="z-index: 2;">
 		<tiles:insertAttribute name="header" />
 	</div>
-	<br><br>
 	<div>
 		<tiles:insertAttribute name="myPageHeader"/>
 	</div>

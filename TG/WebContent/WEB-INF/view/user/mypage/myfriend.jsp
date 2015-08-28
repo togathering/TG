@@ -7,6 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/ajax.js"></script>
+<link rel="stylesheet" type="text/css" href="css/tgBoard.css">
 <script type="text/javascript">
 	function reqLoad() {
 		$.ajax({url:"myFriendReq", type:"POST", dataType:"text",
@@ -77,7 +78,6 @@
 	<div style="z-index: 2;">
 		<tiles:insertAttribute name="header" />
 	</div>
-	<br><br>
 	<div>
 		<tiles:insertAttribute name="myPageHeader"/>
 	</div>
