@@ -61,6 +61,7 @@ float:left;
  margin:15px auto;
  width:100%;
  text-align: center;
+ 
 }
 </style>
 </head>
