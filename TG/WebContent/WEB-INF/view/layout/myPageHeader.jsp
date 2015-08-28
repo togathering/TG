@@ -4,18 +4,21 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<link rel="stylesheet" type="text/css" media="all" href="css/styleMy.css">
+<link rel="stylesheet" type="text/css" media="all" href="tg/css/styleMy.css">
 <title>Insert title here</title>
 </head>
 <body>
-	<div id="side"><ul>
-    <li class="t"><a>알림</a></li>
-    <li class="t"><a href="mypage">프로필</a></li>
-    <li class="t"><a href="mygx">참가내역</a></li>
-    <li class="t"><a href="myhost">호스트내역</a></li>
-    <li class="t"><a href="myFriend">친구목록</a></li>
-    <li class="t"><a href="invite">초대그룹</a></li>
-    <li class="t"><a href="noteList">쪽지</a></li>
-   </ul></div>
+<br>
+	<div id="side">
+	<ul class="mul">
+ 		<li class="mli"><a>알림</a></li>
+   		<li class="mli"><a href="mypage">프로필</a></li>
+    	<li class="mli"><a href="mygx">참가내역</a></li>
+   		<li class="mli"><a href="myhost">호스트내역</a></li>
+  		<li class="mli"><a href="myFriend">친구목록</a></li>
+  		<li class="mli"><a href="invite">초대그룹</a></li>
+  		<li class="mli"><a href="noteList">쪽지</a></li>
+   </ul>
+   </div>
 </body>
 </html>
