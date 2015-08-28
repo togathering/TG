@@ -5,4 +5,12 @@
 	<select id="list" parameterType="hashmap" resultType="com.tg.common.beans.ReviewBean">
 		select id, evaluate, grade from review where evaluator = #{id} and gno = #{gno}
 	</select>
+	
+	<select id="list2" parameterType="hashmap" resultType="com.tg.common.beans.ReviewBean">
+		select id, evaluate, grade from review where evaluator = #{id} and gno = #{gno} and evaluate is null
+	</select>
+	
+	<update id="comment" parameterType="com.tg.common.beans.ReviewBean">
+		update review set evaluate = #{evaluate}, grade = #{grade} where gno = #{gno} and evaluator = #{evaluator} and id = #{id}
+	</update>
 </mapper>

@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.w3c.dom.NodeList;
 
 import com.tg.common.beans.ReviewBean;
 import com.tg.common.dao.GroupDAO;
@@ -34,14 +35,12 @@ public class ReviewControl {
 	}
 	
 	@RequestMapping("/review")
-	public String review(ReviewBean rbean, HttpSession session, Model model){
-		String id = (String) session.getAttribute("id");
+	public String review(ReviewBean bean, HttpSession session, Model model){
+		String evaluator = (String) session.getAttribute("id");
+		bean.setEvaluator(evaluator);
+		rdao.upEvaluate(bean);
 		
-		rbean.setEvaluator(id);
-		rbean.setGrade(10);
 		
-		model.addAttribute("reviewId", rbean.getId());
-		
-		return "user/review/successPage";
+		return "redirect:main";
 	}
 }

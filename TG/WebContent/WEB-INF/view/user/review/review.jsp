@@ -14,11 +14,13 @@
 	
 	function insertReview() {
 		var id = document.reviewFrm.id.value;
-		var evaluate = document.reviewFrm.evaluate.value;
+		var eval = document.reviewFrm.evaluate.value;
+		var grade = document.getElementById('sel2').value;
 		
-		$.ajax({url:'review', type:'POST', data: 'gno=${param.gno}&id='+id+'&evaluate='+evaluate, dataType: 'text', 
+		$.ajax({url:'review', type:'POST', data: 'gno=${param.gno}&id='+id+'&evaluate='+eval+'&grade='+grade, dataType: 'text', 
 			success: function () {
-				alert("성공");
+				alert('참여해주셔서 감사합니다');
+				window.close();
 			}
 		});
 	}
@@ -27,26 +29,32 @@
 <title>함께한 사람들은 어떤 사람들이었나요</title>
 </head>
 <body>
-	<select id="sel" onchange="selectId()">
-		<option value="함께한 친구들">함께한 친구들</option>
+	<form name="reviewFrm">
+		<select id="sel" onchange="selectId()">
+		<option>함께한 친구들</option>
 		<c:forEach items="${list }" var="gx">
 			<option value="${gx.id }">${gx.id }</option>
 		</c:forEach>
-	</select>
-	<br>
-	<br>
-	<form name="reviewFrm">
-		<span>이름</span>
+		</select>
 		<br>
-		<input type="hidden" name="gno" value="${param.gno }" >
-		<c:forEach items="${list }" var="gx">
-			<input type="text" name="id" id="id" readonly="readonly" value="${gx.id }">
+		<input type="hidden" name="gno" value="${param.gno }" >	
+			<span>I D</span>
+			<br>
+			<input type="text" name="id"readonly="readonly">
 			<br>
 			<span>EVALUATE</span>
 			<br>
 			<input type="text" name="evaluate">
 			<br>
-		</c:forEach>
+			<select id="sel2">
+				<option value="평점">평점</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+			</select>
+			
 		<input type="button" value="완료" onclick="insertReview()">
 	</form>
 </body>

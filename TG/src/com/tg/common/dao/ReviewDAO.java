@@ -17,12 +17,19 @@ public class ReviewDAO {
 		map.put("gno", gno);
 		map.put("id", id);		
 		
-		List<ReviewBean> list = session.selectList("review.list", map);
+		List<ReviewBean> list = session.selectList("review.list2", map);
 		return list;
 	}
 	
-	public void upEvaluate(){
-		
+	public boolean upEvaluate(ReviewBean bean){
+		System.out.println("실행1");
+		int t = session.update("review.comment", bean);
+		if(t==1){
+			System.out.println("실행2");
+			return true;
+		}
+		System.out.println("실행3");
+		return false;
 	}
 	
 	
