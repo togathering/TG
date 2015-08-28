@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<!-- <link rel="stylesheet" type="text/css" href="css/tgBoard.css"> -->
+<link rel="stylesheet" type="text/css" href="css/tgBoard.css">
 <link rel="stylesheet" type="text/css" href="css/search.css">
 <!-- <link rel="stylesheet" type="text/css" href="css/list.css">
 <link rel="stylesheet" type="text/css" media="all" href="css/styleMy.css"> -->
@@ -35,6 +35,6 @@
 	<section class="listings" id="section">
 		
 	</section> <!--  end listing section  -->
-	<div style="position: relative; top: 30px"><tiles:insertAttribute name="footer"/></div>
+	<div style="position: relative; top: 50px"><tiles:insertAttribute name="footer"/></div>
 </body>
 </html>
