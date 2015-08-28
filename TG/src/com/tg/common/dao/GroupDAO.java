@@ -18,6 +18,7 @@ public class GroupDAO {
 	
 	@Autowired
 	SqlSession session;
+	
 	public GroupDAO() {
 				
 	}

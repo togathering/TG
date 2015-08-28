@@ -80,9 +80,17 @@
 	<update id="endGx" parameterType="java.lang.String">
 		update gxgroup set gstatus=#{value} where gday&lt;sysdate 
 	</update>
+	
 	<!-- 관리자페이지 모임명으로 모임 검색 -->
 	<select id="MsearchTitle" parameterType="java.lang.String" resultType="com.tg.common.beans.GroupBean">
 		select gno, gtitle, gdate, gday, gsum from gxgroup where gtitle like #{gtitle}
+	</select>
+	
+	<!-- 태그로 검색 -->
+	<select id="selectTag" parameterType="java.lang.String" resultType="com.tg.common.beans.GroupBean">
+		select gno, nick, gloc, gtitle, gstatus, gimg, goption
+		from member,gxgroup 
+		where gtag like #{gtag} and ghost = id and gstatus != '모임종료' order by gday
 	</select>
 </mapper>
 
