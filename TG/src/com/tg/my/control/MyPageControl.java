@@ -18,6 +18,8 @@ import com.tg.common.beans.ParticipantBean;
 import com.tg.common.dao.GroupDAO;
 import com.tg.common.dao.MemberDAO;
 import com.tg.common.dao.ParticipantDAO;
+import com.tg.common.dao.ReplyDAO;
+import com.tg.common.dao.WishDAO;
 
 @Controller
 public class MyPageControl {
@@ -27,6 +29,11 @@ public class MyPageControl {
 	GroupDAO gdao;
 	@Autowired
 	ParticipantDAO pdao;
+	@Autowired
+	WishDAO wdao;
+	@Autowired
+	ReplyDAO rdao;
+	
 	
 	@RequestMapping("/mypage")
 	public String myPage(Model model, HttpSession session){
@@ -120,7 +127,23 @@ public class MyPageControl {
 	
 	@RequestMapping("/gxdelete")
 	public String gxDelete(@RequestParam(value="gno") Integer gno){
-		if(gdao.delGroup(gno)) return "redirect:myhost";
+		
+		if(rdao.delGroup(gno)){
+			System.out.println("댓글삭제성공");
+		}
+		if(pdao.delGroup(gno)){
+			System.out.println("참가멤버들 삭제성공");		
+		}
+		if(wdao.delGroup(gno)){
+			System.out.println("원해요 삭제성공");
+		}
+		
+		if(gdao.delGroup(gno)){
+			System.out.println("모임삭제성공");
+		}else{
+			System.out.println("모임삭제실패");
+		}
+		
 		
 		return "redirect:myhost";
 	}

@@ -154,25 +154,25 @@ footer ul li.about> ul> li.manager a{
 footer ul li.about > ul > li > a.facebook{
     display: block;
     width: 10px;
-    height: 16px;
+    height: 17px;
     background-position: 0 0;
 }
 footer ul li.about > ul > li > a.twitter{
     display: block;
     width: 19px;
-    height: 16px;
+    height: 17px;
     background-position: -11px 0px;
 }
 footer ul li.about > ul > li.sns a.google{
     display: block;
     width: 10px;
-    height: 16px;
+    height: 17px;
     background-position: -31px 0px;
 }
 footer ul li.about > ul > li.sns a.skype{
     display: block;
     width: 17px;
-    height: 16px;
+    height: 17px;
     background-position: -43px 0px;
 }
 

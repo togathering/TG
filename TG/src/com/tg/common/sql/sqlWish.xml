@@ -10,6 +10,10 @@
 		delete from wish where gno=#{gno} and id=#{id}
 	</delete>
 	
+	<delete id="delGroup" parameterType="int">
+		delete from wish where gno = #{gno}
+	</delete>
+	
 	<select id="wishCheck" parameterType="java.util.HashMap" resultType="com.tg.common.beans.WishBean">
 		select gno, id from wish where gno=#{gno} and id=#{id}
 	</select>

@@ -18,6 +18,7 @@ public class GroupDAO {
 	
 	@Autowired
 	SqlSession session;
+	
 	public GroupDAO() {
 				
 	}
@@ -199,6 +200,7 @@ public class GroupDAO {
 			list = session.selectList("group.selectTag", "%#"+tag+"%");
 			System.out.println(list.size());
 		
+			
 		return list;
 	}
 }

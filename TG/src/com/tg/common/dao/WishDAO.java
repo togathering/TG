@@ -22,6 +22,14 @@ public class WishDAO {
 		return false;
 	}
 	
+	public boolean delGroup(int gno){
+		int t = session.delete("wish.delGroup", gno);
+		if(t>0){
+			return true;
+		}
+		return false;
+	}
+	
 	public boolean cancelWish(int gno, String id){
 		HashMap<String, Object> map = new HashMap<String, Object>();
 		map.put("gno", gno);
