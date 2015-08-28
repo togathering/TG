@@ -25,28 +25,24 @@
 <head>
 	<meta charset="UTF-8">
 	<title>ToGathering : 로그인</title>
-
     <link rel="stylesheet" href="css/login.css">
-
-	
-	
 </head>
 
 <body>
 	<div style="z-index: 2;">
 	<tiles:insertAttribute name="header"/>
 	</div>
-	<div  style="position: relative; top: 120px; margin-top: 100px; z-index: 1;">
+	<div  style="position: relative; top: 120px; margin-top: 90px; z-index: 1;">
 		<div class="wrapper">
-			<div class="container">
+			<div class="container" style="padding-top: 40px">
 					
 				<h1 style="color: white;">어서오세요</h1>
 					
 				<form class="form" name="frm" method="post" action="loginpass">
 					<input type="text" placeholder="E-mail" name="id">
 					<input type="password" placeholder="Password" name="pass">
-					<button type="submit" name="login_bt">Login</button>
-					<input type="button" name="getPass" onclick="votmdnjem()" value="비번찾기">
+					<button type="submit" name="login_bt">Login</button><br><br>
+					<button type="button" name="getPass" onclick="votmdnjem()" >forget password?</button>
 				</form>
 			</div>
 			

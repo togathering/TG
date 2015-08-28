@@ -1,4 +1,4 @@
-x<%@ page language="java" contentType="text/html; charset=EUC-KR"
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
 <%@taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles" %>
 <!DOCTYPE html>
@@ -54,9 +54,9 @@ x<%@ page language="java" contentType="text/html; charset=EUC-KR"
 	<div style="z-index: 2;">
 		<tiles:insertAttribute name="header" />
 	</div>
-<div style="position: relative; top: 120px; margin-top: 100px; z-index: 1;">
-	<div class="wrapper">
-		<div class="container" style="padding-top: 40px">
+	<div style="position: relative; top: 120px; margin-top: 90px; z-index: 1;">
+		<div class="wrapper">
+			<div class="container" style="padding-top: 40px">
 
 			<h1 style="color: white;">시작하세요</h1>
 
