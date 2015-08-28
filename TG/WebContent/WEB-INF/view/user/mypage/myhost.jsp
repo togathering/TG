@@ -6,8 +6,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<!-- <link rel="stylesheet" type="text/css" href="css/list.css"> -->
-<!-- <link rel="stylesheet" type="text/css" media="all" href="css/styleMy.css"> -->
+<link rel="stylesheet" type="text/css" href="css/list.css">
+<link rel="stylesheet" type="text/css" media="all" href="css/styleMy.css">
 <title>Today, ToGathering, Together</title>
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript">
