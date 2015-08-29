@@ -3,10 +3,10 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <form id="form" style="padding-top: 20px; text-align: center;">
-		<div class="wrapper"><h1>참가 내역</h1><br><br>
+		<div class="wrapper"><h2>참가 내역</h2><br>
 		<font color="#add">현재 ${gNum } 개의 모임에 참여중입니다</font><br>
 			<div class="board_div" id="tableAndpage">
-			<table id="joinGx" class="board_table" style="width: 60%">
+			<table id="joinGx" class="board_table" style="width: 75%">
 				<tr class="boardth">
 					<th style="width: 100px;">모임이름</th>
 					<th>개최자</th>

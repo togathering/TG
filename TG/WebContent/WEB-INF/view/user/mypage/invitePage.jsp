@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<!-- <link rel="stylesheet" type="text/css" href="css/tgBoard.css"> -->
+<link rel="stylesheet" type="text/css" href="css/tgBoard.css">
 
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/ajax.js"></script>
@@ -43,20 +43,19 @@
 	</div>
 	<div  class="board_div">
 		<h2>그룹에 초대되었어요~</h2>
-		<hr>
 		
 		<table  class="board_table">
 			<tr class="boardth">
 				<th width="220px">나를 초대한 사람</th>
 				<th width="150px">그룹 제목</th>
-				<th width="100px">살펴보기/거절</th>
+				<th width="150px">살펴보기/거절</th>
 			</tr>
 		</table>
 		<table style="width: 70%; margin: 20px auto;" id="inviteTable">
 			
 		</table>
 	</div>	
-	<div style="position: relative; top: 530px">
+	<div style="position: relative; top: 230px; ">
 		<tiles:insertAttribute name="footer" />
 	</div>
 </body>
