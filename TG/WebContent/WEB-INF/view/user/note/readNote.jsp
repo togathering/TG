@@ -101,17 +101,16 @@ font-family:notokr-demilight !important;
 <body>
 	<div>
 		보낸사람 : ${noteBean.senderId}<br>
-		받은시간 : ${noteBean.noteDate}<br>
-		쪽지내용 :<br> <pre>${noteBean.noteContent}</pre>
+		받은시간 : ${noteBean.noteDate}<br><br>
+		${noteBean.noteTitle}<hr style="width: 365px;" align="left">
+		<pre>${noteBean.noteContent}</pre>
 	</div>
 	
 	<form action="deleteNote" method="post">
 		<input type="hidden" id="noteNo" name="noteNo" value="${noteBean.noteNo}">
 		<input type="submit" id="delete" class="sm_button" value="삭제하기" onclick="deleteMsg()">
 	</form>	
-	
-
-	<input type="button" id="reply" class="sm_button" style="display: " value="답장하기" 
+	<input type="button" id="reply" class="sm_button" style="display: " value="답장하기" 	
 			onclick="msg('${noteBean.senderId }', '${noteBean.nick }')">
 	
 </body>

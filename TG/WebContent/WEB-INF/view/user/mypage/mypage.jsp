@@ -71,7 +71,7 @@
 			<% for(int i=2015; i>=1930; i--){ %>
             yy +=  '<option value="<%= i %>"><%= i %></option>';
             <% } %>
-			mm = '<option selected value="'+selectMonth+'">'+selectMonth+'</option>';
+			var mm = '<option selected value="'+selectMonth+'">'+selectMonth+'</option>';
 			<% for(int i=1; i<=12; i++){ %>
 			<%if(i<10){%>
             mm +=  '<option value="0<%= i %>">0<%= i %></option>';
@@ -79,7 +79,7 @@
             mm +=  '<option value="<%= i %>"><%= i %></option>';
             <%}
 			}%>
-			dd = '<option selected value="'+selectDay+'">'+selectDay+'</option>';
+			var dd = '<option selected value="'+selectDay+'">'+selectDay+'</option>';
 			<% for(int i=1; i<=31; i++){ %>
 			<%if(i<10){%>
             dd +=  '<option value="0<%= i %>">0<%= i %></option>';
