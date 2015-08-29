@@ -2,8 +2,9 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <script type="text/javascript" src="js/jquery.js"></script>
-	 <table style="width: 95%;" id="mtable">
-				<tr>
+<div class="board_div" > 
+	 <table style="width: 95%;" id="mtable" class="board_table">
+				<tr class="boardth">
 					<th style="width: 15%">아이디</th>
 					<th style="width: 220px">문의제목</th>
 					<th style="width: 150px">전화번호</th>
@@ -11,12 +12,13 @@
 					<th style="width: 100px">답변하기</th>
 				</tr>
 		<c:forEach  items='${list }' var='qList' >
-				<tr>
+				<tr class="board_contnets">
 					<td align="center">${qList.id } </td>
 					<td align="center" >${qList.qtitle }</td>
 					<td align="center">${qList.tel }</td>
 					<td align="center">${qList.qdate }</td>
-					<td align="center"><input type="button" value="답장하기" onclick="qnaRequest('${qList.qno }')" id=""></td>
+					<td align="center"><input type="button" value="답장하기"  class="sbutton"  onclick="qnaRequest('${qList.qno }')" id=""></td>
 				</tr>
 		</c:forEach>		
-			</table>
+	</table>
+</div>

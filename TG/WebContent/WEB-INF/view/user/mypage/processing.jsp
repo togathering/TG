@@ -4,7 +4,7 @@
 
 <form id="form" style="padding-top: 20px; text-align: center;">
 		<div class="wrapper"><h2>참가 내역</h2><br>
-		<font color="#add">현재 ${gNum } 개의 모임에 참여중입니다</font><br>
+		<%-- <font color="#add">현재 ${gNum } 개의 모임에 참여중입니다</font><br> --%>
 			<div class="board_div" id="tableAndpage">
 			<table id="joinGx" class="board_table" style="width: 75%">
 				<tr class="boardth" style="padding-top: 8px;">

@@ -30,7 +30,7 @@
 
 		<form id="form" style="padding-top: 20px; text-align: center;">
 		<div class="wrapper"><h2>호스트 내역</h2><br>
-			<font color="#add">현재 ${hNum}개의 모임의 호스트를 맡고있습니다.</font><br><br>
+			<%-- <font color="#add">현재 ${hNum}개의 모임의 호스트를 맡고있습니다.</font><br><br> --%>
 			<table id="hostGx" style="width: 75%;" class="board_table">
 				<tr class="boardth">
 					<th hidden="true">모임번호</th>
