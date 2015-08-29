@@ -119,6 +119,7 @@ a:hover{
 	}
 	
 	function delGroup() {
+		alert("ªË¡¶");
 		location.href = 'delGroup?gno=${param.gno}';
 	}
 	
