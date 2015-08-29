@@ -42,6 +42,12 @@ public class MyPageControl {
 			@RequestParam(value="month")String month,
 			@RequestParam(value="day")String day) {
 		String id= (String) session.getAttribute("id");
+		String birth = year+month+day;
+		
+		m.setBirth(birth);
+		m.setId(id);
+		dao.upProfile(m);
+		
 		return ".main";
 		
 		
