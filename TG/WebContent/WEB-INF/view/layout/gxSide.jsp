@@ -29,7 +29,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<div style="float: left; width: 80px; height: 1000px; display: inline; margin: 0 2%; padding-left: 170px; padding-top: 30px;" >
+	<div style="float: left; width: 80px; display: inline; margin: 0 2%; padding-left: 150px; padding-top: 30px;" >
 
 		<ul style="color: black; background-color: pink;  ">
 			<li><a style="color: black; outline-color: pink;" onclick="mygxgroup()">¸ğÁıÁß</a></li>
