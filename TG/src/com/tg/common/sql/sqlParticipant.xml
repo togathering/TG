@@ -19,7 +19,7 @@
 	</delete>
 	
 	<select id="duplicationCheck" parameterType="java.util.HashMap" resultType="com.tg.common.beans.ParticipantBean">
-		select gno, pid from participant where gno = #{gno} and pid = #{id}
+		select gno, pid from participant where gno = #{gno} and pid = #{id} and position != 'host'
 	</select>
 	
 	<select id="joinlist" parameterType="int" resultType="com.tg.common.beans.ParticipantBean">
