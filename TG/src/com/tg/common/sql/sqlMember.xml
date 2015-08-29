@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><!--Converted at: Sat Aug 29 10:05:22 KST 2015-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="member">
+	<select id="telInfo" parameterType="java.lang.String" resultType="java.lang.String">
+		select tel from member where id=#{id}
+	</select>
+	
+	<select id="MselectAll" parameterType="java.util.Map" resultType="com.tg.common.beans.MemberBean">
+	
+select mid, mnick, pp, ccnt
+from  (select m.id mid, m.nick mnick, nvl(p.cnt,0) pp, nvl(gx.cnt,0) ccnt, rownum rn
+		 from  member m, 
+		        (select id, count(*) cnt
+		          from member,participant
+		          where member.id = participant.pid
+		           group by id) p,
+		         (select id, count(*) cnt
+		            from member,gxgroup
+		            where member.id = gxgroup.ghost
+		            group by id) gx
+		  where m.id = p.id(+)
+		           and m.id = gx.id(+))
+where rn between #s# and #e#
+				<if test=" != null">and
+					mid like #{id}
+				</if>		
+				
+	</select>
+	
+	<select id="memberCnt" resultType="java.lang.Integer">
+		select count(*) from member
+	</select>
+	
+	<select id="searchMember" parameterType="java.util.HashMap" resultType="com.tg.common.beans.MemberBean">
+		select id, nick from member where id like #{search} and id != #{id}
+	</select>
+	
+
+
+
+	<select id="selectMem" parameterType="java.lang.String" resultType="com.tg.common.beans.MemberBean">
+		select id, nick from member where id = #{id}
+	</select>
+
+	<delete id="eraseId" parameterType="java.lang.String">
+		delete from member where id=#{param}
+	</delete>
+	<select id="my" parameterType="java.lang.String" resultType="com.tg.common.beans.MemberBeanIn">
+		select id, pass, nick, tel, favo, loc, birth, intro, gender, insta, fbook from member where id=#{value}
+	</select>
+	<update id="profile" parameterType="com.tg.common.beans.MemberBeanIn">
+		update member 
+		set nick=#{nick}, pass=#{pass}, tel=#{tel}, favo=#{favo}, loc=#{loc},birth=#{birth}, 
+			intro=#{intro}, gender=#{gender}, insta=#{insta}, fbook=#{fbook} 
+		where id=#{id}
+	</update>
+	
+	<!-- 패스워드 찾기 -->
+	<select id="getPass" parameterType="java.lang.String" resultType="java.lang.String">
+		select pass from member where id=#{id}
+	</select>
+	
+</mapper>

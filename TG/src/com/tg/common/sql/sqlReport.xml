@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><!--Converted at: Sat Aug 29 10:05:23 KST 2015-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="report">
+	<insert id="Add" parameterType="com.tg.common.beans.ReportBean">
+		insert into report1 (no, reporter, accused, category, content, rdate, status)
+		values (report_seq.nextval, #{reporter}, #{accused}, #{category}, #{content}, sysdate, #{status})
+	</insert>
+	<update id="End" parameterType="java.lang.String">
+		update report1 set status=#{status}
+	</update>
+	<select id="List" parameterType="java.lang.String" resultType="com.tg.common.beans.ReportBean">
+		select no, reporter, accused, category, content, rdate, status from report1 where status=#{status} order by rdate 
+	</select>
+	<select id="Con" parameterType="int" resultType="com.tg.common.beans.ReportBean">
+		select reporter, accused, category, content, rdate from report1 where no=#{no}
+	</select>
+	<update id="Up" parameterType="int">
+		update report1 set status='Y' where no=#{no}
+	</update>
+	<select id="Count" parameterType="java.lang.String" resultType="int">
+		select count(*) from report1 where status='Y' and accused=#{accused}
+	</select>
+</mapper>
