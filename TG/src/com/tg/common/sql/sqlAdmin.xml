@@ -17,8 +17,8 @@
 	<!-- 전체그룹선택 -->
 	<select id="selectAllGroup"  resultType="com.tg.common.beans.GroupBean" parameterType="map">
 	select * from gxgroup
-	<if test="gtitle!=null">
-		where gtitle=#{gtitle}
+	<if test="gtitle != null">
+		where gtitle like #{gtitle}
 	</if>
 
 	</select>

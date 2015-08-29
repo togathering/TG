@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<link rel="stylesheet" type="text/css" media="all" href="tg/css/styleMy.css">
+<link rel="stylesheet" type="text/css" media="all" href="css/styleMy.css">
 <title>Insert title here</title>
 </head>
 <body>
