@@ -65,13 +65,12 @@ public class EmailController {
 	
 	
 	@RequestMapping("/emailConfirm")
-	public String confirmEmail(@RequestParam(value="id", required=false) String mail, 
-								@RequestParam(value="nick", required=false) String nick,
+	public String confirmEmail( @RequestParam(value="nick", required=false) String nick,
 								@RequestParam(value="pass", required=false) String pass,
 								@RequestParam(value="id", required=false) String id,
 								Model model) throws Exception {
 		
-		System.out.println("들어온값"+mail+", "+nick);
+		System.out.println("들어온값"+id+", "+nick);
 		System.out.println("패스워드 : "+pass);
 
 		Random random = new Random();
@@ -97,15 +96,16 @@ public class EmailController {
 				model.addAttribute("join", "fail");
 				return ".join";
 			}		
+
 			// 이메일 발송
-			email.setReceiver(mail);
+			email.setReceiver(id);
 			email.setSubject("안녕하세요. 투게더링 회원가입을 위한 메일입니다.");
 			email.setContent("투게더링 : 회원가입을 위한 핫키는 [ "+ confirmKey +" ] 입니다.");
             emailSender.SendEmail(email);
             
             // 페이지 이동 후 필요한 값 저장
             model.addAttribute("result", "confirmSuccess");
-            model.addAttribute("mail", mail);
+            model.addAttribute("mail", id);
             model.addAttribute("nick", nick);
             model.addAttribute("key", confirmKey);
             model.addAttribute("pass", pass);
@@ -114,8 +114,8 @@ public class EmailController {
             return ".join2";
 		
 		} else {
-			model.addAttribute("result", "confirmFail");
-			return ".join2";
+			model.addAttribute("result", "dontCreateRandom");
+			return ".join";
 		}
 	}
 }
