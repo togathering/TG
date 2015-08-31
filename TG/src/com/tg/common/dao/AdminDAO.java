@@ -169,6 +169,7 @@ public class AdminDAO {
 	
  	public boolean removeG(String gno){
 		int t = session.update("admin.deleteG",gno);
+		System.out.println("삭제된 행 갯수: "+ t);
 		if(t==-1) return true;
 		else return false;
 	}
