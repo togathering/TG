@@ -49,7 +49,7 @@ margin: 0 auto;
 	} 
 	
 	function deleteG(delGno, day) {
-		
+		 
 		var today = new Date(); // 오늘 날짜
 		
 		var hostday = new Date(day); // 모임개최날짜

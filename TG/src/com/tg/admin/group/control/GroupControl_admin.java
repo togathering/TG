@@ -63,7 +63,7 @@ public class GroupControl_admin {
 			}else{
 				 pNum = Integer.parseInt(pageNum)-1;
 			}
-		 
+		  
 			request.setAttribute("keyword", gtitle);
 			request.setAttribute("list", dao.selectTitle(pNum, gtitle));
 			request.setAttribute("pageNum", pNum);

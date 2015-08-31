@@ -39,7 +39,7 @@
 	
 		<!-- 그룹 삭제 -->
 	<update id="deleteG" statementType="CALLABLE" parameterType="String">
-		{call del_group(#{gno})}
+		{call del_group(#{gno})} 
 	</update>
 	
 
