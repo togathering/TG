@@ -72,4 +72,5 @@ where rn between #s# and #e#
 		select nick from member where id=#{id}
 	</select>
 	
+	
 </mapper>
