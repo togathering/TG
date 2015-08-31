@@ -55,11 +55,15 @@ public class EmailController {
 		}
 	}
 	
-	@RequestMapping("/confirmEmail")
-	public String confirmEmail(@RequestParam(value="email", required=false) String confirmEmail, 
-								Model model) throws Exception{
+	
+	@RequestMapping("/emailConfirm")
+	public String confirmEmail(@RequestParam(value="id", required=false) String mail, 
+								@RequestParam(value="nick", required=false) String nick,
+								@RequestParam(value="pass", required=false) String pass,
+								Model model) throws Exception {
 		
-		System.out.println(confirmEmail);
+		System.out.println("들어온값"+mail+", "+nick);
+		System.out.println("패스워드"+pass);
 
 		Random random = new Random();
 		
@@ -77,21 +81,23 @@ public class EmailController {
 		}
 		
 		if(confirmKey != null){
-			email.setReceiver(confirmEmail);
-			email.setSubject("안녕하세요.\n 투게더링 회원가입을 위한 메일입니다.");
-			email.setContent("투게더링 : 회원가입을 위한 핫키는"+ confirmKey+"입니다.");
+			email.setReceiver(mail);
+			email.setSubject("안녕하세요. 투게더링 회원가입을 위한 메일입니다.");
+			email.setContent("투게더링 : 회원가입을 위한 핫키는 [ "+ confirmKey +" ] 입니다.");
             
             emailSender.SendEmail(email);
             
             model.addAttribute("result", "confirmSuccess");
-            model.addAttribute("email", confirmEmail);
+            model.addAttribute("mail", mail);
+            model.addAttribute("nick", nick);
             model.addAttribute("key", confirmKey);
+            model.addAttribute("pass", pass);
             
-            return "redirect:emailConfirm";
+            return ".join2";
 		
 		} else {
 			model.addAttribute("result", "confirmFail");
-			return "redirect:emailConfirm";
+			return "user/main/joinFail";
 		}
 	}
 }
