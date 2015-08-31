@@ -52,7 +52,8 @@ margin: 0 auto;
 		 
 		var today = new Date(); // 오늘 날짜
 		
-		var hostday = new Date(day); // 모임개최날짜
+		//'2015-07-08'
+		var hostday = new Date(day.substr(0,4), parseInt(day.substr(5,2)) - 1, day.substr(8,2)); // 모임개최날짜
 		
 		if(hostday<today){
 			alert("이미 진행이 종료된 모임은 삭제할 수 없습니다.");
@@ -62,8 +63,12 @@ margin: 0 auto;
 				url:'deleteG',
 				type:'POST',
 				data:{delGno:delGno},
-				success:function(){ 
-					url:'/adminGroupList'
+				success:function(data){ 
+					alert('삭제성공: '+ data);
+				  location.href='adminGroupList';
+				},
+				error:function(){
+					
 				}
 					
 			})	//ajax		
