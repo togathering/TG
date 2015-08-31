@@ -68,7 +68,7 @@
 		<div class="wrapper">
 			<div class="container" style="padding-top: 40px">
 
-			<h1 style="color: white;">시작하세요 (1단계 : 이메일 인증)</h1>
+			<h1 style="color: white;">시작하세요 (1단계)</h1>
 			
 			<form class="form" name="frm" method="post" action="emailConfirm">
 				<input type="text" placeholder="Nickname" name="nick"> 

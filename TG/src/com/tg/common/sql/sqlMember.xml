@@ -56,9 +56,20 @@ where rn between #s# and #e#
 		where id=#{id}
 	</update>
 	
+	<!-- 비밀번호 찾기 시 패스워드 변경 --> 
+	<update id="changePass" parameterType="com.tg.common.beans.MemberBean">
+		update member set pass = #{pass} 
+		where id = #{id}
+	</update>
+	
 	<!-- 패스워드 찾기 -->
 	<select id="getPass" parameterType="java.lang.String" resultType="java.lang.String">
 		select pass from member where id=#{id}
+	</select>
+	
+	<!-- 입력받은 닉네임 값 확인 -->
+	<select id="confirmNick" parameterType="java.lang.String" resultType="java.lang.String">
+		select nick from member where id=#{id}
 	</select>
 	
 </mapper>

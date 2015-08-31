@@ -25,7 +25,9 @@ public class MemberDAO {
 	
 	public String getMemberTel(String id){
 		String tel = "";
-		tel =  session.selectOne("member.telInfo", id);
+		if(id != null){
+			tel = session.selectOne("member.telInfo", id);			
+		}
 		return tel;
 	}
 	
@@ -91,6 +93,24 @@ public class MemberDAO {
 			return pass;			
 		}
 		return "fail";
+	}
+	
+	// 비밀번호 찾기 시 비밀번호 자동변경
+	public boolean changePass(MemberBean bean){
+		System.out.println("DAO changePass() 메소드입니다.");
+		System.out.println(bean.getId());
+		System.out.println(bean.getPass());
+		
+		int t = session.update("member.changePass", bean);
+		
+		System.out.println("쿼리문 실행 여부를 확인하겠습니다. "+t);
+		
+		if(t == 1){
+			return true;
+		
+		} else {
+			return false;			
+		}
 	}
 
 }

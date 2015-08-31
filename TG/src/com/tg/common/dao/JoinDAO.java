@@ -31,4 +31,12 @@ public class JoinDAO {
 		
 		return false;
 	}
+
+	// 입력받은 email과 nick에 대한 검증
+	public boolean checkNickAndId(String id, String nick){
+		if(nick.equals(session.selectOne("member.confirmNick",id))){
+			return true;
+		}
+		return false;			
+	}
 }
