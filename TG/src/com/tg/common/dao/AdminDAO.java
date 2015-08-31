@@ -158,8 +158,7 @@ public class AdminDAO {
 		System.out.println("pid삭제아이디:"+pid+"t="+t);
 		if (t==-1) {return true;}
 		else{ return false;}
-	}
-
+	} 
 	public boolean removeId2(String pid){
 		//2차 아이디 삭제 임시보존 내용 까지 삭제
 		int t=session.update("admin.deleteId2",pid);
@@ -167,7 +166,15 @@ public class AdminDAO {
 		if (t==1) return true;
 		else return false;
 	}
+	
+ 	public boolean removeG(String gno){
+		int t = session.update("admin.deleteG",gno);
+		if(t==-1) return true;
+		else return false;
+	}
+	
 }
+
 
 
 

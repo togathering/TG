@@ -94,7 +94,7 @@ margin: 0 auto;
 						<td align="center">${grpbean.gday }</td>
 						<td align="center">${grpbean.gsum }</td>
 						<td align="center">
-							<input type="button" onclick="deleteG()" class="sbutton"
+							<input type="button" onclick="deleteG('${grpbean.gno }','${grpbean.gday }')" class="sbutton"
 							name="delete" id="delete" value="»èÁ¦">
 						</td>
 					</tr>
