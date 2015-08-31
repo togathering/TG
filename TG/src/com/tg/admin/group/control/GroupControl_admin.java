@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.tg.common.dao.AdminDAO;
 
@@ -73,4 +74,17 @@ public class GroupControl_admin {
 		 return "admin/group/SpecificGroup";
 		 
 	 }
+
+	 @RequestMapping("deleteG")
+	 @ResponseBody
+	 public String deleteG (@RequestParam(value="delGno")String delGno){
+		if( dao.removeG(delGno)){
+			System.out.println("그룹삭제 완료 : 그룹번호 : "+delGno);
+			return "success";
+		}else {
+			System.out.println("그룹삭제 실패 : 그룹번호 : "+delGno);
+			return "fail";
+		} 
+	 } 
+
 }

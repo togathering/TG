@@ -55,6 +55,10 @@ margin: 0 auto;
 		if(holdday<today){
 			alert("이미 진행완료된 모임은 삭제할 수 없습니다.");
 		}else{
+			var check = confirm("정말 삭제하시겠습니까?");
+			if(check){
+				alert("check"+check);
+				
 			$.ajax({
 				url : 'deleteG',
 				type:'POST',
@@ -66,9 +70,8 @@ margin: 0 auto;
 					alert(data);
 					location.href='adminGroupList';
 				}
-				 
-				
 			})
+			}
 		}//else
 	}
 </script>
