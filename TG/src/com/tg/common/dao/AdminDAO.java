@@ -13,7 +13,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.tg.common.beans.GroupBean;
 import com.tg.common.beans.MemberBean;
-import com.tg.iba.MySqlMapConfig;
 
 public class AdminDAO {
 

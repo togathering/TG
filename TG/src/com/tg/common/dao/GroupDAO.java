@@ -12,7 +12,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.ibatis.sqlmap.client.SqlMapClient;
 import com.tg.common.beans.GroupBean;
-import com.tg.iba.MySqlMapConfig;
 
 public class GroupDAO {
 	
