@@ -47,27 +47,13 @@ margin: 0 auto;
 			
 		})
 	} 
-	
-	function deleteG(delGno, day) {
-		 
-		var today = new Date(); // 오늘 날짜
-		
-		var hostday = new Date(day); // 모임개최날짜
-		
-		if(hostday<today){
-			alert("이미 진행이 종료된 모임은 삭제할 수 없습니다.");
-			
-		}else{
-			$.ajax({
-				url:'deleteG',
-				type:'POST',
-				data:{delGno:delGno},
-				success:function(){ 
-					url:'/adminGroupList'
-				}
-					
-			})	//ajax		
-		}//else
+	function deleteG() {
+		alert("정말 삭제하시겠습니까?")
+
+	}
+
+	function modifyG() {
+		alert("수정하시겠습니까?")
 	}
 </script>
 <title>Administrator Group관리</title>
