@@ -96,8 +96,7 @@ public class EmailController {
 			if(joinDao.checkJoin(memberBean.getId())){ // 이미 사용중인 아이디 체크
 				model.addAttribute("join", "fail");
 				return ".join";
-			}
-			
+			}		
 			// 이메일 발송
 			email.setReceiver(mail);
 			email.setSubject("안녕하세요. 투게더링 회원가입을 위한 메일입니다.");
