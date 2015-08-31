@@ -17,8 +17,14 @@
 		<put-attribute name="footer" value="/WEB-INF/view/layout/footer.jsp" />
 	</definition>
 	
-	<!-- 회원가입 -->
+	<!-- 회원가입 (기본정보 입력 후 이메일 인증) -->
 	<definition name=".join" template="/WEB-INF/view/user/main/join.jsp">
+		<put-attribute name="header" value="/WEB-INF/view/layout/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/view/layout/footer.jsp" />
+	</definition>
+	
+	<!-- 회원가입2 (진짜 회원가입) -->
+	<definition name=".join2" template="/WEB-INF/view/user/main/join2.jsp">
 		<put-attribute name="header" value="/WEB-INF/view/layout/header.jsp" />
 		<put-attribute name="footer" value="/WEB-INF/view/layout/footer.jsp" />
 	</definition>
@@ -154,9 +160,5 @@
 		<put-attribute name="footer" value="/WEB-INF/view/layout/footer.jsp" />
 	</definition>
 
-	<!-- 가입 전 이메일 인증 -->
-	<definition name =".emailConfirm" template="/WEB-INF/view/user/main/emailConfirm.jsp">
-		<put-attribute name="header" value="/WEB-INF/view/layout/header.jsp" />
-		<put-attribute name="footer" value="/WEB-INF/view/layout/footer.jsp" />
-	</definition>
+	
 </tiles-definitions>
