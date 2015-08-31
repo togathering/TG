@@ -22,6 +22,10 @@
 		select gno, pid from participant where gno = #{gno} and pid = #{id} and position is null
 	</select>
 	
+	<select id="dulication" parameterType="hashmap" resultType="String">
+		select pid from participant where gno = #{gno} and pid = #{pid}
+	</select>
+	
 	<select id="joinlist" parameterType="int" resultType="com.tg.common.beans.ParticipantBean">
 		select pid, rownum from participant where gno = #{gno} and position is null
 	</select>

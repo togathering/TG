@@ -1,8 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%--@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"--%>
+
 
 <!DOCTYPE html>
 <html>
@@ -280,7 +281,7 @@ a:hover{
 	}
 	
 	function loadFriend(gno) {
-		window.open('myFriendList?page=invite&gno='+gno, '', 'width=300, height=400');
+		window.open('myFriendList?page=invite&gno='+gno, '', 'width=400, height=500');
 		
 	}
 	

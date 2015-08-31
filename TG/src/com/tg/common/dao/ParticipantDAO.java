@@ -42,6 +42,19 @@ public class ParticipantDAO {
 		return bean;
 	}
 	
+	public boolean joinDuplication(int gno, String fid){
+		HashMap<String, Object> map = new HashMap<String, Object>();
+		map.put("gno", gno);
+		map.put("pid", fid);
+		
+		String id = session.selectOne("parti.dulication", map);
+		if(fid.equals(id)){
+			return true;
+		}
+				
+		return false;	
+	}
+	
 	public boolean joinGroup(int gno, String id){
 		HashMap<String, Object> map = new HashMap<String, Object>();
 		map.put("gno", gno);

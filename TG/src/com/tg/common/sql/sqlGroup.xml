@@ -24,12 +24,12 @@
 		select gsum, gmin, gmax from gxgroup where gno = #{gno}
 	</select>
 	
-	<select id="list" resultType="com.tg.common.beans.GroupBean">
-     	select gno, nick, gloc, gtitle, gstatus, gimg from member,gxgroup where ghost = id and gstatus != '모임종료'
+	<select id="list" parameterType="String" resultType="com.tg.common.beans.GroupBean">
+     	select gno, nick, gloc, gtitle, gstatus, gimg from member,gxgroup where ghost = id and gstatus != '모임종료' order by ${value}
 	</select>
    
 	<select id="search" parameterType="java.util.HashMap" resultType="com.tg.common.beans.GroupBean">
-    	select gno, nick, gloc, gtitle, gstatus, gimg from member,gxgroup where ghost = id and gstatus != '모임종료' and replace(gtitle, ' ', '') like #{keyword} order by #{order}
+    	select gno, nick, gloc, gtitle, gstatus, gimg from member,gxgroup where ghost = id and gstatus != '모임종료' and replace(gtitle, ' ', '') like #{keyword} order by ${order}
 	</select>
    
    	<!-- 모임 상세페이지 출력 -->
