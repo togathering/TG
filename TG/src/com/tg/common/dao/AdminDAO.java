@@ -167,7 +167,16 @@ public class AdminDAO {
 		if (t==1) return true;
 		else return false;
 	}
+	
+ 	public boolean removeG(String gno){
+//		int t = session.update("admin.deleteG",gno);
+//		if(t==-1) return true;
+//		else return false;
+		return true;
+	}
+	
 }
+
 
 
 

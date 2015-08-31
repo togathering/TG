@@ -73,4 +73,17 @@ public class GroupControl_admin {
 		 return "admin/group/SpecificGroup";
 		 
 	 }
+	 
+	 @RequestMapping("deleteG")
+	 public void deleteG (@RequestParam(value="delGno")String delGno){
+		if( dao.removeG(delGno)){
+			System.out.println("그룹삭제 완료 : 그룹번호 : "+delGno);
+			
+		}else {
+			System.out.println("그룹삭제 실패 : 그룹번호 : "+delGno);
+		} 
+	 } 
+	 
 }
+
+

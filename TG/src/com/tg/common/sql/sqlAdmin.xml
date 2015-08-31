@@ -37,6 +37,11 @@
 		select id from member where id like #{keyword}
 	</select>
 	
+		<!-- 그룹 삭제 -->
+	<update id="deleteG" statementType="CALLABLE" parameterType="String">
+		{call del_group(#{gno})}
+	</update>
+	
 
 <select id ="selectAll" resultType="com.tg.common.beans.MemberBean" parameterType="map">
 
