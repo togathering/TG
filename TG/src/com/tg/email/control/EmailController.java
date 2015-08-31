@@ -48,7 +48,6 @@ public class EmailController {
 		
 		// ID가 DB에 있고, ID로 조회한 nick과 입력받은 nick이 일치한다면..
 		if(joinDao.checkNickAndId(id,nick)){ 
-			
 			System.out.println("입력한 아이디가 있습니다.");
 			//난수생성
 			Random random = new Random();
