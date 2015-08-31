@@ -211,4 +211,10 @@ public class GroupDAO {
 			
 		return list;
 	}
+
+	public List<GroupBean> conditionSearch(String keyword, String order,
+			Integer cnt, String day) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

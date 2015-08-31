@@ -319,11 +319,11 @@ a:hover{
 		<h3 align="center">ToGathering</h3>
 		<hr>
 		<!-- 	이미지삽입 -->
-		<div style="padding:5px 1% 5px 10%; float: left; width:39%; height: 400px;">
-			<img alt="" src="upimg/${group.gimg}" style="min-width: 45%; height: auto;">
+		<div style="padding:5px 10px 10px 100px; margin-bottom:10px; float: left; width:580px; height: 400px; overflow: hidden;">
+			<img alt="" src="upimg/${group.gimg}" style="width:580px; height: auto">
 		</div>
 		<!-- 요약내용 -->			
-		<div style="padding:5px 8% 5px 3%; float:right; width:39%; height: 400px;">		
+		<div style="padding:5px 100px 10px 10px; margin-bottom:10px; float:right; width:540px; height: 400px;">		
 			<div>
 				<br>
 				<p> < ${group.gtitle} > </p>
@@ -347,12 +347,12 @@ a:hover{
 			
 			
 	<!-- 상세내용 -->
-	<div>
+	<div style="padding-top: 20px">
 		<h4 align="center">모임명</h4>
 		<h2 align="center"> ${group.gtitle} </h2>
 		<h4 align="center">모임 소개</h4><br>
 	</div>
-		<div style="border: 0px solid black; width: 80%;  margin: 1% auto; text-align:center; LINE-HEIGHT: 120%;
+		<div style="border: 0px solid black; width: 80%;  margin: 30px auto; text-align:center; LINE-HEIGHT: 120%;
 					padding-top: 10px; padding-bottom: 10px; ">
 			<pre style="width:100%; background-color: #d9d9d9; margin: 0 auto; padding: 2% 1%;" >
 				${group.gintro}
