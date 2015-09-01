@@ -313,17 +313,19 @@ a:hover{
 		<tiles:insertAttribute name="header" />
 	</div>
 <!-- 헤더끝 -->		
-<!-- 상단 이미지+요약내용 -->
-	<div>
+	<div style="width: 100%; height: 100%; background-color: #F0FFF0;">
+	<br>
 		<h2 align="center">모임명 : ${group.gtitle}</h2><h3>${group.goption }</h3>
 		<h3 align="center">ToGathering</h3>
-		<hr>
+<!-- 상단 이미지+요약내용 -->
+
+	<div style="border: 1px solid lightgray; height: 430px; width:1047px;  margin:10px 150px; ">
 		<!-- 	이미지삽입 -->
-		<div style="padding:5px 10px 10px 150px; margin-bottom:10px; float: left; width:590px; height: 400px; overflow: hidden;">
-			<img alt="" src="upimg/${group.gimg}" style="width:640px; height: auto">
+		<div style="padding:5px 10px 10px 0px; margin-bottom:10px; float: left; width:610px; height: 400px; overflow: hidden;">
+			<img alt="" src="upimg/${group.gimg}" style="width:610px; height: auto; min-height:350px; margin: 10px 10px 10px 20px">
 		</div>
 		<!-- 요약내용 -->			
-		<div style="border:1px gray; padding:5px 150px 10px 10px; margin-bottom:10px; float:right; width:430px; height: 400px;">		
+		<div style="padding:5px 0px 10px 10px;; margin-bottom:10px; float:right; width:390px; height: 400px;">		
 			<div>
 				<br>
 				<p> < ${group.gtitle} > </p>
@@ -337,10 +339,10 @@ a:hover{
 			<br>
 			<form style="align:center;">
 				
-				<span id="encore"><button type="button" name="encore" hidden="">앵콜</button></span><br>
+				<span id="encore"><button type="button" name="encore" hidden="">앵콜</button></span>
 				<span id="wish"><button type="button"  class="button" name="wish" onclick="wishGroup()">원해요</button></span>
-				<span id="attend"><button type="button" class="button"  name="attend" onclick="join()">참석</button></span>
-				<span><button type="button" style="display: none" class="button" id="invite" name="invite" value="친구초대" onclick="loadFriend(${group.gno})">친구초대</button></span>
+				<span><button type="button" style="display: none" class="button" id="invite" name="invite" value="친구초대" onclick="loadFriend(${group.gno})">친구초대</button></span><br><br>
+				<span id="attend"><button type="button" class="Bbutton" style="width:350px; height:75px;"  name="attend" onclick="join()">참석</button></span>
 			</form>
 		</div>
 	</div>
@@ -348,30 +350,33 @@ a:hover{
 			
 			
 	<!-- 상세내용 -->
-	<div style="padding-top: 20px">
+<%-- 	<div style="padding-top: 20px;">
 		<h4 align="center">모임명</h4>
 		<h2 align="center"> ${group.gtitle} </h2>
 		<h4 align="center">모임 소개</h4><br>
-	</div>
-		<div style=" width: 1030px;  margin: 30px auto; text-align:center; LINE-HEIGHT: 120%;
-					padding: 25px 10px; background-color: #d9d9d9;">
+	</div> --%>
+		<div style=" width: 650px; height:500px; margin: 10px 20px 10px 150px; text-align:left; LINE-HEIGHT: 160%;
+					padding: 25px 10px; background-color: #d9d9d9; float: left; border: 1px solid lightgray;">
 			<!-- <pre style="width:1050px; background-color: #d9d9d9; margin: 0 auto; padding: 20px 50px;" > -->
 				${group.gintro}
 		<!-- 	</pre> -->
 		</div>
-		
-		<!-- 태그표시 -->
-		<div>
-			<h3>태그</h3>
-			<c:forEach var="tag" items="${tags}">
-				<a href="tagResult?tag=${tag}">#${tag}</a>&nbsp 
-			</c:forEach>	
-		</div>
-		<hr>
+		<!-- 호스트프로필 -->
+			<div style="float: right; width:330px; height:210px; margin: 10px 150px 10px 5px; padding: 25px 10px; border: 1px solid lightgray;">
+			<h3>안녕하세요 호스트입니다!</h3>
+			저는 ~~를 좋아하는 사람입니다.
+			</div>
+		<!-- 약관? -->
+			<div style="float: right; width:320px; height:467px; margin: 10px 150px 10px 5px; padding: 25px 15px;  LINE-HEIGHT: 160%; border: 1px solid lightgray;">
+			<h3>꼭 지켜주세요!</h3>
+			모임 진행의 책임은 해당 모임의 진행자인 그룹장에게 있습니다. 
+			모임 후, 불편했던 점, 수상쩍은 점, 기타 문제점이 발생했다면 적극적으로 신고 부탁드립니다. 
+			훈훈하고 건강한 ToGathering 커뮤니티를 함께 만들어가요!
+			</div>
 		<!-- 참가인원 시작 -->
-				<h3>참가인원들</h3>
-				<div>
-				<table style="margin-left: 45%">
+				<div style="width: 650px; float:left; height:90px; margin: 10px 20px 10px 150px; border: 1px solid lightgray; padding: 5px 10px; text-align:left;">
+				<h3 style="text-align:left;">▶참가인원들</h3>
+				<table style="text-align:left;">
 					<tr>
 						<td width="100px"><a onclick="window.open('profile?id=${group.ghost }', '', 'width=850, height=350, screenX=200, screenY=100');"  style="color: red" >${group.ghost }</a></td>
 						<td width="100px">그룹 호스트</td>
@@ -384,10 +389,17 @@ a:hover{
 					</c:forEach>
 				</table>
 			</div><!-- 참가인원끝 -->
-			<hr>	
+		<!-- 태그표시 -->
+		<div style="width: 650px; float:left; height:90px; margin: 15px 20px 15px 150px; border: 1px solid lightgray; padding: 5px 10px; text-align:left;">
+			<h3 style="text-align:left;">▶태그</h3>
+			<c:forEach var="tag" items="${tags}">
+				<a href="tagResult?tag=${tag}">#${tag}</a>&nbsp 
+			</c:forEach>	
+		</div>
+
 		<!-- 지도 -->
-		<div style="width:1030px;  margin: 1% auto;">
-		<div id="map_canvas"style="width:100%; margin: 0 auto; padding: 2% 1%; height:450px;"></div>
+		<div style="width:1027px;  margin: 20px 150px;">
+		<div id="map_canvas"style="width:100%; margin: 0px 0px; padding: 2% 1%; height:450px;"></div>
 		</div>
 		<!-- 댓글 -->
 		<hr>
@@ -401,6 +413,9 @@ a:hover{
 			</form>
 				<br>
 			<button type="button" class="button" onclick="loadReplyPage()" style="width: 110px; border-radius:1.5em 1.5em 1.5em 1.5em;">댓글더보기</button>
+			
+		</div>
+		<br>
 		</div>
 	<!-- 하단footer -->
 	<div style="position: relative; top: 30px">

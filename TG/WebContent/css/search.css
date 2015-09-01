@@ -147,3 +147,25 @@
 .sbutton:focus {
   background-color: #21c982;
 }
+.Bbutton {
+	font-family: 'Source Sans Pro', sans-serif;
+  	background-color: #53e3a6;
+	 margin:0 auto 3px auto; 
+/* 	  margin:0; */
+	  border: 0;
+	  color: white;
+	  border-radius: 1px;
+	  width: 180px;
+	  min-width:80px;
+	  max-width:200px;
+	  height: 30px;
+	  cursor: pointer;
+	  font-size: 13px;
+}
+.Bbutton:hover {
+  background-color: rgba(83,227,166,0.8);
+}
+
+.Bbutton:focus {
+  background-color: #21c982;
+}
