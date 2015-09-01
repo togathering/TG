@@ -81,16 +81,17 @@
 	<div style="z-index: 2;">
 		<tiles:insertAttribute name="header" />
 	</div>
-	<div
-		style="position: relative; top: 10px; margin-top: 10px; z-index: 1;">
+	<div style="position: relative; top: 10px; margin-top: 10px; z-index: 1;">
 		<section id="container">
 			<span class="chyron"><em></em></span>
+			<h1>모임등록하기</h1>
 			<form name="createFrm" id="hongkiat-form" method="post" action="gxcreate" enctype="multipart/form-data">
-				<div id="wrapping" class="clearfix">
+				<div id="wrapping" class="clearfix">				
 					<section id="aligned">
+					
 						<h2>시간과 날짜</h2>
 						<div id="leftdiary" style="width: 70%; margin: 0 auto; "></div>
-						<table style="margin-top: 20; margin-right: 20;">
+						<table style="margin-top: 20;">
 							<tr height="30">
 							</tr>
 						</table>
@@ -316,6 +317,7 @@
 							<option value="40">40분</option>
 							<option value="50">50분</option>
 						</select>
+						<br>
 						<h2>장소</h2>
 						<section id="buttons">
 						</section>
@@ -357,7 +359,7 @@
 						        }).open();
 						    }
 						</script>
-						<br> <br>
+						<br>
 						<div>
 							<h2>인원 수</h2>
 							<h4>※ 최대 6명 까지 참석 가능하며, 최소 3명이 모임 전날 오후 6시까지 참여하지 않으면, 모임이 자동
