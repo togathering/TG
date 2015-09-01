@@ -54,7 +54,6 @@ span.chyron { font-size: 5.2em; padding-top: 10px; }
  ._1{
  	float: left;
 	width:140px;
-	height:200px;
 	text-align: right;
 } 
 @media (max-width:1450px){}
@@ -121,8 +120,8 @@ display: block;
 border-style: solid;
 border-width: 1px;
 border-color: #dedede;
-font-size: 1.55em;
-padding: 11px 11px;
+font-size: 14px;
+padding: 10px 10px;
 width: 80%;
 color: #777;
 box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset;
@@ -152,7 +151,7 @@ border-style: solid;
 border-width: 1px;
 border-color: #dedede;
 margin-bottom: 15px;
-font-size: 1.5em;
+font-size: 14pxem;
 padding: 11px 11px;
 width: 80%;
 height: 250px;
@@ -255,8 +254,8 @@ border-style: solid;
 border-width: 1px;
 border-color: #dedede;
 margin-bottom: 20px;
-font-size: 1.55em;
-padding: 11px 11px;
+font-size: 1em;
+padding: 10px 10px;
 width: 40%;
 color: #777;
 }
