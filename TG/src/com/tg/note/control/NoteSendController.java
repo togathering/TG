@@ -24,39 +24,6 @@ public class NoteSendController{
 	@Autowired
 	NoteDAO noteDao;
 	
-	@Autowired
-	ValidityDAO valDao;
-
-	
-	@RequestMapping("/banCheck")
-	@ResponseBody
-	public String banCheck(NoteBean noteBean){
-
-		// 금지어 리스트 작성
-		
-		List<String> banList = valDao.selectBans(); 
-				
-		// 받아온 값
-		String strTitle = noteBean.getNoteTitle();
-		String strContent = noteBean.getNoteContent();
-		System.out.println("받아온 쪽지제목="+ strTitle);		
-		System.out.println("받아온 쪽지내용="+ strContent);		
-		System.out.println("받아온 쪽지내용="+ banList.get(1));		
-		System.out.println("받아온 쪽지내용="+ banList.get(2));		
-		
-		// 신호키 설정
-		String flag = "ok";
-		for (int i = 0; i < banList.size(); i++) {
-			if(strTitle.contains(banList.get(i)) || strContent.contains(banList.get(i))){
-				flag = banList.get(i);
-				break;
-			}
-		}	
-		System.out.println("검사가 되나요?");
-	   return flag;
-	}//banCheck
-	
-	
 	@RequestMapping("/noteSendAction")
 	public String noteSend(NoteBean noteBean, HttpSession session, Model model,
 							@RequestParam(value="receiverNick", required=false) String nick, 
