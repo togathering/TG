@@ -25,7 +25,7 @@
 	</select>
 	
 	<select id="conditionSearch" parameterType="hashmap" resultType="com.tg.common.beans.GroupBean">
-		select gno, nick, gloc, gtitle, gstatus, gimg from member,gxgroup where ghost = id and gstatus != '모임종료' and replace(gtitle, ' ', '') like #{keyword} and gday like #{gday} order by ${order}
+		select gno, nick, gloc, gtitle, gstatus, gimg from member,gxgroup where ghost = id and gstatus != '모임종료' and (replace(gtitle, ' ', '') like #{keyword} or gtag like #{keyword})and gday like #{gday} order by ${order}
 	</select>
 	
 	<select id="list" parameterType="String" resultType="com.tg.common.beans.GroupBean">
@@ -97,15 +97,7 @@
 		where gtag like #{gtag} and ghost = id and gstatus != '모임종료' order by gday
 		
 	</select>
-	
-	<!-- 메인화면 검색 -->
-	
-	<select id="mainSearch" parameterType="java.lang.String" resultType="com.tg.common.beans.GroupBean">
-		  select distinct(gno),nick,gloc,gtitle,gstatus,gimg,goption 
-		  from member,gxgroup 
-		  where (gtag like #{word} or replace(gtitle, ' ', '') like #{word})and ghost = id and gstatus != '모임종료' 
-		  order by gday 
-	</select>
+
 </mapper>
 
 
