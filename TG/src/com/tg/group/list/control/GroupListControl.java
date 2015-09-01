@@ -37,11 +37,15 @@ public class GroupListControl {
 		
 		model.addAttribute("tglist", list);
 		model.addAttribute("size", list.size());
-		model.addAttribute("keyword", keyword);
-		
-		
-		
-		
+		model.addAttribute("keyword",keyword);
+		model.addAttribute("order",order);
+		if(!keyword.equals("")){
+			model.addAttribute("search","°Ë»ö¾î");
+		}
+		if(!day.equals("")){
+			model.addAttribute("day",day);			
+		}
+	
 		return movePage;
 	}
 	

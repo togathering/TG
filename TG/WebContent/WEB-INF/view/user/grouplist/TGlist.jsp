@@ -41,9 +41,9 @@
 <script type="text/javascript" src="js/trim.js"></script>
 <script type="text/javascript">
 	
-	order = '';
-	day = '';
-	keyword = '';
+	order = '${order}';
+	day = '${day}';
+	keyword = '${keyword}';
 	cnt = 6;
 	function addPage(){// 페이지 추가
 		cnt += 6;
@@ -61,11 +61,13 @@
 	}
 	
 	function loadlist() {
-		var keyword = document.frm.search.value;
+		keyword = document.frm.search.value;
 		$.ajax({url:"groupsearch", type:"POST", data:"cnt="+cnt+"&search="+keyword+"&day="+day+"&order="+order, dataType:"text",
 			success:function(data){
 				var list = document.getElementById('list');
+				
 				list.innerHTML = data;
+				condition();
 			}
 		});
 	}
@@ -76,6 +78,24 @@
 		cnt = 6;
 		document.frm.search.value = '';
 		location.href = 'groupsearch';
+	}
+	
+	function condition() {
+		
+		var con = "";
+		if(keyword){
+			con += " 검색어";		
+		}
+		if(order == 'gday'){
+			con += " 날짜순정렬";
+		}else if(order == 'gdate'){
+			con += " 개설순정렬";
+		}
+		if(day){
+			con += " 모임날짜";
+		}
+		
+		document.getElementById('testdiv').innerHTML = con;
 	}
 	
 	function popularity() {//인기순
@@ -90,7 +110,7 @@
 		if('${size}' == '0'){
 			alert('결과값이 없습니다');
 		}
-		
+		condition();
 	});
 
 	
@@ -114,6 +134,7 @@
 				<input type="submit" class="sbutton" value="검색">
 			</div>
 		</form>
+		<div id="testdiv"></div>
 		<br><br>
 	
 		<div id="leftdiary"></div>
