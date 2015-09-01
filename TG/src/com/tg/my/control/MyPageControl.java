@@ -62,16 +62,22 @@ public class MyPageControl {
 
 	@RequestMapping("/myhost")
 	public String myHost(Model model, HttpSession session){
+		
+		return ".myhost";
+	}
+	
+	@RequestMapping("/myhosting")
+	public String myHosting(Model model, HttpSession session){
 		String id = (String) session.getAttribute("id");
 		List<GroupBean> list = gdao.hostGx(id);
 		int num = gdao.hostNum(id);
 		model.addAttribute("list", list);
 		model.addAttribute("hNum", num);
 		
-		return ".myhost";
+		return "user/mypage/hosting";
 	}
 	
-	@RequestMapping("/myhostEnd")
+	@RequestMapping("/myhostend")
 	public String myHostEnd(Model model, HttpSession session){
 		String id = (String) session.getAttribute("id");
 		List<GroupBean> list = gdao.hostGxEnd(id);
@@ -79,7 +85,7 @@ public class MyPageControl {
 		model.addAttribute("list", list);
 		model.addAttribute("hNum", num);
 		
-		return ".myhost";
+		return "user/mypage/hostEnd";
 	}
 	
 	@RequestMapping("/mygxgroup")
