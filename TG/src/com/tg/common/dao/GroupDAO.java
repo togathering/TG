@@ -221,4 +221,6 @@ public class GroupDAO {
 		List<GroupBean> list = session.selectList("group.conditionSearch", map, new RowBounds(0, cnt));
 		return list;
 	}
+	
+
 }

@@ -17,9 +17,7 @@
 <script type="text/javascript" src="js/ajax.js"></script>
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript">
-	function clickSearch(){
-		
-	}
+
 
 	function loadlist() {
 		$.ajax({url:"mainlist", type:"POST", dataType:"text",
@@ -50,7 +48,7 @@
 		<section>
 			<form class="frm" name="frm" action="groupsearch">
 				<input type="text" class="search" placeholder="검색 고고" name="search">
-				<button type="submit" class="button" name="join_bt" onclick="clickSearch()">모임 검색</button>
+				<button type="submit" class="button" name="join_bt" >모임 검색</button>
 			</form>
 		</section>	
 	</section>
