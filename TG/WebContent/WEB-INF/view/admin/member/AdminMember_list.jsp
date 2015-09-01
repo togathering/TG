@@ -104,33 +104,23 @@ margin: 0 auto;
 	    		var del =confirm("정말 삭제하시겠습니까?");
 	    		
 	    		if(del){
-	    	$.ajax({
-	    		url: 'removeId',
-	    		type:'POST' ,
-	    		data: {delId:eraseId},
-	    		dataType:"text",
-	    		success:function(){
-	    			searchClick('@',1);
-	    		}});
+	    			location.href="removeId?delId="+eraseId;
 	   		 }//if절
 			}
 		};
 		
 				//삭제2
 		function deleteId2(eraseId){
-		
+			if(eraseId.startsWith('(탈퇴회원)')){
 	    		var del =confirm("정말 삭제하시겠습니까?");
 	    		
 	    		if(del){
-	    	$.ajax({
-	    		url: 'removeId2',
-	    		type:'POST' ,
-	    		data: {delId:eraseId},
-	    		dataType:"text",
-	    		success:function(){
-	    			searchClick('@',1);
-	    		}});
-	   		 }//if절
+	    		location.href="removeId2?delId="+eraseId;
+	   		 } 
+	    		
+			}else{
+				alert("삭제1 실행 후 진행 요망")				
+	   		 }
 		};
 	</script>
 

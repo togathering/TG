@@ -59,7 +59,6 @@ margin: 0 auto;
 		}else{
 			var check = confirm("정말 삭제하시겠습니까?");
 			if(check){
-				alert("삭제 진행 결과 :"+check);
 				location.href = 'deleteG?delGno='+group;
 			}
 		}//else

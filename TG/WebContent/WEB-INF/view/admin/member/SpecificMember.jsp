@@ -28,7 +28,11 @@
 							onclick="msg2('${member.mid }', '${member.mnick }')"></td>
 						<td align="center"><input type="button" class="sbutton"
 							name="delete" id="delete" value="삭제"
-							onclick="deleteId('${member.mid }')"></td>
+							onclick="deleteId('${member.mid }')">
+							<input type="button" class="sbutton"
+							name="delete" id="delete" value="삭제2"
+							onclick="deleteId2('${member.mid }')">
+							</td>
 					</tr>
 				</c:forEach>
 			</table>

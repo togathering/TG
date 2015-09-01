@@ -70,7 +70,7 @@ public class MemberControl_admin {
 		 }else{
 			 System.out.println("삭제아이디:"+eraseId+"삭제 실패");
 		 }
-		 return ".adminMember_List";
+		 return "redirect:adminMemberList";
 	 }
 		 
 		 @RequestMapping("removeId2")
@@ -82,7 +82,7 @@ public class MemberControl_admin {
 				 }else{
 					 System.out.println("삭제아이디:"+eraseId+"삭제 실패");
 				 }
-				 return ".adminMember_List";
+				 return "redirect:adminMemberList";
 			 
 	 }
 
