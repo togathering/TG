@@ -8,7 +8,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <link rel="stylesheet" type="text/css" href="css/search.css">
 <link rel="stylesheet" type="text/css" href="css/tgBoard.css">
-
+<style type="text/css">
+.board_div{
+float:left;
+width: 100%;
+margin: 0 auto;
+}
+</style>
 
 <script type="text/javascript" src="js/ajax.js"></script>
 <script type="text/javascript" src="js/jquery.js"></script>
@@ -66,7 +72,7 @@
 			<input type="button" style="margin-top: 1px" class="button" name="search" id="search" value="검색" onclick="searchGroup()">
 		</div>
 		<!-- 게시판내용 -->
-		<div class="board_div" id="tableAndpage">
+		<div id="tableAndpage" class="board_div" >
 			<table  id="mtable" class="board_table">
 				<!-- 테이블헤더 -->
 				<tr class="boardth">
