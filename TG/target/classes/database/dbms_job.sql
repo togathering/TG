@@ -82,13 +82,18 @@ is
 	type host is table of gxgroup.ghost%type index by binary_integer;
 	type title is table of gxgroup.gtitle%type index by binary_integer;	
 	type day is table of gxgroup.gday%type index by binary_integer;
+	type tels is table of member.tel%type index by binary_integer; 
 
 	p_gno num;
 	p_ghost host;
 	p_title title;
 	p_day day;
+	p_tel tels;
+	p_ids pids;
+	msg varchar2(420);
 
 	i binary_integer := 0;
+	j binary_integer := 0;
 
 begin
 
@@ -105,14 +110,36 @@ begin
 	
 	for idx in 1..i loop
 	
-		for id_idx in (select pid from participant where gno = p_gno(idx)) loop
-			
-			insert into note (noteNo, senderId, receiverId, noteTitle, noteContent, noteDate) 
-				values (gxgroup_seq.nextval, p_ghost(idx), id_idx.pid, '모임 2일전 입니다', 
-						p_title(idx)||' 모임이 '|| to_char(p_day(idx),'yyyy-mm-dd-hh24-mi')||'에 개최 예정입니다', sysdate);
+		for id_idx in (select pid, tel from member, participant where id = pid and gno = p_gno(idx)) loop
+			if p_ghost(idx) != id_idx.pid then
+				j := j+1;
+				p_tel(j) := id_idx.tel;
+				p_ids(j) := id_idx.pid;
+				insert into note (noteNo, senderId, receiverId, noteTitle, noteContent, noteDate) 
+					values (gxgroup_seq.nextval, p_ghost(idx), id_idx.pid, '모임 2일전 입니다', 
+							p_title(idx)||' 모임이 '|| to_char(p_day(idx),'yyyy-mm-dd-hh24-mi')||'에 개최 예정입니다', sysdate);
+			end if;
 		
 		end loop;
-	
+
+		for idx2 in 1..j loop
+			msg := msg ||'아이디: '|| p_ids(idx2) ||' 전화번호: '|| p_tel(idx2) ||chr(13)||chr(10); 
+		end loop;
+		
+		if j!=0 then
+
+			insert into note (noteNo, senderId, receiverId, noteTitle, noteContent, noteDate) 
+						values (gxgroup_seq.nextval, p_ghost(idx), p_ghost(idx), '모임 2일전 입니다', 
+								p_title(idx)||' 모임이 '|| to_char(p_day(idx),'yyyy-mm-dd-hh24-mi')||'에 개최 예정입니다'||chr(10)||chr(13)||'참여인원 정보입니다'||chr(13)||chr(10)|| msg, sysdate);
+		else 
+			insert into note (noteNo, senderId, receiverId, noteTitle, noteContent, noteDate) 
+						values (gxgroup_seq.nextval, p_ghost(idx), p_ghost(idx), '모임 2일전 입니다', 
+								p_title(idx)||' 모임에 참가인원이 없습니다 ', sysdate);
+
+		end if;
+
+		j := 0;
+		msg := '';
 	end loop;
 	
 	
