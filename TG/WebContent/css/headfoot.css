@@ -179,6 +179,11 @@ header .logo{
     margin-top: 27px;
     float: left;
 }
+header .logoSmall{
+	margin-top:8px;
+	margin-left: 25px;
+	float:left;
+}
 
 header a.hamburger{
     text-decoration: none;
@@ -208,6 +213,13 @@ header nav ul{
     overflow: hidden;
     float: left;
 }
+header nav ul .ulSmall{
+    margin-top: 5px;
+    list-style: none;
+    overflow: hidden;
+    float: left;
+}
+
 
 header nav ul li{
     float: left;
@@ -242,6 +254,31 @@ header nav .create_btn:hover{
     color: #676767;
 }
 
+header nav .create_btn2{
+    text-decoration: none;
+    color: #9b9b9b;
+   /*  font-family: "lato-regular", Helvetica, Arial, sans-serif; */
+    font-size: 13px;
+    letter-spacing: 0.9px;
+
+}
+header nav .create_btn2{
+    float: right;
+    margin: 10px 0 0 50px;
+    padding: 8px 30px 8px 30px;
+    border: 2px solid #999999;
+    background: transparent;
+
+    transition: background .1s linear;
+    -webkit-transition: background .1s linear;
+    -moz-transition: background .1s linear;
+    -o-transition: background .1s linear;
+}
+
+header nav .create_btn2:hover{
+    background: #FA5858;
+    color: #676767;
+}
 /*  responsive css */
 
 

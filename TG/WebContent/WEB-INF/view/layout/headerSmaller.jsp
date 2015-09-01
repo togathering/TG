@@ -70,15 +70,15 @@
 
 </head>
 <body>
-	<header>
-	<div class="wrapper5">
-		<a href="main"><img src="img/logo2.png" class="logo" alt="" title="" /></a>
+	<header style="height: 50px">
+	<div class="wrapper5" style="height: 50px;">
+		<a href="main"><img src="img/logo2.png" class="logoSmall" alt="" title="" /></a>
 		<a href="#" class="hamburger"></a>
 		<nav>
-		<ul id="ul">
+		<ul id="ul" class="ulSmall" style="margin-top:17px">
 		</ul>
 
-		<a class="create_btn" onclick="checkLogin()">모임만들기</a> </nav>
+		<a class="create_btn2" onclick="checkLogin()">모임만들기</a> </nav>
 
 	</div>
 	</header>
