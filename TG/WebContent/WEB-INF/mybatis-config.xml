@@ -37,6 +37,7 @@
      		<value>classpath:com/tg/common/sql/sqlQna.xml</value>
      		<value>classpath:com/tg/common/sql/sqlReport.xml</value>
      		<value>classpath:com/tg/common/sql/sqlWish.xml</value>
+			<value>classpath:com/tg/common/sql/sqlValidity.xml</value>
      	</list>
      </property>
      
