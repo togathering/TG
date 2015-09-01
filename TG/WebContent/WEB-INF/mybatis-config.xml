@@ -10,7 +10,7 @@
   <bean class="org.apache.tomcat.dbcp.dbcp.BasicDataSource"
         id="driverManagerDataSource">
      <property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
-     <property name="url" value="jdbc:oracle:thin:@192.168.7.78:1521:orcl"/>
+     <property name="url" value="jdbc:oracle:thin:@192.168.7.10:1521:orcl"/>
      <property name="username" value="scott"/>
      <property name="password" value="tiger"/>
   </bean>
