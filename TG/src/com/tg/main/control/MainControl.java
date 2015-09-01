@@ -26,6 +26,8 @@ public class MainControl {
 	
 	@RequestMapping("/mainSearchGroup")
 	public String searchGroup(Model model){
+		ArrayList<GroupBean> list = (ArrayList<GroupBean>) dao.mainList();
+		model.addAttribute("list", list);
 		
 		return"user/main/mainSearchList";
 	}
