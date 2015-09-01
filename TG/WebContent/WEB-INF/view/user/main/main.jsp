@@ -17,6 +17,10 @@
 <script type="text/javascript" src="js/ajax.js"></script>
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript">
+	function clickSearch(){
+		
+	}
+
 	function loadlist() {
 		$.ajax({url:"mainlist", type:"POST", dataType:"text",
 			success:function(data){
@@ -41,12 +45,12 @@
 	<section class="hero" >
 		<section class="caption">
 			<h2 class="caption" >환영합니다!</h2>
-			<h3 class="properties">190개 활력인들의 독특한 모임에 참여해 보세요.</h3>			
+			<h3 class="properties">전국의 운동을 사랑하는 활력인들의 독특한 모임에 참여해 보세요.</h3>			
 		</section>
 		<section>
 			<form class="frm" name="frm" action="groupsearch">
 				<input type="text" class="search" placeholder="검색 고고" name="search">
-				<button type="submit" class="button" name="join_bt">모임 검색</button>
+				<button type="submit" class="button" name="join_bt" onclick="clickSearch()">모임 검색</button>
 			</form>
 		</section>	
 	</section>

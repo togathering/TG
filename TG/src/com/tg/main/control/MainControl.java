@@ -23,5 +23,11 @@ public class MainControl {
 		
 		return "user/main/mainlist";
 	}
+	
+	@RequestMapping("/mainSearchGroup")
+	public String searchGroup(Model model){
+		
+		return"user/main/mainSearchList";
+	}
 
 }
