@@ -35,8 +35,8 @@ public class GroupSelectControl {
 		return ".selectGxList";
 	}
 	
-	@RequestMapping("create")
-	public String createGx(@RequestParam(value="gno", required=false)Integer gno, Model model){
+	@RequestMapping("createGx")
+	public String createGx(@RequestParam(value="gno", required=true)Integer gno, Model model){
 		GroupBean bean = dao.selectGroupInfo(gno);
 		model.addAttribute("bean", bean);
 		System.out.println(bean.getGtitle());

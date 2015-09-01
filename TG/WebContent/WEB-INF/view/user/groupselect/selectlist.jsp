@@ -9,7 +9,7 @@
 <title>Insert title here</title>
 <script type="text/javascript">
 	function choiceGx(gno) {
-		location.href = "create?gno="+gno;
+		location.href = "createGx?gno="+gno;
 	}
 </script>
 </head>
