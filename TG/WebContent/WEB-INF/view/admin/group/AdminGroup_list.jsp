@@ -61,12 +61,10 @@
 	<form action="" name="frm" onsubmit="return false;">
 	<!-- 검색부분 -->
 		<div class="search_div">
-			<input type="text" name="searchtxt" id="searchtxt" placeholder="검색할 모임명 입력"
-				class="search_input"
+			<input type="text" name="searchtxt" id="searchtxt" placeholder="검색할 모임명 입력" class="search_input"
 				onkeydown="javascript:if(event.keyCode==13){searchClick(search, page);}"> 
-			<input type="button" class="button" name="search" id="search" value="검색" onclick="searchGroup()">
+			<input type="button" style="margin-top: 1px" class="button" name="search" id="search" value="검색" onclick="searchGroup()">
 		</div>
-		<br>
 		<!-- 게시판내용 -->
 		<div class="board_div" id="tableAndpage">
 			<table  id="mtable" class="board_table">

@@ -167,7 +167,7 @@ float:left;
 				<input type="text" name="searchtxt" class="search_input" id="searchtxt"
 					placeholder="검색할ID 입력">
 
-				<input type="button" class="button" name="search" id="search"
+				<input type="button" class="button" style="margin-top: 1px" name="search" id="search"
 					value="검색" style="margin-top: 2px;">
 					
 				<input type="hidden"  name="pageNum"  id="pageNum" value="">	

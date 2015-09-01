@@ -315,7 +315,7 @@ a:hover{
 <!-- 상단 이미지+요약내용 -->
 	<div>
 		<h2 align="center">모임명 : ${group.gtitle}</h2><h3>${group.goption }</h3>
-		<h3 align="center">ToGat	hering</h3>
+		<h3 align="center">ToGathering</h3>
 		<hr>
 		<!-- 	이미지삽입 -->
 		<div style="padding:5px 1% 5px 10%; float: left; width:39%; height: 400px;">
