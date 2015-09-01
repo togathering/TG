@@ -87,9 +87,9 @@
 			con += " 검색어";		
 		}
 		if(order == 'gday'){
-			con += " 날짜순정렬";
+			con += "정렬방법 : 날짜순정렬";
 		}else if(order == 'gdate'){
-			con += " 개설순정렬";
+			con += " 정렬방법 : 개설순정렬";
 		}
 		if(day){
 			con += " 모임날짜";
@@ -134,7 +134,7 @@
 				<input type="submit" class="sbutton" value="검색">
 			</div>
 		</form>
-		<div id="testdiv"></div>
+	
 		<br><br>
 	
 		<div id="leftdiary"></div>
@@ -266,7 +266,11 @@
 				
 				setDay(selDate);
 			 } 
-		</script><!-- searching 끝 --> 
+		</script>
+			<br>
+			<br>
+			<div id="testdiv" style="text-align: center; font-size: 17px;"></div>
+		<!-- searching 끝 --> 
 
 	</section>
 	<section class="listings">
@@ -274,7 +278,7 @@
 			<ul class="properties_list" id="list">
 				<c:forEach  items='${tglist }' var='tglist' >
 					<li onclick="gogroupinfo(${tglist.gno})">
-						<a><img src="upimg/${tglist.gimg}" class="property_img"/></a>
+						<a><img src="upimg/${tglist.gimg}" class="property_img" style="max-height: 250px; overflow: hidden;"/></a>
 						<span class="price">${tglist.gloc}</span>
 						<div class="property_details">
 							<h1><a href="#">${tglist.gtitle}</a></h1>

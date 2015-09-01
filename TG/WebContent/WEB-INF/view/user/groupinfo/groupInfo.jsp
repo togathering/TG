@@ -376,7 +376,7 @@ a:hover{
 			훈훈하고 건강한 ToGathering 커뮤니티를 함께 만들어가요!
 			</div>
 		<!-- 참가인원 시작 -->
-				<div style="width: 650px; float:left; height:90px; margin: 10px 20px 10px 150px; border: 1px solid lightgray; padding: 5px 10px; text-align:left; background-color: white;">
+				<div style="width: 630px; float:left; height:auto; margin: 10px 20px 10px 150px; border: 1px solid lightgray; padding: 10px 20px; text-align:left; background-color: white;">
 				<h3 style="text-align:left;">▶참가인원들</h3>
 				<table style="text-align:left;">
 					<tr>
