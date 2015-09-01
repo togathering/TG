@@ -32,8 +32,22 @@
 				document.hongkiat.intro.focus();
 				return;
 			}
+		
+		
+				var fileName =document.getElementById("imgFile").value;
+				var ext = fileName.substring(fileName.lastIndexOf(".")+1);
+				if(ext !=".jpg" &&  ext !=".JPEG" && ext !=".gif" && ext !="png"){
+					alert("이미지 파일 업로드시 확장자는 jpg,JPEG,gif,png 만 가능합니다.");
+					document.getElementById("imgFile").value="";
+					return;
+				}
+			
 			document.hongkiat.submit();
-	}
+		}	
+	
+	
+	
+	
 	$(document).ready(function(){
 			var gender = document.getElementById("gender");
 			var selectGender = null;
@@ -110,6 +124,9 @@
 		day.innerHTML = dd;
 	});
 		
+	
+
+	
 </script>
 <head>
 

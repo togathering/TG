@@ -1,5 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300);
-@font-face {
+/* @font-face {
     font-family: 'lato-bold';
     src: url('../fonts/lato-bold.eot');
     src: url('../fonts/lato-bold.eot?#iefix') format('embedded-opentype'),
@@ -31,7 +31,7 @@
     font-weight: normal;
     font-style: normal;
 }
-
+ */
 
 * {
   box-sizing: border-box;
@@ -43,7 +43,7 @@
 }
 .caption h1{
     color: #fff;
-    font-family: "P22 Corinthia";
+   /*  font-family: "P22 Corinthia"; */
     font-size: 100px;
     font-weight: lighter;
     margin: 0;
@@ -52,40 +52,40 @@
 }
 
 body {
-  font-family: 'Source Sans Pro', sans-serif;
+  /* font-family: 'Source Sans Pro', sans-serif; */
   color: white;
   font-weight: 300;
 }
 body ::-webkit-input-placeholder {
   /* WebKit browsers */
-  font-family: 'Source Sans Pro', sans-serif;
+  /* font-family: 'Source Sans Pro', sans-serif; */
   color: white;
   font-weight: 300;
 }
 body :-moz-placeholder {
   /* Mozilla Firefox 4 to 18 */
-  font-family: 'Source Sans Pro', sans-serif;
+  /* font-family: 'Source Sans Pro', sans-serif; */
   color: white;
   opacity: 1;
   font-weight: 300;
 }
 body ::-moz-placeholder {
   /* Mozilla Firefox 19+ */
-  font-family: 'Source Sans Pro', sans-serif;
+  /* font-family: 'Source Sans Pro', sans-serif; */
   color: white;
   opacity: 1;
   font-weight: 300;
 }
 body :-ms-input-placeholder {
   /* Internet Explorer 10+ */
-  font-family: 'Source Sans Pro', sans-serif;
+  /* font-family: 'Source Sans Pro', sans-serif; */
   color: white;
   font-weight: 300;form
 }
 .wrapper {
-  background: #50a3a2;
-  background: -webkit-linear-gradient(top left, #50a3a2 0%, #53e3a6 100%);
-  background: linear-gradient(to bottom right, #50a3a2 0%, #53e3a6 100%);
+  background: #FA5858;
+  background: -webkit-linear-gradient(top left, #FA5858 0%, #53e3a6 100%);
+  background: linear-gradient(to bottom right, #FA5858 0%, #F6CECE 100%);
   position: absolute;
   top: 50%;
   left: 0;
@@ -108,7 +108,7 @@ body :-ms-input-placeholder {
 }
 .container h1 {
   font-size: 40px;
-	font-family: "P22 Corinthia";
+	/* font-family: "P22 Corinthia"; */
   -webkit-transition-duration: 1s;
           transition-duration: 1s;
   -webkit-transition-timing-function: ease-in-put;
@@ -145,7 +145,7 @@ form input:hover {
 form input:focus {
   background-color: white;
   width: 300px;
-  color: #53e3a6;
+  color: #fca5a5;
 }
 form button {
   -webkit-appearance: none;
@@ -155,7 +155,7 @@ form button {
   background-color: white;
   border: 0;
   padding: 10px 15px;
-  color: #53e3a6;
+  color: #fca5a5;
   border-radius: 3px;
   width: 250px;
   cursor: pointer;

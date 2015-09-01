@@ -17,12 +17,18 @@
 		<ul>
 			<li class="links">
 				<ul>
-					<li><a href="#">자주하는질문</a></li>
+					<li><a href="knowTG">회사소개</a></li>
 				</ul>
 			</li>
+		<!-- 	<li class="links">
+				<ul>
+					<li><a href="#">자주하는질문</a></li>
+				</ul>
+			</li> -->
 
 			<li class="links">			
 				<ul>
+					<li><a href="#">자주하는질문</a></li>
 					<li><a href="qna">문의하기</a></li>
 				</ul>
 			</li>
@@ -32,11 +38,11 @@
 				</ul>
 			</li>
 			<li class="about">
-					<p>전화 문의는 AM 10:00~ PM 19:00  <br>02-1234-5678번으로 해주세요~ <br>오늘도 힘차게 ToGathering~!!!</p>
+					<p>전화 문의는 AM 10:00~ PM 19:00  <br>02-45*7-5678번으로 해주세요~ <br>오늘도 힘차게 ToGathering~!!!</p>
 					<ul>
 						<li class="sns"><a href="https://www.facebook.com/ToGatheringkr" class="facebook" target="_blank"></a></li>
-						<li class="sns"><a href="http://twitter.com/pixelhint" class="twitter" target="_blank"></a></li>
-						<li class="sns"><a href="http://plus.google.com/+Pixelhint" class="google" target="_blank"></a></li>
+						<li class="sns"><a href="http://twitter.com/ class="twitter" target="_blank"></a></li>
+						<li class="sns"><a href="http://plus.google.com/" class="google" target="_blank"></a></li>
 						<li class="sns"><a href="#" class="skype"></a></li>
 						<li/>
 						<li class="manager"><a href="adminLogin" class="option"></a></li>

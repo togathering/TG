@@ -1,16 +1,13 @@
 package com.tg.common.dao;
 
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import org.apache.ibatis.session.RowBounds;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.ibatis.sqlmap.client.SqlMapClient;
 import com.tg.common.beans.GroupBean;
 
 public class GroupDAO {
@@ -157,16 +154,16 @@ public class GroupDAO {
 		
 		return num;
 	}
-	public List<GroupBean> hostGx(String id, String gstatus){
-		HashMap<Object, Object> map = new HashMap<Object, Object>();
-		map.put("id", id);
-		map.put("gstatus", gstatus);
-		List<GroupBean> gx = null;
-		
-			gx = session.selectList("group.hostGx", map);
-		
+	public List<GroupBean> hostGx(String id){
+		List<GroupBean> gx = session.selectList("group.hostGx", id);
 		return gx;
 	}
+	
+	public List<GroupBean> hostGxEnd(String id){
+		List<GroupBean> gx = session.selectList("group.hostGxEnd", id);
+		return gx;
+	}
+	
 	public int hostNum(String id){
 		int num = 0;
 		
@@ -221,6 +218,4 @@ public class GroupDAO {
 		List<GroupBean> list = session.selectList("group.conditionSearch", map, new RowBounds(0, cnt));
 		return list;
 	}
-	
-
 }

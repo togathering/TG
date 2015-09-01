@@ -32,6 +32,14 @@ public class ReviewDAO {
 		return false;
 	}
 	
-	
-	
+	public List<ReviewBean> rList(String id){
+		List<ReviewBean> list = session.selectList("review.review", id);
+		System.out.println("size:"+list.size());
+		if(list.size() != 0){
+			for(int i=0; i<list.size(); i++){
+				System.out.println(list.get(i).getEvaluate());
+			}
+		}
+		return list;
+	}
 }

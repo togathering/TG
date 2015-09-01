@@ -8,6 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
 <script type="text/javascript" src="js/jquery.js"></script>
 <link rel="stylesheet" type="text/css" href="css/headfoot.css">
+<link rel="stylesheet" type="text/css" href="css/font.css">
 <title>Insert title here</title>
 
 <script type="text/javascript">
@@ -37,7 +38,7 @@
 			alert('로그인을 먼저 해주세요');
 			location.href = 'login';
 		}else{
-			location.href = 'create';
+			location.href = 'selectGx';
 		}
 	}
 	

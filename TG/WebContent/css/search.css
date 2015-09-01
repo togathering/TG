@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300);
+/* @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300); */
 /* @font-face {
     font-family: 'lato-bold';
     src: url('../fonts/lato-bold.eot');
@@ -67,14 +67,14 @@
 	}
 }
 .search {
-	font-family: 'Source Sans Pro', sans-serif;
+	/* font-family: 'Source Sans Pro', sans-serif; */
 	color: white;
 	/* padding: 0 0; */
 	position: relative;
 /* 	outline: 0; */
 	border: 1px solid rgba(255, 255, 255, 0.7);
  	background-color: rgba(255, 255, 255, 0.6);
-	color: #53e3a6;
+	color: #FA5858;
 	width: 44%;
 	height: 20px;
 	border-radius: 1px;
@@ -96,15 +96,15 @@
 }
 
 .search:focus {
-	border: 1px solid rgba(110, 180, 130, 0.9);
+	border: 1px solid rgba(250,88,88,0.9);
 	background-color: white;
 	width: 45%;	
  	height: 23px;
 }
 
 .button {
-	font-family: 'Source Sans Pro', sans-serif;
-  	background-color: #53e3a6;
+	/* font-family: 'Source Sans Pro', sans-serif; */
+  	background-color: #FA5858;
 	 margin:0 auto 3px auto; 
 /* 	  margin:0; */
 	  border: 0;
@@ -119,15 +119,15 @@
 }
 
 .button:hover {
-  background-color: rgba(83,227,166,0.8);
+  background-color: rgba(247,129,129,0.8);
 }
 
 .button:focus {
-  background-color: #21c982;
+  background-color: #F78181;
 }
 .sbutton {
-	font-family: 'Source Sans Pro', sans-serif;
-  	background-color: #53e3a6;
+	/* font-family: 'Source Sans Pro', sans-serif; */
+  	background-color: #FA5858;
 	 margin:0 auto 3px auto; 
 /* 	  margin:0; */
 	  border: 0;
@@ -141,15 +141,15 @@
 	  font-size: 13px;
 }
 .sbutton:hover {
-  background-color: rgba(83,227,166,0.8);
+  background-color: rgba(247,129,129,0.8);
 }
 
 .sbutton:focus {
-  background-color: #21c982;
+  background-color: #F78181;
 }
 .Bbutton {
-	font-family: 'Source Sans Pro', sans-serif;
-  	background-color: #53e3a6;
+	/* font-family: 'Source Sans Pro', sans-serif; */
+  	background-color: #FA5858;
 	 margin:0 auto 3px auto; 
 /* 	  margin:0; */
 	  border: 0;
@@ -163,9 +163,9 @@
 	  font-size: 13px;
 }
 .Bbutton:hover {
-  background-color: rgba(83,227,166,0.8);
+  background-color: rgba(247,129,129,0.8);
 }
 
 .Bbutton:focus {
-  background-color: #21c982;
+  background-color: #F78181;
 }

@@ -8,8 +8,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <link rel="stylesheet" type="text/css" href="css/search.css">
 <link rel="stylesheet" type="text/css" href="css/tgBoard.css">
+<link rel="stylesheet" type="text/css" href="css/font.css">
 <style type="text/css">
-.board_div{
+.board_d{
 float:left;
 width: 100%;
 margin: 0 auto;
@@ -59,7 +60,6 @@ margin: 0 auto;
 		}else{
 			var check = confirm("정말 삭제하시겠습니까?");
 			if(check){
-				alert("삭제 진행 결과 :"+check);
 				location.href = 'deleteG?delGno='+group;
 			}
 		}//else
@@ -75,13 +75,13 @@ margin: 0 auto;
  <!-- 페이지 내용 form -->
 	<form action="" name="frm" onsubmit="return false;">
 	<!-- 검색부분 -->
-		<div class="search_div">
+		<div class="search_d">
 			<input type="text" name="searchtxt" id="searchtxt" placeholder="검색할 모임명 입력" class="search_input"
 				onkeydown="javascript:if(event.keyCode==13){searchClick(search, page);}"> 
 			<input type="button" style="margin-top: 1px" class="button" name="search" id="search" value="검색" onclick="searchGroup()">
 		</div>
 		<!-- 게시판내용 -->
-		<div id="tableAndpage" class="board_div" >
+		<div id="tableAndpage" class="board_d" >
 			<table  id="mtable" class="board_table">
 				<!-- 테이블헤더 -->
 				<tr class="boardth">
@@ -110,12 +110,12 @@ margin: 0 auto;
 				</c:forEach>
 			</table>
 			<!-- 페이징 -->
-			<div class="paging_div" align="center">
-			<a href="adminGroupList?pageNum=1">시작페이지</a>
+			<div class="paging_d" align="center">
+			<a class="atag" href="adminGroupList?pageNum=1">시작페이지</a>
 			<c:forEach begin="1" end="${pageMaxNum }" step="1" var="i">
-				<a href="adminGroupList?pageNum=${i }">${i }</a>
+				<a class="atag" href="adminGroupList?pageNum=${i }">${i }</a>
 			</c:forEach>
-			<a href="adminGroupList?pageNum=${pageMaxNum }">끝페이지</a>
+			<a class="atag" href="adminGroupList?pageNum=${pageMaxNum }">끝페이지</a>
 			</div>
 		</div>
 	</form>

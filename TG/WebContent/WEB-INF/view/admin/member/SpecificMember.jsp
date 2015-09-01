@@ -17,7 +17,8 @@
 
 					<tr class="board_contnets">
 						<td align="center"><a href="#"
-							onclick="window.open('http://localhost/ToGathering/my.do?id=${member.mid }','name','width=1300,height=630') return false">
+							onClick="window.open('http://localhost/TG/profile?id=${member.mid }','name',
+								'width=850,height=400'); return false">
 								${member.mid } </a></td>
 						<td align="center">${member.mnick }</td>
 						<td align="center">${member.pp }</td>
@@ -28,7 +29,11 @@
 							onclick="msg2('${member.mid }', '${member.mnick }')"></td>
 						<td align="center"><input type="button" class="sbutton"
 							name="delete" id="delete" value="삭제"
-							onclick="deleteId('${member.mid }')"></td>
+							onclick="deleteId('${member.mid }')">
+							<input type="button" class="sbutton"
+							name="delete" id="delete" value="삭제2"
+							onclick="deleteId2('${member.mid }')">
+							</td>
 					</tr>
 				</c:forEach>
 			</table>
