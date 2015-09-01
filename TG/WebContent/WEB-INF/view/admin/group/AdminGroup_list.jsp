@@ -48,6 +48,8 @@ margin: 0 auto;
 		})
 	} 
 	function deleteG( day,group) {
+		
+		alert(group)
 		var today = new Date();
 		var holdday= new Date(day.substr(0,4),parseInt(day.substr(5,2))-1, day.substr(8,2),
 											day.substr(11,2),day.substr(14,2),day.substr(17,2));
@@ -63,7 +65,7 @@ margin: 0 auto;
 				url : 'deleteG',
 				type:'POST',
 				data:{
-					delGno : group	  
+					delGno:group	  
 				},
 				dataType:'plain',
 				success: function(data){
