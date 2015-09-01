@@ -92,7 +92,7 @@
 			con += " 정렬방법 : 개설순정렬";
 		}
 		if(day){
-			con += " 모임날짜";
+			con += " , 모임날짜";
 		}
 		
 		document.getElementById('testdiv').innerHTML = con;
