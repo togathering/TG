@@ -33,7 +33,7 @@
 	</select>
 	
 	<update id="deleteG" statementType="CALLABLE" parameterType="String">
-		{call del_user2(#{gno})}
+		{call del_group(#{gno})}
 	</update>
 	
 	
