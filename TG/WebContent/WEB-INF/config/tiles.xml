@@ -35,6 +35,18 @@
 		<put-attribute name="footer" value="/WEB-INF/view/layout/footer.jsp" />
 	</definition>
 	
+	<!-- 그룹만들기 (선택) -->
+	<definition name=".selectGx" template="/WEB-INF/view/user/groupselect/select.jsp">
+		<put-attribute name="header" value="/WEB-INF/view/layout/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/view/layout/footer.jsp" />
+	</definition>
+	
+	<!-- 그룹만들기 (만들 그룹선택) -->
+	<definition name=".selectGxList" template="/WEB-INF/view/user/groupselect/selectlist.jsp">
+		<put-attribute name="header" value="/WEB-INF/view/layout/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/view/layout/footer.jsp" />
+	</definition>
+	
 	<!-- 그룹찾기 -->
 	<definition name=".tglist" template="/WEB-INF/view/user/grouplist/TGlist.jsp">
 		<put-attribute name="header" value="/WEB-INF/view/layout/header.jsp" />
@@ -100,6 +112,14 @@
 	
 	<!-- 문의내역 -->
 	<definition name=".qnaList" template="/WEB-INF/view/user/qna/qnaList.jsp">
+		<put-attribute name="header" value="/WEB-INF/view/layout/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/view/layout/footer.jsp" />
+		<put-attribute name="myPageHeader" value="/WEB-INF/view/layout/myPageHeader.jsp" />
+		<put-attribute name="qnaSide" value="/WEB-INF/view/layout/qnaSide.jsp" />
+	</definition>
+	
+	<!-- 문의내역 -->
+	<definition name=".qnaListEnd" template="/WEB-INF/view/user/qna/qnaListEnd.jsp">
 		<put-attribute name="header" value="/WEB-INF/view/layout/header.jsp" />
 		<put-attribute name="footer" value="/WEB-INF/view/layout/footer.jsp" />
 		<put-attribute name="myPageHeader" value="/WEB-INF/view/layout/myPageHeader.jsp" />
