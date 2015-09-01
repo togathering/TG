@@ -11,7 +11,7 @@
 	<update id="join" parameterType="java.util.HashMap">
 		update gxgroup set gsum = #{gsum} where gno = #{gno}
 	</update>
-	
+	 
 	<delete id="delete" parameterType="int">
 		delete from gxgroup where gno=#{gno}
 	</delete>
