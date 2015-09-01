@@ -104,7 +104,16 @@ $(document).ready(function(){
 		
 	}
 </script>
-
+<script type="text/javascript">
+	function imgCheck(){
+		var fileName =document.getElementById("imgFile").value;
+		var ext = fileName.substring(fileName.lastIndexOf(".")+1);
+		if(ext !=".jpg" &&  ext !=".JPEG" && ext !=".gif" && ext !="png"){
+			alert("이미지 파일 업로드시 확장자는 jpg,JPEG,gif,png 만 가능합니다.");
+			document.getElementById("imgFile").value="";
+		}
+	}
+</script>
 </head>
 <body>
 	<div style="z-index: 2;">
