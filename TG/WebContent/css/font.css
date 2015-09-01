@@ -7,6 +7,18 @@
 body{
 	font-family: 'Nanum Gothic', serif;
 }
+h1, h2, h3, h4{
+	font-family: 'Nanum Gothic', serif;
+}
+p{
+	font-family: 'Nanum Gothic', serif;
+}
+a{
+	font-family: 'Nanum Gothic', serif;
+}
+div{
+	font-family: 'Nanum Gothic', serif;
+}
 
 /* 
 <@impotr한 본고딕 서체 사용방법>
@@ -104,41 +116,41 @@ Example : font-family: 'Nanum Pen Script', serif; */
     font-style: normal;
 }
 
-body {
+/* body {
   font-family: 'Source Sans Pro', sans-serif;
   color: white;
   font-weight: 300;
 }
 body ::-webkit-input-placeholder {
-  /* 크롬, 사파리 웹브라우저에 적용함 : WebKit browsers */
+  크롬, 사파리 웹브라우저에 적용함 : WebKit browsers
   font-family: 'Source Sans Pro', sans-serif;
   color: white;
   font-weight: 300;
 }
 body :-moz-placeholder {
-  /* 모질라에 적용함 : Mozilla Firefox 4 to 18 */
+  모질라에 적용함 : Mozilla Firefox 4 to 18
   font-family: 'Source Sans Pro', sans-serif;
   color: white;
   opacity: 1;
   font-weight: 300;
 }
 body ::-moz-placeholder {
-  /* Mozilla Firefox 19+ */
+  Mozilla Firefox 19+
   font-family: 'Source Sans Pro', sans-serif;
   color: white;
   opacity: 1;
   font-weight: 300;
 }
 body :-ms-input-placeholder {
-  /* 익스플로러에 적용함 : Internet Explorer 10+ */
+  익스플로러에 적용함 : Internet Explorer 10+
   font-family: 'Source Sans Pro', sans-serif;
   color: white;
   font-weight: 300;form
 }
 
 body :-o-placeholder {
-  /* 오페라에 적용함 */
+  오페라에 적용함
   font-family: 'Source Sans Pro', sans-serif;
   color: white;
   font-weight: 300;form
-}
+} */
