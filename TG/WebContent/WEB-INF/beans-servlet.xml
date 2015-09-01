@@ -32,6 +32,7 @@
 	<bean class="com.tg.common.beans.MemberBean" id="memberBean"/>
 	<bean class="com.tg.common.beans.QnaBean" id="qnaBean"/>
 	
+	
 	<!-- 이메일 설정 (gmail) -->
 	
 	<bean id="mailSender" class ="org.springframework.mail.javamail.JavaMailSenderImpl" >
