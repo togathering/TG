@@ -96,7 +96,7 @@ outline: 0 none;
 
 #hongkiat-form textarea {
 display: block;
-font-family: "Helvetica Neue", Arial, sans-serif;
+/* font-family: "Helvetica Neue", Arial, sans-serif; */
 border-style: solid;
 border-width: 1px;
 border-color: #dedede;
