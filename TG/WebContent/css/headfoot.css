@@ -132,7 +132,7 @@ body{
 	float: none;
 	top:5px;
 	bottom:15px;
-	padding:5px 5px 10px 5px;
+	padding:5px 5px 5px 5px;
 	margin: 5px auto;
 	height: 19px;
 }
@@ -141,12 +141,12 @@ body{
 }
 .wrapper5 li ul a{
 	display:block;
-	height:30px;
+	height:20px;
 	width:102px;
 	font-size:14px;
 	font-style:normal;
 	margin:0px;
-	padding:5px 5px 0px 15px;
+	padding:0px 5px 0px 15px;
 	text-align:left;
 	color: white;
 	font-weight: bold;
