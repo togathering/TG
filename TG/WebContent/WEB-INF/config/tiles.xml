@@ -35,6 +35,12 @@
 		<put-attribute name="footer" value="/WEB-INF/view/layout/footer.jsp" />
 	</definition>
 	
+	<!-- 그룹만들기 -->
+	<definition name=".createSelect" template="/WEB-INF/view/user/main/gxcreateselect.jsp">
+		<put-attribute name="header" value="/WEB-INF/view/layout/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/view/layout/footer.jsp" />
+	</definition>
+	
 	<!-- 그룹만들기 (선택) -->
 	<definition name=".selectGx" template="/WEB-INF/view/user/groupselect/select.jsp">
 		<put-attribute name="header" value="/WEB-INF/view/layout/header.jsp" />

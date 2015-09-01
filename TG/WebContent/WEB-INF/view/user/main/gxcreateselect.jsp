@@ -69,22 +69,10 @@
 			document.createFrm.joinOption.focus();
 			return;
 		}
-		
-		
 		document.createFrm.submit();
-		
 	}
 </script>
-<script type="text/javascript">
-	function imgCheck(){
-		var fileName =document.getElementById("imgFile").value;
-		var ext = fileName.substring(fileName.lastIndexOf(".")+1);
-		if(ext !=".jpg" &&  ext !=".JPEG" && ext !=".gif" && ext !="png"){
-			alert("이미지 파일 업로드시 확장자는 jpg,JPEG,gif,png 만 가능합니다.");
-			document.getElementById("imgFile").value="";
-		}
-	}
-</script>
+
 </head>
 <body>
 	<div style="z-index: 2;">
@@ -333,8 +321,8 @@
 						<h1>장소</h1>
 						<section id="buttons">
 						</section>
-						<input type="button" class="sbutton" onclick="searchAddress()" value="장소선택"><br><br>
-						<input type="text" id="loc" name="loc" class="txtinput" placeholder="주소" readonly="readonly">
+						<input type="button" class="sbutton" onclick="searchAddress()" value="장소선택" hi><br><br>
+						<input type="text" id="loc" name="loc" class="txtinput" placeholder="주소" readonly="readonly" value="${bean.gloc}">
 						<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 						<script>
 						    function searchAddress() {
@@ -378,14 +366,14 @@
 								취소됩니다. 최소 인원 수 설정은 ‘상세하게 만들기’에서 가능합니다.</h3>
 						</div>
 						<br> <select id="min" name="min" class="selmenu">
-							<option value="min">최소인원</option>
+							<option value="${bean.gmin }">${bean.gmin }</option>
 							<option value="3">3</option>
 							<option value="4">4</option>
 							<option value="5">5</option>
 							<option value="6">6</option>
 						</select> 
 						<select id="max" name="max" class="selmenu">
-							<option value="max">최대인원</option>
+							<option value="${bean.gmax }">${bean.gmax }</option>
 							<option value="3">3</option>
 							<option value="4">4</option>
 							<option value="5">5</option>
@@ -393,39 +381,32 @@
 						</select> <br>
 						<h1>제목과 초대글</h1>
 						<input type="text" name="title" id="title"
-							placeholder="ex)같이 달리실 분" autocomplete="on" tabindex=""
-							class="txtinput" style="font-size: medium; margin-bottom: 2px;">
-						
+							autocomplete="on" tabindex=""
+							class="txtinput" style="font-size: medium; margin-bottom: 2px;"
+							value="${bean.gtitle }">
 						<textarea name="message" id="message" autocomplete="on"
 							tabindex="" class="txtblock" row="25" col=""
 							style="font-size: medium; text-align: left: ;">
-							
-							어떤 이유로 모임을 만들게 됐나요?
-							간단한 자기소개로 시작합시다. 
-							단, 전화번호, 이메일, 카카오톡(메신저) 등의
-							개인연락처 작성은 금지합니다.
+							${bean.gintro }
 						</textarea>
-
-
+			
 						<br style="clear: both;">
 						<h1>태그</h1>
 						<section id="tags">
 							<input type="text" name="tag" id="tag"
 								placeholder="태그를 입력해주세요. 태그앞에 #을 붙여주세요." autocomplete="on"
-								tabindex="" class="txtinput"> <br style="clear: both;">
+								tabindex="" class="txtinput" value="${bean.gtag}"> <br style="clear: both;">
 						</section>
 					<section id="img">
 						<h1>이미지</h1>
-						<input type="file" name="imgfile" size=40> 
-						<br>
-						<br>
+						<img src="upimg/${bean.gimg}"><br>
+						<input type="text" value="${bean.gimg}" id="gxImg" name="gxImg" hidden="true">
+						<input type="file" name="imgfile" size=40 value="${bean.gimg}" id="gxImg" name="gxImg"><br><br>
 						<h1>그룹 참여 방식</h1>
 						<input type="radio" name="joinOption" value="선착순참여">선착순참여
 						<input type="radio" name="joinOption" value="방장권한부여">방장권한부여
-						<br>
-						<br>
-						<br>
-						</section>
+						<br><br><br>
+					</section>
 						<section id="buttons">
 							<input type="button" class="button" name="save" style="width: 150px;"
 								value="모임 만들기" onclick="checkValue()"> <br style="clear: both;">
