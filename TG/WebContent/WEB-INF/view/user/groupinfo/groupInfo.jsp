@@ -315,20 +315,22 @@ a:hover{
 <!-- 헤더끝 -->		
 	<div style="width: 100%; height: 100%; background-color: #F0FFF0;">
 	<br>
-		<h2 align="center">모임명 : ${group.gtitle}</h2><h3>${group.goption }</h3>
-		<h3 align="center">ToGathering</h3>
+<%-- 		<h2 align="center">모임명 : ${group.gtitle}</h2> --%>
+		<!-- <h3 align="center">ToGathering</h3> -->
 <!-- 상단 이미지+요약내용 -->
 
-	<div style="border: 1px solid lightgray; height: 430px; width:1047px;  margin:10px 150px; ">
+	<div style="border: 1px solid lightgray; height: 430px; width:1047px;  margin:10px 150px; background-color: white; ">
 		<!-- 	이미지삽입 -->
 		<div style="padding:5px 10px 10px 0px; margin-bottom:10px; float: left; width:610px; height: 400px; overflow: hidden;">
 			<img alt="" src="upimg/${group.gimg}" style="width:610px; height: auto; min-height:350px; margin: 10px 10px 10px 20px">
 		</div>
 		<!-- 요약내용 -->			
-		<div style="padding:5px 0px 10px 10px;; margin-bottom:10px; float:right; width:390px; height: 400px;">		
-			<div>
+		<div style="padding:5px 0px 10px 10px;; margin-bottom:10px; float:right; width:390px; height: 400px; ">		
+			<div style="text-align: left;">
 				<br>
-				<p> < ${group.gtitle} > </p>
+				<p>모집중/모집완료/모임종료</p>
+				<br>
+				<p>  ${group.gtitle} (${group.goption } ) </p>
 				<br>
 				<p>모임의 모임일은 ${group.gday}입니다.</p>
 				<br>
@@ -362,19 +364,19 @@ a:hover{
 		<!-- 	</pre> -->
 		</div>
 		<!-- 호스트프로필 -->
-			<div style="float: right; width:330px; height:210px; margin: 10px 150px 10px 5px; padding: 25px 10px; border: 1px solid lightgray;">
+			<div style="float: right; width:330px; height:210px; margin: 10px 150px 10px 5px; padding: 25px 10px; border: 1px solid lightgray; background-color: white;">
 			<h3>안녕하세요 호스트입니다!</h3>
 			저는 ~~를 좋아하는 사람입니다.
 			</div>
 		<!-- 약관? -->
-			<div style="float: right; width:320px; height:467px; margin: 10px 150px 10px 5px; padding: 25px 15px;  LINE-HEIGHT: 160%; border: 1px solid lightgray;">
+			<div style="float: right; width:310px; height:467px; margin: 10px 150px 10px 5px; padding: 25px 20px;  LINE-HEIGHT: 160%; border: 1px solid lightgray; background-color: white;">
 			<h3>꼭 지켜주세요!</h3>
 			모임 진행의 책임은 해당 모임의 진행자인 그룹장에게 있습니다. 
 			모임 후, 불편했던 점, 수상쩍은 점, 기타 문제점이 발생했다면 적극적으로 신고 부탁드립니다. 
 			훈훈하고 건강한 ToGathering 커뮤니티를 함께 만들어가요!
 			</div>
 		<!-- 참가인원 시작 -->
-				<div style="width: 650px; float:left; height:90px; margin: 10px 20px 10px 150px; border: 1px solid lightgray; padding: 5px 10px; text-align:left;">
+				<div style="width: 650px; float:left; height:90px; margin: 10px 20px 10px 150px; border: 1px solid lightgray; padding: 5px 10px; text-align:left; background-color: white;">
 				<h3 style="text-align:left;">▶참가인원들</h3>
 				<table style="text-align:left;">
 					<tr>
@@ -390,7 +392,7 @@ a:hover{
 				</table>
 			</div><!-- 참가인원끝 -->
 		<!-- 태그표시 -->
-		<div style="width: 650px; float:left; height:90px; margin: 15px 20px 15px 150px; border: 1px solid lightgray; padding: 5px 10px; text-align:left;">
+		<div style="width: 650px; float:left; height:90px; margin: 15px 20px 15px 150px; border: 1px solid lightgray; padding: 5px 10px; text-align:left; background-color: white;">
 			<h3 style="text-align:left;">▶태그</h3>
 			<c:forEach var="tag" items="${tags}">
 				<a href="tagResult?tag=${tag}">#${tag}</a>&nbsp 
