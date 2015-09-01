@@ -31,6 +31,13 @@
 	<select id="countSpecificTitle" resultType="java.lang.Integer" parameterType="java.lang.String">
 		select count(*) from gxgroup where gtitle  like #{gtitle}
 	</select>
+	
+	<update id="deleteG" statementType="CALLABLE" parameterType="String">
+		{call del_group(#{gno})}
+	</update>
+	
+	
+	
 <!-- admin member 관리 -->
 	<!-- 검색어 추천  -->
 	<select id="suggestMember" parameterType="java.lang.String" resultType="java.lang.String">

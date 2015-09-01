@@ -78,6 +78,7 @@ public class GroupControl_admin {
 	 @RequestMapping("deleteG")
 	 @ResponseBody
 	 public String deleteG (@RequestParam(value="delGno")String delGno){
+		
 		if( dao.removeG(delGno)){
 			System.out.println("그룹삭제 완료 : 그룹번호 : "+delGno);
 			return "success";
