@@ -51,9 +51,8 @@
 	}
 	
 	function setOrder(ord) {
-		/* order = ord;
-		loadlist(); */
-		alert('미구현기능');
+		order = ord;
+		loadlist();
 	}
 	
 	function setDay(gday) {
@@ -63,7 +62,7 @@
 	
 	function loadlist() {
 		var keyword = document.frm.search.value;
-		$.ajax({url:"groupsearch", type:"POST", data:"cnt="+cnt+"&search="+keyword+"&day=${day}", dataType:"text",
+		$.ajax({url:"groupsearch", type:"POST", data:"cnt="+cnt+"&search="+keyword+"&day=${day}"+order+"&order="+order, dataType:"text",
 			success:function(data){
 				var list = document.getElementById('list');
 				list.innerHTML = data;
