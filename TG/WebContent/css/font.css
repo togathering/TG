@@ -4,8 +4,8 @@
 @import url(http://fonts.googleapis.com/css?family=Noto+Sans); 
 /* ³ª´®°íµñ */
 @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
-*{
-	 font-family: 'Nanum Gothic', serif;
+body{
+	font-family: 'Nanum Gothic', serif;
 }
 
 /* 

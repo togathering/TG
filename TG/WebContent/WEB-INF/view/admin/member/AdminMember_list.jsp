@@ -11,6 +11,7 @@
 <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
 <link rel="stylesheet" type="text/css" href="css/search.css">
 <link rel="stylesheet" type="text/css" href="css/tgBoard.css">
+<link rel="stylesheet" type="text/css" href="font.css">
 <title>Administrator Member관리</title>
 <style type="text/css">
 .board_div{
@@ -125,7 +126,7 @@ margin: 0 auto;
 	</script>
 
 	<form action="" name="frm">
-		<div  class="search_div">	
+		<div  class="search_d">	
 				<input type="text" name="searchtxt" class="search_input" id="searchtxt"
 					placeholder="검색할ID 입력">
 
@@ -135,7 +136,7 @@ margin: 0 auto;
 				<input type="hidden"  name="pageNum"  id="pageNum" value="">	
 			</div>
 			
-		<div class="board_div" id="tableAndpage">
+		<div class="board_d" id="tableAndpage">
 			<table id="mtable" class="board_table">
 				<tr class="boardth">
 					<th style="width: 220px">아이디</th>
@@ -171,7 +172,7 @@ margin: 0 auto;
 			</table>
 
 
-			<div class="paging_div" align="center">
+			<div class="paging_d" align="center">
 				<a href="adminMemberList?pageNum=1">시작페이지</a>
 				<c:forEach begin="1" end="${pageMaxNum }" step="1" var="i">
 					<a href="adminMemberList?pageNum=${i }">${i }</a>
