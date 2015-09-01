@@ -213,8 +213,12 @@ public class GroupDAO {
 	}
 
 	public List<GroupBean> conditionSearch(String keyword, String order,
-			Integer cnt, String day) {
-		// TODO Auto-generated method stub
-		return null;
+			Integer cnt, String gday) {
+		HashMap<String, Object> map = new HashMap<String, Object>();
+		map.put("keyword", "%"+keyword+"%");
+		map.put("gday", gday+"%");
+		map.put("order", order);
+		List<GroupBean> list = session.selectList("group.conditionSearch", map, new RowBounds(0, cnt));
+		return list;
 	}
 }
