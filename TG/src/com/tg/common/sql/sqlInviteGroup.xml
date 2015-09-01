@@ -10,7 +10,15 @@
 		select id, fid, i.gno, gtitle from invitegroup i, gxgroup g where g.gno = i.gno and fid = #{id}
 	</select>
 	
+	<select id="duplication" parameterType="hashmap" resultType="String">
+		select fid from invitegroup where fid = #{fid} and gno = #{gno} and id = #{id}
+	</select>
+	
 	<delete id="del" parameterType="java.util.HashMap">
 		delete from invitegroup where id=#{id} and gno=#{gno} and fid=#{fid}
+	</delete>
+	
+	<delete id="joinAfterDelete" parameterType="hashmap">
+		delete from invitegroup where fid = #{fid} and gno = #{gno}
 	</delete>
 </mapper>

@@ -5,6 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript">
 	function sendInvite(gno) {
 		var friends = document.friendsFrm.friends;
@@ -29,6 +30,24 @@
 		}
 	}
 	
+	function duplicationCheck() {
+		$.ajax({url:'joinDuplication', typ :'POST', data: 'gno=${gno}', dataType: 'json',
+			success: function(data) {				
+				for(var i=0;i<data.length;i++){
+					var id = document.getElementById(data[i].id);
+					if(data[i].id == id.firstChild.nodeValue){
+						id.nextSibling.nextSibling.firstChild.nodeValue = data[i].exist;
+						id.previousSibling.previousSibling.firstChild.disabled = true;
+					}
+				}				
+			}
+		});
+	}
+	
+	$(document).ready(function() {
+		duplicationCheck();
+	});
+	
 	
 </script>
 
@@ -41,14 +60,18 @@
 		<c:forEach  items='${flist }' var='flist' >
 			<tr>
 				<td width="30px"><input type="checkbox" name="friends"></td>
-				<td width="220px">${flist.id }</td>
+				<td width="220px" id="${flist.id }">${flist.id }</td>
+				<td>초대가능</td>
 			</tr>
 		</c:forEach>
-		<tr><td colspan="2"><hr></td></tr>
+		<tr><td colspan="3"><hr></td></tr>
 		<tr>
 			<td colspan="2"><input type="button" class="button" name="inviteBt" value="초대" onclick="sendInvite(${gno})"></td>
 		</tr>				
 	</table>
+	<div id="testdiv">
+	
+	</div>
 </form>
 </body>
 </html>

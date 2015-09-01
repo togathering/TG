@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.tg.common.beans.GroupBean;
 import com.tg.common.beans.ParticipantBean;
 import com.tg.common.dao.GroupDAO;
+import com.tg.common.dao.InviteGroupDAO;
 import com.tg.common.dao.ParticipantDAO;
 
 @Controller
@@ -18,6 +19,8 @@ public class GroupJoinControl {
 	GroupDAO gdao;
 	@Autowired
 	ParticipantDAO pdao;
+	@Autowired
+	InviteGroupDAO idao;
 
 	@RequestMapping("/joingroup")
 	public String groupJoin(@RequestParam(value="gno")String gxno, HttpSession session){
@@ -43,6 +46,8 @@ public class GroupJoinControl {
 		}else{
 			System.out.println("참여 실패");			
 		}
+		
+		idao.joinAfterDelete(gno, id);
 		
 		return "redirect:main";
 	}

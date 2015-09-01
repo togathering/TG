@@ -25,7 +25,9 @@ public class MemberDAO {
 	
 	public String getMemberTel(String id){
 		String tel = "";
-		tel =  session.selectOne("member.telInfo", id);
+		if(id != null){
+			tel = session.selectOne("member.telInfo", id);			
+		}
 		return tel;
 	}
 	
