@@ -7,6 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 
 <link rel="stylesheet" type="text/css" href="css/headfoot.css">
+<link rel="stylesheet" type="text/css" href="css/font.css">
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
