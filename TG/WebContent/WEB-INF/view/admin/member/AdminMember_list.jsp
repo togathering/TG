@@ -115,6 +115,23 @@ margin: 0 auto;
 	   		 }//if절
 			}
 		};
+		
+				//삭제2
+		function deleteId2(eraseId){
+		
+	    		var del =confirm("정말 삭제하시겠습니까?");
+	    		
+	    		if(del){
+	    	$.ajax({
+	    		url: 'removeId2',
+	    		type:'POST' ,
+	    		data: {delId:eraseId},
+	    		dataType:"text",
+	    		success:function(){
+	    			searchClick('@',1);
+	    		}});
+	   		 }//if절
+		};
 	</script>
 
 	<form action="" name="frm">
@@ -153,8 +170,11 @@ margin: 0 auto;
 							name="msg" id="msg" value="쪽지"
 							onclick="msg2('${member.mid }', '${member.mnick }')"></td>
 						<td align="center"><input type="button" class="sbutton"
-							name="delete" id="delete" value="삭제"
-							onclick="deleteId('${member.mid }')"></td>
+							name="delete" id="delete" value="삭제1"
+							onclick="deleteId('${member.mid }')">
+							<input type="button" class="sbutton"
+							name="delete" id="delete" value="삭제2"
+							onclick="deleteId2('${member.mid }')"></td>
 					</tr>
 				</c:forEach>
 			</table>
