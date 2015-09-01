@@ -32,7 +32,7 @@
 	<mvc:view-controller path="/ERROR404" view-name="error/err404"/><!-- 에러페이지 -->
 	<mvc:view-controller path="/ERROR500" view-name="error/err500"/><!-- 에러페이지 -->
 	<mvc:view-controller path="/ERRORnull" view-name="error/nullPoint"/><!-- 에러페이지 -->
-	<mvc:view-controller path="/showTG" view-name=".showTG"/><!-- 회사소개 -->
+	<mvc:view-controller path="/knowTG" view-name=".knowTG"/><!-- 회사소개 -->
 	
 	<!-- 컨트롤러 스캔 -->
 	<context:component-scan base-package="com.tg"/>
