@@ -17,6 +17,9 @@
 </head>
 <script type="text/javascript">
 	$(document).ready(function(){
+			$('#introduceCompany').hide();
+			$('#introduceToGathering').hide();
+			$('#howToUseTG').hide();
 		$('#introCompany').click(function(){
 			$('#introduceCompany').toggle();
 		})
