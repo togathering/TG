@@ -97,6 +97,15 @@
 		where gtag like #{gtag} and ghost = id and gstatus != '모임종료' order by gday
 		
 	</select>
+	
+	<!-- 메인화면 검색 -->
+	
+	<select id="mainSearch" parameterType="java.lang.String" resultType="com.tg.common.beans.GroupBean">
+		  select distinct(gno),nick,gloc,gtitle,gstatus,gimg,goption 
+		  from member,gxgroup 
+		  where (gtag like #{word} or replace(gtitle, ' ', '') like #{word})and ghost = id and gstatus != '모임종료' 
+		  order by gday 
+	</select>
 </mapper>
 
 
