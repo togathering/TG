@@ -75,7 +75,6 @@ float:left;
 	<!-- 테이블 시작> -->
 	<table class="board_table">
 		<caption>쪽지함</caption>
-
 		<!-- 테이블 헤드 -->
 		<thead>
 			<tr class="boardth">
@@ -118,7 +117,7 @@ float:left;
 	</table>
 	
 			<!-- 페이징 -->
-	<div class="paging_d" align="center">
+	<div align="center">
 		<c:if test="${ begin_page != 1 }"><a href="?page=${ begin_page - 1 }">◁이전</a></c:if>
 		<c:forEach begin="${ begin_page }" end="${ end_page }" var="page">
 			<c:choose>
@@ -132,6 +131,6 @@ float:left;
 	</div>
 	
 	<!-- 푸터 -->
-	<div style="position: relative; top: 230px"><tiles:insertAttribute name="footer"/></div>
+	<div style="position: relative; top: 50px"><tiles:insertAttribute name="footer"/></div>
 </body>
 </html>
