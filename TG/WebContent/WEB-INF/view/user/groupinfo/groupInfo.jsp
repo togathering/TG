@@ -313,7 +313,7 @@ a:hover{
 		<tiles:insertAttribute name="header" />
 	</div>
 <!-- 헤더끝 -->		
-	<div style="width: 100%; height: 100%; background-color:rgba(0,205,102,0.1);">
+	<div style="width: 100%; height: 100%; background-color:rgba(243,255,250,0.4);">
 	<br>
 <%-- 		<h2 align="center">모임명 : ${group.gtitle}</h2> --%>
 		<!-- <h3 align="center">ToGathering</h3> -->
