@@ -36,7 +36,7 @@ public class CreateControl{
 	
 	@RequestMapping("/gxcreate")
 	public String groupCreate(HttpServletRequest request) throws Exception{	
-		
+		String gimg = null;
 		request.setCharacterEncoding("UTF-8");
 		
 		String savePath = request.getSession().getServletContext().getRealPath("upimg");
@@ -46,9 +46,15 @@ public class CreateControl{
 		MultipartRequest multi = new MultipartRequest(request, savePath, sizeLimit, "EUC-KR", new DefaultFileRenamePolicy());
 		 
 		String imgfile = multi.getFilesystemName("imgfile");
-		 
-		String gimg = imgfile;		
-	
+		if(imgfile==null){
+			String gxImg = multi.getParameter("gxImg");
+			gimg = gxImg;
+		}else{
+			gimg = imgfile;		
+		}
+		
+		
+		
 		String [] day = multi.getParameter("gdate").split("-");
 		String date = "";
 		for(int i=0;i<day.length;i++){

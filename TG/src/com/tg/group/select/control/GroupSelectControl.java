@@ -27,19 +27,20 @@ public class GroupSelectControl {
 	public String selectGxList(HttpSession session, Model model){
 		String id = (String) session.getAttribute("id");
 		List<GroupBean> list = dao.hostGxEnd(id);
-		if(list.size()!=0){
-			
-			System.out.println("º±≈√!"+list.get(0).getGtitle());
-		}
 		model.addAttribute("list", list);
 		return ".selectGxList";
 	}
 	
 	@RequestMapping("createGx")
 	public String createGx(@RequestParam(value="gno", required=true)Integer gno, Model model){
+		
 		GroupBean bean = dao.selectGroupInfo(gno);
 		model.addAttribute("bean", bean);
-		System.out.println(bean.getGtitle());
+		if(bean.getGintro() != null){
+			System.out.println("#####");
+			String intro = "Yes";
+			model.addAttribute("intro", intro);
+		}
 		return ".create";
 	}
 }
