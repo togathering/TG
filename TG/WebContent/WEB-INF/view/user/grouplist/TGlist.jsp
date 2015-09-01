@@ -57,12 +57,12 @@
 	
 	function setDay(gday) {
 		day = gday
-		location.href = 'groupsearch?day='+day;
+		loadlist();
 	}
 	
 	function loadlist() {
 		var keyword = document.frm.search.value;
-		$.ajax({url:"groupsearch", type:"POST", data:"cnt="+cnt+"&search="+keyword+"&day=${day}"+order+"&order="+order, dataType:"text",
+		$.ajax({url:"groupsearch", type:"POST", data:"cnt="+cnt+"&search="+keyword+"&day="+day+"&order="+order, dataType:"text",
 			success:function(data){
 				var list = document.getElementById('list');
 				list.innerHTML = data;

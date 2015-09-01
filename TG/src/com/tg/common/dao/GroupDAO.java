@@ -67,6 +67,15 @@ public class GroupDAO {
 		return list;
 	}
 	
+	public List<GroupBean> conditionSearch(String keyword, String order, int pageCnt, String gday){
+		HashMap<String, Object> map = new HashMap<String, Object>();
+		map.put("keyword", "%"+keyword+"%");
+		map.put("gday", gday+"%");
+		map.put("order", order);
+		List<GroupBean> list = session.selectList("group.conditionSearch", map, new RowBounds(0, pageCnt));
+		return list;
+	}
+	
 	public List<GroupBean> mSearchTitle(String gtitle){
 		List<GroupBean> list = null;
 		gtitle="%"+gtitle+"%";
