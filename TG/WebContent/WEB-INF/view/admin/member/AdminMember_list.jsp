@@ -11,6 +11,7 @@
 <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
 <link rel="stylesheet" type="text/css" href="css/search.css">
 <link rel="stylesheet" type="text/css" href="css/tgBoard.css">
+<link rel="stylesheet" type="text/css" href="font.css">
 <title>Administrator Member관리</title>
 <style type="text/css">
 .board_div{
@@ -104,21 +105,28 @@ margin: 0 auto;
 	    		var del =confirm("정말 삭제하시겠습니까?");
 	    		
 	    		if(del){
-	    	$.ajax({
-	    		url: 'removeId',
-	    		type:'POST' ,
-	    		data: {delId:eraseId},
-	    		dataType:"text",
-	    		success:function(){
-	    			searchClick('@',1);
-	    		}});
+	    			location.href="removeId?delId="+eraseId;
 	   		 }//if절
 			}
+		};
+		
+				//삭제2
+		function deleteId2(eraseId){
+			if(eraseId.startsWith('(탈퇴회원)')){
+	    		var del =confirm("정말 삭제하시겠습니까?");
+	    		
+	    		if(del){
+	    		location.href="removeId2?delId="+eraseId;
+	   		 } 
+	    		
+			}else{
+				alert("삭제1 실행 후 진행 요망")				
+	   		 }
 		};
 	</script>
 
 	<form action="" name="frm">
-		<div  class="search_div">	
+		<div  class="search_d">	
 				<input type="text" name="searchtxt" class="search_input" id="searchtxt"
 					placeholder="검색할ID 입력">
 
@@ -128,7 +136,7 @@ margin: 0 auto;
 				<input type="hidden"  name="pageNum"  id="pageNum" value="">	
 			</div>
 			
-		<div class="board_div" id="tableAndpage">
+		<div class="board_d" id="tableAndpage">
 			<table id="mtable" class="board_table">
 				<tr class="boardth">
 					<th style="width: 220px">아이디</th>
@@ -142,8 +150,9 @@ margin: 0 auto;
 				
 				<c:forEach items="${list }" var='member'>
 					<tr class="board_contents">
-						<td align="center"><a href="#"
-							onclick="window.open('http://localhost/ToGathering/my.do?id=${member.mid }','name','width=1300,height=630') return false">
+						<td align="center"><a class="atag" href="#"
+							onClick="window.open('http://localhost/TG/profile?id=${member.mid }','name',
+								'width=850,height=400'); return false">
 								${member.mid } </a></td>
 						<td align="center">${member.mnick }</td>
 						<td align="center">${member.pp }</td>
@@ -153,14 +162,17 @@ margin: 0 auto;
 							name="msg" id="msg" value="쪽지"
 							onclick="msg2('${member.mid }', '${member.mnick }')"></td>
 						<td align="center"><input type="button" class="sbutton"
-							name="delete" id="delete" value="삭제"
-							onclick="deleteId('${member.mid }')"></td>
+							name="delete" id="delete" value="삭제1"
+							onclick="deleteId('${member.mid }')">
+							<input type="button" class="sbutton"
+							name="delete" id="delete" value="삭제2"
+							onclick="deleteId2('${member.mid }')"></td>
 					</tr>
 				</c:forEach>
 			</table>
 
 
-			<div class="paging_div" align="center">
+			<div class="paging_d" align="center">
 				<a href="adminMemberList?pageNum=1">시작페이지</a>
 				<c:forEach begin="1" end="${pageMaxNum }" step="1" var="i">
 					<a href="adminMemberList?pageNum=${i }">${i }</a>

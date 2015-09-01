@@ -35,6 +35,24 @@
 		<put-attribute name="footer" value="/WEB-INF/view/layout/footer.jsp" />
 	</definition>
 	
+	<!-- 그룹만들기 -->
+	<definition name=".createSelect" template="/WEB-INF/view/user/main/gxcreateselect.jsp">
+		<put-attribute name="header" value="/WEB-INF/view/layout/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/view/layout/footer.jsp" />
+	</definition>
+	
+	<!-- 그룹만들기 (선택) -->
+	<definition name=".selectGx" template="/WEB-INF/view/user/groupselect/select.jsp">
+		<put-attribute name="header" value="/WEB-INF/view/layout/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/view/layout/footer.jsp" />
+	</definition>
+	
+	<!-- 그룹만들기 (만들 그룹선택) -->
+	<definition name=".selectGxList" template="/WEB-INF/view/user/groupselect/selectlist.jsp">
+		<put-attribute name="header" value="/WEB-INF/view/layout/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/view/layout/footer.jsp" />
+	</definition>
+	
 	<!-- 그룹찾기 -->
 	<definition name=".tglist" template="/WEB-INF/view/user/grouplist/TGlist.jsp">
 		<put-attribute name="header" value="/WEB-INF/view/layout/header.jsp" />
@@ -106,6 +124,14 @@
 		<put-attribute name="qnaSide" value="/WEB-INF/view/layout/qnaSide.jsp" />
 	</definition>
 	
+	<!-- 문의내역 -->
+	<definition name=".qnaListEnd" template="/WEB-INF/view/user/qna/qnaListEnd.jsp">
+		<put-attribute name="header" value="/WEB-INF/view/layout/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/view/layout/footer.jsp" />
+		<put-attribute name="myPageHeader" value="/WEB-INF/view/layout/myPageHeader.jsp" />
+		<put-attribute name="qnaSide" value="/WEB-INF/view/layout/qnaSide.jsp" />
+	</definition>
+	
 	<!-- 문의답변보기 -->
 	<definition name=".qnaReConfirm" template="/WEB-INF/view/user/qna/qnaReConfirm.jsp">
 		<put-attribute name="header" value="/WEB-INF/view/layout/header.jsp" />
@@ -156,6 +182,12 @@
 	
 	<!-- 쪽지함 (받은쪽지) -->
 	<definition name =".noteList" template="/WEB-INF/view/user/note/noteList.jsp">
+		<put-attribute name="header" value="/WEB-INF/view/layout/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/view/layout/footer.jsp" />
+	</definition>
+
+	<!-- 회사소개 -->
+	<definition name =".knowTG" template="/WEB-INF/view/common/companyFAQ.jsp">
 		<put-attribute name="header" value="/WEB-INF/view/layout/header.jsp" />
 		<put-attribute name="footer" value="/WEB-INF/view/layout/footer.jsp" />
 	</definition>
