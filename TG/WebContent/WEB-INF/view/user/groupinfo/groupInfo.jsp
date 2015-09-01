@@ -380,12 +380,12 @@ a:hover{
 				<h3 style="text-align:left;">▶참가인원들</h3>
 				<table style="text-align:left;">
 					<tr>
-						<td width="100px"><a onclick="window.open('profile?id=${group.ghost }', '', 'width=850, height=350, screenX=200, screenY=100');"  style="color: red" >${group.ghost }</a></td>
+						<td width="100px"><a onclick="window.open('profile?id=${group.ghost }', '', 'width=950, height=540, screenX=200, screenY=60');"  style="color: red" >${group.ghost }</a></td>
 						<td width="100px">그룹 호스트</td>
 					</tr>
 					<c:forEach  items='${joinlist}' var='list' >
 						<tr>
-							<td><a href="javascript:void(0)" onclick="window.open('profile?id=${list.pid}', '', 'width=850, height=350, screenX=200, screenY=100');" style="color: blue">${list.pid }</a></td>
+							<td><a href="javascript:void(0)" onclick="window.open('profile?id=${list.pid}', '', 'width=950, height=540, screenX=200, screenY=60');" style="color: blue">${list.pid }</a></td>
 							<td><input type="button" value="추방" style="display: none" name="kickBt" onclick="kick('${list.pid}')"></td>
 						</tr>						
 					</c:forEach>

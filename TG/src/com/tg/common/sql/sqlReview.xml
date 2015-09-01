@@ -13,4 +13,8 @@
 	<update id="comment" parameterType="com.tg.common.beans.ReviewBean">
 		update review set evaluate = #{evaluate}, grade = #{grade} where gno = #{gno} and evaluator = #{evaluator} and id = #{id}
 	</update>
+	
+	<select id="review" parameterType="String" resultType="com.tg.common.beans.ReviewBean">
+		select evaluate from review where id=#{id} and evaluate is not null
+	</select>
 </mapper>
