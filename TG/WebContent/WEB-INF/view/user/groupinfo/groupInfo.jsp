@@ -319,11 +319,11 @@ a:hover{
 		<h3 align="center">ToGathering</h3>
 		<hr>
 		<!-- 	이미지삽입 -->
-		<div style="padding:5px 1% 5px 10%; float: left; width:39%; height: 400px;">
-			<img alt="" src="upimg/${group.gimg}" style="min-width: 45%; height: auto;">
+		<div style="padding:5px 10px 10px 150px; margin-bottom:10px; float: left; width:590px; height: 400px; overflow: hidden;">
+			<img alt="" src="upimg/${group.gimg}" style="width:640px; height: auto">
 		</div>
 		<!-- 요약내용 -->			
-		<div style="padding:5px 8% 5px 3%; float:right; width:39%; height: 400px;">		
+		<div style="border:1px gray; padding:5px 150px 10px 10px; margin-bottom:10px; float:right; width:430px; height: 400px;">		
 			<div>
 				<br>
 				<p> < ${group.gtitle} > </p>
@@ -336,9 +336,10 @@ a:hover{
 			</div>
 			<br>
 			<form style="align:center;">
-				<span id="attend"><button type="button" class="button"  name="attend" onclick="join()">참석</button></span>
-				<span id="wish"><button type="button"  class="button" name="wish" onclick="wishGroup()">원해요</button></span>
+				
 				<span id="encore"><button type="button" name="encore" hidden="">앵콜</button></span><br>
+				<span id="wish"><button type="button"  class="button" name="wish" onclick="wishGroup()">원해요</button></span>
+				<span id="attend"><button type="button" class="button"  name="attend" onclick="join()">참석</button></span>
 				<span><button type="button" style="display: none" class="button" id="invite" name="invite" value="친구초대" onclick="loadFriend(${group.gno})">친구초대</button></span>
 			</form>
 		</div>
@@ -347,16 +348,16 @@ a:hover{
 			
 			
 	<!-- 상세내용 -->
-	<div>
+	<div style="padding-top: 20px">
 		<h4 align="center">모임명</h4>
 		<h2 align="center"> ${group.gtitle} </h2>
 		<h4 align="center">모임 소개</h4><br>
 	</div>
-		<div style="border: 0px solid black; width: 80%;  margin: 1% auto; text-align:center; LINE-HEIGHT: 120%;
-					padding-top: 10px; padding-bottom: 10px; ">
-			<pre style="width:100%; background-color: #d9d9d9; margin: 0 auto; padding: 2% 1%;" >
+		<div style=" width: 1030px;  margin: 30px auto; text-align:center; LINE-HEIGHT: 120%;
+					padding: 25px 10px; background-color: #d9d9d9;">
+			<!-- <pre style="width:1050px; background-color: #d9d9d9; margin: 0 auto; padding: 20px 50px;" > -->
 				${group.gintro}
-			</pre>
+		<!-- 	</pre> -->
 		</div>
 		
 		<!-- 태그표시 -->
@@ -385,7 +386,7 @@ a:hover{
 			</div><!-- 참가인원끝 -->
 			<hr>	
 		<!-- 지도 -->
-		<div style="width:80%;  margin: 1% auto;">
+		<div style="width:1030px;  margin: 1% auto;">
 		<div id="map_canvas"style="width:100%; margin: 0 auto; padding: 2% 1%; height:450px;"></div>
 		</div>
 		<!-- 댓글 -->

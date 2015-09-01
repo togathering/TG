@@ -18,7 +18,6 @@
 		if(nick!=''){
 			var msg = '<li><a href="#">'+nick+'▽</a>';
 				  msg += '<ul><li><a href="#" onclick="logOut()">로그아웃</a></li>';
-				  msg += '<li hidden="true"><a href="#" onclick="profile()">마이페이지</a></li>';
 				  msg += '<li><a href="#" onclick="mypage()">마이페이지</a></ul></li>';
 				  msg += '<li><a href="#">메세지</a></li>';
 				  msg += '<li><a href="groupsearch">모임찾기</a></li>';
