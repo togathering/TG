@@ -317,6 +317,7 @@
 							<option value="40">40분</option>
 							<option value="50">50분</option>
 						</select>
+						<br>
 						<h2>장소</h2>
 						<section id="buttons">
 						</section>
@@ -358,7 +359,7 @@
 						        }).open();
 						    }
 						</script>
-						<br> <br>
+						<br>
 						<div>
 							<h2>인원 수</h2>
 							<h4>※ 최대 6명 까지 참석 가능하며, 최소 3명이 모임 전날 오후 6시까지 참여하지 않으면, 모임이 자동

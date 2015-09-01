@@ -45,7 +45,7 @@ span.chyron { font-size: 1.2em; padding-top: 10px; }
 /** main blocks **/
 #container { 
 display: block;
-max-width: 800px;
+max-width: 720px;
 margin: 0 auto; 
 margin-top: 5px; 
 margin-bottom: 66px;
