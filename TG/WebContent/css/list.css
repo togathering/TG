@@ -14,7 +14,7 @@ div#side{
 	 float:left;
 	}
 		.button{
-	font-family: 'Source Sans Pro', sans-serif;
+	/* font-family: 'Source Sans Pro', sans-serif; */
   	background-color: #53e3a6;
 	 margin:0 auto 3px auto; 
 	  border: 0;

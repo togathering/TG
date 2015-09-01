@@ -2,6 +2,11 @@
 
 /* 본고딕 폰트적용 */
 @import url(http://fonts.googleapis.com/css?family=Noto+Sans); 
+/* 나눔고딕 */
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+*{
+	 font-family: 'Nanum Gothic', serif;
+}
 
 /* 
 <@impotr한 본고딕 서체 사용방법>

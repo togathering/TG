@@ -189,7 +189,7 @@ video {
     padding: 15px 20px;
     background: rgba(255,255,255,0.9);
     color: #514d4d;
-    font-family: "lato-bold", Helvetica, Arial, sans-serif;
+/*     font-family: "lato-bold", Helvetica, Arial, sans-serif; */
     font-size: 16px;
     font-weight: bold;
     letter-spacing: 1px;
@@ -226,7 +226,7 @@ video {
 
 .listings ul li .property_details h1{
     color: #666464;
-    font-family: "lato-bold", Helvetica, Arial, sans-serif;
+/*     font-family: "lato-bold", Helvetica, Arial, sans-serif; */
     font-size: 16px!important;
     font-weight: bold;
     margin-bottom: 5px;
@@ -240,7 +240,7 @@ video {
 
 .listings ul li .property_details h2{
     color: #9d9d9d;
-    font-family: "lato-regular", Helvetica, Arial, sans-serif;
+    /* font-family: "lato-regular", Helvetica, Arial, sans-serif; */
     font-size: 12px;
     line-height: 26px;
     font-weight: normal;
@@ -266,7 +266,7 @@ video {
     -moz-border-radius: 30px;
     -o-border-radius: 30px;
     color: #afcbe6;
-    font-family: "lato-regular", Helvetica, Arial, sans-serif;
+    /* font-family: "lato-regular", Helvetica, Arial, sans-serif; */
     font-size: 16px;
     text-transform: uppercase;
     letter-spacing: 1px;

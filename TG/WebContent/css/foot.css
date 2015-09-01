@@ -189,14 +189,14 @@ footer .copyrights{
     padding: 40px 0;
     margin-top: 20px;
     color: #fff;
-    font-family: "lato-regular", Helvetica, Arial, sans-serif;
+/*     font-family: "lato-regular", Helvetica, Arial, sans-serif; */
     font-size: 14px;
     letter-spacing: .5px;
     border-top: 1px solid #ffffff;
 }
 
 footer .copyrights a.ph_link{
-    font-family: "lato-bold", Helvetica, Arial, sans-serif;
+/*     font-family: "lato-bold", Helvetica, Arial, sans-serif; */
     font-weight: bold;
     text-decoration: none;
 }
