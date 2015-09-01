@@ -20,14 +20,15 @@
 					<li><a href="knowTG">회사소개</a></li>
 				</ul>
 			</li>
-			<li class="links">
+		<!-- 	<li class="links">
 				<ul>
 					<li><a href="#">자주하는질문</a></li>
 				</ul>
-			</li>
+			</li> -->
 
 			<li class="links">			
 				<ul>
+					<li><a href="#">자주하는질문</a></li>
 					<li><a href="qna">문의하기</a></li>
 				</ul>
 			</li>
