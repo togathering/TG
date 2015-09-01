@@ -74,6 +74,7 @@
 		<br>
 		허위 신고 및 도배글을 작성하실 경우 서비스 이용에 제한이 발생할 수 있습니다.
 		<br>
+		
 	</p>
 	<div style="position: relative; top: 30px"><tiles:insertAttribute name="footer"/></div>
 </body>
