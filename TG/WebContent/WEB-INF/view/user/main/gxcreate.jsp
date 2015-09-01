@@ -94,14 +94,14 @@
 		style="position: relative; top: 10px; margin-top: 10px; z-index: 1;">
 		<section id="container">
 			<span class="chyron"><em></em></span>
-			<h2 style="center">모임등록하기</h2>
+			<h1>모임등록하기</h1>
 
 			<form name="createFrm" id="hongkiat-form" method="post" action="gxcreate" enctype="multipart/form-data">
 				<div id="wrapping" class="clearfix">
 					<section id="aligned">
-						<h1>시간과 날짜</h1>
-						<div id="leftdiary"></div>
-						<table style="margin-top: 20; margin-right: 20;">
+						<h2>시간과 날짜</h2>
+						<div id="leftdiary" style="width: 70%; margin: 0 auto; "></div>
+						<table style="margin-top: 20;">
 							<tr height="30">
 							</tr>
 						</table>
@@ -123,15 +123,12 @@
 								var nlastday = nlastdate.getDate();
 								//"dtmsg"라는 변수에 0103소스에서 잘라낸 부분중에서 달력의 상단 부분의 내용(0103소스기준 line 46~64)을 정리해서 넣고, 현재 년도와 월을 위에서 선언한 "lsy"와 "lsm"라는 변수를 이용하여 넣어 줍니다.
 
-								var dtmsg = "<tr height='40'><td colspan='2' style='font-family:tahoma;font-size:24;color:#aaaaaa;' align='right' onclick=\"moveLeftMonth('-')\">◀</td>";
-								dtmsg += "<td colspan='3' align='center'><div style='font-family:tahoma;font-size:10;font-weight:bold;'>"
-										+ lsy
-										+ "</div><div style='font-family:tahoma;font-size:24;font-weight:bold;'>"
-										+ lsm + "</div></td>";
-								dtmsg += "<td colspan='2' style='font-family:tahoma;font-size:24;color:#aaaaaa;' onclick=\"moveLeftMonth('+')\">▶</td></tr><tr bgcolor='#cccccc'><td colspan='7' height='1'></td></tr>";
-								dtmsg += "<tr align='center' height='21'><td width='14%' style='color:#ff0000;'>일</td><td width='14%'>월</td><td width='14%'>화</td><td width='14%'>수</td><td width='14%'>목</td><td width='14%'>금</td><td width='14%' style='color:#0000ff;'>토</td></tr>";
-								dtmsg += "<tr bgcolor='#cccccc'><td colspan='7' height='1'></td></tr>";
-								var d = 0;
+								var dtmsg = "<tr height='40'><td colspan='2' style='font-family:tahoma;font-size:24;color:#aaaaaa; cursor:pointer;' align='right' onclick=\"moveLeftMonth('-')\">◀</td>";
+									dtmsg += "<td colspan='3' align='center'><div style='font-family:tahoma;font-size:10;font-weight:bold;'>"+lsy+"</div><div style='font-family:tahoma;font-size:24;font-weight:bold;'>"+lsm+"</div></td>";
+									dtmsg += "<td colspan='2' style='font-family:tahoma;font-size:24;color:#aaaaaa; cursor:pointer;' onclick=\"moveLeftMonth('+')\">▶</td></tr><tr bgcolor='#cccccc'><td colspan='7' height='1'></td></tr>";
+									dtmsg += "<tr align='center' height='21'><td width='14%' style='color:#ff0000;'>일</td><td width='14%'>월</td><td width='14%'>화</td><td width='14%'>수</td><td width='14%'>목</td><td width='14%'>금</td><td width='14%' style='color:#0000ff;'>토</td></tr>";
+									dtmsg += "<tr bgcolor='#cccccc'><td colspan='7' height='1'></td></tr>";
+				var d = 0;
 								//달력에 사용될 td의 합계를 구합니다(이번달의 총 일수 + 일요일부터 시작되는 공백기간).
 								var ntdsum = nlastday + nfirstweek;
 								//달력의 날짜부분을 "dmsg"라는 변수에 저장합니다.
@@ -140,9 +137,9 @@
 									//달의 1일이 일요일이 아니라면 1일까지 빈 공간을 만들어 줍니다.
 									if (i < nfirstweek) {
 										if (i == 0)
-											dmsg += "<td class='srgfont' style='cursor:hand;'></td>";
+											dmsg += "<td class='srgfont' style='cursor:pointer; color:lightgray'></td>";
 										else
-											dmsg += "<td class='sgfont' style='cursor:hand;' ></td>";
+											dmsg += "<td class='sgfont' style='cursor:pointer; color:lightgray' ></td>";
 									}
 									//현재 달의 1일부터 마지막날까지 일요일과 평일(토요일)의 글자 색상만 바꾸어주며 차례대로 칸을 채워 넣습니다.
 									else {
@@ -153,7 +150,7 @@
 										}
 										dmsg += "<td class='"
 												+ tdfc
-												+ "' style='cursor:hand;background-color:#eeeeee;'onclick=\"selectDate(this)\" id='"
+												+ "' style='cursor:pointer;background-color:#eeeeee;'onclick=\"selectDate(this)\" id='"
 												+ d + "'>" + d + "</td>";
 									}
 									if (i < ntdsum - 1 && ((i + 1) % 7) == 0) {
@@ -169,15 +166,15 @@
 										if (i == 0 && (ntdsum % 7) == 0) {
 											tdfc = "srgfont";
 										}
-										dmsg += "<td class='"+tdfc+"' style='cursor:hand;' >"
+										dmsg += "<td class='"+tdfc+"' style='cursor:pointer; color:lightgray' >"
 												+ (i + 1) + "</td>";
 									}
 								}
 								//달력에서 다음달의 1주일을 추가로 더 보여주도록 합니다. 이번달의 마지막날이 토요일일 경우를 감안하여 다음달이 14일이 넘지 않도록 합니다.
-								dmsg += "<tr align='center' height='17'><td class='srgfont' style='cursor:hand;'>"
+								dmsg += "<tr align='center' height='17'><td class='srgfont' style='cursor:hand; color:lightgray'>"
 										+ (i + 1) + "</td>";
 								for (j = 1; j < 7; j++) {
-									dmsg += "<td class='sgfont' style='cursor:hand;'>"
+									dmsg += "<td class='sgfont' style='cursor:hand; color:lightgray'>"
 											+ (i + j + 1) + "</td>";
 								}
 								//이렇게 달력의 윗부분과 일자부분이 각각 'dtmsg', 'dmsg'로 정의되었다면 "leftdiary"로 정의한 div에 innerHTML로 넣어 줍니다.
@@ -330,11 +327,11 @@
 							<option value="40">40분</option>
 							<option value="50">50분</option>
 						</select>
-						<h1>장소</h1>
+						<h2>장소</h2>
 						<section id="buttons">
 						</section>
 						<input type="button" class="sbutton" onclick="searchAddress()" value="장소선택"><br><br>
-						<input type="text" id="loc" name="loc" class="txtinput" placeholder="주소" readonly="readonly">
+						<input type="text" id="loc" name="loc" class="txtinput" placeholder="주소" readonly="readonly" style="font-size: 15px;">
 						<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 						<script>
 						    function searchAddress() {
@@ -372,10 +369,11 @@
 						    }
 						</script>
 						<br> <br>
+						<br>
 						<div>
-							<h1>인원 수</h1>
-							<h3>최대 6명 까지 참석 가능하며, 최소 3명이 모임 전날 오후 6시까지 참여하지 않으면, 모임이 자동
-								취소됩니다. 최소 인원 수 설정은 ‘상세하게 만들기’에서 가능합니다.</h3>
+							<h2>인원 수</h2>
+							<h4>※ 최대 6명 까지 참석 가능하며, 최소 3명이 모임 전날 오후 6시까지 참여하지 않으면, 모임이 자동
+								취소됩니다.</h4>
 						</div>
 						<br> <select id="min" name="min" class="selmenu">
 							<option value="min">최소인원</option>
@@ -391,35 +389,35 @@
 							<option value="5">5</option>
 							<option value="6">6</option>
 						</select> <br>
-						<h1>제목과 초대글</h1>
+						<h2>제목과 초대글</h2>
 						<input type="text" name="title" id="title"
 							placeholder="ex)같이 달리실 분" autocomplete="on" tabindex=""
 							class="txtinput" style="font-size: medium; margin-bottom: 2px;">
 						
-						<textarea name="message" id="message" autocomplete="on"
+							<textarea name="message" id="message" autocomplete="on"
 							tabindex="" class="txtblock" row="25" col=""
-							style="font-size: medium; text-align: left: ;">
+							 style="font-size: 15px; text-align: left: ;">
 							
-							어떤 이유로 모임을 만들게 됐나요?
-							간단한 자기소개로 시작합시다. 
-							단, 전화번호, 이메일, 카카오톡(메신저) 등의
-							개인연락처 작성은 금지합니다.
+어떤 이유로 모임을 만들게 됐나요?
+간단한 자기소개로 시작합시다. 
+단, 전화번호, 이메일, 카카오톡(메신저) 등의
+개인연락처 작성은 금지합니다.
 						</textarea>
 
 
 						<br style="clear: both;">
-						<h1>태그</h1>
+						<h2>태그</h2>
 						<section id="tags">
 							<input type="text" name="tag" id="tag"
-								placeholder="태그를 입력해주세요. 태그앞에 #을 붙여주세요." autocomplete="on"
-								tabindex="" class="txtinput"> <br style="clear: both;">
+								placeholder="태그를 입력해주세요. 태그앞에 #을 붙여주세요. ex) #농구 #축구 #러닝" autocomplete="on"
+								tabindex="" class="txtinput" style="font-size: 15px"> <br style="clear: both;">
 						</section>
 					<section id="img">
-						<h1>이미지</h1>
+						<h2>이미지</h2>
 						<input type="file" name="imgfile" size=40> 
 						<br>
 						<br>
-						<h1>그룹 참여 방식</h1>
+						<h2>그룹 참여 방식</h2>
 						<input type="radio" name="joinOption" value="선착순참여">선착순참여
 						<input type="radio" name="joinOption" value="방장권한부여">방장권한부여
 						<br>
