@@ -13,35 +13,6 @@
 <link rel="stylesheet" type="text/css" media="all" href="css/search.css">
 <link rel="stylesheet" type="text/css" media="all" href="css/styleGC.css">
 <link rel="stylesheet" type="text/css" media="all" href="css/responsiveGC.css">
-<script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript">
-$(document).ready(function(){
-	var min = document.getElementById("min");
-	var max = document.getElementById("max");
-	
-		
-	if('${bean.gmin }' != '' && '${bean.gmax }' != ''  ){
-		alert('${bean.gmin }');
-		var gmin = '<select id="min" name="min" class="selmenu">';
-		gmin += '<option value="${bean.gmin }">${bean.gmin }</option>';
-		for(var i=3; i<7; i++){
-			if(i=='${bean.gmin}')	i++;
-			gmin += '<option value="'+i+'">'+i+'</option>';
-		}
-		min.innerHTML = gmin;
-		
-		var gmax = '<select id="max" name="max" class="selmenu">';
-		gmin += '<option value="${bean.gmax }">${bean.gmax }</option>';
-		for(var i=3; i<7; i++){
-			if(i=='${bean.gmin}')	i++;
-			gmin += '<option value="'+i+'">'+i+'</option>';
-		}
-		min.innerHTML = gmin;
-	}else{
-		alert("없어야");
-	}
-});
-</script>
 <script type="text/javascript" src="js/trim.js"></script>
 <script type="text/javascript">
 	function checkValue() {
@@ -363,7 +334,7 @@ $(document).ready(function(){
 						<section id="buttons">
 						</section>
 						<input type="button" class="sbutton" onclick="searchAddress()" value="장소선택"><br><br>
-						<input type="text" id="loc" name="loc" class="txtinput" placeholder="주소" readonly="readonly" value="${bean.gloc}">
+						<input type="text" id="loc" name="loc" class="txtinput" placeholder="주소" readonly="readonly">
 						<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 						<script>
 						    function searchAddress() {
@@ -407,7 +378,6 @@ $(document).ready(function(){
 								취소됩니다. 최소 인원 수 설정은 ‘상세하게 만들기’에서 가능합니다.</h3>
 						</div>
 						<br> <select id="min" name="min" class="selmenu">
-							<option value="${bean.gmin }">${bean.gmin }</option>
 							<option value="min">최소인원</option>
 							<option value="3">3</option>
 							<option value="4">4</option>
@@ -415,7 +385,6 @@ $(document).ready(function(){
 							<option value="6">6</option>
 						</select> 
 						<select id="max" name="max" class="selmenu">
-							<option value="${bean.gmax }">${bean.gmax }</option>
 							<option value="max">최대인원</option>
 							<option value="3">3</option>
 							<option value="4">4</option>
@@ -425,8 +394,7 @@ $(document).ready(function(){
 						<h1>제목과 초대글</h1>
 						<input type="text" name="title" id="title"
 							placeholder="ex)같이 달리실 분" autocomplete="on" tabindex=""
-							class="txtinput" style="font-size: medium; margin-bottom: 2px;"
-							value="${bean.gtitle }">
+							class="txtinput" style="font-size: medium; margin-bottom: 2px;">
 						
 						<textarea name="message" id="message" autocomplete="on"
 							tabindex="" class="txtblock" row="25" col=""
@@ -436,28 +404,18 @@ $(document).ready(function(){
 							간단한 자기소개로 시작합시다. 
 							단, 전화번호, 이메일, 카카오톡(메신저) 등의
 							개인연락처 작성은 금지합니다.
-							=================
-							${bean.gintro }
 						</textarea>
 
-
-						<!-- <h1>한 줄 소개</h1>
-			<section id="one">
-			<input type="text" name="like" id="telephone" placeholder="달리기를 좋아하는" tabindex="" class="txtinput" autocomplete="on"><h3>나는</h3><br>
-			<input type="text" name="like" id="telephone" placeholder="사람들과" tabindex="" class="txtinput" autocomplete="on"><h3>(과)와 밥을 먹으며</h3>
-			<input type="text" name="like" id="telephone" placeholder="운동" tabindex="" class="txtinput" autocomplete="on"><h3>(하)고 싶어요</h3>
-			</section> -->
 
 						<br style="clear: both;">
 						<h1>태그</h1>
 						<section id="tags">
 							<input type="text" name="tag" id="tag"
 								placeholder="태그를 입력해주세요. 태그앞에 #을 붙여주세요." autocomplete="on"
-								tabindex="" class="txtinput" value="${bean.gtag}"> <br style="clear: both;">
+								tabindex="" class="txtinput"> <br style="clear: both;">
 						</section>
 					<section id="img">
 						<h1>이미지</h1>
-						<img src="upimg/${bean.gimg }"><br>
 						<input type="file" name="imgfile" size=40> 
 						<br>
 						<br>

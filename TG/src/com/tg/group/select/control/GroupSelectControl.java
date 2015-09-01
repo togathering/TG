@@ -41,6 +41,6 @@ public class GroupSelectControl {
 			String intro = "Yes";
 			model.addAttribute("intro", intro);
 		}
-		return ".create";
+		return ".createSelect";
 	}
 }
