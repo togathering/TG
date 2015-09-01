@@ -163,7 +163,7 @@ public class AdminDAO {
 		//2차 아이디 삭제 임시보존 내용 까지 삭제
 		int t=session.update("admin.deleteId2",pid);
 		
-		if (t==1) return true;
+		if (t==-1) return true;
 		else return false;
 	}
 	

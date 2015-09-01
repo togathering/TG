@@ -47,13 +47,32 @@ margin: 0 auto;
 			
 		})
 	} 
-	function deleteG() {
-		alert("정말 삭제하시겠습니까?")
-
-	}
-
-	function modifyG() {
-		alert("수정하시겠습니까?")
+	function deleteG( day,group) {
+		var today = new Date();
+		var holdday= new Date(day.substr(0,4),parseInt(day.substr(5,2))-1, day.substr(8,2),
+											day.substr(11,2),day.substr(14,2),day.substr(17,2));
+		
+		if(holdday<today){
+			alert("이미 진행완료된 모임은 삭제할 수 없습니다.");
+		}else{
+			var check = confirm("정말 삭제하시겠습니까?");
+			if(check){
+				alert("check"+check);
+				
+			$.ajax({
+				url : 'deleteG',
+				type:'POST',
+				data:{
+					delGno : group	  
+				},
+				dataType:'plain',
+				success: function(data){
+					alert(data);
+					location.href='adminGroupList';
+				}
+			})
+			}
+		}//else
 	}
 </script>
 <title>Administrator Group관리</title>
@@ -94,7 +113,7 @@ margin: 0 auto;
 						<td align="center">${grpbean.gday }</td>
 						<td align="center">${grpbean.gsum }</td>
 						<td align="center">
-							<input type="button" onclick="deleteG()" class="sbutton"
+							<input type="button" onclick="deleteG('${grpbean.gday }','${grpbean.gno }')" class="sbutton"
 							name="delete" id="delete" value="삭제">
 						</td>
 					</tr>

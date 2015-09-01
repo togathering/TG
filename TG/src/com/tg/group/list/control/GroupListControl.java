@@ -33,7 +33,7 @@ public class GroupListControl {
 			movePage = "user/grouplist/addlist";
 		}
 		
-		list = dao.conditionSearch(keyword, order, cnt, day);		
+		list = dao.conditionSearch(keyword, order, cnt, day);
 		
 		model.addAttribute("tglist", list);
 		model.addAttribute("size", list.size());
