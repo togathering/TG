@@ -87,9 +87,9 @@
 			con += " 검색어";		
 		}
 		if(order == 'gday'){
-			con += " 날짜순정렬";
+			con += "정렬방법 : 날짜순정렬";
 		}else if(order == 'gdate'){
-			con += " 개설순정렬";
+			con += " 정렬방법 : 개설순정렬";
 		}
 		if(day){
 			con += " 모임날짜";
@@ -134,10 +134,10 @@
 				<input type="submit" class="sbutton" value="검색">
 			</div>
 		</form>
-		<div id="testdiv"></div>
+	
 		<br><br>
 	
-		<div id="leftdiary"></div>
+		<div id="leftdiary" style="width: 50%; margin: 0 auto;"></div>
 			<!-- 메뉴영역 캘린터목록 end -->
 		<script type="text/javascript">
 			var now = new Date();
@@ -153,9 +153,9 @@
 				var nlastdate = new Date(lsy,lsm,0);
 				var nlastday = nlastdate.getDate();
 				//"dtmsg"라는 변수에 0103소스에서 잘라낸 부분중에서 달력의 상단 부분의 내용(0103소스기준 line 46~64)을 정리해서 넣고, 현재 년도와 월을 위에서 선언한 "lsy"와 "lsm"라는 변수를 이용하여 넣어 줍니다.
-				var dtmsg = "<tr height='40'><td colspan='2' style='font-family:tahoma;font-size:24;color:#aaaaaa;' align='right' onclick=\"moveLeftMonth('-')\">◀</td>";
+				var dtmsg = "<tr height='40'><td colspan='2' style='font-family:tahoma;font-size:24;color:#aaaaaa; cursor:pointer;' align='right' onclick=\"moveLeftMonth('-')\">◀</td>";
 				dtmsg += "<td colspan='3' align='center'><div style='font-family:tahoma;font-size:10;font-weight:bold;'>"+lsy+"</div><div style='font-family:tahoma;font-size:24;font-weight:bold;'>"+lsm+"</div></td>";
-				dtmsg += "<td colspan='2' style='font-family:tahoma;font-size:24;color:#aaaaaa;' onclick=\"moveLeftMonth('+')\">▶</td></tr><tr bgcolor='#cccccc'><td colspan='7' height='1'></td></tr>";
+				dtmsg += "<td colspan='2' style='font-family:tahoma;font-size:24;color:#aaaaaa; cursor:pointer;' onclick=\"moveLeftMonth('+')\">▶</td></tr><tr bgcolor='#cccccc'><td colspan='7' height='1'></td></tr>";
 				dtmsg += "<tr align='center' height='21'><td width='14%' style='color:#ff0000;'>일</td><td width='14%'>월</td><td width='14%'>화</td><td width='14%'>수</td><td width='14%'>목</td><td width='14%'>금</td><td width='14%' style='color:#0000ff;'>토</td></tr>";
 				dtmsg += "<tr bgcolor='#cccccc'><td colspan='7' height='1'></td></tr>";
 				var d = 0;
@@ -166,7 +166,7 @@
 				for(i=0; i<ntdsum; i++) {
 					//달의 1일이 일요일이 아니라면 1일까지 빈 공간을 만들어 줍니다.
 					if(i<nfirstweek) {//현재 달의 1일부터 마지막날까지 일요일과 평일(토요일)의 글자 색상만 바꾸어주며 차례대로 칸을 채워 넣습니다.
-				    	if(i==0) dmsg += "<td class='srgfont' style='cursor:hand;'></td>";
+				    	if(i==0) dmsg += "<td class='srgfont' style='cursor:pointer;'></td>";
 				      	else dmsg += "<td class='sgfont' style='cursor:hand;' ></td>";
 				    }else {
 				    	d++;
@@ -174,7 +174,7 @@
 						if(((i+1)%7)==1) { 
 							tdfc = "srfont"; 
 						}
-				    	dmsg += "<td class='"+tdfc+"' style='cursor:hand;background-color:#eeeeee;'onclick=\"selectDate(this)\" id='"+d+"'>"+d+"</td>";		      
+				    	dmsg += "<td class='"+tdfc+"' style='cursor:pointer;background-color:#eeeeee;'onclick=\"selectDate(this)\" id='"+d+"'>"+d+"</td>";		      
 				    }
 				    if(i<ntdsum-1 && ((i+1)%7)==0) { 
 				    	dmsg += "</tr><tr align='center' height='17' bgcolor='#eeeeee'>"; 
@@ -189,11 +189,11 @@
 				      	if(i==0 && (ntdsum%7)==0) { 
 				      		tdfc = "srgfont"; 
 				      	}
-				      	dmsg += "<td class='"+tdfc+"' style='cursor:hand;' >"+(i+1)+"</td>";
+				      	dmsg += "<td class='"+tdfc+"' style='cursor:pointer;' >"+(i+1)+"</td>";
 				    }
 				}
 				//달력에서 다음달의 1주일을 추가로 더 보여주도록 합니다. 이번달의 마지막날이 토요일일 경우를 감안하여 다음달이 14일이 넘지 않도록 합니다.
-				dmsg += "<tr align='center' height='17'><td  	 class='srgfont' style='cursor:hand;'>"+(i+1)+"</td>";
+				dmsg += "<tr align='center' height='17'><td  	 class='srgfont' style='cursor:pointer;'>"+(i+1)+"</td>";
 				for(j=1; j<7; j++) { 
 					dmsg += "<td class='sgfont' style='cursor:hand;'>"+(i+j+1)+"</td>"; 
 				}//이렇게 달력의 윗부분과 일자부분이 각각 'dtmsg', 'dmsg'로 정의되었다면 "leftdiary"로 정의한 div에 innerHTML로 넣어 줍니다.
@@ -266,7 +266,11 @@
 				
 				setDay(selDate);
 			 } 
-		</script><!-- searching 끝 --> 
+		</script>
+			<br>
+			<br>
+			<div id="testdiv" style="text-align: center; font-size: 17px;"></div>
+		<!-- searching 끝 --> 
 
 	</section>
 	<section class="listings">
@@ -274,7 +278,7 @@
 			<ul class="properties_list" id="list">
 				<c:forEach  items='${tglist }' var='tglist' >
 					<li onclick="gogroupinfo(${tglist.gno})">
-						<a><img src="upimg/${tglist.gimg}" class="property_img"/></a>
+						<a><img src="upimg/${tglist.gimg}" class="property_img" style="max-height: 250px; overflow: hidden;"/></a>
 						<span class="price">${tglist.gloc}</span>
 						<div class="property_details">
 							<h1><a href="#">${tglist.gtitle}</a></h1>

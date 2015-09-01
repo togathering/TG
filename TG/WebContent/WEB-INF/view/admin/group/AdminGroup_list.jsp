@@ -48,6 +48,8 @@ margin: 0 auto;
 		})
 	} 
 	function deleteG( day,group) {
+		
+	//	alert(group)
 		var today = new Date();
 		var holdday= new Date(day.substr(0,4),parseInt(day.substr(5,2))-1, day.substr(8,2),
 											day.substr(11,2),day.substr(14,2),day.substr(17,2));
@@ -57,20 +59,8 @@ margin: 0 auto;
 		}else{
 			var check = confirm("정말 삭제하시겠습니까?");
 			if(check){
-				alert("check"+check);
-				
-			$.ajax({
-				url : 'deleteG',
-				type:'POST',
-				data:{
-					delGno : group	  
-				},
-				dataType:'plain',
-				success: function(data){
-					alert(data);
-					location.href='adminGroupList';
-				}
-			})
+				alert("삭제 진행 결과 :"+check);
+				location.href = 'deleteG?delGno='+group;
 			}
 		}//else
 	}
