@@ -78,6 +78,8 @@ font-family:notokr-demilight !important;
 
 </style>
 
+<script type="text/javascript" src="js/jquery.js"></script>
+
 <script type="text/javascript">
 
 	// 취소버튼을 누르면 이전페이지로 이동
@@ -104,6 +106,15 @@ font-family:notokr-demilight !important;
 		}
 	}
 	
+	// 금지단어가 포함되어 쪽지가 컨트롤러에서 반환되었을 경우
+	$(document).ready(function(){
+		if('${param.result}' == 'containBan'){
+			alert("금지어가 포함되어있습니다.");
+			document.getElementById('noteTitle').value="${param.noteTitle}";
+			document.getElementById('noteContent').value="${param.noteContent}";
+		}
+	});
+	
 	// 빈값 체크
 	function emptyCheck(){
 		var noteTitle = document.frm.noteTitle.value;
@@ -120,7 +131,18 @@ font-family:notokr-demilight !important;
 			return;
 		}
 		
-		document.frm.submit();
+		$.ajax({
+			url:'banCheck',
+			data:{noteTitle:noteTitle, noteContent:noteContent},
+		    type:'post',
+		    success:function(data){
+		    	if(data=='ok') document.frm.submit();
+		    	else alert("[ "+data+' ]는(은) 금지어입니다. 금지어를 지우고 다시 시도해주세요.');
+		    	document.frm.noteTitle.fucus();
+		    }
+		});
+		
+		//document.frm.submit();
 		
 		/* alert("쪽지 보내기 성공"); */
 		
@@ -133,7 +155,8 @@ font-family:notokr-demilight !important;
 	<div align="center">
 	<form action="noteSendAction" method="post" name="frm">
 		<section>			
-			<input type="hidden" name="receiverId" value="${param.id}"></inpit>	
+			<input type="hidden" name="receiverId" id="receiverId" value="${param.id}"></inpit>	
+			<input type="hidden" name="receiverNick"  id="receiverNick" value="${param.nick}"></inpit>	
 			<label>받는사람 : ${param.nick}(${param.id})</label><br>
 			<input type="text" name="noteTitle" placeholder="제목을 입력해주세요 (최대 10글자)" class="noteInput"  
 					onkeydown="limitTitleLength()" maxlength="9"><br>
