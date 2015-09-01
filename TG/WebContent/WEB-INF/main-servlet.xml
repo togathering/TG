@@ -29,6 +29,9 @@
 	<mvc:view-controller path="/mygx" view-name=".mygx"/>
 	<mvc:view-controller path="/sendPass" view-name="common/sendPass"/><!-- 비밀번호 찾기 팝업창 -->
 	<mvc:view-controller path="/emailConfirm" view-name=".emailConfirm"/><!-- 이메일 인증 -->
+	<mvc:view-controller path="/ERROR404" view-name="error/err404"/><!-- 에러페이지 -->
+	<mvc:view-controller path="/ERROR500" view-name="error/err500"/><!-- 에러페이지 -->
+	<mvc:view-controller path="/ERRORnull" view-name="error/nullPoint"/><!-- 에러페이지 -->
 	
 	<!-- 컨트롤러 스캔 -->
 	<context:component-scan base-package="com.tg"/>

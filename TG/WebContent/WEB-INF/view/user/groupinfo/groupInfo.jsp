@@ -313,7 +313,7 @@ a:hover{
 		<tiles:insertAttribute name="header" />
 	</div>
 <!-- 헤더끝 -->		
-	<div style="width: 100%; height: 100%; background-color:rgba(0,205,102,0.1);">
+	<div style="width: 100%; height: 100%; background-color:rgba(243,255,250,0.4);">
 	<br>
 <%-- 		<h2 align="center">모임명 : ${group.gtitle}</h2> --%>
 		<!-- <h3 align="center">ToGathering</h3> -->
@@ -328,9 +328,9 @@ a:hover{
 		<div style="padding:5px 0px 10px 10px;; margin-bottom:10px; float:right; width:390px; height: 400px; ">		
 			<div style="text-align: left;">
 				<br>
-				<p>모집중/모집완료/모임종료</p>
+				<p style=" color: red;"> ${group.gstatus}</p>
 				<br>
-				<p>  ${group.gtitle} (${group.goption } ) </p>
+				<p style="font: bold; font-size: 19px;">  ${group.gtitle} (${group.goption } ) </p>
 				<br>
 				<p>모임의 모임일은 ${group.gday}입니다.</p>
 				<br>
