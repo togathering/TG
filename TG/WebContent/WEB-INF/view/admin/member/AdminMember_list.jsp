@@ -149,8 +149,9 @@ margin: 0 auto;
 				
 				<c:forEach items="${list }" var='member'>
 					<tr class="board_contents">
-						<td align="center"><a href="#"
-							onclick="window.open('http://localhost/ToGathering/my.do?id=${member.mid }','name','width=1300,height=630') return false">
+						<td align="center"><a class="atag" href="#"
+							onClick="window.open('http://localhost/TG/profile?id=${member.mid }','name',
+								'width=850,height=400'); return false">
 								${member.mid } </a></td>
 						<td align="center">${member.mnick }</td>
 						<td align="center">${member.pp }</td>

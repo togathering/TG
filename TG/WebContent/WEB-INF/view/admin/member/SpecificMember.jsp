@@ -17,7 +17,8 @@
 
 					<tr class="board_contnets">
 						<td align="center"><a href="#"
-							onclick="window.open('http://localhost/ToGathering/my.do?id=${member.mid }','name','width=1300,height=630') return false">
+							onClick="window.open('http://localhost/TG/profile?id=${member.mid }','name',
+								'width=850,height=400'); return false">
 								${member.mid } </a></td>
 						<td align="center">${member.mnick }</td>
 						<td align="center">${member.pp }</td>
