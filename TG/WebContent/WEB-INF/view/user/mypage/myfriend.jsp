@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <%@taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,23 +11,6 @@
 <link rel="stylesheet" type="text/css" href="css/tgBoard.css">
 <link rel="stylesheet" type="text/css" href=css/search.css>
 <script type="text/javascript">
-	function reqLoad() {
-		$.ajax({url:"myFriendReq", type:"POST", dataType:"text",
-			success:function(data1){
-				var table1 = document.getElementById('reqTable');
-				table1.innerHTML = data1;
-			}
-		});
-	}
-	function friendLoad() {
-		$.ajax({url:"myFriendList", type:"POST",data:"page=myPage", dataType:"text",
-			success:function(data2){
-				var table2 = document.getElementById('friendTable');
-				table2.innerHTML = data2;
-			}
-		});
-	}
-	
 	function acceptFriend(acceptId) {
 		$.ajax({url:"acceptFriend", type:"POST", data: "fid="+acceptId, dataType:"text",
 			success:function(data){
@@ -73,7 +57,7 @@
 </script>
 
 
-<title>Insert title here</title>
+<title>친구목록</title>
 </head>
 <body>
 	<div style="z-index: 2;">
@@ -82,31 +66,30 @@
 	<div>
 		<tiles:insertAttribute name="myPageHeader"/>
 	</div>
-	<div align="left">
-		<div style="">
-		<h3>마이 프렌드</h3>
-		</div>
+	<div><tiles:insertAttribute name="friendSide"/></div>
+	<!-- <div align="center">
+		<h2>마이 프렌드</h2>
 		<hr>
 	
-		<h4>친구수락하기</h4>
+		<h3>친구수락하기</h3>
 		<br>
-		<table class="board_table" style="width: 70%">
+		<table class="board_table">
 			<tr class="boardth">
-				<th width="200px">I D</th>
-				<th width="140px">닉네임</th>
-				<th width="100px">수락/거절</th>
+				<th width="50%">I D</th>
+				<th width="25%">닉네임</th>
+				<th width="25%">수락/거절</th>
 			</tr>
 		</table>
 		<table  class="board_table" id="reqTable">
 			
 		</table>
 		<hr>
-		<h4 >내친구들</h4>
+		<h3 align="center">내친구들</h3>
 		<br>
-		<table class="board_table" style="width: 70%">
+		<table class="board_table">
 			<tr class="boardth">
-				<th width="200px">I D</th>
-				<th width="140px">닉네임</th>
+				<th width="220px">I D</th>
+				<th width="150px">닉네임</th>
 				<th width="80px">쪽지</th>
 				<th width="80px">친구삭제</th>
 			</tr>
@@ -115,9 +98,10 @@
 		
 		</table>
 	
-	</div>
-	
-	<div style="position: relative; top: 30px">
+	</div> -->
+	<section class="listings" id="section">
+	</section> <!--  end listing section  -->
+	<div style="position: relative; top: 230px">
 		<tiles:insertAttribute name="footer" />
 	</div>	
 </body>
