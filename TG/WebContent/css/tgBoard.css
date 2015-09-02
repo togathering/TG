@@ -6,7 +6,8 @@ color:rgb(41, 128, 185);
 }
 th{
 font-size: 13px;
-color:white;;
+color:#424242 ;
+
 }
 
 td{
@@ -29,7 +30,8 @@ border-collapse: collapse;"
 .boardth{
 height:37px;
 padding-top: 10px;
-background-color: rgb(128,128,128);
+background-color: #E6E6E6;
+border-bottom: 1px solid #2E2E2E;
 }
 .boardth th{
 padding-top: 10px;"
@@ -38,6 +40,7 @@ padding-top: 10px;"
 border-bottom: 1px solid #2E2E2E;
 height: 45px; 
 text-align: center;
+background-color: white;
 }
 
 .search_input{
