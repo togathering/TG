@@ -2,8 +2,8 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="group_pre">
-	<insert id="insert" parameterType="com.tg.common.beans.GroupPreferenceBean">
-		insert into group_preference values(#{gno}, #{category_name}, #{province_name}, #{ratio})
-	</insert>
+<mapper namespace="group_pre">	
+	<select id="selectAll" resultType="com.tg.common.beans.GroupPreferenceBean">
+		select category_name, province_name, ratio from group_preference
+	</select>
 </mapper>

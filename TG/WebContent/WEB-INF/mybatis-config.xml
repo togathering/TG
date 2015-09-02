@@ -40,6 +40,8 @@
 			<value>classpath:com/tg/common/sql/sqlValidity.xml</value>
 			<value>classpath:com/tg/common/sql/sqlUser_Preference.xml</value>
 			<value>classpath:com/tg/common/sql/sqlGroup_Preference.xml</value>
+			<value>classpath:com/tg/common/sql/sqlCategory.xml</value>
+			<value>classpath:com/tg/common/sql/sqlProvince.xml</value>
      	</list>
      </property>
      

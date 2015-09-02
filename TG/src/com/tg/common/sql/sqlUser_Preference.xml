@@ -6,5 +6,17 @@
 	<insert id="insert" parameterType="com.tg.common.beans.UserPreferenceBean">
 		insert into user_preference values(#{id}, #{category_name}, #{province_name}, #{ratio})
 	</insert>
+	
+	<select id="select" parameterType="String" resultType="com.tg.common.beans.UserPreferenceBean">
+		select category_name, province_name, ratio from user_preference where id=#{id}
+	</select>
+	
+	<select id="">
+		select province_name, count(province_name) cnt from user_preference group by province_name order by cnt desc;
+	</select>
+	
+	<select id="">
+		select category_name, count(category_name) cnt from user_preference group by category_name order by cnt desc;
+	</select>
 
 </mapper>
