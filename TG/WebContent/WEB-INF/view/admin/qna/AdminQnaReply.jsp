@@ -50,19 +50,19 @@ function qnaReply(qno) {
 	<input type="text" value="${bean.qno  }" name="qno" hidden="true">
 		<table>
 			<tr>
-				<td width="100"><strong>문의한 사람</strong></td><td width="600">${bean.id  }</td>
+				<td width="100">문의한 사람</td><td width="600">${bean.id  }</td>
 			</tr>
 			<tr>
-				<td><strong>전화번호</strong></td><td>${bean.tel }</td>
+				<td>전화번호</td><td>${bean.tel }</td>
 			</tr>
 			<tr>
-				<td><strong>문의날짜</strong></td><td>${bean.qdate }</td>
+				<td>문의날짜</td><td>${bean.qdate }</td>
 			</tr>
 			<tr>
-				<td><strong>제목</strong></td><td>${bean.qtitle }</td>
+				<td>제목</td><td>${bean.qtitle }</td>
 			</tr>
 			<tr  height="100" valign="top" >
-				<td><strong>내용</strong></td><td>${bean.qcont } </td>
+				<td>내용</td><td>${bean.qcont } </td>
 			</tr>
 		</table><br>
 		<textarea placeholder="답변을 입력해주세요" class="Area" name="rcont"></textarea><br><br>

@@ -369,14 +369,14 @@ a:hover{
 			저는 ~~를 좋아하는 사람입니다.
 			</div>
 		<!-- 약관? -->
-			<div style="float: right; width:310px; height:467px; margin: 10px 150px 10px 5px; padding: 25px 20px;  LINE-HEIGHT: 160%; border: 1px solid lightgray; background-color: white;">
+			<div style="float: right; width:310px; height:467px; margin: 10px 150px 7px 5px; padding: 25px 20px;  LINE-HEIGHT: 160%; border: 1px solid lightgray; background-color: white;">
 			<h3>꼭 지켜주세요!</h3>
 			모임 진행의 책임은 해당 모임의 진행자인 그룹장에게 있습니다. 
 			모임 후, 불편했던 점, 수상쩍은 점, 기타 문제점이 발생했다면 적극적으로 신고 부탁드립니다. 
 			훈훈하고 건강한 ToGathering 커뮤니티를 함께 만들어가요!
 			</div>
 		<!-- 참가인원 시작 -->
-				<div style="width: 620px; float:left; height:auto; margin: 10px 20px 10px 150px; border: 1px solid lightgray; padding: 10px 20px; text-align:left; background-color: white;">
+				<div style="width: 620px; float:left; height:auto; margin: 7px 20px 7px 150px; border: 1px solid lightgray; padding: 10px 20px; text-align:left; background-color: white;">
 				<h4 style="text-align:left;">▶참가인원들</h4>
 				<table style="text-align:left;">
 					<tr>
@@ -400,7 +400,7 @@ a:hover{
 		</div>
 		
 		<!-- 지도 -->
-		<div style="width: 640px; float:left; height:90px; margin: 7px 20px 7px 150px; border: 1px solid lightgray; padding: 5px 10px; text-align:left; background-color: white;">
+		<div style="width: 640px; float:left; height:90px; margin: 7px 10px 15px 150px; border: 1px solid lightgray; padding: 5px 10px; text-align:left; background-color: white;">
 			<h4 style="text-align:left;">▶모임장소</h4>
 				<p style="font-size: 14px">${group.gloc}</p>
 		</div>
