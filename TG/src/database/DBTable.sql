@@ -252,7 +252,7 @@ insert into province values('대구', 33);
 insert into province values('대전', 22);
 insert into province values('광주', 41);
 
-
+ 
 --유저 취향 테이블
 drop table user_preference;
 create table user_preference
