@@ -9,6 +9,7 @@ drop table reply;
 drop table report;
 drop table review;
 drop table banlanguage;
+drop table encore;
 drop table gxgroup;
 drop table member;
 
@@ -44,7 +45,7 @@ gmin number not null,
 gimg varchar2(200),
 gdate date not null,
 gtag varchar2(20),
-gstatus varchar2(20) not null,
+gstatus varchar2(20) default '모집 중' not null,
 gsum number,
 goption varchar2(15) not null
 );
@@ -199,3 +200,9 @@ category varchar2(50) not null,
 primary key(ban, category)
 );
 
+--앵콜 테이블
+create table encore
+(
+gno number constraints encore_fk references gxgroup(gno),
+id varchar2(50) constraints encore_fk2 references member(id)
+);

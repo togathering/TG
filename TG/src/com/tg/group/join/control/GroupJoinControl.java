@@ -38,7 +38,7 @@ public class GroupJoinControl {
 		if(gsum==gmax){
 			gstatus = "모집완료";
 		}else{
-			gstatus = "모집중";
+			gstatus = "모집 중";
 		}		
 		
 		if(gdao.joinG(gsum, gno, gstatus) && pdao.joinGroup(gno, id)){
@@ -61,7 +61,7 @@ public class GroupJoinControl {
 		GroupBean gbean = gdao.wantGsum(gno);
 		int gsum = gbean.getGsum();
 		gsum--;
-		if(gdao.joinG(gsum, gno, "모집중") &&	pdao.cancelJoin(pbean)){
+		if(gdao.joinG(gsum, gno, "모집 중") &&	pdao.cancelJoin(pbean)){
 			System.out.println("참여취소 성공");				
 		}else{
 			System.out.println("참여취소 실패");				

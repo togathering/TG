@@ -21,8 +21,8 @@ update qna set id='(Å»ÅðÈ¸¿ø)'||delid where id=delid;
 -- ¿µ±¸º¸Á¸(ÀÌ¸§º¯°æ)
 update note set senderid = '(Å»ÅðÈ¸¿ø)'||delid where senderid= delid;
 update note set receiverid = '(Å»ÅðÈ¸¿ø)'||delid where receiverid= delid;
-update report1 set reporter = '(Å»ÅðÈ¸¿ø)'||delid where reporter= delid;
-update report1 set accused= '(Å»ÅðÈ¸¿ø)'||delid where accused= delid;
+update report set reporter = '(Å»ÅðÈ¸¿ø)'||delid where reporter= delid;
+update report set accused= '(Å»ÅðÈ¸¿ø)'||delid where accused= delid;
 
 -- ±×·ì°ü·Ã 
 
@@ -54,8 +54,8 @@ delete from qna where id=delid;
 -- È¸¿ø¾ÆÀÌµðº¯°æ
 update note set senderid = '(Å»ÅðÈ¸¿ø)'||TO_CHAR(SYSDATE,'YYMMDD')||delmember.nextval where senderid= delid;
 update note set receiverid = '(Å»ÅðÈ¸¿ø)'||TO_CHAR(SYSDATE,'YYMMDD')||delmember.nextval where receiverid= delid;
-update report1 set reporter = '(Å»ÅðÈ¸¿ø)'||TO_CHAR(SYSDATE,'YYMMDD')||delmember.nextval where reporter= delid;
-update report1 set accused= '(Å»ÅðÈ¸¿ø)'||TO_CHAR(SYSDATE,'YYMMDD')||delmember.nextval where accused= delid;
+update report set reporter = '(Å»ÅðÈ¸¿ø)'||TO_CHAR(SYSDATE,'YYMMDD')||delmember.nextval where reporter= delid;
+update report set accused= '(Å»ÅðÈ¸¿ø)'||TO_CHAR(SYSDATE,'YYMMDD')||delmember.nextval where accused= delid;
 
 
 commit;
