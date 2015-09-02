@@ -18,7 +18,7 @@
 		var ul = document.getElementById("ul");
 		if(nick!=''){
 			var msg = '<li><a href="#">'+nick+'▽</a>';
-				  msg += '<ul><li><a href="#" onclick="logOut()">모임 목록</a></li>';
+				  msg += '<ul><li><a href="#" onclick="">모임 목록</a></li>';
 				  msg += '<li><a href="#" onclick="빈값()">원해요 리스트</a></li>';
 				  msg += '<li><a href="#" onclick="빈값()">친구 리스트</a></li>';
 				  msg += '<li><a href="#" onclick="mypage()">프로필 수정</a></li>';
