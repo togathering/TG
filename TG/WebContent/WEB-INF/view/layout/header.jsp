@@ -19,7 +19,7 @@
 		if(nick!=''){
 			var msg = '<li><a href="#">'+nick+'▽</a>';
 				  msg += '<ul><li><a href="mygx" onclick="">모임 목록</a></li>';
-				  msg += '<li><a href="#" onclick="빈값()">원해요 리스트</a></li>';
+				  msg += '<li><a href="#" onclick="빈값()">위시리스트</a></li>';
 				  msg += '<li><a href="myFriend" onclick="빈값()">친구 리스트</a></li>';
 				  msg += '<li><a href="#" onclick="mypage()">프로필 수정</a></li>';
 				  msg += '<li><a href="#" onclick="logOut()">로그아웃</a></li></ul></li>';
