@@ -32,8 +32,8 @@
 	<div style="float: left; width: 80px;  background-color: #F2F2F2; height:200px; display: inline; margin: 0 2%; padding-left: 120px; padding-top: 30px;" >
 
 		<ul style="color: black;   list-style:none;  ">
-			<li><a style="color: black; outline-color: pink;" onclick="mygxgroup()">모집중</a></li>
-			<li><a style="color: black" onclick="mygxgroupend()">모집완료</a></li>
+			<li><a style="color: black; outline-color: pink;" onclick="mygxgroup()">예정된 모임</a></li>
+			<li><a style="color: black" onclick="mygxgroupend()">지나간 모임</a></li>
 		</ul>
 	</div>
 </body>

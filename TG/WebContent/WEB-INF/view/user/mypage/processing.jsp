@@ -6,7 +6,7 @@
 		<div class="wrapper">
 			<br>
 			<div style="float:left; margin-left: 80px;">
-				<h4 style="text-align: left;">참가중 내역</h4>
+				<h4 style="text-align: left;">예정된 모임</h4>
 			
 		<font color="#F6CECE">현재 ${gNum } 개의 모임에 참여중입니다</font>
 			</div>
