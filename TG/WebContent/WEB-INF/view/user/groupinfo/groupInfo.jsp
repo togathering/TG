@@ -313,7 +313,7 @@ a:hover{
 		<tiles:insertAttribute name="header" />
 	</div>
 <!-- 헤더끝 -->		
-	<div style="width: 100%; height: 100%; background-color:rgba(243,255,250,0.4);">
+	<div style="width: 100%; height: 100%; background-color:rgba(250,250,250,0.4);">
 	<br>
 <%-- 		<h2 align="center">모임명 : ${group.gtitle}</h2> --%>
 		<!-- <h3 align="center">ToGathering</h3> -->
@@ -358,7 +358,7 @@ a:hover{
 		<h4 align="center">모임 소개</h4><br>
 	</div> --%>
 		<div style=" width: 620px; height:500px; margin: 10px 20px 10px 150px; text-align:left; LINE-HEIGHT: 160%;
-					padding: 25px 20px; background-color: #d9d9d9; float: left; border: 1px solid lightgray;">
+					padding: 25px 20px; background-color: #E6E6E6; float: left; border: 1px solid lightgray; font-size: 15px;">
 			<!-- <pre style="width:1050px; background-color: #d9d9d9; margin: 0 auto; padding: 20px 50px;" > -->
 			<pre style="text-align: left;">	${group.gintro}</pre>
 		<!-- 	</pre> -->
@@ -376,8 +376,8 @@ a:hover{
 			훈훈하고 건강한 ToGathering 커뮤니티를 함께 만들어가요!
 			</div>
 		<!-- 참가인원 시작 -->
-				<div style="width: 630px; float:left; height:auto; margin: 10px 20px 10px 150px; border: 1px solid lightgray; padding: 10px 20px; text-align:left; background-color: white;">
-				<h3 style="text-align:left;">▶참가인원들</h3>
+				<div style="width: 620px; float:left; height:auto; margin: 10px 20px 10px 150px; border: 1px solid lightgray; padding: 10px 20px; text-align:left; background-color: white;">
+				<h4 style="text-align:left;">▶참가인원들</h4>
 				<table style="text-align:left;">
 					<tr>
 						<td width="100px"><a onclick="window.open('profile?id=${group.ghost }', '', 'width=950, height=540, screenX=200, screenY=60');"  style="color: red" >${group.ghost }</a></td>
@@ -392,14 +392,18 @@ a:hover{
 				</table>
 			</div><!-- 참가인원끝 -->
 		<!-- 태그표시 -->
-		<div style="width: 650px; float:left; height:90px; margin: 15px 20px 15px 150px; border: 1px solid lightgray; padding: 5px 10px; text-align:left; background-color: white;">
-			<h3 style="text-align:left;">▶태그</h3>
+		<div style="width: 640px; float:left; height:50px; margin: 7px 20px 7px 150px; border: 1px solid lightgray; padding: 5px 10px; text-align:left; background-color: white;">
+			<h4 style="text-align:left;">▶태그</h4>
 			<c:forEach var="tag" items="${tags}">
 				<a href="tagResult?tag=${tag}">#${tag}</a>&nbsp 
 			</c:forEach>	
 		</div>
-
+		
 		<!-- 지도 -->
+		<div style="width: 640px; float:left; height:90px; margin: 7px 20px 7px 150px; border: 1px solid lightgray; padding: 5px 10px; text-align:left; background-color: white;">
+			<h4 style="text-align:left;">▶모임장소</h4>
+				<p style="font-size: 14px">${group.gloc}</p>
+		</div>
 		<div style="width:1027px;  margin: 20px 150px;">
 		<div id="map_canvas"style="width:100%; margin: 0px 0px; padding: 2% 1%; height:450px;"></div>
 		</div>
@@ -420,7 +424,7 @@ a:hover{
 		<br>
 		</div>
 	<!-- 하단footer -->
-	<div style="position: relative; top: 30px">
+	<div style="position: relative;">
 		<tiles:insertAttribute name="footer" />
 	</div>
 </body>
