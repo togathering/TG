@@ -37,7 +37,7 @@ $(document).ready(function(){
 </style>
 <body>
 	<div style="z-index: 2;"><tiles:insertAttribute name="header"/></div>
-	
+	<div style="position: relative;"><tiles:insertAttribute name="faqside"/></div> 
 	<div id="flip">Click to slide the panel down or up</div>
 	<div id="panel">Hello world!</div>
 
