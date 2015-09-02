@@ -199,6 +199,20 @@ header a.hamburger.opned{
     width: 19px;
     background: url('../img/close_menu_icon.png') no-repeat;
 }
+header a.hamburgerSmall{
+    text-decoration: none;
+    display: none;
+    float: right;
+    margin-top: 21px;
+    width: 23px;
+    height: 18px;
+    background: url('../img/hamburger_icon.png') no-repeat;
+}
+
+header a.hamburgerSmall.opned{
+    width: 19px;
+    background: url('../img/close_menu_icon.png') no-repeat;
+}
 
 
 header nav{

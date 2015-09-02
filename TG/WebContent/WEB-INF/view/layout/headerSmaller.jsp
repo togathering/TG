@@ -63,7 +63,7 @@
 	$(document).ready(function(){
 		loginOk();
 		
-		$('.hamburger').click(function(){ //Hamburger Menu & Icon
+		$('.hamburgerSmall').click(function(){ //Hamburger Menu & Icon
 			/* $("nav").fadeToggle(); */
 			$(this).toggleClass('opned');
 			$('header nav').toggleClass('active');
@@ -76,7 +76,7 @@
 	<header style="height: 50px; background-color: white;">
 	<div class="wrapper5" style="height: 50px;">
 		<a href="main"><img src="img/logo2.png" class="logoSmall" alt="" title="" /></a>
-		<a href="#" class="hamburger"></a>
+		<a href="#" class="hamburgerSmall"></a>
 		<nav>
 		<ul id="ul" class="ulSmall" style="margin-top:17px">
 		</ul>
