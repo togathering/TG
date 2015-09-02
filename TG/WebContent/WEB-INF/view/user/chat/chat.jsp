@@ -14,7 +14,7 @@
     var wsocket;
     
     function connect(){
-      wsocket = new WebSocket('ws://192.168.7.24/SpringMybatis2/chat-ws');
+      wsocket = new WebSocket('ws://192.168.7.103/SpringMybatis2/chat-ws');
       wsocket.onopen = onOpen;
       wsocket.onmessage = onMessage;
       wsocket.onclose = onClose;
