@@ -82,29 +82,29 @@
 	<div>
 		<tiles:insertAttribute name="myPageHeader"/>
 	</div>
-	<div align="center">
-		<h2>마이 프렌드</h2>
+	<div align="left">
+		<h3>마이 프렌드</h3>
 		<hr>
 	
-		<h3>친구수락하기</h3>
+		<h4>친구수락하기</h4>
 		<br>
-		<table class="board_table">
+		<table class="board_table" style="width: 70%">
 			<tr class="boardth">
-				<th width="50%">I D</th>
-				<th width="25%">닉네임</th>
-				<th width="25%">수락/거절</th>
+				<th width="200px">I D</th>
+				<th width="140px">닉네임</th>
+				<th width="100px">수락/거절</th>
 			</tr>
 		</table>
 		<table  class="board_table" id="reqTable">
 			
 		</table>
 		<hr>
-		<h3 align="center">내친구들</h3>
+		<h4 >내친구들</h4>
 		<br>
-		<table class="board_table">
+		<table class="board_table" style="width: 70%">
 			<tr class="boardth">
-				<th width="220px">I D</th>
-				<th width="150px">닉네임</th>
+				<th width="200px">I D</th>
+				<th width="140px">닉네임</th>
 				<th width="80px">쪽지</th>
 				<th width="80px">친구삭제</th>
 			</tr>
