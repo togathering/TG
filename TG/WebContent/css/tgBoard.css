@@ -27,11 +27,12 @@ margin:1% auto;
 border-collapse: collapse;"
 }
 .boardth{
-height:35px;
+height:37px;
+padding-top: 10px;
 background-color: rgb(128,128,128);
 }
 .boardth th{
-padding-top: 8px;"
+padding-top: 10px;"
 }
 .board_contents{
 border-bottom: 1px solid #2E2E2E;

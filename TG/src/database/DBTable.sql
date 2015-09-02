@@ -28,7 +28,8 @@ gender varchar2(2),
 insta varchar2(100),
 fbook varchar2(100),
 pic varchar2(100),
-mdate date
+mdate date,
+newbie varchar2(10) default 'newbie'
 );
 
 --그룹 테이블

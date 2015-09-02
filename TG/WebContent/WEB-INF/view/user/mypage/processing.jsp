@@ -3,24 +3,29 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <form id="form" style="padding-top: 20px; text-align: center;">
-		<div class="wrapper"><h2>참가 내역</h2><br>
-		<%-- <font color="#add">현재 ${gNum } 개의 모임에 참여중입니다</font><br> --%>
+		<div class="wrapper">
+			<br>
+			<div style="float:left; margin-left: 80px;">
+				<h4 style="text-align: left;">참가중 내역</h4>
+			
+		<font color="#F6CECE">현재 ${gNum } 개의 모임에 참여중입니다</font>
+			</div>
 			<div class="board_div" id="tableAndpage">
-			<table id="joinGx" class="board_table" style="width: 75%">
+			<table id="joinGx" class="board_table" style="width: 70%">
 				<tr class="boardth" style="padding-top: 8px;">
 					<th style="width: 170px;">모임이름</th>
 					<th>개최자</th>
-					<th>장소</th>
-					<th>일시</th>
+					<th style="width: 270px">장소</th>
+					<th style="width: 170px">일시</th>
 			<!-- 		<th>최소인원</th>
 					<th>최대인원</th> -->
-					<th>참여인원</th>
+					<th style="width: 70px">참가인원</th>
 					<!-- <th>모집상태</th> -->
-					<th><font style="text-align: center;">참여취소</font></th>
+					<th style="width: 90px"><font style="text-align: center;">참가취소</font></th>
 				</tr>
 				<c:forEach  items='${list }' var='gx' >
 				<tr class="board_contents" >
-					<td style="padding-top: 15px;"><a style="color: gray;" href="groupinfo?gno=${gx.gno }">${gx.gtitle }</a></td>
+					<td style="padding-top: 15px;"><a style="color: #58ACFA;" href="groupinfo?gno=${gx.gno }">${gx.gtitle }</a></td>
 					<td>${gx.ghost }</td>
 					<td>${gx.gloc }</td>
 					<td>${gx.gday }</td>
@@ -29,7 +34,7 @@
 					<td>${gx.gsum }</td>
 					<%-- <td>${gx.gstatus }</td> --%>
 					<td>
-					<input type="button" name="cancel" class="sbutton" value="모임취소" style="display: " onclick="cancelGx('${gx.gno}')">
+					<input type="button" name="cancel" class="sbutton" value="참가취소" style="display: " onclick="cancelGx('${gx.gno}')">
 					</td>
 				</tr>
 				</c:forEach>

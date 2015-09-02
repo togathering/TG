@@ -28,7 +28,8 @@ public class LoginControl {
 			session.setAttribute("nick", nick);
 			//세션로그인
 		    session.setAttribute("id", id);
-			session.setAttribute("pass", pass);	
+			session.setAttribute("pass", pass);
+			dao.changeNewbie(id);
 			page = "redirect:main";
 		}else{
 			model.addAttribute("login", "fail");

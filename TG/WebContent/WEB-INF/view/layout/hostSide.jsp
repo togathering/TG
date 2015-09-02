@@ -30,7 +30,7 @@
 <body>
 	<div style="float: left; width: 80px; height: 200px; display: inline; margin: 0 2%; padding-left: 120px; padding-top: 30px;" >
 
-		<ul style="color: black; ">
+		<ul style="color: black;  list-style:none; background-color: #F2F2F2; ">
 			<li><a href="#" style="color: black" onclick="myhost()">모집중</a></li>
 			<li><a href="#" style="color: black" onclick="myhostend()">모집완료</a></li>
 		</ul>

@@ -31,7 +31,7 @@
 <body>
 	<div style="float: left; width: 80px; height:200px; display: inline; margin: 0 2%; padding-left: 120px; padding-top: 30px;" >
 
-		<ul style="color: black; background-color: pink;  ">
+		<ul style="color: black; background-color: #F2F2F2;  list-style:none;  ">
 			<li><a style="color: black; outline-color: pink;" onclick="mygxgroup()">모집중</a></li>
 			<li><a style="color: black" onclick="mygxgroupend()">모집완료</a></li>
 		</ul>

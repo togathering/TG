@@ -17,7 +17,13 @@ public class LoginDAO {
 		return false;		
 	}
 	
-
+	public boolean changeNewbie(String id){
+		int t = session.update("log.changeNewbie", id);
+		if(t==1){
+			return true;
+		}
+		return false;
+	}
 	
 	public String loginNick(String id){
 		String nick = session.selectOne("log.logInfo", id);
