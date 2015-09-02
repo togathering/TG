@@ -18,18 +18,18 @@
 .subject{
 	background-color: lightblue;
 	margin-left: 20px;
-	height: 40px;
 	width: 100%;
 	vertical-align: middle;
 	text-align: center;
 	font-size: 16px;
+	padding: 10px;
 
 }
 .contents{
 	margin-left: 30px;
 	font-size: 13px;
-	padding-bottom: 15px;
-	margin-bottom: 10px;
+	padding: 10px;
+	line-height: 30px;
 }
 
 </style>
