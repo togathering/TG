@@ -6,7 +6,7 @@
 		<div class="wrapper">
 		<br>
 		<div style="float:left; margin-left: 80px;">
-		<h4 style="text-align: left;">모임 종료</h4>
+		<h4 style="text-align: left;">지나간 모임</h4>
 		</div>
 			<br>
 			<table id="joinGx" style="width: 70%;"class="board_table">
