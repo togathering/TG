@@ -73,7 +73,7 @@
 
 </head>
 <body>
-	<header style="height: 50px">
+	<header style="height: 50px; background-color: white;">
 	<div class="wrapper5" style="height: 50px;">
 		<a href="main"><img src="img/logo2.png" class="logoSmall" alt="" title="" /></a>
 		<a href="#" class="hamburger"></a>
