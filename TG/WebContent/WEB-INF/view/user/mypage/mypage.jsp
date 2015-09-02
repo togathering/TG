@@ -144,66 +144,95 @@
 <body>
 	<div style="z-index: 2;"><tiles:insertAttribute name="header"/></div>
 	<div><tiles:insertAttribute name="myPageHeader"/></div>
-	<div id="menu" class="t">
+<!-- 	<div id="menu" class="t"> -->
 			
 	<div id="main" style="position: relative; margin-top: 10px; z-index: 1;">
-		<section id="container">
-		<div style="border: 1px solid gray; background-color: lightgray; width: 550px; height:30px; padding: 20px 20px; margin: 0 auto">
-		<h4 style="text-align: left;;">프로필</h4>
+		<section id="container"  style="width:700px;">
+		<div style="border: 1px solid gray; background-color: #F2F2F2; width: 650px; height:20px; padding: 20px 30px; margin: 0 auto">
+		<h4 style="text-align: left;">프로필 수정</h4>
 		</div>
 		
-		<div style="border:1px solid gray;">
+		<div style="border:1px solid gray; border-top:none; width:710px;">
 			<form name="hongkiat" id="hongkiat-form" method="post" action="myupdate">		
-			<div class="_1" >
-				<h5>닉네임</h5><h5>이메일</h5><h5>비밀번호</h5>
-				<h5>휴대전화</h5><h5>성별</h5><h5>생년월일</h5>
-				<h5>선호운동</h5><h5>활동지역</h5>
-				<h5>Instagram</h5><h5>Facebook</h5><h5>자기소개</h5>
-				<h5>프사</h5>
-			</div>
-			
+
 				<div id="wrapping" class="clearfix" style="margin-left: 30px">
 					<section id="aligned">
-	
-				<input type="text" id="nick" name="nick" class="txtinput" value="${my.nick }"><br>
-               	<input type="text" id="email" name="email" class="txtinput" readonly="readonly"   value="<%=session.getAttribute("id") %>"><br>
-               	<input type="password" id="pass" name="pass" class="txtinput" value="${my.pass }"><br>
-               	<input type="text" id="tel" name="tel" class="txtinput" value="${my.tel }"><br>
+				<div style="width:600px; padding: 10px 0px">
+				<label class="label_left">닉네임</label>
+				<span>
+				<input type="text" id="nick" name="nick" class="txtinput" value="${my.nick }">
+				</span>
+				</div>
+				<div style="width:600px; padding: 10px 0px">
+				<label class="label_left">이메일</label>
+               	<input type="text" id="email" name="email" class="txtinput" readonly="readonly"   value="<%=session.getAttribute("id") %>">
+               	</div>
+               	<div style="width:600px; padding: 10px 0px">
+				<label class="label_left">비밀번호</label>
+               	<input type="password" id="pass" name="pass" class="txtinput" value="${my.pass }">
+               	</div>
+               	<div style="width:600px; padding: 10px 0px">
+				<label class="label_left">휴대전화</label>
+               	<input type="text" id="tel" name="tel" class="txtinput" value="${my.tel }">
+               	</div>
+               	<div style="width:600px; padding: 10px 0px">
+				<label class="label_left">성별</label>
                	<span id="gender">
 	               	<select id="gender" name="gender" tabindex="" class="sel" onselect="show()">
 	               	</select>
                	</span>
-               	<br><br>
+               	</div>
+               	<div style="width:600px; padding: 10px 0px">
+				<label class="label_left">생년월일</label>
             	  	<select id="year" name="year" tabindex="" class="selmenu">
-            			 <span id="year"></span>
+            			 <!-- <span id="year"></span> -->
 	            	</select>
             	  	<select id="month" name="month" tabindex="" class="selmenu">
-            			 <span id="month"></span> 
+            			 <!-- <span id="month"></span>  -->
 	            	</select>
             	  	<select id="day" name="day" tabindex="" class="selmenu">
-            			 <span id="day"></span>  
+            			 <!-- <span id="day"></span>  --> 
 	            	</select>
-	            	   <br><br>
-         	 	<input type="text" name="favo" id="favo" tabindex="" class="txtinput" value="${my.favo }"><br>
-        		<input type="text" name="loc" id="loc" tabindex="" class="txtinput" value="${my.loc }"><br>
-        		<input type="text" name="insta" id="insta" tabindex="" class="txtinput" value="${my.insta }"><br>
-        		<input type="text" name="fbook" id="fbook" tabindex="" class="txtinput" value="${my.fbook }"><br>
+	            	</div>
+	            <div style="width:600px; padding: 10px 0px">
+				<label class="label_left">선호운동</label>	
+	            <input type="text" name="favo" id="favo" tabindex="" class="txtinput" value="${my.favo }">
+        		</div>
+        		<div style="width:600px; padding: 10px 0px">
+				<label class="label_left">활동지역</label>
+        		<input type="text" name="loc" id="loc" tabindex="" class="txtinput" value="${my.loc }">
+        		</div>
+        		<div style="width:600px; padding: 10px 0px">
+				<label class="label_left">Instagram</label>
+        		<input type="text" name="insta" id="insta" tabindex="" class="txtinput" value="${my.insta }">
+        		</div>
+        		<div style="width:600px; padding: 10px 0px">
+				<label class="label_left">Facebook</label>
+        		<input type="text" name="fbook" id="fbook" tabindex="" class="txtinput" value="${my.fbook }">
+        		</div>
+        		<div style="width:600px; padding: 10px 0px">
+				<label class="label_left">자기소개</label>
         		<textarea name="intro" id="intro" autocomplete="on"  tabindex="" class="txtblock" row="10" col="">
          		${my.intro }
          		</textarea>
-         		
-         		<input type="file" name="imgFile" id="imgFile" class="txtinput" value="">
-						<br style="clear: both;">
+         		</div>
+         		<div style="width:600px; padding: 10px 0px">
+				<label class="label_left">프로필사진</label>
+         		<input type="file" name="imgFile" id="imgFile" class="txtinput" value="">						
+						</div>
+						<!-- <br style="clear: both;"> -->
+						<div style="width: 98%">
 						<section id="buttons">
 							<input type="button" name="save" id="save" class="resetbtn"
 								value="수정하기" onclick="checkValue()" onresize="false"> <br style="clear: both;">
 						</section>
+						</div>
 					</section>
 				</div>
 				</form>
 				</div>
 			</section>		
-		</div>
+		<!-- </div> -->
 	</div>
 	<div style="position: relative; top: 30px"><tiles:insertAttribute name="footer"/></div>
 </body>

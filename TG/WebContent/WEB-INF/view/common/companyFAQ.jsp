@@ -14,6 +14,25 @@
 <title>show ToGathering</title>
 <link rel="stylesheet" type="text/css" media="all" href="css/styleMy.css">
 <link rel="stylesheet" type="text/css" media="all" href="css/responsiveMy.css">
+<style type="text/css">
+.subject{
+	background-color: lightblue;
+	margin-left: 20px;
+	height: 40px;
+	width: 100%;
+	vertical-align: middle;
+	text-align: center;
+	font-size: 16px;
+
+}
+.contents{
+	margin-left: 30px;
+	font-size: 13px;
+	padding-bottom: 15px;
+	margin-bottom: 10px;
+}
+
+</style>
 </head>
 <script type="text/javascript">
 	$(document).ready(function(){
@@ -36,14 +55,14 @@
 <body>
 	<div style="z-index: 2;"><tiles:insertAttribute name="header"/></div>
 	
-	<p id='introCompany' >회사 소개</p>
-	<p id="introduceCompany">
+	<p id='introCompany' class="subject" >회사 소개</p>
+	<p id="introduceCompany" class='contents'>
 	TG company 는 운동을 좋아하는 젊은 5인이 의기 투합하여 만든 Platform Service 입니다.<br>
 	아직은 부족하더라도 세계로 뻗어가는 TG의 모습을 기대해주시기 바랍니다.	
 	</p>
 	<hr>
-	<p id='introTG'>ToGathering 소개</p>
-	<p id="introduceToGathering">
+	<p id='introTG' class="subject">ToGathering 소개</p>
+	<p id="introduceToGathering" class='contents'>
 	 ToGathering 은 Social Exercising Platform Service를 제공해 드립니다. 
 	 <br>
 	 ToGathering은 together와 gathering의 합성어로 다함께 하는 모임을 의미합니다.
@@ -52,8 +71,8 @@
 	</p>
 	<hr>
 	
-	<p id='howToUse'>TG이용방법</p>
-	<p id= 'howToUseTG'>
+	<p id='howToUse' class="subject">TG이용방법</p>
+	<p id= 'howToUseTG' class='contents'>
 		1. 회원 가입 : 간단한 절차로 회원가입이 가능합니다. 
 		<br>
 		원활한 서비스 이용을 위해서는 상세정보 기입이 필요합니다.	 

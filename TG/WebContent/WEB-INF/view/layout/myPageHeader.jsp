@@ -11,7 +11,7 @@
 	<div id="side">
 	<ul class="mul">
  		<!-- <li class="mli"><a>알림</a></li> -->
-   		<li class="mli"><a href="mypage">프로필</a></li>
+   		<li class="mli"><a href="mypage">프로필 수정</a></li>
     	<li class="mli"><a href="mygx">참가내역</a></li>
    		<li class="mli"><a href="myhost">호스트내역</a></li>
   		<li class="mli"><a href="myFriend">친구목록</a></li>
