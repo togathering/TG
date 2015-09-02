@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.tg.common.beans.NoteBean;
@@ -40,16 +41,19 @@ public class ValidityController {
 	
 	
 	// 그룹만들기 금지 단어 체크
-	@RequestMapping("/banCheckforGxCreate")
+	@RequestMapping("/gxCreatebanCheck")
 	@ResponseBody	
 	public String banCheckforGxCreate(NoteBean noteBean){
 
 		// DB에서 금지어 리스트 조회	
 		List<String> banList = valDao.selectBans(); 
-				
+		System.out.println("금지어거르는 메소드는 실행");		
 		// 받아온 내용
 		String noteTitle = noteBean.getNoteTitle();
 		String noteContent = noteBean.getNoteContent();	
+		
+		System.out.println("모임명은 "+noteTitle);
+		System.out.println("모임소개는 "+noteContent);
 		
 		// 신호키 설정
 		String flag = "ok";
@@ -58,7 +62,7 @@ public class ValidityController {
 				flag = banList.get(i);
 				break;
 			}
-		}	
+		}	System.out.println("flag는 "+flag);
 		return flag;
 	}//banCheck
 }
