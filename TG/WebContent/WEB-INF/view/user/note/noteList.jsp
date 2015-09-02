@@ -9,61 +9,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>쪽지함</title>
 <link rel="stylesheet" type="text/css" href="css/tgBoard.css">
-<!-- <style type="text/css">
-a{
-text-decoration:none;
-font:bold;
-color:rgb(41, 128, 185);
-}
-th{
-font-size: 15px;
-color:white;;
-}
-td{
-font-size: 14px;
-color: #585858;
-}
-/* .board_div{
-float:left;
-width: 100%;
-margin: 0 auto;
-} */
-.board_table{
-width: 80%; 
-min-width:800px; 
-margin:1% auto; 
-border-collapse: collapse;"
-}
-.boardth{
-height:45px;
-background-color: rgb(245, 88, 88);
-}
-.board_contnets{
-border-bottom: 1px solid #2E2E2E;
-height: 47px; 
-font: bold;"
-}
-.search_input{
- height: 30px;
- width:30%;
- min-width:400px; 
- padding: 3px 6px; 
- font-size: 14px;"
-}
-.search_div{
-	float:left;
- 	width: 90%; 
- 	margin-left:10%;
- 	padding: 0 auto;
-}
-.paging_div{
-float:left;
- margin:15px auto;
- width:100%;
- text-align: center;
- 
-}
-</style> -->
 </head>
 
 <body>
@@ -96,24 +41,6 @@ float:left;
 				</tr>
 			</c:forEach>
 		</tbody>
-		
-
-		
-		<!-- 페이징 -->
-		<%-- <tfoot>
-			<tr class="paging_div" style="text-align: center;">
-				<td colspan="3" >
-					<c:if test="${ begin_page != 1 }"><a href="?page=${ begin_page - 1 }"><-이전</a></c:if>
-					<c:forEach begin="${ begin_page }" end="${ end_page }" var="page">
-						<c:choose>
-							<c:when test="${ page == pres_page }">${ page }</c:when>
-							<c:otherwise><a href="?page=${ page }">${ page }</a></c:otherwise>
-						</c:choose>
-					</c:forEach>
-					<c:if test="${ end_page != max_page }"><a href="?page=${ end_page + 1 }">다음-></a></c:if>
-				</td>
-			</tr>
-		</tfoot> --%>
 	</table>
 	
 			<!-- 페이징 -->

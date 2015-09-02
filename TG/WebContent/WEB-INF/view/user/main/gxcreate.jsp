@@ -27,6 +27,7 @@
 		var message = document.createFrm.message.value;
 		var tag = document.createFrm.tag.value;
 		var option = document.createFrm.joinOption.value;
+		var gcategory = document.createFrm.gcategory.value;
 		
 		if(trim(gdate).length==0){
 			alert('모임날짜를 선택해주세요');
@@ -51,6 +52,12 @@
 			document.createFrm.title.focus();
 			return;
 		}
+
+		if(trim(gcategory).length==0){
+			alert('카테고리를 선택해주세요.');
+			document.createFrm.gcategory.focus();
+			return;
+		}
 		
 		if(title.length >= 30){
 			alert('모임 명은 최대 30글자 까지 가능합니다');
@@ -68,11 +75,8 @@
 			alert("그룹 참여 방식을 선택해주세요");
 			document.createFrm.joinOption.focus();
 			return;
-		}
-		
-		
+		}		
 		document.createFrm.submit();
-		
 	}
 </script>
 <script type="text/javascript">
@@ -369,7 +373,6 @@
 						    }
 						</script>
 						<br> <br>
-						<br>
 						<div>
 							<h2>인원 수</h2>
 							<h4>※ 최대 9명 까지 참석 가능하며, 최소 2명이 모임 24시간 전까지 참여하지 않으면 모임이 자동
@@ -398,6 +401,22 @@
 							<option value="8">8</option>
 							<option value="9">9</option>
 						</select> <br>
+
+						<!-- 운동성격 선택 -->
+						<div>
+							<h2>모임 카테고리</h2>
+						</div>
+						<br> <select id="gcategory" name="gcategory" class="selmenu">
+							<option value="구기/단체/실내">구기/단체/실내</option>
+							<option value="구기/단체/실외">구기/단체/실외</option>
+							<option value="구기/개인/실내">구기/개인/실내</option>
+							<option value="구기/개인/실외">구기/개인/실외</option>
+							<option value="비구기/단체/실내">비구기/단체/실내</option>
+							<option value="비구기/단체/실외">비구기/단체/실외</option>
+							<option value="비구기/개인/실내">비구기/개인/실내</option>
+							<option value="비구기/개인/실외">비구기/개인/실외</option>
+						</select><br>
+						
 						<h2>제목과 초대글</h2>
 						<input type="text" name="title" id="title"
 							placeholder="ex)같이 달리실 분" autocomplete="on" tabindex=""
@@ -427,7 +446,7 @@
 						<br>
 						<br>
 						<h2>그룹 참여 방식</h2>
-						<input type="radio" name="joinOption" value="선착순참여">선착순참여
+						<input type="radio" name="joinOption" value="선착순참여" checked="checked">선착순참여
 						<input type="radio" name="joinOption" value="방장권한부여">방장권한부여
 						<br>
 						<br>

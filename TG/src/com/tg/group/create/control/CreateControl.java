@@ -76,7 +76,10 @@ public class CreateControl{
 		String gintro = multi.getParameter("message");
 		String gtag = multi.getParameter("tag");
 		String goption = multi.getParameter("joinOption");
-
+		String gcategory = multi.getParameter("gcategory");
+		
+		System.out.println("받아온 카테고리명은,"+ gcategory);
+		
 		if(gimg == null){
 			gimg = "Tg_Default_Img.png";
 		}
@@ -91,6 +94,9 @@ public class CreateControl{
 		bean.setGtag(gtag);
 		bean.setGimg(gimg);
 		bean.setGoption(goption);
+		bean.setGcategory(gcategory);
+		
+		
 		
 		if(dao.create(bean)){
 			System.out.println("모임생성성공");
