@@ -65,7 +65,7 @@ body{
 .wrapper4 li ul{
 	background: #FA5858;
 	display:none; /* 평상시에는 드랍메뉴가 안보이게 하기 */
-	height:95px;
+	height:210px;
 	padding:1px;
 	margin:0.5px 10px 10px 0px;
 	border:0px;
@@ -86,7 +86,7 @@ body{
 	bottom:15px;
 	padding:5px 5px 10px 5px;
 	margin: 5px auto;
-	height: 19px;
+	height: 17px;
 }
 .wrapper4 li ul li:HOVER a{
 	background: #F5A9A9;; /* 마우스 커서 올리면 드랍메뉴 보이게 하기 */
@@ -113,7 +113,7 @@ body{
 .wrapper5 li ul{
 	background: #FA5858;
 	display:none; /* 평상시에는 드랍메뉴가 안보이게 하기 */
-	height:65px;
+	height:225px;
 	padding:1px;
 	margin:0px 10px 0px 0px;
 	border:0px;
