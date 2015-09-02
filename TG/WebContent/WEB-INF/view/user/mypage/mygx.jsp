@@ -35,6 +35,6 @@
 	<section class="listings" id="section">
 		
 	</section> <!--  end listing section  -->
-	<div style="position: relative; top: 50px"><tiles:insertAttribute name="footer"/></div>
+	<div style="position: relative; top: 130px"><tiles:insertAttribute name="footer"/></div>
 </body>
 </html>

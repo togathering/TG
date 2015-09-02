@@ -83,7 +83,9 @@
 		<tiles:insertAttribute name="myPageHeader"/>
 	</div>
 	<div align="left">
+		<div style="">
 		<h3>마이 프렌드</h3>
+		</div>
 		<hr>
 	
 		<h4>친구수락하기</h4>
