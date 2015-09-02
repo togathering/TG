@@ -35,11 +35,13 @@
 		
 		
 				var fileName =document.getElementById("imgFile").value;
-				var ext = fileName.substring(fileName.lastIndexOf(".")+1);
-				if(ext !=".jpg" &&  ext !=".JPEG" && ext !=".gif" && ext !="png"){
-					alert("이미지 파일 업로드시 확장자는 jpg,JPEG,gif,png 만 가능합니다.");
-					document.getElementById("imgFile").value="";
-					return;
+				if(fileName){
+					var ext = fileName.substring(fileName.lastIndexOf(".")+1);
+					if(ext !="jpg" &&  ext !="JPEG" && ext !="gif" && ext !="png"){
+						alert("이미지 파일 업로드시 확장자는 jpg,JPEG,gif,png 만 가능합니다.");
+						document.getElementById("imgFile").value="";
+						return;
+					}					
 				}
 			
 			document.hongkiat.submit();
@@ -212,9 +214,7 @@
         		</div>
         		<div style="width:600px; padding: 10px 0px">
 				<label class="label_left">자기소개</label>
-        		<textarea name="intro" id="intro" autocomplete="on"  tabindex="" class="txtblock" row="10" col="">
-         		${my.intro }
-         		</textarea>
+        		<textarea name="intro" id="intro" autocomplete="on"  tabindex="" class="txtblock" row="10" col="">${my.intro }</textarea>
          		</div>
          		<div style="width:600px; padding: 10px 0px">
 				<label class="label_left">프로필사진</label>

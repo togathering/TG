@@ -55,7 +55,7 @@ public class MyPageControl {
 		m.setId(id);
 		dao.upProfile(m);
 		
-		return ".main";
+		return "redirect:main";
 		
 		
 	}
