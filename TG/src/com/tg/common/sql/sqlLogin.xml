@@ -11,4 +11,9 @@
 	<update id="changeNewbie" parameterType="String">
 		update member set newbie = 'nonewbie' where id = #{id}
 	</update>
+	
+	<!-- 뉴비 체크 -->
+	<select id="checkNewbie" parameterType="java.lang.String" resultType="java.lang.String">
+		select newbie from member where id=#{id}
+	</select>
 </mapper>

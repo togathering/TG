@@ -40,8 +40,8 @@ color: #424242;
 	<div style="float: left; width: 80px;  background-color: #FAFAFA;  height: 300px; display: inline; margin: 0 2%; padding-left: 120px; padding-top: 30px;" >
 
 		<ul class="ulHostside">
-			<li><a href="#" style="color: black" onclick="myhost()">모집중</a></li>
-			<li><a href="#" style="color: black" onclick="myhostend()">모집완료</a></li>
+			<li><a href="#" style="color: black" onclick="myhost()">예정된 모임</a></li>
+			<li><a href="#" style="color: black" onclick="myhostend()">지나간 모임</a></li>
 		</ul>
 	</div>
 </body>

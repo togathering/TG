@@ -29,8 +29,19 @@ public class LoginControl {
 			//세션로그인
 		    session.setAttribute("id", id);
 			session.setAttribute("pass", pass);
-			dao.changeNewbie(id);
-			page = "redirect:main";
+			
+			String status = dao.checkNewbie(id);
+			
+			System.out.println("로그인 컨트롤러 실행결과는 "+status);
+			
+			if(status.equals("newbie")){
+				page = "redirect:research";
+			
+			} else{
+				// dao.changeNewbie(id);
+				page = "redirect:main";				
+			}
+			System.out.println("페이지는 "+page);
 		}else{
 			model.addAttribute("login", "fail");
 			page = ".login";
