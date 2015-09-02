@@ -74,9 +74,9 @@ div#side{
 #container { 
 display: block;
 /* max-width: 800px; */
-margin: 10px auto; 
-margin-top: 5px; 
-padding: 20px 15px; 
+ margin: 0px auto; 
+/*margin-top: 5px;  */
+/* padding: 20px 15px;  */
 background: #fff; 
 border-radius: 6px; 
 -webkit-border-radius: 6px; 

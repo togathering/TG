@@ -12,21 +12,23 @@
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <meta name="viewport"	content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <title>show ToGathering</title>
-<link rel="stylesheet" type="text/css" media="all" href="css/styleMy.css">
-<link rel="stylesheet" type="text/css" media="all" href="css/responsiveMy.css">
+<!-- <link rel="stylesheet" type="text/css" media="all" href="css/styleMy.css">
+<link rel="stylesheet" type="text/css" media="all" href="css/responsiveMy.css"> -->
 <style type="text/css">
 .subject{
-	background-color: lightblue;
-	margin-left: 20px;
-	width: 100%;
+	background-color: #F78181;
+	margin: 10px auto;
+	width: 700px;
 	vertical-align: middle;
 	text-align: center;
-	font-size: 16px;
+	font-size: 15px;
 	padding: 10px;
-
+	cursor: pointer;
 }
 .contents{
-	margin-left: 30px;
+	background-color: #F2F2F2;
+	margin: 10px auto;
+	width:700px;
 	font-size: 13px;
 	padding: 10px;
 	line-height: 30px;
@@ -54,13 +56,15 @@
 </script>
 <body>
 	<div style="z-index: 2;"><tiles:insertAttribute name="header"/></div>
-	
+	<div>
 	<p id='introCompany' class="subject" >회사 소개</p>
 	<p id="introduceCompany" class='contents'>
 	TG company 는 운동을 좋아하는 젊은 5인이 의기 투합하여 만든 Platform Service 입니다.<br>
 	아직은 부족하더라도 세계로 뻗어가는 TG의 모습을 기대해주시기 바랍니다.	
 	</p>
+	</div>
 	<hr>
+	<div>
 	<p id='introTG' class="subject">ToGathering 소개</p>
 	<p id="introduceToGathering" class='contents'>
 	 ToGathering 은 Social Exercising Platform Service를 제공해 드립니다. 
@@ -69,9 +73,8 @@
 	 <br>
 	 저희는 단순한 O2O service가 아닌 Interest & Culture Platform Service 를 지향합니다.	  
 	</p>
+	</div>
 	
-	
-	
-	<div style="position: relative; top: 30px"><tiles:insertAttribute name="footer"/></div>
+	<div style="position: relative; top: 105px"><tiles:insertAttribute name="footer"/></div>
 </body>
 </html>
