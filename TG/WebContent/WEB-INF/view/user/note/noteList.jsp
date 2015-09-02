@@ -131,6 +131,6 @@ float:left;
 	</div>
 	
 	<!-- г╙ем -->
-	<div style="position: relative; top: 50px"><tiles:insertAttribute name="footer"/></div>
+	<div style="position: relative; top: 280px"><tiles:insertAttribute name="footer"/></div>
 </body>
 </html>

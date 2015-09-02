@@ -41,7 +41,7 @@
 					<p>전화 문의는 AM 10:00~ PM 19:00  <br>02-45*7-5678번으로 해주세요~ <br>오늘도 힘차게 ToGathering~!!!</p>
 					<ul>
 						<li class="sns"><a href="https://www.facebook.com/ToGatheringkr" class="facebook" target="_blank"></a></li>
-						<li class="sns"><a href="http://twitter.com/ class="twitter" target="_blank"></a></li>
+						<li class="sns"><a href="http://twitter.com/" class="twitter" target="_blank"></a></li>
 						<li class="sns"><a href="http://plus.google.com/" class="google" target="_blank"></a></li>
 						<li class="sns"><a href="#" class="skype"></a></li>
 						<li/>
