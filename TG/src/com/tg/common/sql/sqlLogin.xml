@@ -8,4 +8,7 @@
 	<select id="logInfo" parameterType="java.lang.String" resultType="java.lang.String">
 		select nick from member where id=#{value}
 	</select>
+	<update id="changeNewbie" parameterType="String">
+		update member set newbie = 'nonewbie' where id = #{id}
+	</update>
 </mapper>
