@@ -23,8 +23,8 @@
 		var loc = document.createFrm.loc.value;
 		var min = document.createFrm.min.value;
 		var max = document.createFrm.max.value;
-		var title = document.createFrm.title.value;
-		var message = document.createFrm.message.value;
+		var noteTitle = document.createFrm.title.value;
+		var noteContent = document.createFrm.message.value;
 		var tag = document.createFrm.tag.value;
 		var option = document.createFrm.joinOption.value;
 		var gcategory = document.createFrm.gcategory.value;
@@ -47,7 +47,7 @@
 			return;
 		}
 		
-		if(trim(title).length==0){
+		if(trim(noteTitle).length==0){
 			alert('모임 명을 입력해주세요');
 			document.createFrm.title.focus();
 			return;
@@ -59,13 +59,13 @@
 			return;
 		}
 		
-		if(title.length >= 30){
+		if(noteTitle.length >= 30){
 			alert('모임 명은 최대 30글자 까지 가능합니다');
 			document.createFrm.title.focus();
 			return;
 		}
 		
-		if(message.length >= 300){
+		if(noteContent.length >= 300){
 			alert('300글자 이내로 적어주세요');
 			document.createFrm.message.focus();
 			return;
@@ -75,8 +75,20 @@
 			alert("그룹 참여 방식을 선택해주세요");
 			document.createFrm.joinOption.focus();
 			return;
-		}		
-		document.createFrm.submit();
+		}
+		
+		$.ajax({
+			url:'gxCreatebanCheck',
+			data:{noteContent:noteContent, noteTitle:noteTitle, tag:tag},
+		    type:'post',
+		    success:function(data){
+		    	if(data=='ok') document.createFrm.submit();
+		    	else alert("[ "+data+' ]는(은) 금지어입니다. 금지어를 지우고 다시 시도해주세요.');
+		    	document.frm.title.fucus();
+		    }
+		});
+		
+		/* document.createFrm.submit(); */
 	}
 </script>
 <script type="text/javascript">
@@ -453,12 +465,14 @@
 						<br>
 						</section>
 						<section id="buttons">
-							<input type="button" class="button" name="save" style="width: 150px;"
-								value="모임 만들기" onclick="checkValue()"> <br style="clear: both;">
+							<!-- <input type="button" class="button" name="save" style="width: 150px;"
+								value="모임 만들기" onclick="checkValue()"> <br style="clear: both;"> -->
 						</section>
 					</section>
 				</div>
 			</form>
+		<input type="submit" class="button" name="save" style="width: 150px;"
+			value="모임 만들기" onclick="checkValue()"> <br style="clear: both;">
 		</section>		
 	</div>
 

@@ -8,7 +8,6 @@
 	<select id="selectList" resultType="String">
 		select ban from banLanguage
 	</select>
-
 </mapper>
 
 
