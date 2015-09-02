@@ -152,7 +152,7 @@ margin: 0 auto;
 					<tr class="board_contents">
 						<td align="center"><a class="atag" href="#"
 							onClick="window.open('http://localhost/TG/profile?id=${member.mid }','name',
-								'width=850,height=400'); return false">
+								'width=880,height=600'); return false">
 								${member.mid } </a></td>
 						<td align="center">${member.mnick }</td>
 						<td align="center">${member.pp }</td>

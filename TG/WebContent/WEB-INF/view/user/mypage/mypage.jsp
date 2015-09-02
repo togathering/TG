@@ -144,21 +144,22 @@
 <body>
 	<div style="z-index: 2;"><tiles:insertAttribute name="header"/></div>
 	<div><tiles:insertAttribute name="myPageHeader"/></div>
-	
-	<div id="menu" class="t"><br>
-			<h2>프로필</h2>
-	<div id="main"
-		style="position: relative; top: 10px; margin-top: 10px; z-index: 1;">
+	<div id="menu" class="t">
+			
+	<div id="main" style="position: relative; margin-top: 10px; z-index: 1;">
 		<section id="container">
-			<span class="chyron"><em></em></span>
-			<form name="hongkiat" id="hongkiat-form" method="post" action="myupdate">
-
-			<div class="_1">
-				<h3>닉네임</h3><br><h3>이메일</h3><br><h3>비밀번호</h3><br>
-				<h3>휴대전화</h3><br><h3>성별</h3><br><h3>생년월일</h3><br>
-				<h3>선호운동</h3><br><h3>활동지역</h3><br>
-				<h3>Instagram</h3><br><h3>Facebook</h3><br><h3>자기소개</h3>
-				<br><br><br><br><br><br><br><br><br><br><br><br><br><br><h3>프사</h3>
+		<div style="border: 1px solid gray; background-color: lightgray; width: 550px; height:30px; padding: 20px 20px; margin: 0 auto">
+		<h4 style="text-align: left;;">프로필</h4>
+		</div>
+		
+		<div style="border:1px solid gray;">
+			<form name="hongkiat" id="hongkiat-form" method="post" action="myupdate">		
+			<div class="_1" >
+				<h5>닉네임</h5><h5>이메일</h5><h5>비밀번호</h5>
+				<h5>휴대전화</h5><h5>성별</h5><h5>생년월일</h5>
+				<h5>선호운동</h5><h5>활동지역</h5>
+				<h5>Instagram</h5><h5>Facebook</h5><h5>자기소개</h5>
+				<h5>프사</h5>
 			</div>
 			
 				<div id="wrapping" class="clearfix" style="margin-left: 30px">
@@ -200,6 +201,7 @@
 					</section>
 				</div>
 				</form>
+				</div>
 			</section>		
 		</div>
 	</div>
