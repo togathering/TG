@@ -18,12 +18,12 @@
 		var ul = document.getElementById("ul");
 		if(nick!=''){
 			var msg = '<li><a href="#">'+nick+'▽</a>';
-				  msg += '<ul><li><a href="#" onclick="">모임 목록</a></li>';
-				  msg += '<li><a href="#" onclick="빈값()">원해요 리스트</a></li>';
-				  msg += '<li><a href="#" onclick="빈값()">친구 리스트</a></li>';
+				  msg += '<ul><li><a href="mygx" onclick="">모임 목록</a></li>';
+				  msg += '<li><a href="#" onclick="빈값()">위시리스트</a></li>';
+				  msg += '<li><a href="myFriend" onclick="빈값()">친구 리스트</a></li>';
 				  msg += '<li><a href="#" onclick="mypage()">프로필 수정</a></li>';
 				  msg += '<li><a href="#" onclick="logOut()">로그아웃</a></li></ul></li>';
-				  msg += '<li><a href="#">메세지</a></li>';
+				  msg += '<li><a href="noteList">메세지</a></li>';
 				  msg += '<li><a href="groupsearch">모임찾기</a></li>';
 				  msg += '<li><a href="userlist">사람찾기</a></li>';
 			ul.innerHTML = msg;

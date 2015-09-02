@@ -8,7 +8,7 @@ body {
 
 /* a { color: #4681da; text-decoration: none; } */
 /* a:hover { text-decoration: underline; } */
-
+/* 
 h1 {
 letter-spacing: -0.04em;
 font-weight: bold;
@@ -40,7 +40,7 @@ h4 {
 letter-spacing: -0.04em;
 font-size: 1.54em;
 margin-bottom: 10px;
-}
+} */
 .label_left{
 	font-size:15px;
 	width:100px;
@@ -50,9 +50,9 @@ margin-bottom: 10px;
 	padding-top:11px;
 	
 }
-
+/* 
 span.chyron { font-size: 5.2em; padding-top: 10px; }
-
+ */
 /** main blocks **/
 
 
@@ -254,10 +254,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 border-color: #aeaeae;
 box-shadow: inset 0 1px 0 rgba(256,256,256,0.4),0 1px 3px rgba(0,0,0,0.5);
 }
-
+/* 
 #one .txtinput { 
 display: block;
-/* font-family: "Helvetica Neue", Arial, sans-serif; */
+font-family: "Helvetica Neue", Arial, sans-serif;
 border-style: solid;
 border-width: 1px;
 border-color: #dedede;
@@ -275,7 +275,7 @@ box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset, 0 0 8px rgba(41, 92, 161, 0.6);
 -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset, 0 0 8px rgba(41, 92, 161, 0.6);
 -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset, 0 0 8px rgba(41, 92, 161, 0.6);
 outline: 0 none; 
-}
+} */
 
 /** @group clearfix **/
 .clearfix:after { content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }

@@ -76,14 +76,14 @@
 	<definition name=".myfriend" template="/WEB-INF/view/user/mypage/myfriend.jsp">
 		<put-attribute name="header" value="/WEB-INF/view/layout/headerSmaller.jsp" />
 		<put-attribute name="footer" value="/WEB-INF/view/layout/footer.jsp" />
-		<put-attribute name="myPageHeader" value="/WEB-INF/view/layout/myPageHeader.jsp" />
+		<put-attribute name="myPageHeader" value="/WEB-INF/view/layout/friendListHeader.jsp" />
 	</definition>
 
 	<!-- 참가내역 -->
 	<definition name=".mygx" template="/WEB-INF/view/user/mypage/mygx.jsp">
 		<put-attribute name="header" value="/WEB-INF/view/layout/headerSmaller.jsp" />
 		<put-attribute name="footer" value="/WEB-INF/view/layout/footer.jsp" />
-		<put-attribute name="myPageHeader" value="/WEB-INF/view/layout/myPageHeader.jsp" />
+		<put-attribute name="myPageHeader" value="/WEB-INF/view/layout/gatheringListHeader.jsp" />
 		<put-attribute name="gxSide" value="/WEB-INF/view/layout/gxSide.jsp" />
 	</definition>
 	
@@ -91,7 +91,7 @@
 	<definition name=".myhost" template="/WEB-INF/view/user/mypage/myhost.jsp">
 		<put-attribute name="header" value="/WEB-INF/view/layout/headerSmaller.jsp" />
 		<put-attribute name="footer" value="/WEB-INF/view/layout/footer.jsp" />
-		<put-attribute name="myPageHeader" value="/WEB-INF/view/layout/myPageHeader.jsp" />
+		<put-attribute name="myPageHeader" value="/WEB-INF/view/layout/gatheringListHeader.jsp" />
 		<put-attribute name="hostSide" value="/WEB-INF/view/layout/hostSide.jsp" />
 	</definition>
 	

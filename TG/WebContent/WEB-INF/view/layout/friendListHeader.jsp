@@ -11,8 +11,8 @@
 	<div id="side">
 	<ul class="mul">
  		<!-- <li class="mli"><a>알림</a></li> -->
-   		<li class="mli"><a href="mypage">프로필 수정</a></li>
-  		<li class="mli"><a href="invite">초대그룹</a></li>
+   		<li class="mli"><a href="myhost">친구목록</a></li>
+    	<li class="mli"><a href="invite">초대받은 그룹</a></li>
    </ul>
    </div>
 </body>
