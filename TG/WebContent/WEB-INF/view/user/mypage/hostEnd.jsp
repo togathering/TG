@@ -5,7 +5,7 @@
 		<div class="wrapper">
 		<br>
 		<div style="float:left; margin-left: 80px;">
-		<h4 style="text-align: left;">종료된 모임(호스트)</h4>
+		<h4 style="text-align: left;">지나간 모임</h4>
 		<br>
 			<%-- <font color="#add">현재 ${hNum}개의 모임의 호스트를 맡고있습니다.</font><br><br> --%>
 			</div>
