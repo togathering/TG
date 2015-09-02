@@ -357,7 +357,7 @@ a:hover{
 		<h2 align="center"> ${group.gtitle} </h2>
 		<h4 align="center">모임 소개</h4><br>
 	</div> --%>
-		<div style=" width: 630px; height:500px; margin: 10px 20px 10px 150px; text-align:left; LINE-HEIGHT: 160%;
+		<div style=" width: 620px; height:500px; margin: 10px 20px 10px 150px; text-align:left; LINE-HEIGHT: 160%;
 					padding: 25px 20px; background-color: #d9d9d9; float: left; border: 1px solid lightgray;">
 			<!-- <pre style="width:1050px; background-color: #d9d9d9; margin: 0 auto; padding: 20px 50px;" > -->
 			<pre style="text-align: left;">	${group.gintro}</pre>

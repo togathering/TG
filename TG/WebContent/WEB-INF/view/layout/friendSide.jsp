@@ -26,7 +26,7 @@ function friendList() {
 <title>Insert title here</title>
 </head>
 <body>
-	<div style="float: left; width: 100px;  background-color: #F2F2F2;  height: 300px; display: inline; margin: 0 2%; padding-left: 120px; padding-top: 30px;" >
+	<div style="float: left; width: 100px;  background-color: #FAFAFA;  height: 300px; display: inline; margin: 0 2%; padding-left: 120px; padding-top: 30px;" >
 
 		<ul style="color: black;  list-style:none; ">
 			<li><a href="#" style="color: black" onclick="friendReq()">친구목록</a></li>
