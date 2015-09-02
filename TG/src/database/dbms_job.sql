@@ -72,11 +72,11 @@ begin
 					p_tel(k) := id_idx.tel;
 					p_id(k) := id_idx.pid;
 					insert into note (noteNo, senderId, receiverId, noteTitle, noteContent, noteDate) 
-						values (gxgroup_seq.nextval, p_ghost(idx), id_idx.pid, '모임 1일전 입니다', 
+						values (note_seq.nextval, p_ghost(idx), id_idx.pid, '모임 1일전 입니다', 
 								p_title(idx)||' 모임이 '|| to_char(p_day(idx),'yyyy-mm-dd-hh24-mi')||'에 개최 예정입니다', sysdate);
 				else
 					insert into note (noteNo, senderId, receiverId, noteTitle, noteContent, noteDate) 
-						values (gxgroup_seq.nextval, p_ghost(idx), id_idx.pid, '모임이 최소인원을 충족하지 못하여 취소되었습니다', 
+						values (note_seq.nextval, p_ghost(idx), id_idx.pid, '모임이 최소인원을 충족하지 못하여 취소되었습니다', 
 								p_title(idx)||' 모임이 최소인원 '|| p_min(idx) ||'명을 충족하지 못하여서 취소되었습니다', sysdate);
 					
 				end if;
@@ -90,13 +90,13 @@ begin
 		if p_min(idx) <= p_sum(idx) then
 			
 			insert into note (noteNo, senderId, receiverId, noteTitle, noteContent, noteDate) 
-						values (gxgroup_seq.nextval, p_ghost(idx), p_ghost(idx), '모임 1일전 입니다', 
+						values (note_seq.nextval, p_ghost(idx), p_ghost(idx), '모임 1일전 입니다', 
 								p_title(idx)||' 모임이 '|| to_char(p_day(idx),'yyyy-mm-dd-hh24-mi')||'에 개최 예정입니다'||chr(10)||chr(13)||'참여인원 정보입니다'||chr(13)||chr(10)|| msg, sysdate);
 	
 
 		else
 			insert into note (noteNo, senderId, receiverId, noteTitle, noteContent, noteDate) 
-						values (gxgroup_seq.nextval, p_ghost(idx), p_ghost(idx), '모임이 최소인원을 충족하지 못하여 취소되었습니다', 
+						values (note_seq.nextval, p_ghost(idx), p_ghost(idx), '모임이 최소인원을 충족하지 못하여 취소되었습니다', 
 								p_title(idx)||' 모임이 최소인원 '|| p_min(idx) ||'명을 충족하지 못하여서 취소되었습니다', sysdate);
 		end if;
 

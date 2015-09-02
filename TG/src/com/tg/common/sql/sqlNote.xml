@@ -7,7 +7,7 @@
 	<!-- 쪽지보내기 -->
 	<insert id="insert" parameterType="com.tg.common.beans.NoteBean">
 		insert into note (noteNo, senderId, receiverId, noteTitle, noteContent, noteDate) 
-				values (gxgroup_seq.nextval, #{senderId}, #{receiverId}, #{noteTitle}, 
+				values (note_seq.nextval, #{senderId}, #{receiverId}, #{noteTitle}, 
 						#{noteContent}, sysdate)
 	</insert>
 	
