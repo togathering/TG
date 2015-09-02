@@ -85,8 +85,8 @@
 		  <br>
 		  <input type="text" id="message">
 		  <input type="button" id="sendBtn" value="Àü¼Û">
-		</center>
 		
+		</center>
 		
 		<div style="position: relative; top: 30px"><tiles:insertAttribute name="footer"/></div>
 </body>

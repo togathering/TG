@@ -5,6 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<link rel="stylesheet" type="text/css" href="css/tgBoard.css">
 <title>Insert title here</title>
 </head>
 <script type="text/javascript" src="tg/js/jquery.js"></script>

@@ -5,8 +5,8 @@
 		<div class="wrapper">
 		<br>
 		<div style="float:left; margin-left: 80px;">
-		<h4 style="text-align: left;">호스트 내역</h4>
-			<font color="#F6CECE">현재 ${hNum}개의 모임의 호스트를 맡고있습니다.</font>
+		<h4 style="text-align: left;">예정된 모임</h4>
+			<font color="#F78181">현재 ${hNum}개의 모임의 호스트를 맡고있습니다.</font>
 			</div>
 			<div>
 			<table id="hostGx" style="width: 70%;" class="board_table">

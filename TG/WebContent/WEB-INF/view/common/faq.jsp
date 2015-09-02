@@ -32,17 +32,25 @@ $(document).ready(function(){
 });
 </script>
 <style> 
-.panel, .flip {
+.panel {
     padding: 5px;
-    text-align: center;
-    background-color: #e5eecc;
-    border: solid 1px #c3c3c3;
-    width: 70%;
-    margin-left: 30%;
+    text-align: left;
+    background-color: #F2F2F2;
+    /* border: solid 1px #c3c3c3; */
+    width: 700px;
+    margin: 0px 0px 0px 400px;
 }
+ .flip{
+	padding: 5px;
+    text-align: center;
+    background-color: #F78181;
+    /* border: solid 1px #c3c3c3; */
+    width: 700px;
+    margin: 0px 0px 0px 400px;
+ 	cursor: pointer;
+ }
 
 .panel {
-    padding: 50px;
     display: none;
     text-align: left;
 }
@@ -52,7 +60,7 @@ $(document).ready(function(){
 	<div style="position: relative;"><tiles:insertAttribute name="faqside"/></div> 
 
 <form id="faqSheet"> 
-
+	<div style="">
 	<div id="flip1" class="flip">ToGathering은 무엇을 하는 사이트인가요?</div>
 	<div id="panel1" class="panel">
 	 저희 ToGathering 은 Social Exercising O2O(Online to Offline) Service를 제공합니다.<br>
@@ -97,7 +105,8 @@ $(document).ready(function(){
 	 기타 홈페이지의 모임을 보시는 중, 혹은 모임참여 후  문제가 발생하셨다면,<br>
 	  하단의 신고하기 버튼을 통해 즉각 신고 부탁드립니다.
 	</div>
+	</div>
 </form>
-	<div style="position: relative; top: 30px"><tiles:insertAttribute name="footer"/></div>
+	<div style="position: relative; top: 250px"><tiles:insertAttribute name="footer"/></div>
 </body>
 </html>

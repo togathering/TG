@@ -31,4 +31,12 @@ public class LoginDAO {
 		return nick;
 	}
 	
+	public String checkNewbie(String id){
+		System.out.println("되냐1");
+		String status = session.selectOne("log.checkNewbie", id);
+		System.out.println("되냐2");
+		System.out.println("checkNewbie() 실행결과는 "+status);
+		return status;
+	}
+	
 }

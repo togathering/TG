@@ -64,7 +64,7 @@ span.chyron { font-size: 5.2em; padding-top: 10px; }
 @media (max-width:1450px){}
 div#side{ 
 	 height:30px;
-	 background:#424242; 
+	 background:#6E6E6E; 
 	 top:0; 
 	 left:0; 
 	 margin-left:0px; 
@@ -74,9 +74,9 @@ div#side{
 #container { 
 display: block;
 /* max-width: 800px; */
-margin: 10px auto; 
-margin-top: 5px; 
-padding: 20px 15px; 
+ margin: 0px auto; 
+/*margin-top: 5px;  */
+/* padding: 20px 15px;  */
 background: #fff; 
 border-radius: 6px; 
 -webkit-border-radius: 6px; 
@@ -244,7 +244,7 @@ text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
 }
 
 #buttons #resetbtn:hover {
-text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);	
+text-shadow: 0 1px 1px rgba(245, 245, 245, 0.75);	
 color: #818181;
 background-color: #fff;
 background-image: -moz-linear-gradient(top,  rgb(255,255,255) 2%, rgb(244,244,244) 2%, rgb(229,229,229) 100%);

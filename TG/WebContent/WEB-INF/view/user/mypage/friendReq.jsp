@@ -1,7 +1,31 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<script>
+function acceptFriend(acceptId) {
+	$.ajax({url:"acceptFriend", type:"POST", data: "fid="+acceptId, dataType:"text",
+		success:function(data){
+			reqLoad();
+			friendLoad();
+		}
+	});
+}
 
+function rejectFriend(rejectId) {		
+	$.ajax({url:"rejectFriend", type:"POST", data: "rejectId="+rejectId, dataType:"text",
+		success:function(data){
+			reqLoad();
+			friendLoad();
+		}
+	});
+}
+<script type="text/javascript">
+
+$(document).ready(function(){
+	reqLoad();
+});
+
+</script>
 			<form id="form" style="padding-top: 20px; text-align: center;">
 			<div class="wrapper">
 				<br>
