@@ -23,12 +23,21 @@ function friendList() {
 	});
 }
 </script>
+<style>
+.ulHostside{
+color: #424242; 
+ list-style:none;
+}
+.ulHostside li{
+	margin: 15px 0px; 
+}
+</style>
 <title>Insert title here</title>
 </head>
 <body>
 	<div style="float: left; width: 100px;  background-color: #FAFAFA;  height: 300px; display: inline; margin: 0 2%; padding-left: 120px; padding-top: 30px;" >
 
-		<ul style="color: black;  list-style:none; ">
+		<ul class="ulHostside">
 			<li><a href="#" style="color: black" onclick="friendReq()">模备格废</a></li>
 			<li><a href="#" style="color: black" onclick="friendList()">模备夸没格废</a></li>
 		</ul>
