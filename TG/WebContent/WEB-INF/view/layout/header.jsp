@@ -24,6 +24,7 @@
 				  msg += '<li><a href="#" onclick="mypage()">프로필 수정</a></li>';
 				  msg += '<li><a href="#" onclick="logOut()">로그아웃</a></li></ul></li>';
 				  msg += '<li><a href="#">메세지</a></li>';
+				  msg += '<li><a href="groupsearch">모임찾기</a></li>';
 				  msg += '<li><a href="userlist">사람찾기</a></li>';
 			ul.innerHTML = msg;
 			
