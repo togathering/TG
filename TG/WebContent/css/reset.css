@@ -62,6 +62,7 @@
         color: #ffffff;
         text-decoration:none;
         font-family: 'Nanum Gothic', serif;
+        cursor: pointer;
     }
 
     /* change colours to suit your needs */
