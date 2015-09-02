@@ -53,6 +53,7 @@ public class LoginControl {
 				ch.afterConnectionEstablished(wSession);
 			    System.out.println("["+wSession.getId()+ "] ¿¬°á");
 			    users.put((String)session.getAttribute("id") ,  wSession);
+			    session.setAttribute("map", users);
 			
 			} catch (Exception e) {
 				e.printStackTrace();

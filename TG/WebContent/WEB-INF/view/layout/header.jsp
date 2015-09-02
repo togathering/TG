@@ -26,6 +26,7 @@
 				  msg += '<li><a href="noteList">메세지</a></li>';
 				  msg += '<li><a href="groupsearch">모임찾기</a></li>';
 				  msg += '<li><a href="userlist">사람찾기</a></li>';
+				  msg += '<li><a href="chat">채팅</a></li>';
 			ul.innerHTML = msg;
 			
 		}else{
