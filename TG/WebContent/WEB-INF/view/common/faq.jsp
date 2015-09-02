@@ -16,10 +16,31 @@
 <link rel="stylesheet" type="text/css" media="all" href="css/responsiveMy.css">
 </head>
 <script type="text/javascript">
-
+$(document).ready(function(){
+    $("#flip").click(function(){
+        $("#panel").slideToggle("slow");
+    });
+});
 </script>
+<style> 
+#panel, #flip {
+    padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+}
+
+#panel {
+    padding: 50px;
+    display: none;
+}
+</style>
 <body>
 	<div style="z-index: 2;"><tiles:insertAttribute name="header"/></div>
+	
+	<div id="flip">Click to slide the panel down or up</div>
+	<div id="panel">Hello world!</div>
+
 	
 	
 	<div style="position: relative; top: 30px"><tiles:insertAttribute name="footer"/></div>

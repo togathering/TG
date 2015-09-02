@@ -28,7 +28,7 @@
 
 			<li class="links">			
 				<ul>
-					<li><a href="#">자주하는질문</a></li>
+					<li><a href="FAQ">자주하는질문</a></li>
 					<li><a href="qna">문의하기</a></li>
 				</ul>
 			</li>
