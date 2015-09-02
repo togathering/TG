@@ -32,8 +32,12 @@
 	<div style="float: left; width: 15%; height: 1000px; display: inline; margin: 0 2%; padding-left: 170px; padding-top: 20px;" >
 
 		<ul style="color: black; background-color: pink;  ">
-			<li><a href="qna" style="color: black;">시작하기</a></li>
-			<li><a href="qnaList?" style="color: black">나의 문의내역</a></li>
+			<li><a href="#" style="color: black">시작하기</a></li>
+			<li><a href="#" style="color: black">참여하기</a></li>
+			<li><a href="#" style="color: black">모임생성</a></li>
+			<li><a href="#" style="color: black">모임개설자</a></li>
+			<li><a href="#" style="color: black">계정설정</a></li>
+			<li><a href="#" style="color: black">기타</a></li>
 		</ul>
 	</div>
 </body>
