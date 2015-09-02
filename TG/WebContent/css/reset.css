@@ -1,3 +1,5 @@
+   @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
     html, body, div, span, object, iframe,
     h1, h2, h3, h4, h5, h6, p, blockquote, pre,
     abbr, address, cite, code,
@@ -17,12 +19,15 @@
         font-size:100%;
         vertical-align:baseline;
         background:transparent;
+        font-family: 'Nanum Gothic', serif;
     }
 	tr, th, td{
 		font-size:13px;
+		font-family: 'Nanum Gothic', serif;
 	}
     body {
         line-height:1;
+        font-family: 'Nanum Gothic', serif;
     }
 
     img{
@@ -55,7 +60,8 @@
         vertical-align:baseline;
         background:transparent;
         color: #ffffff;
-        text-decoration:none
+        text-decoration:none;
+        font-family: 'Nanum Gothic', serif;
     }
 
     /* change colours to suit your needs */
@@ -85,6 +91,7 @@
     table {
         border-collapse:collapse;
         border-spacing:0;
+        font-family: 'Nanum Gothic', serif;
     }
 
     /* change border colour to suit your needs */
