@@ -55,10 +55,11 @@
 	<bean id="emailSender" class="com.tg.email.model.EmailSender"/>
 
 	<!-- 스프링 웹소켓 설정 --> 
+		 <bean id="chatHandler" class="com.tg.webSocket.control.ChatHandler"></bean>
+
 		 <websocket:handlers>
-	
 		   <websocket:mapping handler="chatHandler" path="/TG-chat"/>
 		 </websocket:handlers>
 		  
-		 <bean id="chatHandler" class="com.tg.webSocket.control.ChatHandler"></bean>
 </beans>
+

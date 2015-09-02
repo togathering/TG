@@ -14,10 +14,9 @@
     var wsocket;
     
     function connect(){
-      wsocket = new WebSocket('ws://192.168.7.103/SpringMybatis2/chat-ws');
+      wsocket = new WebSocket('ws://192.168.7.103/TG/TG-chat');
       wsocket.onopen = onOpen;
       wsocket.onmessage = onMessage;
-      wsocket.onclose = onClose;
     }
 
     function disconnect(){
@@ -48,6 +47,8 @@
     
     function appendMsg(msg){
       $('#chatMsg').append(msg+'<br>');
+      
+      // 스크롤을 맨 밑으로 내려주는 기능
       var chatHeight = $('#chatArea').height();      
       var maxScroll = $('#chatMsg').height() - chatHeight;
       $('#chatArea').scrollTop(maxScroll);
@@ -55,11 +56,12 @@
     
     $(document).ready(function(){
       $('#message').keypress(function(event){
-        var keyCode = (event.keyCode? event.keyCode: event.which);
+        var keyCode = (event.keyCode? event.keyCode: event.which); 
+        //만약 event.keyCode 가 적용 안되는 브라우저에 대한 예외처리
         if(keyCode=='13'){
         	send();
         }
-        event.stopPropagation();
+        event.stopPropagation(); //이벤트의 전이 방지
       });
       $('#sendBtn').click(function(){send();});
       $('#enterBtn').click(function(){connect();});
@@ -73,14 +75,17 @@
 <body>
 		<div style="z-index: 2;"><tiles:insertAttribute name="header"/></div>
 		
+		<center>
 				이름: <input type="text" id="nickname">
 		  <input type="button" id="enterBtn" value="입장">
 		  <input type="button" id="exitBtn" value="나가기">
 		  <h3>대화영역</h3>
-		  <div id="chatArea"><div id="chatMsg"></div></div>
+		  <div id="chatArea">
+		  <div id="chatMsg"></div></div>
 		  <br>
 		  <input type="text" id="message">
 		  <input type="button" id="sendBtn" value="전송">
+		</center>
 		
 		
 		<div style="position: relative; top: 30px"><tiles:insertAttribute name="footer"/></div>
