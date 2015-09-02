@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>Insert title here</title><script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript">
-/* 	function myhost() {
+ 	function myhost() {
 		$.ajax({url: 'myhost', type: 'POST', dataType: 'text', 
 			success: function (data) {
 				alert(data);
@@ -16,7 +16,7 @@
 			}
 		});
 	}
-	
+	/*
 	function myhostEnd() {
 		$.ajax({url: 'myhostEnd', type: 'POST', dataType: 'text', 
 			success: function (data) {
@@ -32,12 +32,12 @@
 	<div style="float: left; width: 15%; height: 1000px; display: inline; margin: 0 2%; padding-left: 170px; padding-top: 20px;" >
 
 		<ul style="color: black; background-color: pink;  ">
-			<li><a href="#" style="color: black">시작하기</a></li>
-			<li><a href="#" style="color: black">참여하기</a></li>
-			<li><a href="#" style="color: black">모임생성</a></li>
-			<li><a href="#" style="color: black">모임개설자</a></li>
-			<li><a href="#" style="color: black">계정설정</a></li>
-			<li><a href="#" style="color: black">기타</a></li>
+			<li><a style="color: black">시작하기</a></li>
+			<li><a style="color: black">참여하기</a></li>
+			<li><a style="color: black">모임생성</a></li>
+			<li><a style="color: black">모임개설자</a></li>
+			<li><a style="color: black">계정설정</a></li>
+			<li><a style="color: black">기타</a></li>
 		</ul>
 	</div>
 </body>

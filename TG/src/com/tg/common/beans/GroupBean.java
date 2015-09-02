@@ -16,6 +16,7 @@ public class GroupBean {
 	private String gstatus;
 	private String nick; // not null
 	private String goption; // not null
+	private String gcategory;
 	
 	public GroupBean() {
 	
@@ -26,7 +27,7 @@ public class GroupBean {
 	public GroupBean(int gno, String ghost, String gtitle, String gloc,
 			String gintro, String gday, int gmax, int gmin, int gsum,
 			String gimg, String gdate, String gtag, String gstatus,
-			String nick, String goption) {
+			String nick, String goption, String gcategory) {
 		this.gno = gno;
 		this.ghost = ghost;
 		this.gtitle = gtitle;
@@ -42,6 +43,7 @@ public class GroupBean {
 		this.gstatus = gstatus;
 		this.nick = nick;
 		this.goption = goption;
+		this.gcategory = gcategory;
 	}
 
 	
@@ -170,7 +172,13 @@ public class GroupBean {
 		this.goption = goption;
 	}
 
-	
+	public String getGcategory() {
+		return gcategory;
+	}
+
+	public void setGcategory(String gcategory) {
+		this.gcategory = gcategory;
+	}
 	
 	
 }
