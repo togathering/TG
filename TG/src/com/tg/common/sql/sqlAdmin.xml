@@ -59,8 +59,8 @@
 		            where member.id = gxgroup.ghost
 		            group by id) gx,
 		            ( select id, count(*) cnt 
-		            from member,report1 
-		            where member.id= report1.accused 		            
+		            from member,report 
+		            where member.id= report.accused 		            
 		            and status='Y'
 		            group by id) re
 		  where m.id = p.id(+)
