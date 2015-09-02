@@ -207,3 +207,65 @@ create table encore
 gno number constraints encore_fk references gxgroup(gno),
 id varchar2(50) constraints encore_fk2 references member(id)
 );
+
+-----------------------------------추가테이블----------------------------------------
+
+--모임 카테고리 테이블
+drop table category;
+create table category
+(
+category_name varchar2(30) constraints category_pk primary key,
+category_no varchar2(3) not null
+);
+
+insert into category values('구기/단체/실내' , 111);
+insert into category values('구기/단체/실외', 112);
+insert into category values('구기/개인/실내', 121);
+insert into category values('구기/개인/실외', 122);
+insert into category values('비구기/단체/실내', 211);
+insert into category values('비구기/단체/실외', 212);
+insert into category values('비구기/개인/실내', 221);
+insert into category values('비구기/개인/실외', 222);
+
+
+--모임 지역 테이블
+drop table province;
+create table province
+(
+province_name varchar2(10) constraints province_pk primary key,
+province_no varchar2(2) not null
+);
+
+insert into province values('서울', 11);
+insert into province values('경기', 12);
+insert into province values('인천', 11);
+insert into province values('강원', 13);
+insert into province values('충남', 21);
+insert into province values('충북', 22);
+insert into province values('전남', 41);
+insert into province values('전북', 31);
+insert into province values('경남', 42);
+insert into province values('경북', 23);
+insert into province values('부산', 43);
+insert into province values('울산', 43);
+insert into province values('대구', 33);
+insert into province values('대전', 22);
+insert into province values('광주', 41);
+
+
+--유저 취향 테이블
+drop table user_preference;
+create table user_preference
+(
+category_name varchar2(30) constraints user_preference_fk references category(category_name),
+province_name varchar2(10) constraints user_preference_fk2 references province(province_name),
+ratio number not null
+);
+
+drop table group_preference;
+create table group_preference
+(
+category_name varchar2(30) constraints group_preference_fk references category(category_name),
+province_name varchar2(10) constraints grou_preference_fk2 references province(province_name),
+ratio number not null
+);
