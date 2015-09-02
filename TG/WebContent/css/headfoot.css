@@ -105,7 +105,7 @@ body{
 	/* border-radius:1em 1em 1em 1em; */
 }
 .wrapper5{
-    max-width: 1300px;
+    max-width: 1350px;
     margin: 0 auto;
     position: relative;
 }
@@ -181,7 +181,7 @@ header .logo{
 }
 header .logoSmall{
 	margin-top:8px;
-	margin-left: 5px;
+	margin-left: 110px;
 	float:left;
 }
 
@@ -264,7 +264,7 @@ header nav .create_btn2{
 }
 header nav .create_btn2{
     float: right;
-    margin: 10px 0 0 50px;
+    margin: 10px 100px 0 50px;
     padding: 8px 30px 8px 30px;
     border: 2px solid #999999;
     background: transparent;

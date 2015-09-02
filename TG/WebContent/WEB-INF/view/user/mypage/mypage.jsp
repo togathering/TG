@@ -148,11 +148,11 @@
 			
 	<div id="main" style="position: relative; margin-top: 10px; z-index: 1;">
 		<section id="container"  style="width:700px;">
-		<div style="border: 1px solid gray; background-color: #F2F2F2; width: 630px; height:30px; padding: 20px 20px; margin: 0 auto">
-		<h4 style="text-align: left;;">프로필</h4>
+		<div style="border: 1px solid gray; background-color: #F2F2F2; width: 650px; height:20px; padding: 20px 30px; margin: 0 auto">
+		<h4 style="text-align: left;">프로필 수정</h4>
 		</div>
 		
-		<div style="border:1px solid gray; border-top:none; width:670px;">
+		<div style="border:1px solid gray; border-top:none; width:710px;">
 			<form name="hongkiat" id="hongkiat-form" method="post" action="myupdate">		
 
 				<div id="wrapping" class="clearfix" style="margin-left: 30px">

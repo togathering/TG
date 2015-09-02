@@ -1,16 +1,16 @@
 
 .atag{
 text-decoration:none;
-font:bold;
+font-size:13px;
 color:rgb(41, 128, 185);
 }
 th{
-font-size: 15px;
+font-size: 13px;
 color:white;;
 }
 
 td{
-font-size: 14px;
+font-size: 13px;
 color: #585858;
 }
 
@@ -27,7 +27,7 @@ margin:1% auto;
 border-collapse: collapse;"
 }
 .boardth{
-height:45px;
+height:35px;
 background-color: rgb(128,128,128);
 }
 .boardth th{
@@ -36,7 +36,6 @@ padding-top: 8px;"
 .board_contents{
 border-bottom: 1px solid #2E2E2E;
 height: 49px; 
-font: bold;
 text-align: center;
 }
 
