@@ -386,6 +386,7 @@
 							<option value="8">8</option>
 							<option value="9">9</option>
 						</select> 
+						
 						<select id="max" name="max" class="selmenu">
 							<option value="max">최대인원</option>
 							<option value="2">2</option>

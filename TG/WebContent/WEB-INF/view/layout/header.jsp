@@ -26,6 +26,7 @@
 				  msg += '<li><a href="#">메세지</a></li>';
 				  msg += '<li><a href="userlist">사람찾기</a></li>';
 			ul.innerHTML = msg;
+			
 		}else{
 			var msg = '<li><a href="join">회원가입</a></li>';
 			msg +='<li><a href="login">로그인</a></li>';
