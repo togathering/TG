@@ -59,7 +59,7 @@
 
 <title>친구목록</title>
 </head>
-<body>
+<body style="background-color: #FAFAFA">
 	<div style="z-index: 2;">
 		<tiles:insertAttribute name="header" />
 	</div>

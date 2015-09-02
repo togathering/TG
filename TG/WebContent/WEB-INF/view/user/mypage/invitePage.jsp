@@ -34,7 +34,7 @@
 </script>
 <title>Insert title here</title>
 </head>
-<body>
+<body style="background-color: #FAFAFA">
 	<div style="z-index: 2;">
 		<tiles:insertAttribute name="header" />
 	</div>
@@ -42,9 +42,10 @@
 		<tiles:insertAttribute name="myPageHeader"/>
 	</div>
 	<div  class="board_div">
-		<h2>그룹에 초대되었어요~</h2>
-		
-		<table  class="board_table">
+		<div>
+		<h4>그룹에 초대되었어요~</h4>
+		</div>
+		<table  class="board_table" style="width: 800px;">
 			<tr class="boardth">
 				<th width="220px">나를 초대한 사람</th>
 				<th width="150px">그룹 제목</th>

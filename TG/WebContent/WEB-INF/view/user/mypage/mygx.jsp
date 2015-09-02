@@ -28,7 +28,7 @@
 </script>
 
 </head>
-<body>
+<body style="background-color: #FAFAFA;">
 		<div style="z-index: 2;"><tiles:insertAttribute name="header"/></div>
 	<div><tiles:insertAttribute name="myPageHeader"/></div>
 	<div><tiles:insertAttribute name="gxSide"/></div>
