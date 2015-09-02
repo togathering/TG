@@ -54,13 +54,16 @@ public class GroupInfoControl {
 		// 값은 제대로 가져오고 있다.
 
 		// 태그들을 분할시킨다.
-		String tags = bean.getGtag().substring(1);
-		String[] arrTag = tags.split("#");
-		
-		// 태그의 앞뒤 공백을 제거한다.
-		for (int i = 0; i < arrTag.length; i++) {
-			arrTag[i] = arrTag[i].trim();
+		if(bean.getGtag() != null){
+			String tags = bean.getGtag().substring(1);
+			String[] arrTag = tags.split("#");			
+			// 태그의 앞뒤 공백을 제거한다.
+			for (int i = 0; i < arrTag.length; i++) {
+				arrTag[i] = arrTag[i].trim();
+			}
+			model.addAttribute("tags", arrTag);
 		}
+		
 		
 		// 현재 빈에 들어가 있는 정보는..
 		// select ghost, gtitle, gday, gloc, gstatus, 
@@ -73,7 +76,7 @@ public class GroupInfoControl {
 		if(bean != null){
 			bean.setGno(gno);
 			model.addAttribute("group", bean);	
-			model.addAttribute("tags", arrTag);
+			
 		}
 		ArrayList<ParticipantBean> list = (ArrayList<ParticipantBean>) pdao.joinList(gno);
 		
