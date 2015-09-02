@@ -77,7 +77,10 @@ public class CreateControl{
 		String gtag = multi.getParameter("tag");
 		String goption = multi.getParameter("joinOption");
 
-	
+		if(gimg == null){
+			gimg = "Tg_Default_Img.png";
+		}
+		
 		bean.setGdate(gdate);
 		bean.setGhost(id);
 		bean.setGintro(gintro);

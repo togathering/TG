@@ -3,9 +3,7 @@ html { margin: 0; padding: 0; }
 
 body { 
 	.center{margin:0 auto; }
-height: 101%; 
-
-
+	height: 101%; 
 }
 
 /* a { color: #4681da; text-decoration: none; } */
@@ -39,11 +37,18 @@ margin-bottom: 10px;
 }
 
 h4 {
-	
-	
 letter-spacing: -0.04em;
 font-size: 1.54em;
 margin-bottom: 10px;
+}
+.label_left{
+	font-size:15px;
+	width:100px;
+	float: left;
+	text-align: right;
+	padding-right:25px;
+	padding-top:11px;
+	
 }
 
 span.chyron { font-size: 5.2em; padding-top: 10px; }
@@ -53,7 +58,7 @@ span.chyron { font-size: 5.2em; padding-top: 10px; }
 
  ._1{
  	float: left;
-	width:140px;
+	width:120px;
 	text-align: right;
 } 
 @media (max-width:1450px){}
@@ -68,7 +73,7 @@ div#side{
 	 }
 #container { 
 display: block;
-max-width: 800px;
+/* max-width: 800px; */
 margin: 10px auto; 
 margin-top: 5px; 
 padding: 20px 15px; 
@@ -122,7 +127,7 @@ border-width: 1px;
 border-color: #dedede;
 font-size: 14px;
 padding: 10px 10px;
-width: 80%;
+width: 400px;
 color: #777;
 box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset;
 -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset;
@@ -153,7 +158,7 @@ border-color: #dedede;
 margin-bottom: 15px;
 font-size: 14pxem;
 padding: 11px 11px;
-width: 80%;
+width: 400px;
 height: 250px;
 text-align: left;
 color: #777;
@@ -182,21 +187,21 @@ outline: 0 none;
 
 
 
-#wrapping { width: 75%; box-sizing: border-box; }
+#wrapping { width:630px; box-sizing: border-box; }
 
 
 select.selmenu {
-font-size: 17px;
+font-size: 13px;
 color: #676767;
-padding: 9px !important;
+padding: 7px !important;
 border: 1px solid #aaa;
 width: 100px;
 }
 
 select.sel {
-font-size: 17px;
+font-size: 13px;
 color: #676767;
-padding: 9px !important;
+padding: 7px !important;
 border: 1px solid #aaa;
 width: 200px;
 }
@@ -208,12 +213,15 @@ display: block;
 float: left;
 color: #515151;
 text-shadow: -1px 1px 0px #fff;
-margin-right: 20px;
-height: 3em;
+margin-top: 20px;
+margin-bottom: 20px;
+margin-left: 125px;
+width:420px;
+height: 40px;
 padding: 0 1em;
 outline: 0;
 font-weight: bold;
-font-size: 1.3em;
+font-size: 15px;
 white-space: nowrap;
 word-wrap: normal;
 vertical-align: middle;
