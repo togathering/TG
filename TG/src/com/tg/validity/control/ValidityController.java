@@ -43,9 +43,11 @@ public class ValidityController {
 	// 그룹만들기 금지 단어 체크
 	@RequestMapping("/gxCreatebanCheck")
 	@ResponseBody	
-	public String banCheckforGxCreate(NoteBean noteBean){
+	public String banCheckforGxCreate(NoteBean noteBean,
+									@RequestParam(value="tag", required=false )String tag){
 
 		// DB에서 금지어 리스트 조회	
+		
 		List<String> banList = valDao.selectBans(); 
 		System.out.println("금지어거르는 메소드는 실행");		
 		// 받아온 내용
@@ -54,11 +56,14 @@ public class ValidityController {
 		
 		System.out.println("모임명은 "+noteTitle);
 		System.out.println("모임소개는 "+noteContent);
+		System.out.println("받아온 태그는 "+tag);
 		
 		// 신호키 설정
 		String flag = "ok";
 		for (int i = 0; i < banList.size(); i++) {
-			if(noteTitle.contains(banList.get(i)) || noteContent.contains(banList.get(i))){
+			if(noteTitle.contains(banList.get(i)) || noteContent.contains(banList.get(i)) ||
+				tag.contains(banList.get(i))){
+				
 				flag = banList.get(i);
 				break;
 			}

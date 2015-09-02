@@ -79,12 +79,12 @@
 		
 		$.ajax({
 			url:'gxCreatebanCheck',
-			data:{noteContent:noteContent, noteTitle:noteTitle},
+			data:{noteContent:noteContent, noteTitle:noteTitle, tag:tag},
 		    type:'post',
 		    success:function(data){
 		    	if(data=='ok') document.createFrm.submit();
 		    	else alert("[ "+data+' ]는(은) 금지어입니다. 금지어를 지우고 다시 시도해주세요.');
-		    	document.frm.noteTitle.fucus();
+		    	document.frm.title.fucus();
 		    }
 		});
 		
