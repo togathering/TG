@@ -124,6 +124,11 @@
         <artifactId>mail</artifactId>
         <version>1.4</version>
     </dependency>
-  
+  	<!-- 채팅 소켓 -->
+		<dependency>
+		    	<groupId>org.springframework</groupId>
+		    	<artifactId>spring-websocket</artifactId>
+		    	<version>4.2.0.RELEASE</version>
+		</dependency>
   </dependencies>
 </project>
