@@ -372,7 +372,7 @@
 						<br>
 						<div>
 							<h2>인원 수</h2>
-							<h4>※ 최대 10명 까지 참석 가능하며, 최소 2명이 모임 24시간 전까지 참여하지 않으면 모임이 자동
+							<h4>※ 최대 9명 까지 참석 가능하며, 최소 2명이 모임 24시간 전까지 참여하지 않으면 모임이 자동
 								취소됩니다.</h4>
 						</div>
 						<br> <select id="min" name="min" class="selmenu">
@@ -385,7 +385,6 @@
 							<option value="7">7</option>
 							<option value="8">8</option>
 							<option value="9">9</option>
-							<option value="10">10</option>
 						</select> 
 						<select id="max" name="max" class="selmenu">
 							<option value="max">최대인원</option>
@@ -397,7 +396,6 @@
 							<option value="7">7</option>
 							<option value="8">8</option>
 							<option value="9">9</option>
-							<option value="10">10</option>
 						</select> <br>
 						<h2>제목과 초대글</h2>
 						<input type="text" name="title" id="title"

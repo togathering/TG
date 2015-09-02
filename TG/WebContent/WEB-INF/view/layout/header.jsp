@@ -19,10 +19,10 @@
 		if(nick!=''){
 			var msg = '<li><a href="#">'+nick+'▽</a>';
 				  msg += '<ul><li><a href="#" onclick="logOut()">모임 목록</a></li>';
-				  msg += '<li><a href="#" onclick="빈값()">원해요 리스트</a></ul></li>';
-				  msg += '<li><a href="#" onclick="빈값()">친구 리스트</a></ul></li>';
-				  msg += '<li><a href="#" onclick="mypage()">프로필 수정</a></ul></li>';
-				  msg += '<li><a href="#" onclick="logOut()">로그아웃</a></li>';
+				  msg += '<li><a href="#" onclick="빈값()">원해요 리스트</a></li>';
+				  msg += '<li><a href="#" onclick="빈값()">친구 리스트</a></li>';
+				  msg += '<li><a href="#" onclick="mypage()">프로필 수정</a></li>';
+				  msg += '<li><a href="#" onclick="logOut()">로그아웃</a></li></ul></li>';
 				  msg += '<li><a href="#">메세지</a></li>';
 				  msg += '<li><a href="userlist">사람찾기</a></li>';
 			ul.innerHTML = msg;
