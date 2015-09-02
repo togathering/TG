@@ -42,10 +42,11 @@
 		<tiles:insertAttribute name="myPageHeader"/>
 	</div>
 	<div  class="board_div">
-		<div style="float:left; margin-left: 180px;">
+		<div style="float:left; margin-left: 280px; width: 600px; margin-top: 20px;">
 		<h4>그룹에 초대되었어요~</h4>
+		<br>
 		</div>
-		<div>
+		
 		<table  class="board_table" style="width: 800px;">
 			<tr class="boardth">
 				<th width="220px">나를 초대한 사람</th>
@@ -56,7 +57,7 @@
 		<table style="width: 70%; margin: 20px auto;" id="inviteTable">
 			
 		</table>
-		</div>
+	
 	</div>	
 	<div style="position: relative; top: 230px; ">
 		<tiles:insertAttribute name="footer" />
