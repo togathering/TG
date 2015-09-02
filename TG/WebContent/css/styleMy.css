@@ -244,7 +244,7 @@ text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
 }
 
 #buttons #resetbtn:hover {
-text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);	
+text-shadow: 0 1px 1px rgba(245, 245, 245, 0.75);	
 color: #818181;
 background-color: #fff;
 background-image: -moz-linear-gradient(top,  rgb(255,255,255) 2%, rgb(244,244,244) 2%, rgb(229,229,229) 100%);
