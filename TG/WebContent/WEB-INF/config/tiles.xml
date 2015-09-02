@@ -193,5 +193,11 @@
 		<put-attribute name="footer" value="/WEB-INF/view/layout/footer.jsp" />
 	</definition>
 
+	<!-- FQA -->
+	<definition name =".faq" template="/WEB-INF/view/common/faq.jsp">
+		<put-attribute name="header" value="/WEB-INF/view/layout/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/view/layout/footer.jsp" />
+	</definition>
+
 	
 </tiles-definitions>
