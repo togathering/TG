@@ -251,21 +251,24 @@ insert into province values('울산', 43);
 insert into province values('대구', 33);
 insert into province values('대전', 22);
 insert into province values('광주', 41);
+insert into province values('제주', 51);
 
  
 --유저 취향 테이블
 drop table user_preference;
 create table user_preference
 (
-category_name varchar2(30) constraints user_preference_fk references category(category_name),
-province_name varchar2(10) constraints user_preference_fk2 references province(province_name),
+id varchar2(50) constraint user_preference_fk references member(id),
+category_name varchar2(30) constraint user_preference_fk2 references category(category_name),
+province_name varchar2(10) constraint user_preference_fk3 references province(province_name),
 ratio number not null
 );
 
 drop table group_preference;
 create table group_preference
 (
-category_name varchar2(30) constraints group_preference_fk references category(category_name),
-province_name varchar2(10) constraints grou_preference_fk2 references province(province_name),
+gno number constraint group_preference_fk references gxgroup(gno),
+category_name varchar2(30) constraint group_preference_fk2 references category(category_name),
+province_name varchar2(10) constraint grou_preference_fk3 references province(province_name),
 ratio number not null
 );

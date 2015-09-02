@@ -11,9 +11,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 
 
+
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 import com.tg.common.beans.GroupBean;
+import com.tg.common.beans.GroupPreferenceBean;
 import com.tg.common.dao.GroupDAO;
 import com.tg.common.dao.ParticipantDAO;
 import com.tg.common.dao.ReplyDAO;
@@ -94,9 +96,7 @@ public class CreateControl{
 		bean.setGtag(gtag);
 		bean.setGimg(gimg);
 		bean.setGoption(goption);
-		bean.setGcategory(gcategory);
-		
-		
+		bean.setGcategory(gcategory);		
 		
 		if(dao.create(bean)){
 			System.out.println("모임생성성공");
