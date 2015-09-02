@@ -75,6 +75,7 @@
 <body>
 		<div style="z-index: 2;"><tiles:insertAttribute name="header"/></div>
 		
+<div style="float: left; width: 45%" >
 		<center>
 				이름: <input type="text" id="nickname">
 		  <input type="button" id="enterBtn" value="입장">
@@ -87,7 +88,19 @@
 		  <input type="button" id="sendBtn" value="전송">
 		
 		</center>
+</div>
+<div style="float: right; width: 45%" >
+	<table>
+		<tr><th>접속 인원</th></tr>
+		<tr>
+		<td>
 		
-		<div style="position: relative; top: 30px"><tiles:insertAttribute name="footer"/></div>
+		</td>
+		</tr>
+	</table>
+
+</div>
+		
+		<div style="position: relative; top: 330px"><tiles:insertAttribute name="footer"/></div>
 </body>
 </html>
