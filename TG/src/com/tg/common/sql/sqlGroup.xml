@@ -40,7 +40,7 @@
    	<!-- 모임 상세페이지 출력 -->
 	<select id="info" parameterType="int" 
 						resultType="com.tg.common.beans.GroupBean">
-		select ghost, gtitle, gday, gloc, gstatus, gmin, gmax, gimg, gintro, gsum, goption, nick, gtag 
+		select gno, ghost, gtitle, gday, gloc, gstatus, gmin, gmax, gimg, gintro, gsum, goption, nick, gtag 
 		from member, gxgroup 
 		where ghost = id and gno = #{gno}
 	</select>
