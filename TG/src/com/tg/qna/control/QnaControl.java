@@ -28,11 +28,13 @@ public class QnaControl {
 	public String qnaSend(@Param(value="title") String title, @Param(value="content") String content, 
 			@Param(value="tel") String tel, HttpServletRequest request){
 		String id = (String) request.getSession().getAttribute("id");
+		String qstatus = "N";
 		QnaBean bean = new QnaBean();
 		bean.setId(id);
 		bean.setQtitle(title);
 		bean.setQcont(content);
 		bean.setTel(tel);
+		bean.setQstatus(qstatus);
 		if(dao.qnaInsert(bean)){ return ".main";}
 		return ".qna";
 	}
