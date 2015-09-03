@@ -16,8 +16,8 @@
 </style>
 <link rel="stylesheet" href="css/qna.css">
 </head>
-<body bgcolor="#FAFAFA">
-	<div style="z-index: 2;"><tiles:insertAttribute name="header"/></div>
+<body style="background-color: #FAFAFA">
+	<div style="z-index: 2; background-color: white;"><tiles:insertAttribute name="header"/></div>
 	<div>	<tiles:insertAttribute name="myPageHeader"/></div><br>
 	<div style="position: relative;"><tiles:insertAttribute name="qnaSide"/></div>
 		<form action="qnaSend" class="form">
