@@ -5,7 +5,7 @@ public class UserPreferenceBean {
 	private String category_name;
 	private String province_name;
 	private int ratio;
-	
+	 
 	public UserPreferenceBean() {
 	}
 	

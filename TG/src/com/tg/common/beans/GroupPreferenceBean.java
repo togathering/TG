@@ -5,7 +5,7 @@ public class GroupPreferenceBean {
 	private String category_name;
 	private String province_name;
 	private int ratio;
-	
+	 
 	public GroupPreferenceBean() {
 		
 	}
