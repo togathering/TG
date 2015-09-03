@@ -31,7 +31,7 @@
 <body>
 	<div style="float: left; width: 15%;  background-color: #F2F2F2; display: inline; margin: 0 2%; padding-left: 170px; padding-top: 20px;" >
 
-		<ul style="color: black; background-color: pink;  list-style:none; background-color: #F2F2F2;">
+		<ul style="color: black;   list-style:none; background-color: #F2F2F2;">
 			<li><a href="qna" style="color: black;" onclick="myhost()">문의하기</a></li>
 			<li><a href="qnaList?" style="color: black" onclick="myhostEnd()">나의 문의내역</a></li>
 		</ul>
