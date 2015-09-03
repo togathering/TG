@@ -5,6 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>신고하기</title>
+
 <script type="text/javascript">
 </script>
 <link rel="stylesheet" type="text/css" href="css/list.css">

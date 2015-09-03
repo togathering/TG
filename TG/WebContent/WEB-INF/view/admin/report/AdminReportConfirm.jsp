@@ -18,6 +18,7 @@ color: #585858;
 float:left;
 width: 100%;
 margin: 0 auto;
+
 }
 </style>
 <script type="text/javascript">
