@@ -63,7 +63,7 @@ $(document).ready(function(){
 		</div>
 		<div class="evaluate">	
 			<table class="tevaluate">
-				<tr><td>평가점수</td><td></td><td>신고횟수</td><td>${count }</td></tr>
+				<tr><td>평가점수</td><td>${grade }</td><td>신고횟수</td><td>${count }</td></tr>
 			</table>
 		</div>
 </body>

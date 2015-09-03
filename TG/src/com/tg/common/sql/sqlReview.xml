@@ -17,4 +17,8 @@
 	<select id="review" parameterType="String" resultType="com.tg.common.beans.ReviewBean">
 		select evaluate from review where id=#{id} and evaluate is not null
 	</select>
+	
+	<select id="grade" parameterType="String" resultType="int">
+		select nvl(avg(grade),0) from review where id=#{id}
+	</select>
 </mapper>
