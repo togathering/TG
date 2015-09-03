@@ -31,6 +31,14 @@ public class MemberDAO {
 		return tel;
 	}
 	
+	public String getMemberGender(String id){
+		String gender = "";
+		if(id != null){
+			gender = session.selectOne("member.genderInfo", id);			
+		}
+		return gender;
+	}
+	
 	public List<MemberBean> mSelectAll(){
 		List<MemberBean> list = session.selectList("member.MselectAll");
 		return list;

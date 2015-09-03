@@ -84,6 +84,11 @@ public class MyPageControl {
 		String day = multi.getParameter("day");
 		String birth = year+month+day;
 		System.out.println("¸â¹ö:"+birth);
+		
+		if(pic == null){
+			pic = "";
+		}
+		
 		m.setId(id);
 		m.setPass(pass);
 		m.setNick(nick);
