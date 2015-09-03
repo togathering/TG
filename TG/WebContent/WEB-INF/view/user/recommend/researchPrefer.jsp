@@ -5,11 +5,32 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>Insert title here</title>
+ 
+<script type="text/javascript">
+// 체크된 체크박스 갯수 체크
+function selectChkBox(frm) {
+
+	var sum = 0;
+	var count = frm.prefer.length;
+	
+	for(var i=0; i < count; i++ ){
+		if( frm.prefer[i].checked == true ){
+			sum += 1;
+		}
+	} 
+	
+	if(sum < 4){
+		alert("최소 4개의 모임을 선택해주세요.");
+		return;
+	} else document.frm.submit();
+}
+</script>
+
 </head>
 <body>
 	
 	<h3>유저님에게 꼭 맞는 모임을 추천드리기 위한 조사입니다..</h3>
-	<h3>참여하고 싶은 모임을 최소 5개, 최대 10개까지 선택한 후 전송 버튼을 눌러주세요.</h3>
+	<h3>참여하고 싶은 모임을 최소 4개, 최대 8개까지 선택한 후 전송 버튼을 눌러주세요.</h3>
 	<h3>지금 입력하시는 것을 원하지 않으시다면 메인버튼을 눌러 메인화면으로 하실 수 있습니다.</h3>
 	
 	<form action="sendPrefer" method="post" name="frm">
@@ -40,15 +61,16 @@
 		<input type="checkbox" name="prefer" value="비구기/단체/실외|경북|5" />Birds<br />
 		<input type="checkbox" name="prefer" value="구기/단체/실내|부산|-6" />Birds<br />
 		<input type="checkbox" name="prefer" value="비구기/개인/실내|대구|5" />Birds<br />
-		<input type="checkbox"	 name="prefer" value="비구기/단체/실외|부산|-8" />Birds<br />
+		<input type="checkbox" name="prefer" value="비구기/단체/실외|부산|-8" />Birds<br />
 		<input type="checkbox" name="prefer" value="비구기/단체/실외|울산|-7" />Birds<br />
 		<input type="checkbox" name="prefer" value="비구기/단체/실외|울산|4" />Birds<br />
 		<input type="checkbox" name="prefer" value="비구기/개인/실내|대전|2" />Birds<br />
 		<input type="checkbox" name="prefer" value="비구기/개인/실외|대전|3" />Birds<br />
 		<input type="checkbox" name="prefer" value="비구기/개인/실외|광주|-1" />Birds<br /> -->
 		
-		<input type="submit" value="전송"/> 
 	</form>
+	
+	<input type="submit" value="전송" onclick='selectChkBox(frm)'/> 
 	
 	<a href="main"><input type="button" value="메인화면으로"></a>
 

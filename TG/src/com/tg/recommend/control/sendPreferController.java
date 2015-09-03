@@ -48,10 +48,10 @@ public class sendPreferController {
 			
 			if(dao.insert(bean) == true){
 				loginDao.changeNewbie(id);
+				session.setAttribute("newbie", "nonewbie");
 			}
 		}
 
-		model.addAttribute("msg", "제출성공");
 		return "redirect:main";
 	}
 }

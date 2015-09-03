@@ -34,6 +34,9 @@ public class ReportControl {
 		bean.setContent(content);
 		bean.setStatus(status);
 		
+		System.out.println("리포터는 "+ bean.getReporter());
+		System.out.println("피신고자는 "+bean.getAccused());
+		
 		if(dao.report(bean)) return "redirect:myFriendList";
 		
 		System.out.println("##id##"+reporter+":"+category);

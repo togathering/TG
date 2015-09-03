@@ -43,6 +43,7 @@ public class LoginControl {
 			session.setAttribute("pass", pass);
 			
 			String status = dao.checkNewbie(id);
+			session.setAttribute("newbie", status);
 			
 			System.out.println("로그인 컨트롤러 실행결과는 "+status);
 			
