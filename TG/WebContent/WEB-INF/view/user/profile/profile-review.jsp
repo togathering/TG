@@ -34,13 +34,18 @@ $(document).ready(function(){
 			var birthday = '${my.birth }'.split(" ", 2);
 			bb.innerHTML = birthday[0];
 		}
+		if('${my.pic }' == ''){
+			var pic = document.getElementById("pic");
+			var img = '<img src="proimg/running.jpg" width="350px" height="350px">';
+			pic.innerHTML = img;
+		}
 });
 </script>
 </head>
 <body>
-	<h3>${my.nick }¥‘¿« «¡∑Œ« </h3>
-		<div class="image">
-			<img src="upimg/${my.pic }" width="350px" height="350px">
+	<h3>${my.nick }(${my.id })¥‘¿« «¡∑Œ« </h3>
+		<div class="image" id ="pic">
+			<img src="proimg/${my.pic }" width="350px" height="350px">
 		</div>
 		
 		<div class="profile">

@@ -52,7 +52,7 @@ public class MyPageControl {
 		String pic = null;
 		request.setCharacterEncoding("UTF-8");
 		
-		String savePath = request.getSession().getServletContext().getRealPath("upimg");
+		String savePath = request.getSession().getServletContext().getRealPath("proimg");
 
 		int sizeLimit = 1024*1024*15;
 		
@@ -60,9 +60,12 @@ public class MyPageControl {
 		 
 		String imgFile = multi.getFilesystemName("imgFile");
 		if(imgFile==null){
-			String picImg = multi.getParameter("imgFile");
-			System.out.println("img:"+picImg);
-			pic = picImg;
+			String picImg = multi.getParameter("picImg");
+			if(picImg != null){
+				pic = picImg;
+			}else{
+				pic = "";
+			}
 		}else{
 			pic = imgFile;		
 		}

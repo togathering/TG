@@ -124,6 +124,13 @@
 		year.innerHTML = yy;
 		month.innerHTML = mm;
 		day.innerHTML = dd;
+		
+		if('${my.pic}' != ''){
+			var imag = document.getElementById("pic");
+			var pic = '<img src=upimg/${my.pic}>';
+			imag.innerHTML = pic;
+			
+		}
 	});
 		
 	
@@ -218,9 +225,11 @@
          		</div>
          		<div style="width:600px; padding: 10px 0px">
 				<label class="label_left">프로필사진</label>
+					<div id="pic"></div>
+         		<label class="label_left"></label>
          		<input type="file" name="imgFile" id="imgFile" class="txtinput" >		
          		<input type="text" value="${my.pic}" id="picImg" name="picImg" hidden="true">		
-						</div>
+				</div>
 						<!-- <br style="clear: both;"> -->
 						<div style="width: 98%">
 						<section id="buttons">

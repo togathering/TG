@@ -22,12 +22,9 @@ margin: 0 auto;
 </style>
 <script type="text/javascript">
 	function reportOk(rno) {
-		alert("µÇ¶ó");
-		location.href = "adminReportOk?no="+rno;
 		self.close();
 	}
 	function reportHold(rno) {
-		location.href = "adminReportHold?no="+rno;
 		window.close();
 	}
 </script>
