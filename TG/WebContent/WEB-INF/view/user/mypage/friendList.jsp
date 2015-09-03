@@ -47,8 +47,8 @@
 			</tr>
 
 			<c:forEach items='${flist }' var='flist'>
-				<tr class="board_contents">
-					<td width="220px">${flist.id }</td>
+				<tr class="board_contents" style="margin-top: 5px;">
+					<td width="220px" style="padding-top: 15px">${flist.id }</td>
 					<td width="150px">${flist.nick }</td>
 					<td width="70px"><input type="button" class="sbutton"
 						value="ÂÊÁö" onclick="msg('${flist.id }', '${flist.nick }')"></td>

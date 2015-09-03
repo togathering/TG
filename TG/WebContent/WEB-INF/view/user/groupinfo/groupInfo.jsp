@@ -392,7 +392,7 @@ a:hover{
 				</table>
 			</div><!-- 참가인원끝 -->
 		<!-- 태그표시 -->
-		<div style="width: 640px; float:left; height:50px; margin: 7px 20px 7px 150px; border: 1px solid lightgray; padding: 5px 10px; text-align:left; background-color: white;">
+		<div style="width: 640px; float:left; height:50px; margin: 7px 20px 7px 150px; border: 1px solid lightgray; padding: 10px 10px; text-align:left; background-color: white;">
 			<h4 style="text-align:left;">▶태그</h4>
 			<c:forEach var="tag" items="${tags}">
 				<a href="tagResult?tag=${tag}">#${tag}</a>&nbsp 
@@ -400,7 +400,7 @@ a:hover{
 		</div>
 		
 		<!-- 지도 -->
-		<div style="width: 640px; float:left; height:90px; margin: 7px 10px 15px 150px; border: 1px solid lightgray; padding: 5px 10px; text-align:left; background-color: white;">
+		<div style="width: 640px; float:left; height:70px; margin: 7px 10px 15px 150px; border: 1px solid lightgray; padding: 10px 10px; text-align:left; background-color: white;">
 			<h4 style="text-align:left;">▶모임장소</h4>
 				<p style="font-size: 14px">${group.gloc}</p>
 		</div>

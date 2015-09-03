@@ -40,10 +40,10 @@ $(document).ready(function(){
 					<th width="100px">수락/거절</th>
 				</tr>
 			<c:forEach  items='${freq }' var='freq' >
-				<tr style="height: 20px; text-align: center; border: 1px; border: 1px solid lightgray;" >
+				<tr class="board_contents" >
 					<td width="220px">${freq.id } </td>
 					<td width="150px">${freq.nick }</td>
-					<td width="100px"><input type="button" value="수락" onclick="acceptFriend('${freq.id }')">/<input type="button" value="거절" onclick="rejectFriend('${freq.id }')"></td>
+					<td width="100px" ><input type="button" value="수락" onclick="acceptFriend('${freq.id }')" class="sbutton" style="margin-top:5px;">&nbsp<input type="button" value="거절" class="sbutton"  style="margin-top:5px;"onclick="rejectFriend('${freq.id }')"></td>
 				</tr>
 				</c:forEach>
 			</table>
