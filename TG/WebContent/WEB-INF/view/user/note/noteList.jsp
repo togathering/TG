@@ -46,7 +46,7 @@ function msg(no, id) {
 				<tr class="board_contents">
 					<td style="padding-top: 15px;"><a href="" class="atag">${noteInfo.senderId}</a></td>
 					<td><a href="noteDtail?no=${noteInfo.noteNo}&senderId=${noteInfo.senderId}" class="atag" 
-						onclick="window.open(this.href,'','popup', 'width=200px, height=250px'); return false">${noteInfo.noteTitle}</a></td>
+						onclick="window.open(this.href,'', 'width=390, height=430'); return false">${noteInfo.noteTitle}</a></td>
 					<td>${noteInfo.noteDate}</td>
 				</tr>
 			</c:forEach>
