@@ -16,6 +16,13 @@ public class UserPreferenceDAO {
 		return bean;
 	}
 	
+	public boolean insert(UserPreferenceBean bean){
+		
+		session.selectOne("user_pre.insert", bean);
+		
+		return false;
+	}
+	
 	public String selectTopProvince(String id){
 		session.selectOne("user_pre.topProvince",id);
 		
