@@ -127,7 +127,7 @@
 		
 		if('${my.pic}' != ''){
 			var imag = document.getElementById("pic");
-			var pic = '<img src=upimg/${my.pic}>';
+			var pic = '<img src=upimg/${my.pic} width=420; height=400>';
 			imag.innerHTML = pic;
 			
 		}
@@ -225,7 +225,7 @@
          		</div>
          		<div style="width:600px; padding: 10px 0px">
 				<label class="label_left">프로필사진</label>
-					<div id="pic"></div>
+					<div id="pic"></div><br>
          		<label class="label_left"></label>
          		<input type="file" name="imgFile" id="imgFile" class="txtinput" >		
          		<input type="text" value="${my.pic}" id="picImg" name="picImg" hidden="true">		
