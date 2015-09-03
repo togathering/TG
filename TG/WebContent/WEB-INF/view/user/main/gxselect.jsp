@@ -97,6 +97,12 @@
 			alert('로그인해주세요');
 			location.href="login";
 		}
+		if('${bean.gimg}'!=''){
+			var gimg = document.getElementById("gimg");
+			var img = '<img src="{bean.gimg}" width=400; height=400;>';
+			gimg.innerHTML = img;
+			
+		}
 	});
 </script>
 <script type="text/javascript">
@@ -367,7 +373,7 @@
 						<section id="buttons">
 						</section>
 						<input type="button" class="sbutton" onclick="searchAddress()" value="장소선택"><br><br>
-						<input type="text" id="loc" name="loc" class="txtinput" placeholder="주소" readonly="readonly" style="font-size: 15px;">
+						<input type="text" id="loc" name="loc" class="txtinput" placeholder="주소" readonly="readonly" style="font-size: 15px;" value="${bean.gloc }">
 						<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 						<script>
 						    function searchAddress() {
@@ -415,7 +421,7 @@
 						모임이 자동취소됩니다.<br>&nbsp;
 								<br>
 						<select id="min" name="min" class="selmenu">
-							<option value="min">최소인원</option>
+							<option value="${bean.gmin }">${bean.gmin }</option>
 							<option value="2">2</option>
 							<option value="3">3</option>
 							<option value="4">4</option>
@@ -427,7 +433,7 @@
 						</select> 
 						
 						<select id="max" name="max" class="selmenu">
-							<option value="max">최대인원</option>
+							<option value="${bean.gmax }">${bean.gmax }</option>
 							<option value="2">2</option>
 							<option value="3">3</option>
 							<option value="4">4</option>
@@ -448,6 +454,7 @@
 						 ※ 모임 추천과 보다 많은 사람들에게 모임을 알리기위해 카테고리를 선택해주세요~!!
 						<br>&nbsp;<br>
 						<select id="gcategory" name="gcategory" class="selmenu">
+							<option value="${bean.gcategory }">${bean.gcategory }</option>
 							<option value="구기/단체/실내">구기/단체/실내</option>
 							<option value="구기/단체/실외">구기/단체/실외</option>
 							<option value="구기/개인/실내">구기/개인/실내</option>
@@ -464,17 +471,13 @@
 						</div>
 						<div style=" width:94%; padding:3% 3%; border:1px solid lightgray; border-top:0px; font-size:14px; background-color: #FCFCFC;">
 						<input type="text" name="title" id="title"
-							placeholder="제목 ex)한강에서 같이 달리실 분~" autocomplete="on" tabindex=""
-							class="txtinput" style="font-size: 14px; margin-bottom: 2px;">
+							class="txtinput" style="font-size: 14px; margin-bottom: 2px;" value="${bean.gtitle }">
 						
 							<textarea name="message" id="message" autocomplete="on"
 							tabindex="" class="txtblock" row="25" col=""
 							 style="font-size: 14px; text-align: left: ; line-height: 1.4em;">
-							
-어떤 이유로 모임을 만들게 됐나요?
-간단한 자기소개로 시작합시다. 
-단, 전화번호, 이메일, 카카오톡(메신저) 등의
-개인연락처 작성은 금지합니다.
+							${bean.gintro }
+	
 						</textarea>
 
 						</div>
@@ -487,7 +490,7 @@
 						<br>&nbsp;
 						<section id="tags">
 							<input type="text" name="tag" id="tag"
-								placeholder="태그를 입력해주세요. 태그앞에 #을 붙여주세요. ex) #농구 #축구 #러닝" autocomplete="on"
+								value="${bean.gtag }" autocomplete="on"
 								tabindex="" class="txtinput" style="font-size: 15px"> <br style="clear: both;">
 						</section>
 						</div>
@@ -500,6 +503,7 @@
 						<div style=" width:94%; padding:3% 3%; border:1px solid lightgray; border-top:0px; font-size:14px; background-color: #FCFCFC;">
 						※ 모임과 관련된 사진으로 사람들의 관심을 끌어보세요~!! 
 						<br>&nbsp;<br>
+						<div id="gimg"></div>
 						<input type="file" name="imgfile" size=40> 
 						</div>
 						<br>
