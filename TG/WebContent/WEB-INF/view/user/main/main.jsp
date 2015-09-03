@@ -28,12 +28,25 @@
 		});
 	}
 	
+	function loadRecom() {
+		$.ajax({url:"recommend", type:"POST", dataType:"text",
+			success:function(data){
+				var recomList = document.getElementById('recomList');
+				document.getElementById('h3').style.display = '';
+				recomList.innerHTML = data;
+			}
+		});
+	}
+	
 	function gogroupinfo(gno){
 		location.href = 'groupinfo?gno='+gno;
 	}
 	
 	$(document).ready(function() {
 		loadlist();
+		if('${id}'){
+			loadRecom();
+		}
 	});
 </script>
 </head>
@@ -60,6 +73,11 @@
 	
 	<section class="listings">
 	<div class="wrapper">
+		<h3 style="display: none" id="h3">이런 모임은 어떠신가요</h3>
+		<ul class="properties_list" id="recomList">
+		
+		</ul>
+		<h3>얼마 안있으면 종료되요</h3>
 		<ul class="properties_list" id="list">
 			
 		</ul>

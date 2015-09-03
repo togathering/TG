@@ -20,6 +20,6 @@
 	</select>
 	
 	<select id="ratioSum" parameterType="String" resultType="int">
-		select sum(ratio) from user_preference where id = #{id}
+		select round(avg(ratio),0) from user_preference where id = #{id}
 	</select>
 </mapper>
