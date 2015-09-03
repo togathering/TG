@@ -54,7 +54,7 @@
 				<th width="150px">살펴보기/거절</th>
 			</tr>
 		</table>
-		<table style="width: 70%; margin: 20px auto;" id="inviteTable">
+		<table class="board_table"  id="inviteTable" style="width: 800px; margin-top: -13px;">
 			
 		</table>
 	

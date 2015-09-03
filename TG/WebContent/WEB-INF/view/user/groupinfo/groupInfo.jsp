@@ -364,12 +364,12 @@ a:hover{
 		<!-- 	</pre> -->
 		</div>
 		<!-- 호스트프로필 -->
-			<div style="float: right; width:330px; height:210px; margin: 10px 150px 10px 5px; padding: 25px 10px; border: 1px solid lightgray; background-color: white;text-align: left;">
-			<h3>안녕하세요 ${group.nick }입니다!</h3>
-			${group.intro}
+			<div style="float: right; width:330px; height:210px; margin: 10px 150px 10px 5px; padding: 25px 10px; border: 1px solid lightgray; background-color: white;">
+			<h3>안녕하세요 호스트입니다!</h3>
+			저는 ~~를 좋아하는 사람입니다.
 			</div>
 		<!-- 약관? -->
-			<div style="float: right; width:310px; height:467px; margin: 10px 150px 7px 5px; padding: 25px 20px;  LINE-HEIGHT: 160%; border: 1px solid lightgray; background-color: white;text-align: left;">
+			<div style="float: right; width:310px; height:467px; margin: 10px 150px 7px 5px; padding: 25px 20px;  LINE-HEIGHT: 160%; border: 1px solid lightgray; background-color: white;">
 			<h3>꼭 지켜주세요!</h3>
 			모임 진행의 책임은 해당 모임의 진행자인 그룹장에게 있습니다. 
 			모임 후, 불편했던 점, 수상쩍은 점, 기타 문제점이 발생했다면 적극적으로 신고 부탁드립니다. 

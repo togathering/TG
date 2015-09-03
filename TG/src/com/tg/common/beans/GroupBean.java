@@ -17,20 +17,17 @@ public class GroupBean {
 	private String nick; // not null
 	private String goption; // not null
 	private String gcategory;
-	
-	// 회원 자기소개 추가
 	private String intro;
 	
 	public GroupBean() {
 	
 	}
 
-	
-
 	public GroupBean(int gno, String ghost, String gtitle, String gloc,
 			String gintro, String gday, int gmax, int gmin, int gsum,
 			String gimg, String gdate, String gtag, String gstatus,
 			String nick, String goption, String gcategory, String intro) {
+		super();
 		this.gno = gno;
 		this.ghost = ghost;
 		this.gtitle = gtitle;
@@ -49,8 +46,6 @@ public class GroupBean {
 		this.gcategory = gcategory;
 		this.intro = intro;
 	}
-
-	
 
 	public int getGno() {
 		return gno;
@@ -164,13 +159,9 @@ public class GroupBean {
 		this.nick = nick;
 	}
 
-
-
 	public String getGoption() {
 		return goption;
 	}
-
-
 
 	public void setGoption(String goption) {
 		this.goption = goption;
@@ -191,6 +182,9 @@ public class GroupBean {
 	public void setIntro(String intro) {
 		this.intro = intro;
 	}
+
+	
+
 	
 	
 }

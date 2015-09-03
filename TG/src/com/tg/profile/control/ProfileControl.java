@@ -19,15 +19,15 @@ public class ProfileControl {
 	@Autowired
 	MemberDAO dao;
 	@Autowired
-	ReportDAO rdao;
+	ReportDAO rpdao;
 	@Autowired
-	ReviewDAO redao;
+	ReviewDAO rvdao;
 
 	@RequestMapping("/profile")
 	public String profile(@RequestParam(value="id") String id, Model model){
 		MemberBeanIn bean = dao.profile(id);
-		List<ReviewBean> review = redao.rList(id);
-		int count = rdao.reportCount(id);
+		List<ReviewBean> review = rvdao.rList(id);
+		int count = rpdao.reportCount(id);
 		model.addAttribute("my", bean);
 		model.addAttribute("count", count);
 		model.addAttribute("review", review);

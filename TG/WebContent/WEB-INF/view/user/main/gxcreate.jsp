@@ -85,9 +85,11 @@
 		    success:function(data){
 		    	if(data=='ok') document.createFrm.submit();
 		    	else alert("[ "+data+' ]는(은) 금지어입니다. 금지어를 지우고 다시 시도해주세요.');
-		    	document.frm.title.focus();
+		    	document.frm.title.fucus();
 		    }
 		});
+		
+		/* document.createFrm.submit(); */
 	}
 	
 	$(document).ready(function(){

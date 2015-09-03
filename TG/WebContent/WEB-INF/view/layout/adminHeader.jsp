@@ -31,7 +31,7 @@ $(document).ready(function(){
 			<li><a href="adminMemberList">회원관리</a></li>
 			<li><a href="adminGroupList">모임관리</a></li>
 <%-- 			<li><a href="adminReportList">신고관리</a></li> --%>
-			<li><a href="adminBoard">게시판관리</a></li>
+			<li><a href="adminQna">게시판관리</a></li>
 		</ul>
 		</nav>
 	</div>

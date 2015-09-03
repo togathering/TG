@@ -45,7 +45,7 @@ public class GroupJoinControl {
 			gstatus = "모집완료";
 		}else{
 			gstatus = "모집 중";
-		}
+		}		
 		
 		if(gdao.joinG(gsum, gno, gstatus) && pdao.joinGroup(gno, id)){
 			System.out.println("참여 성공");
@@ -56,7 +56,7 @@ public class GroupJoinControl {
 			}else{
 				ratio = ratio-1;
 			}
-			gpdao.upRatio(ratio, gno);
+			gpdao.upRatio(gno,ratio);				
 			
 		}else{
 			System.out.println("참여 실패");			
@@ -77,7 +77,7 @@ public class GroupJoinControl {
 		int gsum = gbean.getGsum();
 		gsum--;
 		if(gdao.joinG(gsum, gno, "모집 중") &&	pdao.cancelJoin(pbean)){
-			System.out.println("참여취소 성공");
+			System.out.println("참여취소 성공");	
 			int ratio = gpdao.selectRatio(gno);
 			String gender = mdao.selectMem(id).getGender();
 			if(gender.equals("M")){
@@ -85,7 +85,7 @@ public class GroupJoinControl {
 			}else{
 				ratio = ratio+1;
 			}
-			gpdao.upRatio(ratio, gno);
+			gpdao.upRatio(gno,ratio);				
 		}else{
 			System.out.println("참여취소 실패");				
 		}

@@ -1,6 +1,8 @@
 package com.tg.common.dao;
 
+import java.util.HashMap;
 import java.util.List;
+
 
 
 import org.apache.ibatis.session.SqlSession;
@@ -39,9 +41,13 @@ public class ReportDAO {
 		ReportBean bean = session.selectOne("report.Con", no);
 		return bean;
 	}
-	public boolean reportUp(int no){
-		int t = session.update("report.Up", no);
-		if(t>=1) {
+	public boolean reportUp(int no, String status){
+		System.out.println("no:"+no+", status:"+status);
+		HashMap<Object, Object> map = new HashMap<Object, Object>();
+		map.put("no", no);
+		map.put("status", status);
+		int t = session.update("report.Up", map);
+		if(t==1) {
 			return true;
 		}
 		return false;

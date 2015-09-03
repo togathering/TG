@@ -20,15 +20,14 @@ public class GroupPreferenceDAO {
 	}
 	
 	public Integer selectRatio(int gno){
-		int ratio = session.selectOne("group_pre.selectRatio",gno);
+		int ratio = session.selectOne("group_pre.selectRatio");
 		return ratio;
 	}
 	
-	public boolean upRatio(int ratio, int gno){
+	public boolean upRatio(int gno, int ratio){
 		HashMap<String, Integer> map = new HashMap<String, Integer>();
-		map.put("ratio", ratio);
 		map.put("gno", gno);
-		
+		map.put("ratio", ratio);
 		int t = session.update("group_pre.upRatio", map);
 		if(t==1){
 			return true;

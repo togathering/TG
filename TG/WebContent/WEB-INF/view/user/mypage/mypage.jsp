@@ -155,7 +155,7 @@
 		</div>
 		
 		<div style="border:1px solid lightgray; border-top:none; width:100%;">
-			<form name="hongkiat" id="hongkiat-form" method="post" action="myupdate">		
+			<form name="hongkiat" id="hongkiat-form" method="post" action="myupdate" enctype="multipart/form-data">		
 
 				<div id="wrapping" class="clearfix" style="margin-left: 30px">
 					<section id="aligned">

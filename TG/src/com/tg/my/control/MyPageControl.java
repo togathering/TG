@@ -10,7 +10,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 
+import com.oreilly.servlet.MultipartRequest;
+import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 import com.tg.common.beans.GroupBean;
 import com.tg.common.beans.MemberBean;
 import com.tg.common.beans.MemberBeanIn;
@@ -44,15 +47,46 @@ public class MyPageControl {
 	}
 	
 	@RequestMapping("/myupdate")
-	public String gxDelete(MemberBeanIn m, HttpSession session,
-			@RequestParam(value="year")String year,
-			@RequestParam(value="month")String month,
-			@RequestParam(value="day")String day) {
-		String id= (String) session.getAttribute("id");
-		String birth = year+month+day;
+	public String gxDelete(HttpServletRequest request, HttpSession session) throws Exception{	
+		MemberBeanIn m = new MemberBeanIn();
+		request.setCharacterEncoding("UTF-8");
 		
-		m.setBirth(birth);
+		String savePath = request.getSession().getServletContext().getRealPath("upimg");
+
+		int sizeLimit = 1024*1024*15;
+		
+		MultipartRequest multi = new MultipartRequest(request, savePath, sizeLimit, "EUC-KR", new DefaultFileRenamePolicy());
+		 
+		String pic = multi.getFilesystemName("imgFile");
+		System.out.println("imgFile"+pic);
+		
+		String id= (String) session.getAttribute("id");
+		String pass = multi.getParameter("pass");
+		String nick = multi.getParameter("nick");
+		String tel = multi.getParameter("tel");
+		String gender = multi.getParameter("gender");
+		String favo = multi.getParameter("favo");
+		String loc = multi.getParameter("loc");
+		String insta = multi.getParameter("insta");
+		String fbook = multi.getParameter("fbook");
+		String intro = multi.getParameter("intro");
+		String year = multi.getParameter("year");
+		String month = multi.getParameter("month");
+		String day = multi.getParameter("day");
+		String birth = year+month+day;
+		System.out.println("¸â¹ö:"+birth);
 		m.setId(id);
+		m.setPass(pass);
+		m.setNick(nick);
+		m.setTel(tel);
+		m.setGender(gender);
+		m.setFavo(favo);
+		m.setLoc(loc);
+		m.setInsta(insta);
+		m.setFbook(fbook);
+		m.setIntro(intro);
+		m.setBirth(birth);
+		m.setPic(pic);
 		dao.upProfile(m);
 		
 		return "redirect:main";

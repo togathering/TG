@@ -63,7 +63,7 @@
 	아직은 부족하더라도 세계로 뻗어가는 TG의 모습을 기대해주시기 바랍니다.	
 	</p>
 	</div>
-	<hr>
+	<br>
 	<div>
 	<p id='introTG' class="subject">ToGathering 소개</p>
 	<p id="introduceToGathering" class='contents'>
@@ -75,6 +75,6 @@
 	</p>
 	</div>
 	
-	<div style="position: relative; top: 105px"><tiles:insertAttribute name="footer"/></div>
+	<div style="position: relative; top: 150px"><tiles:insertAttribute name="footer"/></div>
 </body>
 </html>
