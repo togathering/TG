@@ -6,4 +6,12 @@
 	<select id="selectAll" resultType="com.tg.common.beans.GroupPreferenceBean">
 		select gno, category_name, province_name, ratio from group_preference
 	</select>
+	
+	<select id="selectRatio" parameterType="int" resultType="int">
+		select ratio from group_preference where gno=#{gno}
+	</select>
+	
+	<update id="upRatio" parameterType="hashmap">
+		update group_preference set ratio = #{ratio} where gno=#{gno}
+	</update>
 </mapper>

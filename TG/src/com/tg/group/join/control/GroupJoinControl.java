@@ -10,7 +10,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.tg.common.beans.GroupBean;
 import com.tg.common.beans.ParticipantBean;
 import com.tg.common.dao.GroupDAO;
+import com.tg.common.dao.GroupPreferenceDAO;
 import com.tg.common.dao.InviteGroupDAO;
+import com.tg.common.dao.MemberDAO;
 import com.tg.common.dao.ParticipantDAO;
 
 @Controller
@@ -21,6 +23,10 @@ public class GroupJoinControl {
 	ParticipantDAO pdao;
 	@Autowired
 	InviteGroupDAO idao;
+	@Autowired
+	GroupPreferenceDAO gpdao;
+	@Autowired
+	MemberDAO mdao;
 
 	@RequestMapping("/joingroup")
 	public String groupJoin(@RequestParam(value="gno")String gxno, HttpSession session){
@@ -39,10 +45,19 @@ public class GroupJoinControl {
 			gstatus = "모집완료";
 		}else{
 			gstatus = "모집 중";
-		}		
+		}
 		
 		if(gdao.joinG(gsum, gno, gstatus) && pdao.joinGroup(gno, id)){
-			System.out.println("참여 성공");						
+			System.out.println("참여 성공");
+			int ratio = gpdao.selectRatio(gno);
+			String gender = mdao.selectMem(id).getGender();
+			if(gender.equals("M")){
+				ratio = ratio+1;
+			}else{
+				ratio = ratio-1;
+			}
+			gpdao.upRatio(ratio, gno);
+			
 		}else{
 			System.out.println("참여 실패");			
 		}
@@ -62,7 +77,15 @@ public class GroupJoinControl {
 		int gsum = gbean.getGsum();
 		gsum--;
 		if(gdao.joinG(gsum, gno, "모집 중") &&	pdao.cancelJoin(pbean)){
-			System.out.println("참여취소 성공");				
+			System.out.println("참여취소 성공");
+			int ratio = gpdao.selectRatio(gno);
+			String gender = mdao.selectMem(id).getGender();
+			if(gender.equals("M")){
+				ratio = ratio-1;
+			}else{
+				ratio = ratio+1;
+			}
+			gpdao.upRatio(ratio, gno);
 		}else{
 			System.out.println("참여취소 실패");				
 		}
