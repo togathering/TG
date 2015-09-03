@@ -47,5 +47,6 @@ public class ReportControl_admin {
 			status = "H";
 		dao.reportUp(no, status);
 		return "redirect:adminReportList";
+		
 	}
 }
