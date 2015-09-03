@@ -166,7 +166,7 @@
 				for(i=0; i<ntdsum; i++) {
 					//달의 1일이 일요일이 아니라면 1일까지 빈 공간을 만들어 줍니다.
 					if(i<nfirstweek) {//현재 달의 1일부터 마지막날까지 일요일과 평일(토요일)의 글자 색상만 바꾸어주며 차례대로 칸을 채워 넣습니다.
-				    	if(i==0) dmsg += "<td class='srgfont' style='cursor:pointer;'></td>";
+				    	if(i==0) dmsg += "<td class='srgfont' style='cursor:defualt; '></td>";
 				      	else dmsg += "<td class='sgfont' style='cursor:hand;' ></td>";
 				    }else {
 				    	d++;
@@ -174,7 +174,7 @@
 						if(((i+1)%7)==1) { 
 							tdfc = "srfont"; 
 						}
-				    	dmsg += "<td class='"+tdfc+"' style='cursor:pointer;background-color:#eeeeee;'onclick=\"selectDate(this)\" id='"+d+"'>"+d+"</td>";		      
+				    	dmsg += "<td class='"+tdfc+"' style='cursor:pointer;background-color:#eeeeee; 'onclick=\"selectDate(this)\" id='"+d+"'>"+d+"</td>";		      
 				    }
 				    if(i<ntdsum-1 && ((i+1)%7)==0) { 
 				    	dmsg += "</tr><tr align='center' height='17' bgcolor='#eeeeee'>"; 
@@ -189,7 +189,7 @@
 				      	if(i==0 && (ntdsum%7)==0) { 
 				      		tdfc = "srgfont"; 
 				      	}
-				      	dmsg += "<td class='"+tdfc+"' style='cursor:pointer;' >"+(i+1)+"</td>";
+				      	dmsg += "<td class='"+tdfc+"' style='cursor:default;' >"+(i+1)+"</td>";
 				    }
 				}
 				//달력에서 다음달의 1주일을 추가로 더 보여주도록 합니다. 이번달의 마지막날이 토요일일 경우를 감안하여 다음달이 14일이 넘지 않도록 합니다.
