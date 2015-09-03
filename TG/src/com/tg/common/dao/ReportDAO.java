@@ -51,6 +51,7 @@ public class ReportDAO {
 			return true;
 		}
 		return false;
+		
 	}
 	
 	public int reportCount(String id){
