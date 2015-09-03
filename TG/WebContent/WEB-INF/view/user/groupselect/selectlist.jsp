@@ -6,7 +6,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="css/search.css">
+<link rel="stylesheet" type="text/css" href="css/tgBoard.css">
+<title>모임 다시 만들기</title>
 <script type="text/javascript">
 	function choiceGx(gno) {
 		location.href = "createGx?gno="+gno;
@@ -17,26 +19,27 @@
 <div style="z-index: 2;"><tiles:insertAttribute name="header"/></div>
 <div class="board_div">
 	<form id="form" style="padding-top: 20px; text-align: center;">
-		<div class="wrapper"><h2>다시 개최할 모임</h2><br>
-			<table id="historyGx" style="width: 75%;"class="board_table">
+		<div class="wrapper">
+			<h4>다시 개최할 모임</h4><br>
+			<table id="historyGx" style="width: 730px;"class="board_table">
 				<tr class="boardth">
-					<th style="width: 100px; padding-top: 8px;">모임이름</th>
-					<th>장소</th>
+					<th style="width: 220px;">모임이름</th>
+					<th  style="width: 260px;">장소</th>
 					<th>날짜</th>
 					<th>선택</th>
 				</tr>
 				<c:forEach  items='${list }' var='history' >
 				<tr class="board_contents" >
-					<td><a  style="color: gray;" href="groupinfo?gno=${history.gno }">${history.gtitle }</a></td>
+					<td style="padding-top: 15px;"><a  style="color: gray;" href="groupinfo?gno=${history.gno }">${history.gtitle }</a></td>
 					<td>${history.gloc }</td>
 					<td>${history.gday }</td>
-					<td><input type="button" value="모임선택" onclick="choiceGx('${history.gno }')"> </td>
+					<td><input type="button" class="sbutton" value="모임선택" onclick="choiceGx('${history.gno }')"> </td>
 				</tr>
 				</c:forEach>
 			</table>
 		</div>
 	</form>
 </div>
-	<div style="position: relative; top: 30px"><tiles:insertAttribute name="footer"/></div>
+	<div style="position: relative; top: 50px"><tiles:insertAttribute name="footer"/></div>
 </body>
 </html>
