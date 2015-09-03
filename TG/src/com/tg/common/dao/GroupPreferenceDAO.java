@@ -20,7 +20,7 @@ public class GroupPreferenceDAO {
 	}
 	
 	public Integer selectRatio(int gno){
-		int ratio = session.selectOne("group_pre.selectRatio");
+		int ratio = session.selectOne("group_pre.selectRatio",gno);
 		return ratio;
 	}
 	
