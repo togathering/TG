@@ -14,8 +14,8 @@
 	
 	<form action="sendPrefer" method="post" name="frm">
         <p>유저님 선호하는 모임의 유형은?</p>
-		<input type="checkbox" name="prefer" value="구기/단체/실내|서울|-8" />풋살모임 | 서울 | 남(8), 여(0)<br/>
-		<input type="checkbox" name="prefer" value="비구기/개인/실외|광주|5" />마라톤 | 광주 | 남(7), 여(2)<br />
+		<input type="checkbox" name="prefer" value="구기/단체/실내z서울z-8" />풋살모임 | 서울 | 남(8), 여(0)<br/>
+		<input type="checkbox" name="prefer" value="비구기/개인/실외z광주z5" />마라톤 | 광주 | 남(7), 여(2)<br />
 		<input type="checkbox" name="prefer" value="구기/단체/실외|인천|5" />축구 | 인천 | 남(6), 여(1)<br />
 		<input type="checkbox" name="prefer" value="구기/단체/실외|강원|2" />발야구 | 강원 | 남(5), 여(3)<br />
 		<input type="checkbox" name="prefer" value="구기/개인/실외|전남|-1" />소프트볼 | 전남 | 남(4), 여(5)<br />
@@ -40,7 +40,7 @@
 		<input type="checkbox" name="prefer" value="비구기/단체/실외|경북|5" />Birds<br />
 		<input type="checkbox" name="prefer" value="구기/단체/실내|부산|-6" />Birds<br />
 		<input type="checkbox" name="prefer" value="비구기/개인/실내|대구|5" />Birds<br />
-		<input type="checkbox" name="prefer" value="비구기/단체/실외|부산|-8" />Birds<br />
+		<input type="checkbox"	 name="prefer" value="비구기/단체/실외|부산|-8" />Birds<br />
 		<input type="checkbox" name="prefer" value="비구기/단체/실외|울산|-7" />Birds<br />
 		<input type="checkbox" name="prefer" value="비구기/단체/실외|울산|4" />Birds<br />
 		<input type="checkbox" name="prefer" value="비구기/개인/실내|대전|2" />Birds<br />

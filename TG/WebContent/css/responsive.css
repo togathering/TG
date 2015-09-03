@@ -190,10 +190,10 @@ video {
     background: rgba(255,255,255,0.9);
     color: #514d4d;
 /*     font-family: "lato-bold", Helvetica, Arial, sans-serif; */
-    font-size: 16px;
+    font-size: 12px;
     font-weight: bold;
     letter-spacing: 1px;
-
+	max-width:270px;
     border-radius: 2px;
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;

@@ -64,7 +64,7 @@ public class LoginControl {
 				page = "redirect:research";
 			
 			} else{
-				// dao.changeNewbie(id);
+
 				page = "redirect:main";				
 			}
 			System.out.println("페이지는 "+page);

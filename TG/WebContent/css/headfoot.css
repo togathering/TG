@@ -112,18 +112,17 @@ body{
 }
 
 .wrapper5 li ul{
-	background: #FA5858;
+	background: #ffffff;
 	display:none; /* 평상시에는 드랍메뉴가 안보이게 하기 */
-	height:225px;
+	height:200px;
 	padding:1px;
-	margin:0px 10px 0px 0px;
+	margin:0.5px 10px 10px -20px;
 	border:0px;
 	position:absolute;
-	width:130px;
+	width:120px;
 	z-index:200;
-/* 	border-radius: 0em 2.5em 0em 2.5em; */
-	/*top:1em;
-	/*left:0;*/
+	border: 1px solid #F2F2F2;
+	border-radius: 0.3em 0.3em 0.3em 0.3em; 
 }
 
 .wrapper5 li:HOVER ul{
@@ -131,25 +130,25 @@ body{
 }
 .wrapper5 li ul li{
 	float: none;
-	top:5px;
-	bottom:15px;
-	padding:5px 5px 5px 5px;
-	margin: 5px auto;
-	height: 19px;
+	top:2px;
+	bottom:5px;
+	padding:5px 0px 10px 0px;
+	margin: 5px 0px;
+	height: 17px;
 }
 .wrapper5 li ul li:HOVER a{
-	background: #F5A9A9;; /* 마우스 커서 올리면 배경색 보이게 하기 */
+	background: #f0f0f0;; /* 마우스 커서 올리면 배경색 보이게 하기 */
 }
 .wrapper5 li ul a{
 	display:block;
-	height:20px;
-	width:102px;
+	height:22px;
+	width:110px;
 	font-size:14px;
 	font-style:normal;
 	margin:0px;
-	padding:0px 5px 0px 15px;
+	padding:11px 0px 1px 10px;
 	text-align:left;
-	color: white;
+	color: #5a5a5a;
 	font-weight: bold;
 	/* border-radius:1em 1em 1em 1em; */
 }
@@ -244,7 +243,7 @@ header nav ul li{
 header nav ul li a,
 header nav .create_btn{
     text-decoration: none;
-    color: #9b9b9b;
+    color: #8a8a8a;
    /*  font-family: "lato-regular", Helvetica, Arial, sans-serif; */
     font-size: 14px;
     letter-spacing: 1px;
@@ -266,7 +265,8 @@ header nav .create_btn{
 
 header nav .create_btn:hover{
     background: #FA5858;
-    color: #676767;
+    color: #f6f6f6;
+    border-color: #d1d1d1;
 }
 
 header nav .create_btn2{
@@ -292,7 +292,8 @@ header nav .create_btn2{
 
 header nav .create_btn2:hover{
     background: #FA5858;
-    color: #676767;
+    color: #f6f6f6;
+    border-color: #d1d1d1;
 }
 /*  responsive css */
 
