@@ -52,11 +52,13 @@ margin-top: 30px;
 	<p>관련 문의사항은 ToGathering 문의하기로 알려주시면 친절하게 안내해 드리겠습니다.</p>
 	<p>감사합니다.</p>
 	</div>
-	<br>
-	<form class="frm" name="frm" action="groupsearch" style="padding-top: 30px;">
-		<input type="text" class="search" placeholder="검색해주세요." name="search" style="border: 1px solid lightgray; width: 500px;">
-		<button type="submit" class="button" name="search_bt" >모임 검색</button>
+	<div>
+	<p style="margin-left: 90px;">모임을 찾고계시다면 검색을 해보세요~!!</p>
+	<form class="frm" name="frm" action="groupsearch" style="padding-top: 5px; width: 100%;">
+		<input type="text" class="search" placeholder="검색해주세요." name="search" style="border: 1px solid lightgray; width: 400px; float: left; margin-left: 90px;">
+		<button type="submit" class="button" name="search_bt" style="float: left; margin-left: 10px;">모임 검색</button>
 	</form>
+	</div>
 </div>
 </body>
 <%-- [error 내용]
