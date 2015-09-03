@@ -8,6 +8,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>투게더링 :: 페이지를 찾을 수 없습니다.</title>
 <link rel="shortcut icon" href="img/favi/tgFavi.ico">
+<link rel="stylesheet" type="text/css" href="css/search.css">
+<link rel="stylesheet" type="text/css" href="css/tgBoard.css">
 <style type="text/css">
 *{
 list-style: none
@@ -15,7 +17,7 @@ list-style: none
 }
 
 body{
-width : 700px;
+width : 100%
 
 }
 
@@ -25,39 +27,37 @@ float: left;
 
 ul{
 float: right;
+margin-top: 30px;
 }
 
 </style>
 </head>
 <body>
-
+<div style="margin: 20px 350px 20px 250px;">
 	<h1><a href="main"><img src="img/logo2.png" class="logo" alt="" title=""></a></h1>
 	<ul>
-		<li><a href="main">투게더링홈</a></li>
-		<li><a href="qna">투게더링 문의</a></li>
+		<li><a href="main" style="text-decoration: none;">투게더링홈</a></li>
+		<li><a href="qna" style="text-decoration: none;">투게더링 문의</a></li>
 	</ul>
 	
 	<br><br>
 	<br>
 	<br>
-	<br>
-	
+	<div>
 	<p>죄송합니다.</p>
 	<p>요청하신 페이지를 찾을 수 없습니다.</p>
 	<p>방문하시려는 페이지의 주소가 잘못 입력되었거나,</p>
 	<p>페이지의 주소가 변경 혹은 삭제되어 요청하신 페이지를 찾을 수 없습니다.</p>
 	<p>입력하신 주소가 정확한지 다시 한번 확인해 주시기 바랍니다.</p>
-	<p>관련 문의사항은 네이버 고객센터에 알려주시면 친절하게 안내해 드리겠습니다.</p>
+	<p>관련 문의사항은 ToGathering 문의하기로 알려주시면 친절하게 안내해 드리겠습니다.</p>
 	<p>감사합니다.</p>
-
+	</div>
 	<br>
-	<br>
-	
-	<form class="frm" name="frm" action="groupsearch">
-		<input type="text" class="search" placeholder="검색해주세요." name="search">
+	<form class="frm" name="frm" action="groupsearch" style="padding-top: 30px;">
+		<input type="text" class="search" placeholder="검색해주세요." name="search" style="border: 1px solid lightgray; width: 500px;">
 		<button type="submit" class="button" name="search_bt" >모임 검색</button>
 	</form>
-
+</div>
 </body>
 <%-- [error 내용]
 <br>

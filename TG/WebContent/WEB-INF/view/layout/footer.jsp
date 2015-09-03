@@ -34,7 +34,7 @@
 			</li>
 			<li class="links">
 				<ul>
-					<li><a href="report2">신고하기</a></li>
+					<li><a href="report">신고하기</a></li>
 				</ul>
 			</li>
 			<li class="about">
