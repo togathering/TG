@@ -47,12 +47,12 @@ where rn between #s# and #e#
 		delete from member where id=#{param}
 	</delete>
 	<select id="my" parameterType="java.lang.String" resultType="com.tg.common.beans.MemberBeanIn">
-		select id, pass, nick, tel, favo, loc, birth, intro, gender, insta, fbook from member where id=#{value}
+		select id, pass, nick, tel, favo, loc, birth, intro, gender, insta, fbook, pic from member where id=#{value}
 	</select>
 	<update id="profile" parameterType="com.tg.common.beans.MemberBeanIn">
 		update member 
 		set nick=#{nick}, pass=#{pass}, tel=#{tel}, favo=#{favo}, loc=#{loc},birth=#{birth}, 
-			intro=#{intro}, gender=#{gender}, insta=#{insta}, fbook=#{fbook} 
+			intro=#{intro}, gender=#{gender}, insta=#{insta}, fbook=#{fbook}, pic=#{pic}
 		where id=#{id}
 	</update>
 	
