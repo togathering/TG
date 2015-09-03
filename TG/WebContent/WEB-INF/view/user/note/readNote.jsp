@@ -38,7 +38,7 @@
 <body style="background-color: #FAFAFA;">
 	<div align="center">
 	<form action="deleteNote" method="post">
-	<div style="background-color: #E6E6E6; border: 1px solid lightgray; padding: 10px 5px;">
+	<div style="background-color: #E6E6E6; border: 1px solid lightgray; padding: 10px 5px; font-size: 15px;">
 		<label>
 			보낸사람 : ${noteBean.senderId}<br>
 			받은시간 : ${noteBean.noteDate}
