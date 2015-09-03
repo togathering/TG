@@ -6,6 +6,7 @@
 <html>
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript">
+
 	function checkValue() {
 		var nick = document.hongkiat.nick.value;
 		var tel = document.hongkiat.tel.value;
