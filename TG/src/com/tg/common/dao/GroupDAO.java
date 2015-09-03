@@ -218,4 +218,9 @@ public class GroupDAO {
 		List<GroupBean> list = session.selectList("group.conditionSearch", map, new RowBounds(0, cnt));
 		return list;
 	}
+	
+	public GroupBean recommend(int gno){
+		GroupBean bean = session.selectOne("group.recommend",gno);
+		return bean;
+	}
 }

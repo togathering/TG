@@ -525,7 +525,7 @@
 					</section>
 				</div>
 			</form>
-		<input type="submit" class="button" name="save" style="width: 150px;"
+		<input type="button" class="button" name="save" style="width: 150px;"
 			value="모임 만들기" onclick="checkValue()"> <br style="clear: both;">
 		</section>		
 	</div>

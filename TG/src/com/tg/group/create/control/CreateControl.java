@@ -12,11 +12,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 
 
+
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 import com.tg.common.beans.GroupBean;
 import com.tg.common.beans.GroupPreferenceBean;
 import com.tg.common.dao.GroupDAO;
+import com.tg.common.dao.GroupPreferenceDAO;
 import com.tg.common.dao.ParticipantDAO;
 import com.tg.common.dao.ReplyDAO;
 import com.tg.common.dao.WishDAO;
@@ -32,6 +34,8 @@ public class CreateControl{
 	GroupDAO dao;
 	@Autowired
 	WishDAO wdao;
+	@Autowired
+	GroupPreferenceDAO gpdao;
 	
 	@Autowired
 	GroupBean bean;
@@ -109,6 +113,10 @@ public class CreateControl{
 	
 	@RequestMapping("/delGroup")
 	public String delGroup(@RequestParam(value="gno")Integer gno){
+		
+		if(gpdao.delPref(gno)){
+			System.out.println("그룹정보삭제성공");
+		}
 		
 		if(rdao.delGroup(gno)){
 			System.out.println("댓글삭제성공");

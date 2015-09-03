@@ -143,7 +143,7 @@ public class RecommendControl {
 		List<GroupBean> recomlist = new ArrayList<GroupBean>();
 		for(int idx=0;idx<3;idx++){
 			System.out.println("상위"+(idx+1)+"번그룹 :"+point.get(idx).get("gno")+" 점수:"+point.get(idx).get("sum"));
-			recomlist.add(gdao.selectGroupInfo(point.get(idx).get("gno")));
+			recomlist.add(gdao.recommend(point.get(idx).get("gno")));
 			
 		}
 		model.addAttribute("recommendList", recomlist);
