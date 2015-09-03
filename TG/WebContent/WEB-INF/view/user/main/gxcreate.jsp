@@ -85,11 +85,9 @@
 		    success:function(data){
 		    	if(data=='ok') document.createFrm.submit();
 		    	else alert("[ "+data+' ]는(은) 금지어입니다. 금지어를 지우고 다시 시도해주세요.');
-		    	document.frm.title.fucus();
+		    	document.frm.title.focus();
 		    }
 		});
-		
-		/* document.createFrm.submit(); */
 	}
 	
 	$(document).ready(function(){
@@ -525,7 +523,7 @@
 					</section>
 				</div>
 			</form>
-		<input type="submit" class="button" name="save" style="width: 150px;"
+		<input type="button" class="button" name="save" style="width: 150px;"
 			value="모임 만들기" onclick="checkValue()"> <br style="clear: both;">
 		</section>		
 	</div>

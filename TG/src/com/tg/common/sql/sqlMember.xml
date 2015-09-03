@@ -40,7 +40,7 @@ where rn between #s# and #e#
 
 
 	<select id="selectMem" parameterType="java.lang.String" resultType="com.tg.common.beans.MemberBean">
-		select id, nick from member where id = #{id}
+		select id, nick, gender from member where id = #{id}
 	</select>
 
 	<delete id="eraseId" parameterType="java.lang.String">
