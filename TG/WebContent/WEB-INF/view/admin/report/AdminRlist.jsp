@@ -2,7 +2,7 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
     <div class="board_div">
-	 <table style="width: 95%; border-collapse: collapse;" id="mtable" class="board_table">
+	 <table style="width: 60%; border-collapse: collapse;" id="mtable" class="board_table">
 				<tr class="boardth">
 					<th style="width: 220px">신고자</th>
 					<th>피신고자</th>

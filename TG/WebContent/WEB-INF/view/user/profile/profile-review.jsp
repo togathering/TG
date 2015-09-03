@@ -16,10 +16,12 @@
 	.tprofile {margin: 10px;}
 	.tevaluate {margin: 18px;}
 	.trcomment {padding: 5px;}
+	.tevaluate td{width: 100px;}
 </style>
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
+	alert('${my.pic}');
 	var gg = document.getElementById("gender");
 	var bb = document.getElementById("birth");
 		if('${my.gender}'=='F'){
@@ -39,7 +41,7 @@ $(document).ready(function(){
 <body>
 	<h3>${my.nick }님의 프로필</h3>
 		<div class="image">
-			<img src="upimg/kk.jpg" width="350px" height="350px">
+			<img src="upimg/${my.pic }" width="350px" height="350px">
 		</div>
 		
 		<div class="profile">
@@ -62,8 +64,7 @@ $(document).ready(function(){
 		</div>
 		<div class="evaluate">	
 			<table class="tevaluate">
-				<tr><td>평가점수</td><td></td></tr>
-				<tr><td>신고횟수</td><td></td></tr>
+				<tr><td>평가점수</td><td></td><td>신고횟수</td><td>${count }</td></tr>
 			</table>
 		</div>
 </body>

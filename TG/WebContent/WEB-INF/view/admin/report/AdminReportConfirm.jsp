@@ -22,7 +22,12 @@ margin: 0 auto;
 </style>
 <script type="text/javascript">
 	function reportOk(rno) {
+		alert("되라");
 		location.href = "adminReportOk?no="+rno;
+		self.close();
+	}
+	function reportHold(rno) {
+		location.href = "adminReportHold?no="+rno;
 		window.close();
 	}
 </script>
@@ -31,7 +36,7 @@ margin: 0 auto;
 	
 <div class="board_div">
 	<h2 align="center">신고 내용</h2>
-	<form action="adminReportOk?" style="padding-left: 30px;" >
+	<form action="adminReportOk" style="padding-left: 30px;" >
 		<table>
 			<tr>
 				<td width="80"><strong>신고자</strong></td><td width="250">${bean.reporter }</td>
@@ -51,8 +56,8 @@ margin: 0 auto;
 		</table>
 		<input hidden="true" type="text" name="upno" value="${rno}" ><br>
 		<div align="center">
-			<input type="submit" class="sbutton" value="확인" onclick="reportOk('${rno}')">
-			<input type="button" class="sbutton" value="보류" onclick="window.close()">
+			<input type="submit" class="sbutton" value="확인" onclick="reportOk('${rno}')" name="status">
+			<input type="submit" class="sbutton" value="보류" onclick="reportHold('${rno}')" name="status">
 		</div><br>
 	</form>
 	</div>
