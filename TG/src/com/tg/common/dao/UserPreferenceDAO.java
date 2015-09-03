@@ -16,16 +16,17 @@ public class UserPreferenceDAO {
 		return bean;
 	}
 	
+	// 선호도 제출
 	public boolean insert(UserPreferenceBean bean){
-		
-		session.selectOne("user_pre.insert", bean);
-		
+		int t = session.insert("user_pre.insert", bean);
+		if(t==1){
+			return true;			
+		}
 		return false;
 	}
 	
 	public String selectTopProvince(String id){
-		session.selectOne("user_pre.topProvince",id);
-		
+		session.selectOne("user_pre.topProvince",id);	
 		return "";
 	}
 }

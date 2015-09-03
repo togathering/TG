@@ -46,7 +46,7 @@ public class sendPreferController {
 			bean.setProvince_name(info[1]);
 			bean.setRatio(Integer.valueOf(info[2]));
 			
-			if(dao.insert(bean)){
+			if(dao.insert(bean) == true){
 				loginDao.changeNewbie(id);
 			}
 		}
