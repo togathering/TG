@@ -22,6 +22,7 @@ public class AdminLoginControl {
 		String page="";
 		
 		if(dao.loginCheck(id, pass)){
+			
 			session.setAttribute("id", id);
 			session.setAttribute("pass", pass);	
 			request.setAttribute("login", "succcess");

@@ -44,7 +44,7 @@
 	
 	$(document).ready(function() {
 		loadlist();
-		if('${id}'){
+		if('${newbie}'=='nonewbie'){
 			loadRecom();
 		}
 	});
