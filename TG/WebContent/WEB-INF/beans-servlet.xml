@@ -37,7 +37,7 @@
 	<bean class="com.tg.common.beans.AdminBean" id="adminBean"/>
 	<bean class="com.tg.common.beans.MemberBean" id="memberBean"/>
 	<bean class="com.tg.common.beans.QnaBean" id="qnaBean"/>
-	
+	<bean class="com.tg.common.beans.UserPreferenceBean" id="userPreferenceBean"/>
 	
 	<!-- 이메일 설정 (gmail) -->
 	
