@@ -28,9 +28,11 @@ public class ProfileControl {
 		MemberBeanIn bean = dao.profile(id);
 		List<ReviewBean> review = rvdao.rList(id);
 		int count = rpdao.reportCount(id);
+		int grade = rvdao.reviewGrade(id);
 		model.addAttribute("my", bean);
 		model.addAttribute("count", count);
 		model.addAttribute("review", review);
+		model.addAttribute("grade", grade);
 		return "user/profile/profile-review";
 	}
 	
