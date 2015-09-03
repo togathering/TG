@@ -219,7 +219,7 @@
 				if(lsy==now.getFullYear() && lsm==(now.getMonth()+1)) {
 					for(i=4; i<document.getElementById("leftdiary").childNodes[0].rows.length-1; i++) {
 				    	for(j=0; j<7; j++) {
-				        	if(document.getElementById("leftdiary").childNodes[0].rows[i].cells[j].style.backgroundColor=="#eeeeee") {
+				        	if(document.getElementById("leftdiary").childNodes[0].rows[i].cells[j].style.backgroundColor=="#FAFAFA") {
 				          		if(document.getElementById("leftdiary").childNodes[0].rows[i].cells[j].innerText=="<\%=date("+d+")*1%>") {
 				            		document.getElementById("leftdiary").childNodes[0].rows[i].cells[j].style.backgroundColor = "#6e9cf2";
 				            		document.getElementById("leftdiary").childNodes[0].rows[i].cells[j].style.color = "#ffffff";
