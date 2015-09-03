@@ -8,7 +8,7 @@
 			<div style="float:left; margin-left: 80px;">
 				<h4 style="text-align: left;">참가자 내역 ▷ 예정된 모임</h4>
 				<br>
-		<font color="#F78181">현재 ${gNum }개 모임에 참여중입니다</font>
+		<%-- <font color="#F78181">현재 ${gNum }개 모임에 참여중입니다</font> --%>
 			</div>
 			<div class="board_div" id="tableAndpage">
 			<table id="joinGx" class="board_table" style="width: 70%">

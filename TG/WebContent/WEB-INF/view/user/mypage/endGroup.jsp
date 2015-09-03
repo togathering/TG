@@ -19,7 +19,7 @@
 				</tr>
 				<c:forEach  items='${list }' var='gx' >
 				<tr  class="board_contents" >
-					<td style="padding-top: 15px;"><a style="color: #58ACFA; href="groupinfo?gno=${gx.gno }">${gx.gtitle }</a></td>
+					<td style="padding-top: 15px;"><a style="color: #58ACFA;" href="groupinfo?gno=${gx.gno }">${gx.gtitle }</a></td>
 					<td>${gx.ghost }</td>
 					<td>${gx.gloc }</td>
 					<td>${gx.gday }</td>
