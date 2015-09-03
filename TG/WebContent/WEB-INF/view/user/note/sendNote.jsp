@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>쪽지 보내기</title>
-
+<link rel="stylesheet" type="text/css" href="css/search.css">
 <style type="text/css">
 
 /* form 디자인 설정 */
@@ -101,21 +101,21 @@
 					<div style=" border: 1px solid lightgray; border-top: 0px; background-color: white;">
 					 <input	type="text" name="noteTitle" placeholder="제목을 입력해주세요 (최대 10글자)"
 						class="noteInput" onkeydown="limitTitleLength()" maxlength="9"
-						style="padding: 5px 24px; margin: 20px 0 10px 5px;">
+						style="padding: 5px 5px; margin: 20px 0 10px 5px; width:350px">
 					<br>
-					<textarea rows="15" cols="5" name="noteContent" maxlength="199"
+					<textarea rows="15"  name="noteContent" maxlength="199"
 						class="noteInput" placeholder="내용을 입력해주세요 (최대 50글자)" onkeydown="limitContentLength()" 
-						style="padding:5px 25px; margin: 1px 0 20px 0;">
+						style="padding:5px 5px; margin: 1px 0 20px 0; width:350px">
 						
 					</textarea>
 					</div>
 			</section>
 		</form>
-
-		<input type="submit" class="sm_button" value="보내기"
+		<div style="padding-top: 10px;">
+		<input type="submit" class="sbutton" value="보내기"
 			onclick="emptyCheck()"> <input type="button"
-			class="sm_button" onclick="goBack()" value="취소">
-
+			class="sbutton" onclick="goBack()" value="취소">
+		</div>
 	</div>
 </body>
 </html>
