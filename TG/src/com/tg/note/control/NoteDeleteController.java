@@ -17,8 +17,11 @@ public class NoteDeleteController {
 	NoteDAO noteDao;
 	
 	@RequestMapping("/deleteNote")
-	public String noteDelete(@RequestParam(value="noteNo", required=false) Integer noteNo){
+	public String noteDelete(@RequestParam(value="noteNo", required=false) Integer noteNo, Model model){
 		noteDao.deleteNote(noteNo);
-		return "redirect:noteList";
+		model.addAttribute("result", "notedeleteSuccess");
+		// 페이지 이동
+		return "common/windowClose";
+		// return "redirect:noteList";
 	}
 }

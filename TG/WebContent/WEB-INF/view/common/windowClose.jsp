@@ -13,7 +13,10 @@
 				alert("비밀번호를 이메일로 전송하였습니다.");
 			} else if('${result}' == 'noteSendSuccess'){
 				alert("쪽지 보내기 성공.");
-			} 
+			} 		
+			if('${result}' == 'notedeleteSuccess'){
+				alert("쪽지 삭제");
+			}
 			window.close();
 		})
 	</script>

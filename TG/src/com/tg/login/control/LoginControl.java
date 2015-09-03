@@ -59,7 +59,7 @@ public class LoginControl {
 				e.printStackTrace();
 			}
 			
-			
+			System.out.println(status);
 			if(status.equals("newbie")){
 				page = "redirect:research";
 			
