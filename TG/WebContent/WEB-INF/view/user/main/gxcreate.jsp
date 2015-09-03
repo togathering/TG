@@ -13,6 +13,7 @@
 <link rel="stylesheet" type="text/css" media="all" href="css/search.css">
 <link rel="stylesheet" type="text/css" media="all" href="css/styleGC.css">
 <link rel="stylesheet" type="text/css" media="all" href="css/responsiveGC.css">
+<script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/trim.js"></script>
 <script type="text/javascript">
 	function checkValue() {
@@ -90,6 +91,13 @@
 		
 		/* document.createFrm.submit(); */
 	}
+	
+	$(document).ready(function(){
+		if(!'${id}'){
+			alert('로그인해주세요');
+			location.href="login";
+		}
+	});
 </script>
 <script type="text/javascript">
 	function imgCheck(){
