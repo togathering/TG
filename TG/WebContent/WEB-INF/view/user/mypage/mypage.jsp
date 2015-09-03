@@ -218,7 +218,8 @@
          		</div>
          		<div style="width:600px; padding: 10px 0px">
 				<label class="label_left">프로필사진</label>
-         		<input type="file" name="imgFile" id="imgFile" class="txtinput" value="">						
+         		<input type="file" name="imgFile" id="imgFile" class="txtinput" >		
+         		<input type="text" value="${my.pic}" id="picImg" name="picImg" hidden="true">		
 						</div>
 						<!-- <br style="clear: both;"> -->
 						<div style="width: 98%">

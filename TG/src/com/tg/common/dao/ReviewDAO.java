@@ -42,4 +42,10 @@ public class ReviewDAO {
 		}
 		return list;
 	}
+	
+	public int reviewGrade(String id){
+		int grade = session.selectOne("review.grade", id);
+		
+		return grade;
+	}
 }

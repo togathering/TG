@@ -16,6 +16,7 @@ import com.tg.common.beans.GroupPreferenceBean;
 import com.tg.common.dao.CategoryDAO;
 import com.tg.common.dao.GroupDAO;
 import com.tg.common.dao.GroupPreferenceDAO;
+import com.tg.common.dao.MemberDAO;
 import com.tg.common.dao.ProvinceDAO;
 import com.tg.common.dao.UserPreferenceDAO;
 
@@ -31,6 +32,8 @@ public class RecommendControl {
 	ProvinceDAO prodao;
 	@Autowired
 	GroupDAO gdao;
+	@Autowired
+	MemberDAO mdao;
 	
 	
 	@RequestMapping("/recommend")

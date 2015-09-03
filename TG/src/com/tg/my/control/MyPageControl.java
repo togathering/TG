@@ -49,6 +49,7 @@ public class MyPageControl {
 	@RequestMapping("/myupdate")
 	public String gxDelete(HttpServletRequest request, HttpSession session) throws Exception{	
 		MemberBeanIn m = new MemberBeanIn();
+		String pic = null;
 		request.setCharacterEncoding("UTF-8");
 		
 		String savePath = request.getSession().getServletContext().getRealPath("upimg");
@@ -57,7 +58,15 @@ public class MyPageControl {
 		
 		MultipartRequest multi = new MultipartRequest(request, savePath, sizeLimit, "EUC-KR", new DefaultFileRenamePolicy());
 		 
-		String pic = multi.getFilesystemName("imgFile");
+		String imgFile = multi.getFilesystemName("imgFile");
+		if(imgFile==null){
+			String picImg = multi.getParameter("imgFile");
+			System.out.println("img:"+picImg);
+			pic = picImg;
+		}else{
+			pic = imgFile;		
+		}
+		
 		System.out.println("imgFile"+pic);
 		
 		String id= (String) session.getAttribute("id");

@@ -5,23 +5,22 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>${my.nick }님의 프로필</title>
+<title>${my.nick }(${my.id })님의 프로필</title>
 <style type="text/css">
 	body { width:900px; margin:20px auto; background:#ddd;}
 	.image { width:350px; height:350px; float:left; background:skyblue;}
 	.profile {width:550px; height:200px; float:right; background:skyblue;}
-	.comment {width:550px; height:250px; float:right; background:pink;}
-	.evaluate {width:350px; height:100px; float:left; background:orange;}
+	.comment {width:550px; height:200px; float:right; background:pink;}
+	.evaluate {width:350px; height:50px; float:left; background:orange;}
 	.tcomment {margin: 10px;}
 	.tprofile {margin: 10px;}
-	.tevaluate {margin: 18px;}
-	.trcomment {padding: 5px;}
+	.tevaluate {margin: 12px;}
+	.trcomment {padding: 3px;}
 	.tevaluate td{width: 100px;}
 </style>
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
-	alert('${my.pic}');
 	var gg = document.getElementById("gender");
 	var bb = document.getElementById("birth");
 		if('${my.gender}'=='F'){
@@ -64,7 +63,7 @@ $(document).ready(function(){
 		</div>
 		<div class="evaluate">	
 			<table class="tevaluate">
-				<tr><td>평가점수</td><td></td><td>신고횟수</td><td>${count }</td></tr>
+				<tr><td>평가점수</td><td>${grade }</td><td>신고횟수</td><td>${count }</td></tr>
 			</table>
 		</div>
 </body>
