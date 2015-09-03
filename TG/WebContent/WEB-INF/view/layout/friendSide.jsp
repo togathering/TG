@@ -39,6 +39,36 @@ function friendList() {
 		}
 	});
 }
+
+function acceptFriend(acceptId) {
+	location.href = "acceptFriend?fid="+acceptId;
+}
+
+function rejectFriend(rejectId) {
+	location.href = "refectFriend?rejectId="+rejectId;	
+}
+//쪽지 쓸수 있는 팝업창 생성 
+function msg(friendId, friendNick) {
+	var id = friendId;
+	var nick = friendNick;
+
+	window.open('writeNote?id=' + id + '&nick=' + nick, '',
+					'width=400, height=450, screenX=400, screenY=130, resizable=no');
+}
+
+function delFriend(delFriendId) {
+	var del = confirm("삭제할거에요?");
+	
+	if (del) {
+		location.href = "delFriend?delId="+delFriendId;
+	}
+}
+
+$(document).ready(function(){
+	friendReq();
+});
+
+
 </script>
 <style>
 .ulHostside{

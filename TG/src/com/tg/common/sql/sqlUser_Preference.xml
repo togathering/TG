@@ -11,12 +11,15 @@
 		select category_name, province_name, ratio from user_preference where id=#{id}
 	</select>
 	
-	<select id="topProvince" resultType="String">
-		select province_name from (select province_name, count(province_name) cnt from user_preference where id = #{id} group by province_name order by cnt desc) where rownum = 1;
+	<select id="topProvince" parameterType="String" resultType="String">
+		select province_name from (select province_name, count(province_name) cnt from user_preference where id = #{id} group by province_name order by cnt desc) where rownum = 1
 	</select>
 	
-	<select id="topCategory" resultType="String">
-		select category_name from (select category_name, count(category_name) cnt from user_preference where id = #{id} group by category_name order by cnt desc) where rownum = 1;
+	<select id="topCategory" parameterType="String" resultType="String">
+		select category_name from (select category_name, count(category_name) cnt from user_preference where id = #{id} group by category_name order by cnt desc) where rownum = 1
 	</select>
-
+	
+	<select id="ratioSum" parameterType="String" resultType="int">
+		select sum(ratio) from user_preference where id = #{id}
+	</select>
 </mapper>

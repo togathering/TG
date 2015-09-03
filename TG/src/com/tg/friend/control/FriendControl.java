@@ -107,8 +107,17 @@ public class FriendControl {
 	@RequestMapping("/rejectFriend")
 	public String refectFriend(@RequestParam(value="rejectId")String rejectId){
 		
-		fdao.delRequest(rejectId);		
+		fdao.delRequest(rejectId);
 
+		return "redirect:myFriend";
+	}
+	
+	@RequestMapping("/delFriend")
+	public String delFriend(HttpSession session, @RequestParam(value="delId")String delId){
+		String id = (String) session.getAttribute("id");
+		fdao.delFriend(id, delId);
+		fdao.delFriend(delId, id);
+		
 		return "redirect:myFriend";
 	}
 	

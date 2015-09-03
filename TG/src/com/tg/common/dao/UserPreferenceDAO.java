@@ -17,8 +17,17 @@ public class UserPreferenceDAO {
 	}
 	
 	public String selectTopProvince(String id){
-		session.selectOne("user_pre.topProvince",id);
+		String topProvince = session.selectOne("user_pre.topProvince",id);
 		
-		return "";
+		return topProvince;
+	}
+	
+	public String selectTopCategory(String id){
+		String topCategory = session.selectOne("user_pre.topCategory",id);
+		return topCategory;
+	}
+	
+	public int selectRatioSum(String id){
+		return session.selectOne("user_pre.ratioSum", id);
 	}
 }

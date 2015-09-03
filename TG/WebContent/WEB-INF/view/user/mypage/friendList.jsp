@@ -1,37 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<script>
-	// 쪽지 쓸수 있는 팝업창 생성 
-	function msg(friendId, friendNick) {
-		var id = friendId;
-		var nick = friendNick;
-
-		window
-				.open('writeNote?id=' + id + '&nick=' + nick, '',
-						'width=400, height=450, screenX=400, screenY=130, resizable=no');
-	}
-
-	function delFriend(delFriendId) {
-		var del = confirm("삭제할거에요?");
-
-		if (del) {
-			$.ajax({
-				url : "delFriend.do",
-				type : "POST",
-				data : "delId=" + delFriendId,
-				dataType : "text",
-				success : friendLoad()
-			});
-		}
-	}
-	<script type="text/javascript">
-
-	$(document).ready(function(){
-		friendLoad();
-	});
-
-</script>
 <form id="form" style="padding-top: 20px; text-align: center;">
 	<div class="wrapper">
 		<br>

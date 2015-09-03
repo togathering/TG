@@ -21,39 +21,8 @@
 		<tiles:insertAttribute name="myPageHeader"/>
 	</div>
 	<div><tiles:insertAttribute name="friendSide"/></div>
-	<!-- <div align="center">
-		<h2>마이 프렌드</h2>
-		<hr>
-	
-		<h3>친구수락하기</h3>
-		<br>
-		<table class="board_table">
-			<tr class="boardth">
-				<th width="50%">I D</th>
-				<th width="25%">닉네임</th>
-				<th width="25%">수락/거절</th>
-			</tr>
-		</table>
-		<table  class="board_table" id="reqTable">
-			
-		</table>
-		<hr>
-		<h3 align="center">내친구들</h3>
-		<br>
-		<table class="board_table">
-			<tr class="boardth">
-				<th width="220px">I D</th>
-				<th width="150px">닉네임</th>
-				<th width="80px">쪽지</th>
-				<th width="80px">친구삭제</th>
-			</tr>
-		</table>
-		<table class="board_table" id="friendTable">
-		
-		</table>
-	
-	</div> -->
 	<section class="listings" id="section">
+	
 	</section> <!--  end listing section  -->
 	<div style="position: relative; top: 230px">
 		<tiles:insertAttribute name="footer" />

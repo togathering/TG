@@ -35,9 +35,9 @@ public class RecommendControl {
 		String id = (String) session.getAttribute("id");
 		
 		UserPreferenceBean upbean = updao.select(id);
-		String userPro = upbean.getProvince_name();
-		int userRatio = upbean.getRatio();
-		String userCategory = upbean.getCategory_name();
+		String userPro = updao.selectTopProvince(id);
+		int userRatio = updao.selectRatioSum(id);
+		String userCategory = updao.selectTopCategory(id);
 		
 		String user_province_no = prodao.selectNo(userPro);
 		String user_category_no = cdao.selectNo(userCategory);
