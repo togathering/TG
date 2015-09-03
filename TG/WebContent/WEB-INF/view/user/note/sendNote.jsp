@@ -91,12 +91,10 @@
 	<div align="center">
 		<form action="noteSendAction" method="post" name="frm">
 			<section>
-
-				<input type="hidden" name="receiverId" id="receiverId"
-					value="${param.id}"> <input type="hidden"
-					name="receiverNick" id="receiverNick" value="${param.nick}">
+				<input type="hidden" name="receiverId" id="receiverId" value="${param.id}"> 
+				<input type="hidden" name="receiverNick" id="receiverNick" value="${param.nick}">
 					<div style="background-color: #E6E6E6; border: 1px solid lightgray; padding: 10px 5px;">
-					<label>받는사람 : ${param.nick}(${param.id})</label> 
+						<label>받는사람 : ${param.nick}(${param.id})</label> 
 					</div>
 					<div style=" border: 1px solid lightgray; border-top: 0px; background-color: white;">
 					 <input	type="text" name="noteTitle" placeholder="제목을 입력해주세요 (최대 10글자)"
