@@ -37,7 +37,7 @@ color: #424242;
 <title>Insert title here</title>
 </head>
 <body>
-	<div style="float: left; width: 80px;  background-color: #FAFAFA; height:200px; display: inline; margin: 0 2%; padding-left: 120px; padding-top: 30px;" >
+	<div style="float: left; width: 80px;  background-color: #FAFAFA;  display: inline; margin: 0 2%; padding-left: 120px; padding-top: 30px;" >
 
 		<ul class="ulHostside" >
 			<li><a style="color: black;" onclick="mygxgroup()">예정된 모임</a></li>
