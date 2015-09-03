@@ -21,7 +21,6 @@
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
-	alert('${my.pic}');
 	var gg = document.getElementById("gender");
 	var bb = document.getElementById("birth");
 		if('${my.gender}'=='F'){
