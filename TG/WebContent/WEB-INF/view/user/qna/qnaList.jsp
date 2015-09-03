@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 <style> 
 .form { height:400px; margin:20px auto; }
-.qList { width:700px;  background:#dd1;}
+.qList { width:700px;  }
 </style>
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript">

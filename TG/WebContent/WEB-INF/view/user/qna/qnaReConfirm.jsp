@@ -39,7 +39,7 @@ $(document).ready(function(){
 		</table>
 		<table class="recontent" id="recontent" style="display: ">
 			<tr>
-				<td width="50"><b>답변</b></td><td bgcolor="gray">${bean.rcont } </td>
+				<td width="50"><b>답변</b></td><td>${bean.rcont } </td>
 			</tr>
 		</table>
 	</form>
