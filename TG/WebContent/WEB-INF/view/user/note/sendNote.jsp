@@ -133,7 +133,7 @@ font-family:notokr-demilight !important;
 		
 		$.ajax({
 			url:'banCheck',
-			data:{message:noteTitle, noteContent:noteContent},
+			data:{noteTitle:noteTitle, noteContent:noteContent},
 		    type:'post',
 		    success:function(data){
 		    	if(data=='ok') document.frm.submit();
