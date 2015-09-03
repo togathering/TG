@@ -2,7 +2,7 @@
     pageEncoding="EUC-KR"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <c:forEach  items='${tglist }' var='tglist' varStatus='status'>
-	<li onclick='gogroupinfo(${tglist.gno}, ${tglist.nick})'>
+	<li onclick='gogroupinfo(${tglist.gno})'>
 		<a><img src='upimg/${tglist.gimg}' class='property_img'/></a>
 		<span class='price'>${tglist.gloc}</span>
 		<div class='property_details'>
