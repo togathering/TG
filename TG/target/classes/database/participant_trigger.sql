@@ -44,5 +44,6 @@ end loop;
 
 
 insert into group_preference values (group_no, category, loc, gender_ratio);
+insert into user_preference values (host, category, loc, 0);
 end;
 /
