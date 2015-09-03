@@ -8,14 +8,38 @@
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>투게더링 :: 페이지를 찾을 수 없습니다.</title>
 <link rel="shortcut icon" href="img/favi/tgFavi.ico">
+<style type="text/css">
+*{
+list-style: none
+
+}
+
+body{
+width : 700px;
+
+}
+
+h1{
+float: left;
+}
+
+ul{
+float: right;
+}
+
+</style>
 </head>
 <body>
-	<h1>ToGathering</h1>
+
+	<h1><a href="main"><img src="img/logo2.png" class="logo" alt="" title=""></a></h1>
 	<ul>
 		<li><a href="main">투게더링홈</a></li>
 		<li><a href="qna">투게더링 문의</a></li>
 	</ul>
 	
+	<br><br>
+	<br>
+	<br>
 	<br>
 	
 	<p>죄송합니다.</p>
@@ -34,9 +58,7 @@
 		<button type="submit" class="button" name="search_bt" >모임 검색</button>
 	</form>
 
-
-
-
+</body>
 <%-- [error 내용]
 <br>
 <br>
@@ -51,5 +73,5 @@
 <br>
 에러유발 서블릿 : ${requestScope['javax.servlet.error.servlet_name']}  
 <br> --%>
-</body>
+
 </html>
