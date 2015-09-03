@@ -31,6 +31,6 @@
 	<div><tiles:insertAttribute name="hostSide"/></div>
 	<section class="listings" id="section">
 	</section> <!--  end listing section  -->
-		<div style="position: relative; top: 30px"><tiles:insertAttribute name="footer"/></div>
+		<div style="position: relative; top: 140px"><tiles:insertAttribute name="footer"/></div>
 </body>
 </html>

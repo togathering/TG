@@ -132,7 +132,7 @@ video {
 
 .hero .caption h2{
     color: #ffffff;
-    font-family: "p22_corinthia", Helvetica, Arial, sans-serif;
+    /* font-family: "p22_corinthia", Helvetica, Arial, sans-serif; */
     font-size: 60px;
     font-weight: bolder;
     margin: 0;
@@ -142,7 +142,7 @@ video {
 
 .hero .caption h3{
    color: #ffffff;
-    font-family: "lato-regular", Helvetica, Arial, sans-serif;
+   /*  font-family: "lato-regular", Helvetica, Arial, sans-serif; */
     font-size: 20px;
     margin: 5px 0 0 25px;
     /* left: 1px; */
@@ -195,6 +195,7 @@ video {
     letter-spacing: 1px;
 	max-width:270px;
     border-radius: 2px;
+    line-height:1.3em;
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
     -o-border-radius: 2px;

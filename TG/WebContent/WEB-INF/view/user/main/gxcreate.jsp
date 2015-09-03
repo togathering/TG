@@ -110,23 +110,28 @@
 	}
 </script>
 </head>
-<body>
-	<div style="z-index: 2;">
+<body style="background-color: #F2F2F2;">
+	<div style="z-index: 2; background-color: white;">
 		<tiles:insertAttribute name="header" />
 	</div>
 	<div
 		style="position: relative; top: 10px; margin-top: 10px; z-index: 1;">
 		<section id="container">
 			<span class="chyron"><em></em></span>
-			<h1>모임등록하기</h1>
+			<h3 style="margin-left: 30px">모임등록하기</h3>
 
 			<form name="createFrm" id="hongkiat-form" method="post" action="gxcreate" enctype="multipart/form-data">
 				<div id="wrapping" class="clearfix">
 					<section id="aligned">
-						<h2>시간과 날짜</h2>
+						<div style=" width:94%; padding:3% 3%; border:1px solid lightgray; background-color: #E6E6E6;">
+						<h4>시간과 날짜</h4>
+						</div>
+						<div style=" width:94%; padding:3% 3%; border:1px solid lightgray; border-top:0px; font-size:14px;  background-color: #FCFCFC;">
+						※ 달력에서 모임 날짜를 선택하고 시간을 선택해주세요~!!
+						<br>&nbsp;
 						<div id="leftdiary" style="width: 70%; margin: 0 auto; "></div>
 						<table style="margin-top: 20;">
-							<tr height="30">
+							<tr height="30" style="padding-top: 3px;">
 							</tr>
 						</table>
 						<!-- 메뉴영역 캘린터목록 end -->
@@ -351,7 +356,14 @@
 							<option value="40">40분</option>
 							<option value="50">50분</option>
 						</select>
-						<h2>장소</h2>
+						</div>
+						<br><br>
+						<div style=" width:94%; padding:3% 3%; border:1px solid lightgray; background-color: #E6E6E6;">
+						<h4>장소</h4>
+						</div>
+						<div style=" width:94%; padding:3% 3%; border:1px solid lightgray; border-top:0px; font-size:14px; background-color: #FCFCFC;">
+						※ 장소선택 버튼을 클릭한뒤 주소를 검색하고 선택해주세요~!!
+						<br>&nbsp;
 						<section id="buttons">
 						</section>
 						<input type="button" class="sbutton" onclick="searchAddress()" value="장소선택"><br><br>
@@ -392,13 +404,17 @@
 						        }).open();
 						    }
 						</script>
-						<br> <br>
-						<div>
-							<h2>인원 수</h2>
-							<h4>※ 최대 9명 까지 참석 가능하며, 최소 2명이 모임 24시간 전까지 참여하지 않으면 모임이 자동
-								취소됩니다.</h4>
 						</div>
-						<br> <select id="min" name="min" class="selmenu">
+						<br> <br>
+						<div style=" width:94%; padding:3% 3%; border:1px solid lightgray; background-color: #E6E6E6;">
+							<h4>인원 수</h4>
+							
+						</div>
+						<div style=" width:94%; padding:3% 3%; border:1px solid lightgray; border-top:0px; font-size:14px; background-color: #FCFCFC; line-height: 1.3em;">
+						※ 최대 9명 까지 참석 가능하며, 최소 2명이 모임 24시간 전까지 참여하지 않으면<br> 
+						모임이 자동취소됩니다.<br>&nbsp;
+								<br>
+						<select id="min" name="min" class="selmenu">
 							<option value="min">최소인원</option>
 							<option value="2">2</option>
 							<option value="3">3</option>
@@ -420,13 +436,18 @@
 							<option value="7">7</option>
 							<option value="8">8</option>
 							<option value="9">9</option>
-						</select> <br>
-
-						<!-- 운동성격 선택 -->
-						<div>
-							<h2>모임 카테고리</h2>
+						</select>
 						</div>
-						<br> <select id="gcategory" name="gcategory" class="selmenu">
+						 <br><br>
+						
+						<!-- 운동성격 선택 -->
+						<div style=" width:94%; padding:3% 3%; border:1px solid lightgray; background-color: #E6E6E6;">
+							<h4>모임 카테고리</h4>
+						</div>
+						<div style=" width:94%; padding:3% 3%; border:1px solid lightgray; border-top:0px; font-size:14px;  background-color: #FCFCFC;">
+						 ※ 모임 추천과 보다 많은 사람들에게 모임을 알리기위해 카테고리를 선택해주세요~!!
+						<br>&nbsp;<br>
+						<select id="gcategory" name="gcategory" class="selmenu">
 							<option value="구기/단체/실내">구기/단체/실내</option>
 							<option value="구기/단체/실외">구기/단체/실외</option>
 							<option value="구기/개인/실내">구기/개인/실내</option>
@@ -435,16 +456,20 @@
 							<option value="비구기/단체/실외">비구기/단체/실외</option>
 							<option value="비구기/개인/실내">비구기/개인/실내</option>
 							<option value="비구기/개인/실외">비구기/개인/실외</option>
-						</select><br>
-						
-						<h2>제목과 초대글</h2>
+						</select>
+						</div>
+						<br>
+						<div style=" width:94%; padding:3% 3%; border:1px solid lightgray; background-color: #E6E6E6;">
+						<h4>제목과 초대글</h4>
+						</div>
+						<div style=" width:94%; padding:3% 3%; border:1px solid lightgray; border-top:0px; font-size:14px; background-color: #FCFCFC;">
 						<input type="text" name="title" id="title"
-							placeholder="ex)같이 달리실 분" autocomplete="on" tabindex=""
-							class="txtinput" style="font-size: medium; margin-bottom: 2px;">
+							placeholder="제목 ex)한강에서 같이 달리실 분~" autocomplete="on" tabindex=""
+							class="txtinput" style="font-size: 14px; margin-bottom: 2px;">
 						
 							<textarea name="message" id="message" autocomplete="on"
 							tabindex="" class="txtblock" row="25" col=""
-							 style="font-size: 15px; text-align: left: ;">
+							 style="font-size: 14px; text-align: left: ; line-height: 1.4em;">
 							
 어떤 이유로 모임을 만들게 됐나요?
 간단한 자기소개로 시작합시다. 
@@ -452,30 +477,51 @@
 개인연락처 작성은 금지합니다.
 						</textarea>
 
-
-						<br style="clear: both;">
-						<h2>태그</h2>
+						</div>
+						<br style="clear: both;"><br>
+						<div style=" width:94%; padding:3% 3%; border:1px solid lightgray; background-color: #E6E6E6;">
+						<h4>태그</h4>
+						</div>
+						<div style=" width:94%; padding:3% 3%; border:1px solid lightgray; border-top:0px; font-size:14px; background-color: #FCFCFC;">
+						※ 모임과 관련된 태그로 검색에 노출을 더 많이 시켜보세요~!! 
+						<br>&nbsp;
 						<section id="tags">
 							<input type="text" name="tag" id="tag"
 								placeholder="태그를 입력해주세요. 태그앞에 #을 붙여주세요. ex) #농구 #축구 #러닝" autocomplete="on"
 								tabindex="" class="txtinput" style="font-size: 15px"> <br style="clear: both;">
 						</section>
+						</div>
+						<br><br>
+						
 					<section id="img">
-						<h2>이미지</h2>
+						<div style=" width:94%; padding:3% 3%; border:1px solid lightgray; background-color: #E6E6E6;">
+							<h4>이미지</h4>
+						</div>
+						<div style=" width:94%; padding:3% 3%; border:1px solid lightgray; border-top:0px; font-size:14px; background-color: #FCFCFC;">
+						※ 모임과 관련된 사진으로 사람들의 관심을 끌어보세요~!! 
+						<br>&nbsp;<br>
 						<input type="file" name="imgfile" size=40> 
-						<br>
-						<br>
-						<h2>그룹 참여 방식</h2>
-						<input type="radio" name="joinOption" value="선착순참여" checked="checked">선착순참여
-						<input type="radio" name="joinOption" value="방장권한부여">방장권한부여
-						<br>
+						</div>
 						<br>
 						<br>
 						</section>
+						<div style=" width:94%; padding:3% 3%; border:1px solid lightgray; background-color: #E6E6E6;">
+						<h4>그룹 참여 방식</h4>
+						</div>
+						<div style=" width:94%; padding:3% 3%; border:1px solid lightgray; border-top:0px; font-size:14px; background-color: #FCFCFC; line-height: 1.3em;">
+						※ 선착순으로 참가자를 받으려면 선착순 참여 버튼, 방장 권한으로 원하는 참가자만 받으려면
+						<br> 방장권한부여 버튼을 선택해주세요!!
+						<br>&nbsp;<br>
+						<input type="radio" name="joinOption" value="선착순참여" checked="checked">선착순참여
+						<input type="radio" name="joinOption" value="방장권한부여">방장권한부여
+						</div>
+						<br><br>
+						</section>
+						<div style=" width:94%; padding:3% 3%; border:1px solid lightgray; background-color: #E6E6E6;">
 						<section id="buttons">
 							<!-- <input type="button" class="button" name="save" style="width: 150px;"
 								value="모임 만들기" onclick="checkValue()"> <br style="clear: both;"> -->
-						</section>
+						
 					</section>
 				</div>
 			</form>

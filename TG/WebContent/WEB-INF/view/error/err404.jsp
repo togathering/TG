@@ -6,16 +6,38 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>TG:404 </title>
-
+<title>투게더링 :: 페이지를 찾을 수 없습니다.</title>
+<link rel="shortcut icon" href="img/favi/tgFavi.ico">
 </head>
-<body><strong>요청한 페이지는 존재하지 않습니다:</strong>
-<br><br>
-주소를 올바르게 입력했는 지 확인해보시기 바랍니다.
-<br>
-<br>
+<body>
+	<h1>ToGathering</h1>
+	<ul>
+		<li><a href="main">투게더링홈</a></li>
+		<li><a href="qna">투게더링 문의</a></li>
+	</ul>
+	
+	<br>
+	
+	<p>죄송합니다.</p>
+	<p>요청하신 페이지를 찾을 수 없습니다.</p>
+	<p>방문하시려는 페이지의 주소가 잘못 입력되었거나,</p>
+	<p>페이지의 주소가 변경 혹은 삭제되어 요청하신 페이지를 찾을 수 없습니다.</p>
+	<p>입력하신 주소가 정확한지 다시 한번 확인해 주시기 바랍니다.</p>
+	<p>관련 문의사항은 네이버 고객센터에 알려주시면 친절하게 안내해 드리겠습니다.</p>
+	<p>감사합니다.</p>
 
-[error 내용]
+	<br>
+	<br>
+	
+	<form class="frm" name="frm" action="groupsearch">
+		<input type="text" class="search" placeholder="검색해주세요." name="search">
+		<button type="submit" class="button" name="search_bt" >모임 검색</button>
+	</form>
+
+
+
+
+<%-- [error 내용]
 <br>
 <br>
 
@@ -28,6 +50,6 @@
 에러유발 URI : ${requestScope['javax.servlet.error.request_uri']}
 <br>
 에러유발 서블릿 : ${requestScope['javax.servlet.error.servlet_name']}  
-<br>
+<br> --%>
 </body>
 </html>

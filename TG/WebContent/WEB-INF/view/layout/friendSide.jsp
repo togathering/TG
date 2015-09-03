@@ -82,11 +82,11 @@ color: #424242;
 <title>Insert title here</title>
 </head>
 <body>
-	<div style="float: left; width: 100px;  background-color: #FAFAFA;  height: 300px; display: inline; margin: 0 2%; padding-left: 120px; padding-top: 30px;" >
+	<div style="float: left; width: 140px;  background-color: #FAFAFA;  height: 300px; display: inline; margin: 0 2%; padding-left: 120px; padding-top: 30px;" >
 
 		<ul class="ulHostside">
-			<li><a href="#" style="color: black" onclick="friendReq()">模备夸没格废</a></li>
-			<li><a href="#" style="color: black" onclick="friendList()">模备格废</a></li>
+			<li><a href="#" style="color: black" onclick="friendReq()">模备夸没 府胶飘</a></li>
+			<li><a href="#" style="color: black" onclick="friendList()">模备 府胶飘</a></li>
 		</ul>
 	</div>
 </body>

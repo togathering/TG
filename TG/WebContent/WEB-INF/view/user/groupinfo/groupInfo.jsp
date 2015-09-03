@@ -400,7 +400,7 @@ a:hover{
 		</div>
 		
 		<!-- 지도 -->
-		<div style="width: 640px; float:left; height:70px; margin: 7px 10px 15px 150px; border: 1px solid lightgray; padding: 10px 10px; text-align:left; background-color: white;">
+		<div style="width: 640px; float:left; margin: 7px 10px 15px 150px; border: 1px solid lightgray; padding: 10px 10px 15px 10px; text-align:left; background-color: white;">
 			<h4 style="text-align:left;">▶모임장소</h4>
 				<p style="font-size: 14px">${group.gloc}</p>
 		</div>

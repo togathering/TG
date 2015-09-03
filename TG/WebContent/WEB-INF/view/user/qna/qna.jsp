@@ -16,9 +16,9 @@
 </style>
 <link rel="stylesheet" href="css/qna.css">
 </head>
-<body>
-	<div style="z-index: 2;"><tiles:insertAttribute name="header"/></div><br><br>
-	<div>	<tiles:insertAttribute name="myPageHeader"/></div><br><br>
+<body bgcolor="#FAFAFA">
+	<div style="z-index: 2;"><tiles:insertAttribute name="header"/></div>
+	<div>	<tiles:insertAttribute name="myPageHeader"/></div><br>
 	<div style="position: relative;"><tiles:insertAttribute name="qnaSide"/></div>
 		<form action="qnaSend" class="form">
 		<h3 align="center">문의하기</h3>

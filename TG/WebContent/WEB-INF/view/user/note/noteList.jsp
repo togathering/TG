@@ -9,6 +9,16 @@
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>쪽지함</title>
 <link rel="stylesheet" type="text/css" href="css/tgBoard.css">
+<script type="text/javascript">
+/* // 쪽지 보는 팝업창 생성 
+function msg(no, id) {
+	var no = no;
+	var id = id;
+	window.open('noteDtail?no=' + no + '&id=' + id, '',
+					'width=400, height=450, screenX=400, screenY=130, resizable=no');
+} */
+</script>
+
 </head>
 
 <body>
@@ -35,8 +45,8 @@
 			<c:forEach items="${noteList}" var='noteInfo'>
 				<tr class="board_contents">
 					<td><a href="" class="atag">${noteInfo.senderId}</a></td>
-					<td><a href="noteDtail?no=${noteInfo.noteNo}&senderId=${noteInfo.senderId}"
-						class="atag">${noteInfo.noteTitle}</a></td>
+					<td><a href="noteDtail?no=${noteInfo.noteNo}&senderId=${noteInfo.senderId}" class="atag" 
+						onclick="window.open(this.href,'','popup', 'width=400, height=450'); return false">${noteInfo.noteTitle}</a></td>
 					<td>${noteInfo.noteDate}</td>
 				</tr>
 			</c:forEach>

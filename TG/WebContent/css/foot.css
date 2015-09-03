@@ -120,6 +120,7 @@ footer .footer > ul > li.links li a{
     font-size: 16px;
     letter-spacing: .5px;
     text-align: left;
+     font-size: 15px;
 }
 
 footer .footer > ul > li.about{
@@ -132,6 +133,7 @@ footer ul li.about p{
     letter-spacing: .5px;
     line-height: 34px;
     margin-top: -9px;
+     font-size: 15px;
 }
 
 footer ul li.about > ul > li{
@@ -254,6 +256,7 @@ footer .copyrights a.ph_link{
         margin-right: 100%;
         overflow: hidden;
         border-top: 1px solid #ffffff;
+         font-size: 14px;
     }
 }
 
@@ -299,6 +302,7 @@ footer .copyrights a.ph_link{
         margin-right: 0;
         margin-bottom: 60px;
         padding-bottom: 60px;
+        font-size: 14px;
     }
 
     footer .footer > ul > li:last-child{

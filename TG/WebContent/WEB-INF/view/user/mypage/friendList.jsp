@@ -4,8 +4,9 @@
 <form id="form" style="padding-top: 20px; text-align: center;">
 	<div class="wrapper">
 		<br>
-		<div style="float: left; margin-left: 80px;">
-			<h4 style="text-align: left;">郴模备甸</h4>
+		<div style="float: left; margin-left: 50px;">
+			<h4 style="text-align: left;">模备 府胶飘</h4>
+			<br>
 		</div>
 		<table class="board_table" style="width: 70%" id="friendTable">
 			<tr class="boardth">
