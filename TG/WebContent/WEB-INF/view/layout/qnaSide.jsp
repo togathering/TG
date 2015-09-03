@@ -20,7 +20,7 @@
 	function myhostEnd() {
 		$.ajax({url: 'myhostEnd', type: 'POST', dataType: 'text', 
 			success: function (data) {
-				alert(data);
+				//alert(data);
 				var listings = document.getElementById('listings');
 				listings.innerHTML = data;
 			}
