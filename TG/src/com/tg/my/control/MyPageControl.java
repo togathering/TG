@@ -88,10 +88,6 @@ public class MyPageControl {
 		String birth = year+month+day;
 		System.out.println("¸â¹ö:"+birth);
 		
-		if(pic == null){
-			pic = "";
-		}
-		
 		m.setId(id);
 		m.setPass(pass);
 		m.setNick(nick);
