@@ -5,6 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<link rel="stylesheet" type="text/css" href="css/search.css">
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript">
 	function selectId() {
@@ -35,24 +36,28 @@
 </script>
 <title>함께한 사람들은 어떤 사람들이었나요</title>
 </head>
-<body>
-	<form name="reviewFrm">
-		<select id="sel" onchange="selectId()">
-		<option>함께한 친구들</option>
-		<c:forEach items="${list }" var="gx">
-			<option value="${gx.id }">${gx.id }</option>
-		</c:forEach>
-		</select>
-		<br>
-		<input type="hidden" name="gno" value="${param.gno }" >	
-			<span>I D</span>
+<body style="background-color: #FAFAFA;">
+	<div style="background-color:#E6E6E6; width:400px; border: 1px solid lightgray; padding: 10px 5px 10px 27px;">
+	 평가
+	</div>
+	<div style=" border: 1px solid lightgray; border-top: 0px; background-color: white; font-size: 14px;">
+		
+		<form name="reviewFrm">
+		<div style="padding:20px 0px 5px 20px;">
+			<select id="sel" onchange="selectId()">
+				<option>함께한 친구들</option>
+				<c:forEach items="${list }" var="gx">
+				<option value="${gx.id }">${gx.id }</option>
+				</c:forEach>
+			</select>
 			<br>
-			<input type="text" name="id"readonly="readonly">
-			<br>
-			<span>EVALUATE</span>
-			<br>
+			<input type="hidden" name="gno" value="${param.gno }" >	
+			<h4 style="margin:5px 0;">ID</h4>
+			<input type="text" name="id"readonly="readonly"><br>
+			<h4 style="margin:5px 0;">한줄 평가</h4>
 			<input type="text" name="evaluate">
-			<br>
+			</div>
+		<div style="padding:5px 0px 5px 20px;">
 			<select id="sel2">
 				<option value="평점">평점</option>
 				<option value="1">1</option>
@@ -61,8 +66,11 @@
 				<option value="4">4</option>
 				<option value="5">5</option>
 			</select>
-			
-		<input type="button" value="완료" onclick="insertReview()">
+		</div>
 	</form>
+	</div>
+		<div style="padding:5px 0px 5px 180px;">	
+		<input type="button" class="sbutton" value="완료" onclick="insertReview()">
+		</div>
 </body>
 </html>
