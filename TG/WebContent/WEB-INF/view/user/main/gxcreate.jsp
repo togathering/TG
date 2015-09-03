@@ -108,9 +108,9 @@
 	</div>
 	<div
 		style="position: relative; top: 10px; margin-top: 10px; z-index: 1;">
-		<section id="container">
-			<span class="chyron"><em></em></span>
-			<h3 style="margin-left: 30px">모임등록하기</h3>
+		<section id="container" style="background-color: #F2F2F2;">
+			<!-- <span class="chyron"><em></em></span> -->
+			<h3 style="margin-left: 15px">모임등록하기</h3>
 
 			<form name="createFrm" id="hongkiat-form" method="post" action="gxcreate" enctype="multipart/form-data">
 				<div id="wrapping" class="clearfix">
