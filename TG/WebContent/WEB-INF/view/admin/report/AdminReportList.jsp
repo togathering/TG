@@ -66,6 +66,6 @@ font: bold;"
 	<div><tiles:insertAttribute name="adminBoard"/></div>
 		<h3>신고관리</h3>
 		<br>
-			<table style="width: 70%;" id="rList"></table>
+			<table style="width: 60%;" id="rList"></table>
 </body>
 </html>

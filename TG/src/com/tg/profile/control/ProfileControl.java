@@ -29,6 +29,7 @@ public class ProfileControl {
 		List<ReviewBean> review = redao.rList(id);
 		int count = rdao.reportCount(id);
 		model.addAttribute("my", bean);
+		System.out.println("»çÁø:"+bean.getPic());
 		model.addAttribute("count", count);
 		model.addAttribute("review", review);
 		return "user/profile/profile-review";

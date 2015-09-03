@@ -35,15 +35,19 @@ public class ReportControl_admin {
 		ReportBean bean = dao.reportCon(rno);
 		model.addAttribute("bean", bean);
 		model.addAttribute("rno", rno);
-		System.out.println("확인");
 		return "admin/report/AdminReportConfirm";
 	}
 	
 	@RequestMapping("/adminReportOk")
-	public String reportOk(@RequestParam(value="upno") Integer no){
-		System.out.println("##"+no+"##");
-		dao.reportUp(no);
+	public String reportOk(@RequestParam(value="status") String rstatus, @RequestParam(value="upno") Integer no){
+		String status = null;
+		if(rstatus.equals("확인")){
+			status = "Y";
+		}else if(rstatus.equals("보류"))
+			status = "H";
+		dao.reportUp(no, status);
 		return "redirect:adminReportList";
 	}
+	
 	
 }

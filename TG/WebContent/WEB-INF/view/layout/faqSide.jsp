@@ -51,8 +51,8 @@
 <body>
 	<div style="float:left; width: 200px; height: 200px; display: inline; margin: 0 2%; padding-left: 50px; ">
 		<ul class="ulFaq">
-			<li><a>시작하기</a></li>
-			<li><a>참여하기</a></li>
+			<li><a href="faqStart">시작하기</a></li>
+			<li><a href="faqJoin">참여하기</a></li>
 			<li><a>모임생성</a></li>
 			<li><a>모임개설자</a></li>
 			<li><a>계정설정</a></li>
