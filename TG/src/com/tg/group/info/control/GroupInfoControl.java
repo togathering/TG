@@ -49,7 +49,11 @@ public class GroupInfoControl {
 			
 		}		
 		GroupBean bean = gdao.selectGroupInfo(gno);
-
+		
+		if(bean.getIntro() == null){
+			bean.setIntro("자기소개가 없습니다.");
+		}
+		
 		System.out.println(bean.getGtag());	
 		// 값은 제대로 가져오고 있다.
 
