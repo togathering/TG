@@ -11,7 +11,7 @@
 <link rel="stylesheet" type="text/css" href="css/tgBoard.css">
 <link rel="stylesheet" type="text/css" href=css/search.css>
 
-<title>模备格废</title>
+<title>模备 府胶飘</title>
 </head>
 <body style="background-color: #FAFAFA">
 	<div style="z-index: 2;">
