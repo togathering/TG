@@ -5,7 +5,8 @@
 	<div class="wrapper">
 		<br>
 		<div style="float: left; margin-left: 80px;">
-			<h4 style="text-align: left;">郴模备甸</h4>
+			<h4 style="text-align: left;">模备格废</h4>
+			<br>
 		</div>
 		<table class="board_table" style="width: 70%" id="friendTable">
 			<tr class="boardth">
