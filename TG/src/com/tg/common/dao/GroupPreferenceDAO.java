@@ -35,4 +35,12 @@ public class GroupPreferenceDAO {
 		}
 		return false;
 	}
+	
+	public boolean delPref(int gno){
+		int t = session.delete("delPref",gno);
+		if(t==1){
+			return true;
+		}
+		return false;
+	}
 }

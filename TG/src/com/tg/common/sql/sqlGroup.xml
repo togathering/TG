@@ -45,6 +45,10 @@
 		where ghost = id and gno = #{gno}
 	</select>
 	
+	<select id="recommend" parameterType="int" resultType="com.tg.common.beans.GroupBean">
+		select gno, nick, gloc, gtitle, gstatus, gimg from member,gxgroup where ghost = id and gstatus != '모임종료' and gno=#{gno}
+	</select>
+	
 	<!-- 날짜로 모임검색 -->
 	<select id="selectDay" parameterType="java.lang.String" resultType="com.tg.common.beans.GroupBean">
 		select gno, nick, gloc, gtitle, gstatus, gimg from member,gxgroup where ghost = id and gstatus != '모임종료' and gday like #{gday} order by gdate
