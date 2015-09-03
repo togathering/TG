@@ -6,6 +6,10 @@
 		select tel from member where id=#{id}
 	</select>
 	
+	<select id="genderInfo" parameterType="java.lang.String" resultType="java.lang.String">
+		select gender from member where id=#{id}
+	</select>
+	
 	<select id="MselectAll" parameterType="java.util.Map" resultType="com.tg.common.beans.MemberBean">
 	
 select mid, mnick, pp, ccnt

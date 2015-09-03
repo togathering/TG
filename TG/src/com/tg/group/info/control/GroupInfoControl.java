@@ -70,8 +70,9 @@ public class GroupInfoControl {
 		// gmin, gmax, gimg, gintro, gsum, nick, gtag
 		
 		String tel = mdao.getMemberTel(id);
-		
+		String gender = mdao.getMemberGender(id);
 		model.addAttribute("tel", tel);
+		model.addAttribute("gender", gender);
 		
 		if(bean != null){
 			bean.setGno(gno);

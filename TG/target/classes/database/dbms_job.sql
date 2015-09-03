@@ -39,7 +39,7 @@ begin
 
 	for gno_idx in (select gno, ghost, gtitle, gday, gmin, gsum 
 						from gxgroup 
-						where to_char(gday,'yyyy-mm-dd-hh24-mi') = to_char(sysdate+1,'yyyy-mm-dd-hh24-mi') 
+						where to_char(gday,'yyyy-mm-dd-hh24-mi') <= to_char(sysdate+1,'yyyy-mm-dd-hh24-mi') 
 								and gstatus != '모임종료') loop
 	
 		i := i+1;
@@ -114,7 +114,7 @@ begin
 	
 	update gxgroup 
 		set gstatus = '모임종료' 
-		where to_char(gday,'yyyy-mm-dd-hh24-mi') = to_char(sysdate+1,'yyyy-mm-dd-hh24-mi');
+		where to_char(gday,'yyyy-mm-dd-hh24-mi') <= to_char(sysdate+1,'yyyy-mm-dd-hh24-mi');
 	
 	commit;
 

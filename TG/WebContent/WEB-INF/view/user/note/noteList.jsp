@@ -21,14 +21,14 @@ function msg(no, id) {
 
 </head>
 
-<body>
+<body style="background-color: #FAFAFA">
 	<!-- 헤더 -->
 	<div><tiles:insertAttribute name="header"/></div>
 	
-	<div >
+	<div style="background-color: #FAFAFA">
 	
 	<!-- 테이블 시작> -->
-	<table class="board_table">
+	<table class="board_table" style="width: 700px; margin-top: 30px;">
 		<caption>쪽지함</caption>
 		<!-- 테이블 헤드 -->
 		<thead>
@@ -44,7 +44,7 @@ function msg(no, id) {
 			
 			<c:forEach items="${noteList}" var='noteInfo'>
 				<tr class="board_contents">
-					<td><a href="" class="atag">${noteInfo.senderId}</a></td>
+					<td style="padding-top: 15px;"><a href="" class="atag">${noteInfo.senderId}</a></td>
 					<td><a href="noteDtail?no=${noteInfo.noteNo}&senderId=${noteInfo.senderId}" class="atag" 
 						onclick="window.open(this.href,'','popup', 'width=400, height=450'); return false">${noteInfo.noteTitle}</a></td>
 					<td>${noteInfo.noteDate}</td>
@@ -68,6 +68,6 @@ function msg(no, id) {
 	</div>
 	
 	<!-- 푸터 -->
-	<div style="position: relative; top: 280px"><tiles:insertAttribute name="footer"/></div>
+	<div style="position: relative; top: 280px; "><tiles:insertAttribute name="footer"/></div>
 </body>
 </html>

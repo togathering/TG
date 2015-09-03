@@ -137,6 +137,10 @@ a:hover{
 			alert("마이페이지에서 연락 가능한 전화번호를 입력해주세요");
 			return;
 		}
+		if('${gender}'==''){
+			alert('마이페이지에서 성별을 입력해주세요');
+			return;
+		}
 		
 		var gsum = ${group.gsum};
 		var gmax = ${group.gmax};

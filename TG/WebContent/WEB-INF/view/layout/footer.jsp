@@ -34,7 +34,7 @@
 			</li>
 			<li class="links">
 				<ul>
-					<li><a href="reportM">신고하기</a></li>
+					<li><a href="#">신고하기</a></li>
 				</ul>
 			</li>
 			<li class="about">
@@ -45,7 +45,7 @@
 						<li class="sns"><a href="http://plus.google.com/" class="google" target="_blank"></a></li>
 						<li class="sns"><a href="#" class="skype"></a></li>
 						<li/>
-						<li class="manager"><a href="adminLogin" class="option"></a></li>
+						<li class="manager"><a href="vali" class="option"></a></li>
 					</ul>
 				</li>
 		</ul>
