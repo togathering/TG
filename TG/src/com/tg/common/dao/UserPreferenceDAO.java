@@ -15,4 +15,10 @@ public class UserPreferenceDAO {
 		
 		return bean;
 	}
+	
+	public String selectTopProvince(String id){
+		session.selectOne("user_pre.topProvince",id);
+		
+		return "";
+	}
 }

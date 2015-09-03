@@ -11,12 +11,12 @@
 		select category_name, province_name, ratio from user_preference where id=#{id}
 	</select>
 	
-	<select id="topProvince">
-		select province_name, cnt from (select province_name, count(province_name) cnt from user_preference group by province_name order by cnt desc) where rownum = 1;
+	<select id="topProvince" resultType="String">
+		select province_name from (select province_name, count(province_name) cnt from user_preference where id = #{id} group by province_name order by cnt desc) where rownum = 1;
 	</select>
 	
-	<select id="topCategory">
-		select category_name, cnt from (select category_name, count(category_name) cnt from user_preference group by category_name order by cnt desc) where rownum = 1;
+	<select id="topCategory" resultType="String">
+		select category_name from (select category_name, count(category_name) cnt from user_preference where id = #{id} group by category_name order by cnt desc) where rownum = 1;
 	</select>
 
 </mapper>
