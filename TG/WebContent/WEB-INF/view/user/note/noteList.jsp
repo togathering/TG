@@ -28,8 +28,8 @@ function msg(no, id) {
 	<div style="background-color: #FAFAFA">
 	
 	<!-- 테이블 시작> -->
+	<h4 style="margin-left: 280px; margin-top:30px;">쪽지함</h4>
 	<table class="board_table" style="width: 700px; margin-top: 30px;">
-		<caption>쪽지함</caption>
 		<!-- 테이블 헤드 -->
 		<thead>
 			<tr class="boardth">
@@ -46,7 +46,7 @@ function msg(no, id) {
 				<tr class="board_contents">
 					<td style="padding-top: 15px;"><a href="" class="atag">${noteInfo.senderId}</a></td>
 					<td><a href="noteDtail?no=${noteInfo.noteNo}&senderId=${noteInfo.senderId}" class="atag" 
-						onclick="window.open(this.href,'','popup', 'width=400, height=450'); return false">${noteInfo.noteTitle}</a></td>
+						onclick="window.open(this.href,'','popup', 'width=200px, height=250px'); return false">${noteInfo.noteTitle}</a></td>
 					<td>${noteInfo.noteDate}</td>
 				</tr>
 			</c:forEach>
@@ -68,6 +68,6 @@ function msg(no, id) {
 	</div>
 	
 	<!-- 푸터 -->
-	<div style="position: relative; top: 280px; "><tiles:insertAttribute name="footer"/></div>
+	<div style="position: relative; top: 50px; "><tiles:insertAttribute name="footer"/></div>
 </body>
 </html>
