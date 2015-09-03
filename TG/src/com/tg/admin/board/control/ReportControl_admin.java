@@ -23,6 +23,7 @@ public class ReportControl_admin {
 		return ".adminReport";
 	}
 	
+	
 	@RequestMapping("/adminReportList")
 	public String reportList(Model model){
 		List<ReportBean> list = dao.reportList();

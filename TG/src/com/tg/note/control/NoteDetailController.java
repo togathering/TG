@@ -27,7 +27,7 @@ public class NoteDetailController {
 						@RequestParam(value="senderId",required=false) String sender,
 						HttpServletRequest req) {
 		
-		System.out.println("보낸사람"+sender);
+		System.out.println("보낸사람 "+sender);
 		System.out.println("쪽지번호 :"+noteNo);
 		
 		if(sender.equals("관리자")){

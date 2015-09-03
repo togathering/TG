@@ -28,10 +28,9 @@
 		window.open('writeNote?id='+id+'&nick='+nick,'',
 					'width=400, height=450, screenX=400, screenY=130, resizable=no');
 	}
-	
+/* 	
 	function deleteMsg(){
-		alert("쪽지가 삭제되었습니다.");
-	}
+		alert("쪽지가 삭제되었습니다."); */
 	
 </script>
 
