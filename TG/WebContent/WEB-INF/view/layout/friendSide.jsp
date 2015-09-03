@@ -45,7 +45,7 @@ function acceptFriend(acceptId) {
 }
 
 function rejectFriend(rejectId) {
-	location.href = "refectFriend?rejectId="+rejectId;	
+	location.href = "rejectFriend?rejectId="+rejectId;	
 }
 //쪽지 쓸수 있는 팝업창 생성 
 function msg(friendId, friendNick) {
