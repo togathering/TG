@@ -12,7 +12,7 @@
 	<ul class="mul">
  		<!-- <li class="mli"><a>알림</a></li> -->
    		<li class="mli"><a href="myFriend">친구 리스트</a></li>
-    	<li class="mli"><a href="invite">초대받은 그룹</a></li>
+    	<li class="mli"><a href="noteList">쪽지</a></li>
    </ul>
    </div>
 </body>

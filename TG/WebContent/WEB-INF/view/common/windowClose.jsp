@@ -12,10 +12,10 @@
 			if('${result}' == 'passSendSuccess'){
 				alert("비밀번호를 이메일로 전송하였습니다.");
 			} else if('${result}' == 'noteSendSuccess'){
-				alert("쪽지 보내기 성공.");
+				alert("쪽지를 발송였습니다.");
 			} 		
 			if('${result}' == 'notedeleteSuccess'){
-				alert("쪽지 삭제");
+				alert("쪽지가 삭제되었습니다.");
 			}
 			window.close();
 		})
