@@ -112,5 +112,11 @@ public class MemberDAO {
 			return false;			
 		}
 	}
+	
+	// 뉴비검사
+	public String checkNewbie(String id){
+		String chekcNewbie = session.selectOne("member.checkNewbie", id);
+		return chekcNewbie;
+	}
 
 }
