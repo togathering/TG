@@ -32,7 +32,7 @@
 		$.ajax({url:"recommend", type:"POST", dataType:"text",
 			success:function(data){
 				var recomList = document.getElementById('recomList');
-				document.getElementById('h3').style.display = '';
+				document.getElementById('h4').style.display = '';
 				recomList.innerHTML = data;
 			}
 		});
@@ -73,12 +73,12 @@
 	
 	<section class="listings">
 	<div class="wrapper">
-		<h4 style="display: none" id="h4">강력추천! 이런 모임은 어떠신가요?</h4>
+		<h4 style="display: none" id="h4"><font color="red">강력추천!</font> 이런 모임은 어떠신가요?</h4>
 		<br>
 		<ul class="properties_list" id="recomList">
 		
 		</ul>
-		<h4>마감임박!! 곧 종료되는 모임입니다</h4>
+		<h4><font color="red">마감임박!!</font> 곧 종료되는 모임입니다</h4>
 		<br>
 		<ul class="properties_list" id="list">
 			
