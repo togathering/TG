@@ -119,11 +119,11 @@
 </head>
 <body>
 	<div><tiles:insertAttribute name="header"/></div>
-	<section class='searchingHere'>
+	<section class='searchingHere' style="padding: 20px 0;">
 		
-		<label class="mainLabel">
+		<%-- <label class="mainLabel">
 			${size }개의 ToGathering이 진행중입니다. <br><br>
-		</label>
+		</label> --%>
 		<form name="frm" action="groupsearch">	
 			<div class="orderBySubject" align="center">
 				<input type="button" class="sbutton" value="인기순" name="buttons" hidden=""> &nbsp;
@@ -273,7 +273,7 @@
 		<!-- searching 끝 --> 
 
 	</section>
-	<section class="listings">
+	<section class="listings" style="background-color: #fcfcfc; padding-top: 40px;">
 		<div class="wrapper">
 			<ul class="properties_list" id="list">
 				<c:forEach  items='${tglist }' var='tglist' >
