@@ -73,11 +73,13 @@
 	
 	<section class="listings">
 	<div class="wrapper">
-		<h3 style="display: none" id="h3">이런 모임은 어떠신가요</h3>
+		<h4 style="display: none" id="h4">강력추천! 이런 모임은 어떠신가요?</h4>
+		<br>
 		<ul class="properties_list" id="recomList">
 		
 		</ul>
-		<h3>얼마 안있으면 종료되요</h3>
+		<h4>마감임박!! 곧 종료되는 모임입니다</h4>
+		<br>
 		<ul class="properties_list" id="list">
 			
 		</ul>
