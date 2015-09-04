@@ -44,14 +44,14 @@
 	<div>
 		<form style="text-align: center;">
 		<div style="float: left; width:300px; height:300px; margin-left: 23%; margin-top: 50px; background-color: rgba(222,222,222,0.6);z-index: 0;">
-		<div style="border: 1px solid lightgray; background-color: #D8D8D8">
+		<div style="border: 1px solid lightgray; background-color: #E6E6E6; font: bold; font-size: 15px;">
 			<br><br>
 			 새로운 모임을 만들어보세요~!!<br><br> <br>
 			 </div>
 			<button style="border:solid 0px #FAFAFA; background-color:#F2F2F2; padding: 0px; cursor: pointer;" type="button" onclick="newGx()"><img src='img/slow.jpg' style="width: 100%; height: 100%; "></button>
 		</div>
 		<div style="float:right;  width:300px; height:300px; margin-right: 23%; margin-top: 50px;">	
-			 <div style="border: 1px solid lightgray; background-color: #D8D8D8; padding: 15px 10px; ">
+			 <div style="border: 1px solid lightgray; background-color: #E6E6E6; padding: 15px 10px; font: bold; font-size: 15px;">
 			 이전에 만들었던 모임과 비슷한 내용으로 <br><br>
 			간편하게 만들어보세요~!!<br>
 			</div>

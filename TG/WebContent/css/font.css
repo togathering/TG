@@ -82,7 +82,7 @@ Example : font-family: 'Nanum Pen Script', serif; */
     font-style: normal;
     font-weight: normal;
 } */
-
+/* 
 @font-face {
     font-family: 'lato-bold';
     src: url('../fonts/lato-bold.eot');
@@ -115,7 +115,7 @@ Example : font-family: 'Nanum Pen Script', serif; */
     font-weight: normal;
     font-style: normal;
 }
-
+ */
 /* body {
   font-family: 'Source Sans Pro', sans-serif;
   color: white;
