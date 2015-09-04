@@ -28,13 +28,13 @@
     		var arr = data.split("|");
     		if(parseInt(arr[0])==0) alert('참여한 모임이 없습니다!!');
     		else{
-    			alert(arr[1])
+    			
     		  var titles = arr[1].split('§');
     		  var titleDiv="";
     		  for(var i=0; i<titles.length; i++){
     			  titleDiv+="<div>"+titles[i]+"</div>";
     		  }
-    		  alert(titleDiv);
+    		 
     		  var titles = document.getElementById("titles");
     		  titles.innerHTML=titleDiv;
     		}
