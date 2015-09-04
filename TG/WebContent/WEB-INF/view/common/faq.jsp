@@ -33,12 +33,14 @@ $(document).ready(function(){
 </script>
 <style> 
 .panel {
-    padding: 5px;
+    padding: 15px;
     text-align: left;
     background-color: #F2F2F2;
     /* border: solid 1px #c3c3c3; */
-    width: 700px;
+    width: 680px;
     margin: 0px 0px 0px 400px;
+    font-size: 14px;
+    line-height: 1.3em;
 }
  .flip{
 	padding: 5px;
@@ -89,7 +91,7 @@ $(document).ready(function(){
 	 3. 모임 생성 버튼을 누릅니다. <br>
 	 4. 모임 생성이 완료되었으니 모임인원이 충족되길 기다립니다.<br>
 	 5. 만약 최소인원이 기간 내에 모이면 모임이 진행되고, <br>
-	  &nbsp 기간 내에 최소인원이 모이지 않으면 모임은 자동으로 '종료'되고 해당 내용에 대한 쪽지가 발송됩니다.<br>
+	  &nbsp;기간 내에 최소인원이 모이지 않으면 모임이 자동으로 '종료'되며 해당 내용에 대한 쪽지가 발송됩니다.<br>
 	</div>
 	<br>
 	
@@ -107,6 +109,6 @@ $(document).ready(function(){
 	</div>
 	</div>
 </form>
-	<div style="position: relative; top: 250px"><tiles:insertAttribute name="footer"/></div>
+	<div style="position: relative; top: 90px; width: 100%; float:left;"><tiles:insertAttribute name="footer"/></div>
 </body>
 </html>
