@@ -42,6 +42,7 @@ function selectChkBox(frm) {
 		<p>지금 입력하는 것을 원하지 않는다면 메인버튼을 눌러 메인화면으로 하실 수 있습니다.</p>
 	<form action="sendPrefer" method="post" name="frm" >
         <h3>운동을 사랑하는 당신의 선호하는 모임 유형은?</h3>
+        <div align="left" style="margin-left: 215px">
 		<input type="checkbox" name="prefer" value="구기/단체/실내z서울z8" />풋살모임 | 서울 | 남(8), 여(0)<br/>
 		<input type="checkbox" name="prefer" value="비구기/개인/실외z광주z5" />마라톤 | 광주 | 남(7), 여(2)<br />
 		<input type="checkbox" name="prefer" value="구기/단체/실외z인천z-8" />피구 | 인천 | 남(1), 여(9)<br />
@@ -74,7 +75,7 @@ function selectChkBox(frm) {
 		<input type="checkbox" name="prefer" value="비구기/개인/실내|대전|2" />Birds<br />
 		<input type="checkbox" name="prefer" value="비구기/개인/실외|대전|3" />Birds<br />
 		<input type="checkbox" name="prefer" value="비구기/개인/실외|광주|-1" />Birds<br /> -->
-		
+		</div>
 	</form>
 	</div>
 	<div style="margin-top: 15px; margin-left: 50px;">
