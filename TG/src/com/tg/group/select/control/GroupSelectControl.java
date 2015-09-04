@@ -32,9 +32,11 @@ public class GroupSelectControl {
 		String id = (String) session.getAttribute("id");
 		String tel = mdao.getMemberTel(id);
 		String gender = mdao.getMemberGender(id);
+		int historyGx = dao.historyGx(id);
 		
 		model.addAttribute("tel",tel);
 		model.addAttribute("gender",gender);
+		model.addAttribute("historyGx", historyGx);
 		
 		return ".selectGx";
 	}
