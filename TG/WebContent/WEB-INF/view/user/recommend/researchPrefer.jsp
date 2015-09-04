@@ -29,11 +29,10 @@ function selectChkBox(frm) {
 
 </head>
 <body style="background-color:#FAFAFA; margin:0; ">
-<div align="left" style=" padding:15px 0 15px 100px; background-color : white;">
+<div align="left" style=" padding:27px 0 18px 125px; background-color : white;">
 	<a href="main"><img src="img/logo2.png" class="logo" alt="" title=""></a>
 	</div>
-	<div style="padding-bottom:80px; padding-top:40px; background-color: #FAFAFA; width: 100%;" align="center" >
-	
+	<div style="padding-bottom:70px; padding-top:30px; background-color: #FAFAFA; width: 100%;" align="center" >
 	<div style="background-color: #E6E6E6; border: 1px solid lightgray; padding: 5px 5px; font-size: 15px; width: 620px;">
 	<h3>설문조사</h3>
 	</div>
