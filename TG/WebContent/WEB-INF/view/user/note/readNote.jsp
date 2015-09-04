@@ -47,7 +47,7 @@
 		<div style=" border: 1px solid lightgray; border-top: 0px; background-color: white; font-size: 14px;">
 			<br>
 			${noteBean.noteTitle}
-			<textarea rows="15"  name="noteContent" maxlength="199"
+			<textarea rows="15"  name="noteContent" maxlength="199" readonly
 						class="noteInput"  onkeydown="limitContentLength()" 
 						style="padding:5px 5px; margin: 10px 0 20px 0; width:350px;">
 							${noteBean.noteContent}
