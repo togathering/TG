@@ -380,13 +380,23 @@ a:hover{
 		<!-- 호스트프로필 -->
 			<div style="float: right; width:330px; height:210px; margin: 10px 150px 10px 5px; padding: 25px 10px; border: 1px solid lightgray; background-color: white;text-align: left;">
 			<h3>안녕하세요 ${group.nick }입니다!</h3>
+			정말 즐거운 모임이 되도록 노력하겠습니다<br>
+			반갑습니다!
 			${group.intro}
 			</div>
 		<!-- 약관? -->
 			<div style="float: right; width:310px; height:467px; margin: 10px 150px 7px 5px; padding: 25px 20px;  LINE-HEIGHT: 160%; border: 1px solid lightgray; background-color: white;text-align: left;">
 			<h3>꼭 지켜주세요!</h3>
-			모임 진행의 책임은 해당 모임의 진행자인 그룹장에게 있습니다. 
-			모임 후, 불편했던 점, 수상쩍은 점, 기타 문제점이 발생했다면 적극적으로 신고 부탁드립니다. 
+			하나. 신청은 당일 2시간 전까지 가능합니다.<br>
+
+			둘. 환불은 모임 하루 전 오후 6시까지, 참가내역에서 가능합니다. 이후 참가비 환불은 불가능합니다.<br>
+
+			셋. 집밥지기의 연락처는 모임 하루 전 오후 7시에 문자와 이메일을 통해 공유됩니다.<br>
+
+			넷. 모임 하루 전 까지 최소 참가인원을 넘지 못할 경우 모임은 자동 취소되며, 신청자 전원에게 쪽지로 공지됩니다.<br>
+			
+			모임 진행의 책임은 해당 모임의 진행자인 그룹장에게 있습니다. <br>
+			모임 후, 불편했던 점, 수상쩍은 점, 기타 문제점이 발생했다면 적극적으로 신고 부탁드립니다. <br>
 			훈훈하고 건강한 ToGathering 커뮤니티를 함께 만들어가요!
 			</div>
 		<!-- 참가인원 시작 -->
