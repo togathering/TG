@@ -7,11 +7,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>${my.nick }(${my.id })님의 프로필</title>
 <style type="text/css">
-	body { width:900px; margin:20px auto; background:#FCFCFC;}
+	body { width:900px; margin:20px auto; background:#F2F2F2;}
 	.image { width:350px; height:350px; float:left; background:white}
-	.profile {width:548px; height:200px; float:right; background:white;}
-	.comment {width:548px; height:200px; float:right; background:white;}
-	.evaluate {width:350px; height:50px; float:left; background:white;}
+	.profile {width:548px; height:200px; float:right; background:#FDFDFD;}
+	.comment {width:548px; height:200px; float:right; background:#FAFAFA;}
+	.evaluate {width:350px; height:50px; float:left; background:#FDFDFD;}
 	.tcomment {margin: 10px;}
 	.tprofile {margin: 10px;}
 	.tevaluate {margin: 12px;}
@@ -43,7 +43,7 @@ $(document).ready(function(){
 </script>
 </head>
 <body>
-		<div style="background-color: #E6E6E6; border: 1px solid lightgray; padding: 10px 5px; margin-top: 20px;">
+		<div style="background-color: #D8D8D8; border: 1px solid lightgray; padding: 10px 5px; margin-top: 20px;">
 			<h3>${my.nick }(${my.id })님의 프로필</h3>
 		</div>
 		<div style=" border: 1px solid lightgray; border-top: 0px; background-color: gray; font-size: 14px; height: 400px;">

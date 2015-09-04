@@ -9,7 +9,7 @@
 <title>TG:채팅</title>
 <style type="text/css">
    #chatArea{
-     width:400px; height: 100px; overflow-y:auto; border: 1px solid black;  
+     width:600px; height: 300px; overflow-y:auto; border: 1px solid gray;  background-color: white;
    }
  </style>
  <script type="text/javascript" src="js/jquery.js"></script>
@@ -101,19 +101,19 @@
   </script>
  
 </head>
-<body>
+<body style="background-color: #FAFAFA;">
 		<div style="z-index: 2;"><tiles:insertAttribute name="header"/></div>
 		
-<div style="margin-left: 300px; width: 45%" >
+<div style="margin-left: 370px; padding-top:30px; width: 650px;" >
 
-		  <input type="button" id="enterBtn" value="입장">
-		  <input type="button" id="exitBtn" value="나가기">
-		  <h3>나와 잘맞는 사람을 찾아봐요</h3>
+		  <input type="button" class="sbutton" id="enterBtn" value="입장">
+		  <input type="button" class="sbutton" id="exitBtn" value="나가기">
+		  <h4 style="padding: 20px 0;">채팅으로 나와 잘맞는 사람을 찾아봐요</h4>
 		  <div id="chatArea">
 		  <div id="chatMsg"></div></div>
 		  <br>
-		  <input type="text" id="message">
-		  <input type="button" id="sendBtn" value="전송">
+		  <input type="text" class="search" id="message" placeholder="하고싶은 말을 적고 전송버튼을 클릭~!!" style="font-size:13px; height: 12px; width:486px; border: 1px solid gray; color: gray;">
+		  <input type="button" class="sbutton" id="sendBtn" value="전송" style="height: 35px; border: 1px solid lightgray;">
 		
 		
 </div>
@@ -124,6 +124,6 @@
 
 </div> -->
 		
-		<div style="position: relative; top: 330px"><tiles:insertAttribute name="footer"/></div>
+		<div style="position: relative; top: 50px"><tiles:insertAttribute name="footer"/></div>
 </body>
 </html>

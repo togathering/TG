@@ -8,12 +8,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>${my.nick }(${my.id })님의 프로필</title>
 <style type="text/css">
-	.form{margin-left: 500px}
-	.image { width:350px; height:350px;  background:skyblue;}
-	.profile {width:550px; height:200px;  background:skyblue;}
-	.comment {width:550px; height:200px; background:pink;}
-	.evaluate {width:350px; height:50px;  background:orange;}
-	.tcomment {margin: 10px;}
+	.form{margin-left: 270px}
+	.image { float:left; width:300px; height:300px;  background:white;}
+	.profile { float:left;width:500px; height:200px;  background: white;}
+	.comment { float:left;width:500px; height:200px; background:#FAFAFA;}
+	.evaluate { float:left;width:300px; height:50px;  background:#FAFAFA; margin-top: -50px;}
+	.tcomment { float:left; margin: 10px;}
 	.tprofile {margin: 10px;}
 	.tevaluate {margin: 12px;}
 	.trcomment {padding: 3px;}
@@ -46,10 +46,14 @@ $(document).ready(function(){
 <body>
 	<div style="z-index: 2;"><tiles:insertAttribute name="header"/></div>
 	<div><tiles:insertAttribute name="myPageHeader"/></div>
-	<form action="" class="form">
-	<h3>${my.nick }(${my.id })님의 프로필</h3>
+	<form action="" class="form" style="margin-top: 30px;">
+	<div style="background-color: #E6E6E6; border: 1px solid lightgray; padding: 25px 20px; font-size: 15px; width: 760px;">
+	<h4>${my.nick }(${my.id })님의 프로필</h4>
+	</div>
+	
+	<div style="border: 1px solid lightgray; border-top: 0px; background-color: white; height: 400px; width: 800px; ">
 		<div class="image" id ="pic">
-			<img src="proimg/${my.pic }" width="350px" height="350px">
+			<img src="proimg/${my.pic }" width="300px" height="300px">
 		</div>
 		
 		<div class="profile">
@@ -75,7 +79,8 @@ $(document).ready(function(){
 				<tr><td><b>평가점수</b></td><td>${grade }</td><td><b>신고횟수</b></td><td>${count }회</td></tr>
 			</table>
 		</div>
+		</div>
 	</form>
-		<div style="position: relative; top: 30px"><tiles:insertAttribute name="footer"/></div>
+		<div style="position: relative; top: 130px; width: 100%; float: left;"><tiles:insertAttribute name="footer"/></div>
 </body>
 </html>
