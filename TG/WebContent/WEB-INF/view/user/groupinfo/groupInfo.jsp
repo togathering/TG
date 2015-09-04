@@ -85,11 +85,17 @@ a:hover{
 		var date = gday[2].split(" ");
 		
 		if('${join}'=='ok'){
-			var newBt = '<button type="button" class="button" name="attend" onclick="joinOut()">참가중</button>';
-			attend.innerHTML = newBt;				
+			if(year == gday[0] && month == gday[1] && day >= date[0]){			
+				var endBt = '<button type="button" class="button" name="attend" onclick="delx()">모임종료</button>';
+				attend.innerHTML = endBt;	
+
+			}else{
+				var newBt = '<button type="button" class="button" name="attend" onclick="joinOut()">참가중</button>';
+				attend.innerHTML = newBt;								
+			}
 			
 		}else if(year == gday[0] && month == gday[1] && day >= date[0]){			
-			var endBt = '<button type="button" class="button" name="attend" onclick="">모임종료</button>';
+			var endBt = '<button type="button" class="button" name="attend" onclick="delx()">모임종료</button>';
 			attend.innerHTML = endBt;	
 
 		}else if('${group.gmax}'=='${group.gsum}'){
@@ -122,6 +128,10 @@ a:hover{
 	function delGroup() {
 		alert("삭제");
 		location.href = 'delGroup?gno=${param.gno}';
+	}
+	
+	function delx() {
+		alert('진행된 모임은 삭제불가능합니다 관리자에게 문의해주세요');
 	}
 	
 	function kick(kickId) {
