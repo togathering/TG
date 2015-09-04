@@ -224,6 +224,11 @@ public class GroupDAO {
 		return bean;
 	}
 	
+	public int historyGx(String id){
+		int historyGx = session.selectOne("group.historyGx", id);
+		return historyGx;
+	}
+	
 	
 	//==========채팅부분============
 	// 채팅방 이름 호출

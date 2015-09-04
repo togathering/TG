@@ -55,8 +55,8 @@ $(document).ready(function(){
 			<table class="tprofile">
 				<tr><td>성별</td><td id="gender">${my.gender }</td><td>생년월일</td><td id="birth">${my.birth }</td></tr>
 				<tr><td>선호운동</td><td>${my.favo }</td><td>활동지역</td><td>${my.loc }</td></tr>
-				<tr><td width="100px">인스타그램</td><td width="160px"><a>${my.insta }</a></td>
-				<td width="100px">페이스북</td><td width="160px"><a>${my.fbook }</a></td></tr>
+				<tr><td width="100px">인스타그램</td><td width="160px"><a onclick="window.open('${my.insta}', '', 'width=950, height=540, screenX=200, screenY=60');"  style="color: gray" >${my.insta }</a></td>
+				<td width="100px">페이스북</td><td width="160px"><a onclick="window.open('${my.fbook }', '', 'width=950, height=540, screenX=200, screenY=60');"  style="color: gray" >${my.fbook }</a></td></tr>
 				<tr><td colspan="4">자기소개</td></tr>
 				<tr><td colspan="4">${my.intro }</td></tr>
 			</table>

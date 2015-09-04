@@ -110,6 +110,10 @@
 	</select>
 	
 	
+	<select id="historyGx" parameterType="String" resultType="int">
+		select count(*) from gxgroup where ghost=#{id} and gstatus = '모임종료'
+	</select>
+	
 	<!-- 채팅부분 -->
 	<select id = "chat" parameterType="java.lang.String" resultType="String">
 		select gtitle from gxgroup,participant where gxgroup.gno=participant.gno and participant.pid = #{id}  
