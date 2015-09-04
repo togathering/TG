@@ -223,4 +223,14 @@ public class GroupDAO {
 		GroupBean bean = session.selectOne("group.recommend",gno);
 		return bean;
 	}
+	
+	
+	//==========채팅부분============
+	// 채팅방 이름 호출
+	
+			public List<String> roomTitle(String id){
+				return session.selectList("group.chat",id);
+			}
+	
+	
 }

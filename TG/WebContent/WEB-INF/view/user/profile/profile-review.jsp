@@ -7,15 +7,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>${my.nick }(${my.id })님의 프로필</title>
 <style type="text/css">
-	body { width:900px; margin:20px auto; background:#ddd;}
-	.image { width:350px; height:350px; float:left; background:skyblue;}
-	.profile {width:550px; height:200px; float:right; background:skyblue;}
-	.comment {width:550px; height:200px; float:right; background:pink;}
-	.evaluate {width:350px; height:50px; float:left; background:orange;}
+	body { width:900px; margin:20px auto; background:#F2F2F2;}
+	.image { width:350px; height:350px; float:left; background:white}
+	.profile {width:548px; height:200px; float:right; background:#FDFDFD;}
+	.comment {width:548px; height:200px; float:right; background:#FAFAFA;}
+	.evaluate {width:350px; height:50px; float:left; background:#FDFDFD;}
 	.tcomment {margin: 10px;}
 	.tprofile {margin: 10px;}
 	.tevaluate {margin: 12px;}
-	.trcomment {padding: 3px;}
+	.trcomment {padding: 3px; border-top: 1px solid llightgray;}
 	.tevaluate td{width: 100px;}
 </style>
 <script type="text/javascript" src="js/jquery.js"></script>
@@ -43,7 +43,10 @@ $(document).ready(function(){
 </script>
 </head>
 <body>
-	<h3>${my.nick }(${my.id })님의 프로필</h3>
+		<div style="background-color: #D8D8D8; border: 1px solid lightgray; padding: 10px 5px; margin-top: 20px;">
+			<h3>${my.nick }(${my.id })님의 프로필</h3>
+		</div>
+		<div style=" border: 1px solid lightgray; border-top: 0px; background-color: gray; font-size: 14px; height: 400px;">
 		<div class="image" id ="pic">
 			<img src="proimg/${my.pic }" width="350px" height="350px">
 		</div>
@@ -70,6 +73,7 @@ $(document).ready(function(){
 			<table class="tevaluate">
 				<tr><td><b>평가점수</b></td><td>${grade }</td><td><b>신고횟수</b></td><td>${count }회</td></tr>
 			</table>
+		</div>
 		</div>
 </body>
 </html>
