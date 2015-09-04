@@ -1,17 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>${my.nick }(${my.id })님의 프로필</title>
 <style type="text/css">
-	body { width:900px; margin:20px auto; background:#ddd;}
-	.image { width:350px; height:350px; float:left; background:skyblue;}
-	.profile {width:550px; height:200px; float:right; background:skyblue;}
-	.comment {width:550px; height:200px; float:right; background:pink;}
-	.evaluate {width:350px; height:50px; float:left; background:orange;}
+	.form{margin-left: 500px}
+	.image { width:350px; height:350px;  background:skyblue;}
+	.profile {width:550px; height:200px;  background:skyblue;}
+	.comment {width:550px; height:200px; background:pink;}
+	.evaluate {width:350px; height:50px;  background:orange;}
 	.tcomment {margin: 10px;}
 	.tprofile {margin: 10px;}
 	.tevaluate {margin: 12px;}
@@ -43,6 +44,9 @@ $(document).ready(function(){
 </script>
 </head>
 <body>
+	<div style="z-index: 2;"><tiles:insertAttribute name="header"/></div>
+	<div><tiles:insertAttribute name="myPageHeader"/></div>
+	<form action="" class="form">
 	<h3>${my.nick }(${my.id })님의 프로필</h3>
 		<div class="image" id ="pic">
 			<img src="proimg/${my.pic }" width="350px" height="350px">
@@ -71,5 +75,7 @@ $(document).ready(function(){
 				<tr><td><b>평가점수</b></td><td>${grade }</td><td><b>신고횟수</b></td><td>${count }회</td></tr>
 			</table>
 		</div>
+	</form>
+		<div style="position: relative; top: 30px"><tiles:insertAttribute name="footer"/></div>
 </body>
 </html>
