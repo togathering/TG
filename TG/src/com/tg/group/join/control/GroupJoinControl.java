@@ -64,7 +64,7 @@ public class GroupJoinControl {
 		
 		idao.joinAfterDelete(gno, id);
 		
-		return "redirect:main";
+		return "redirect:groupinfo?gno="+gno;
 	}
 	
 	@RequestMapping("/cancelJoin")
@@ -90,6 +90,6 @@ public class GroupJoinControl {
 			System.out.println("참여취소 실패");				
 		}
 		
-		return "redirect:main";
+		return "redirect:groupinfo?gno="+gno;
 	}
 }

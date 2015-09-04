@@ -15,6 +15,17 @@
 	function historyGx() {
 		location.href = "selectGxList";
 	}
+	
+	$(document).ready(function () {
+		if(!'${gender}'){
+			alert('마이페이지에서 성별을 입력해주세요');
+			location.href="mypage";
+		}
+		if(!'${tel}'){
+			alert('마이페이지에서 전화번호를 입력해주세요');
+			location.href="mypage";
+		}
+	});
 </script>
 </head>
 <body style="background-color: #F2F2F2;">
