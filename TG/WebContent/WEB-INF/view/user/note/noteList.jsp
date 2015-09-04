@@ -68,6 +68,6 @@ function msg(no, id) {
 	</div>
 	
 	<!-- г╙ем -->
-	<div style="position: relative; top: 50px; "><tiles:insertAttribute name="footer"/></div>
+	<div style="position: relative; top: 145px; "><tiles:insertAttribute name="footer"/></div>
 </body>
 </html>

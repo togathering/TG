@@ -103,9 +103,7 @@
 					<br>
 					<textarea rows="15"  name="noteContent" maxlength="199"
 						class="noteInput" placeholder="내용을 입력해주세요 (최대 50글자)" onkeydown="limitContentLength()" 
-						style="padding:5px 5px; margin: 1px 0 20px 0; width:350px">
-						
-					</textarea>
+						style="padding:5px 5px; margin: 1px 0 20px 0; width:350px"></textarea>
 					</div>
 			</section>
 		</form>
