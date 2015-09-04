@@ -104,12 +104,11 @@
 <body>
 		<div style="z-index: 2;"><tiles:insertAttribute name="header"/></div>
 		
-<div style="float: right; width: 45%" >
-		
-				이름: <input type="text" id="nickname">
+<div style="margin-left: 300px; width: 45%" >
+
 		  <input type="button" id="enterBtn" value="입장">
 		  <input type="button" id="exitBtn" value="나가기">
-		  <h3>대화영역</h3>
+		  <h3>나와 잘맞는 사람을 찾아봐요</h3>
 		  <div id="chatArea">
 		  <div id="chatMsg"></div></div>
 		  <br>
