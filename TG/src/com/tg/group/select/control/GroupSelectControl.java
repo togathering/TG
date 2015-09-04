@@ -9,10 +9,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.tg.common.beans.GroupBean;
 import com.tg.common.dao.GroupDAO;
 import com.tg.common.dao.MemberDAO;
+import com.tg.webSocket.control.ChatHandler;
 
 @Controller
 public class GroupSelectControl {
@@ -20,6 +22,8 @@ public class GroupSelectControl {
 	GroupDAO dao;
 	@Autowired
 	MemberDAO mdao;
+	@Autowired
+	ChatHandler chat;
 	
 	
 	@RequestMapping("selectGx")
@@ -54,5 +58,24 @@ public class GroupSelectControl {
 			model.addAttribute("intro", intro);
 		}
 		return ".createSelect";
+	}
+	
+	@RequestMapping("/chatId")
+	@ResponseBody
+	public String getUser(@RequestParam(value="id") String id,
+			               @RequestParam(value="nick") String nick){
+		
+		chat.setId(id);
+		chat.setNickName(nick);
+		
+		String result="";
+		List<String> list = dao.roomTitle(id);
+		if(list==null||list.size()==0) result = "0|";
+		else result=list.size()+"|";
+		for(int i=0; i< list.size(); i++){
+			result+=list.get(i);
+			if(i < list.size()-1)result+="¡×";
+		}
+		return result;
 	}
 }
