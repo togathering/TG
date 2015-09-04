@@ -12,7 +12,7 @@
 	<div style="float: left; width: 15%;  display: inline; margin: 0 2%; padding-left: 170px; padding-top: 20px;" >
 
 		<ul style="color: black;   list-style:none;">
-			<li><a href="qna" style="color: black;" >문의하기</a></li>
+			<li style="margin: 15px 0;"><a href="qna" style="color: black;" >문의하기</a></li>
 			<li><a href="qnaList?" style="color: black" >나의 문의내역</a></li>
 		</ul>
 	</div>

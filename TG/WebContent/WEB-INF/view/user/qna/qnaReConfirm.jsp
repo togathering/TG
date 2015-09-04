@@ -22,24 +22,24 @@ $(document).ready(function(){
 });
 </script>
 </head>
-<body>
-<div style="z-index: 2;"><tiles:insertAttribute name="header"/></div><br><br>
-	<div>	<tiles:insertAttribute name="myPageHeader"/></div><br><br>
+<body style="background-color: #FAFAFA">
+<div style="z-index: 2;"><tiles:insertAttribute name="header"/></div>
+<%-- 	<div>	<tiles:insertAttribute name="myPageHeader"/></div><br><br> --%>
 	<div style="position: relative;"><tiles:insertAttribute name="qnaSide"/></div>
 	<form class="form">
-		<table class="title">
+		<table class="title" style="border: 1px solid gray;">
 			<tr>
-				<td width="50"><b>제목</b></td><td width="280">${bean.qtitle }</td><td width="50"><b>날짜</b></td><td>${bean.qdate }</td>
+				<td width="50" style="border: 1px solid gray;"><b>제목</b></td><td width="280" style="background-color: white">${bean.qtitle }</td><td width="50" style="border: 1px solid gray;"><b>날짜</b></td><td style="background-color: white">${bean.qdate }</td>
 			</tr>
 		</table>
-		<table class="content">
+		<table class="content" style="border: 1px solid gray;">
 			<tr>
-				<td width="50"><b>내용</b></td><td>${bean.qcont } </td>
+				<td width="50" style="border: 1px solid gray;"><b>내용</b></td><td style="background-color: white">${bean.qcont } </td>
 			</tr>
 		</table>
-		<table class="recontent" id="recontent" style="display: ">
+		<table class="recontent" id="recontent" style="border: 1px solid gray;"">
 			<tr>
-				<td width="50"><b>답변</b></td><td>${bean.rcont } </td>
+				<td width="50" style="border: 1px solid gray;"><b>답변</b></td><td style="background-color: white">${bean.rcont } </td>
 			</tr>
 		</table>
 	</form>
