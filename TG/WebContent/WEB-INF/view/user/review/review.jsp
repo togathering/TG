@@ -57,7 +57,7 @@
 			<h4 style="margin:5px 0;">한줄 평가</h4>
 			<input type="text" name="evaluate">
 			</div>
-		<div style="padding:5px 0px 5px 20px;">
+		<div style="padding:5px 0px 15px 20px;">
 			<select id="sel2">
 				<option value="평점">평점</option>
 				<option value="1">1</option>

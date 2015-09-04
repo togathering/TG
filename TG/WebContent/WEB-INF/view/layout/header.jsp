@@ -75,7 +75,7 @@
 
 </head>
 <body>
-	<header>
+	<header style="background-color: white;">
 	<div class="wrapper4">
 		<a href="main"><img src="img/logo2.png" class="logo" alt="" title="" /></a>
 		<a href="#" class="hamburger"></a>
