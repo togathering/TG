@@ -475,8 +475,7 @@
 						
 							<textarea name="message" id="message" autocomplete="on"
 							tabindex="" class="txtblock" row="25" col=""
-							 style="font-size: 14px; text-align: left: ; line-height: 1.4em;">
-							${bean.gintro }
+							 style="font-size: 14px; text-align: left: ; line-height: 1.4em;">${bean.gintro }
 	
 						</textarea>
 
