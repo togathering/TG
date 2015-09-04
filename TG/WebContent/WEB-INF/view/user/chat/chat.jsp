@@ -7,6 +7,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>TG:채팅</title>
+<link rel="stylesheet" type="text/css" href="css/search.css">
 <style type="text/css">
    #chatArea{
      width:600px; height: 300px; overflow-y:auto; border: 1px solid gray;  background-color: white;
