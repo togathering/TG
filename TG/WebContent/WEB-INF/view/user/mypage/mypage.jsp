@@ -127,7 +127,7 @@
 		
 		if('${my.pic}' != ''){
 			var imag = document.getElementById("pic");
-			var pic = '<img src=upimg/${my.pic} width=420; height=400>';
+			var pic = '<img src=proimg/${my.pic} width=420; height=400>';
 			imag.innerHTML = pic;
 			
 		}

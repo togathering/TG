@@ -55,9 +55,7 @@
 	
 	function report(reportId) {
 		if(confirm("정말 신고하시겠습니까?\n허위로 신고한 경우 처벌을 받을 수 있습니다.")){
-			window.open('report?accused='+reportId,'','width=390, height=440, screenX=400, screenY=120  scrollbars= no'); 
-		}else{
-			alert("왜죠");
+			window.open('report?accused='+reportId,'','width=450, height=480, screenX=400, screenY=120  scrollbars= no'); 
 		}
 	}
 

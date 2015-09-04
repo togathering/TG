@@ -18,10 +18,13 @@ import com.tg.common.beans.GroupBean;
 import com.tg.common.beans.MemberBean;
 import com.tg.common.beans.MemberBeanIn;
 import com.tg.common.beans.ParticipantBean;
+import com.tg.common.beans.ReviewBean;
 import com.tg.common.dao.GroupDAO;
 import com.tg.common.dao.MemberDAO;
 import com.tg.common.dao.ParticipantDAO;
 import com.tg.common.dao.ReplyDAO;
+import com.tg.common.dao.ReportDAO;
+import com.tg.common.dao.ReviewDAO;
 import com.tg.common.dao.WishDAO;
 
 @Controller
@@ -36,7 +39,24 @@ public class MyPageControl {
 	WishDAO wdao;
 	@Autowired
 	ReplyDAO rdao;
+	@Autowired
+	ReportDAO rpdao;
+	@Autowired
+	ReviewDAO rvdao;
 	
+	@RequestMapping("/myprofile")
+	public String myProfile(Model model, HttpSession session){
+		String id = (String) session.getAttribute("id");
+		MemberBeanIn bean = dao.profile(id);
+		List<ReviewBean> review = rvdao.rList(id);
+		int count = rpdao.reportCount(id);
+		int grade = rvdao.reviewGrade(id);
+		model.addAttribute("my", bean);
+		model.addAttribute("count", count);
+		model.addAttribute("review", review);
+		model.addAttribute("grade", grade);
+		return ".myprofile";
+	}
 	
 	@RequestMapping("/mypage")
 	public String myPage(Model model, HttpSession session){

@@ -14,7 +14,6 @@
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript">
 	function deleteGx(gno) {
-		alert(gno);
 		location.href = 'gxdelete?gno='+gno;
 	}
 	function review(gno) {

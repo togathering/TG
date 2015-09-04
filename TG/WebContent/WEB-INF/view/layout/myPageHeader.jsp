@@ -12,7 +12,7 @@
 	<ul class="mul">
  		<!-- <li class="mli"><a>알림</a></li> -->
    		<li class="mli"><a href="mypage">프로필 수정</a></li>
-  		<li class="mli"><a href="#">프로필 확인</a></li>
+  		<li class="mli"><a href="myprofile">프로필 확인</a></li>
    </ul>
    </div>
 </body>
