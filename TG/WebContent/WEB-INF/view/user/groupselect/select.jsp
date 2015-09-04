@@ -14,7 +14,11 @@
 	}
 	
 	function historyGx() {
-		location.href = "selectGxList";
+		if('${historyGx}'==0){
+			alert("모임을 개최한적이 없습니다\n새로운 모임을 만들어보세요");	
+		}else{
+			location.href = "selectGxList";
+		}
 	}
 	
 	$(document).ready(function () {
