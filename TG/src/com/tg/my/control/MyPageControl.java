@@ -20,6 +20,7 @@ import com.tg.common.beans.MemberBeanIn;
 import com.tg.common.beans.ParticipantBean;
 import com.tg.common.beans.ReviewBean;
 import com.tg.common.dao.GroupDAO;
+import com.tg.common.dao.GroupPreferenceDAO;
 import com.tg.common.dao.MemberDAO;
 import com.tg.common.dao.ParticipantDAO;
 import com.tg.common.dao.ReplyDAO;
@@ -43,6 +44,8 @@ public class MyPageControl {
 	ReportDAO rpdao;
 	@Autowired
 	ReviewDAO rvdao;
+	@Autowired
+	GroupPreferenceDAO gpdao;
 	
 	@RequestMapping("/myprofile")
 	public String myProfile(Model model, HttpSession session){
@@ -198,6 +201,10 @@ public class MyPageControl {
 	
 	@RequestMapping("/gxdelete")
 	public String gxDelete(@RequestParam(value="gno") Integer gno){
+		
+		if(gpdao.delPref(gno)){
+			System.out.println("그룹정보삭제성공");
+		}
 		
 		if(rdao.delGroup(gno)){
 			System.out.println("댓글삭제성공");
