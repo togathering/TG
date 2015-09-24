@@ -8,7 +8,7 @@
 
 <script type="text/javascript">
 </script>
-<link rel="stylesheet" type="text/css" href="css/list.css">
+<link rel="stylesheet" type="text/css" href="css/search.css">
 <% String accused = request.getParameter("accused"); %>
 </head>
 <body>
